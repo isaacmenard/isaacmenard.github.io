@@ -1,0 +1,165 @@
+/****GENERAL****/
+.texte{
+	background-color: #7485f0;
+	position: relative;
+	left: 280px;
+	padding-block-start: 1px;
+	padding-block-end: 1px;
+	
+	
+}
+body{
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 25px;
+	margin: 0px;
+	padding: 0px;
+	color: rgb(46, 46, 46)
+}
+h1{
+	font-size: 43px;
+	font-weight: normal;
+	text-align: center;
+}
+h2{
+	font-size: 35px;
+	font-weight: normal;
+	text-align: center;
+}
+	
+.boutton{
+	width: 50px;
+	color: black;
+	background-color: #2e3b91
+	margin: 0px;
+	padding: 0px;
+}
+.bras{
+	
+	text-align: left;
+	width: 280px;
+	background-color: rgba(255, 153, 0, 0.815);
+	margin: 0px;
+	padding: 0px;
+	padding-top: 30px;
+	padding-block-end: 30px;
+}
+.btexteras{
+	
+	text-align: left;
+	width: 1000px;
+	background-color: rgba(255, 153, 0, 0.815);
+	margin: 0px;
+	padding: 0px;
+	padding-top: 30px;
+	padding-block-end: 30px;
+	left: 280px
+}
+.hey{
+	text-decoration: none;
+	list-style-type: none;
+	font-size: 18px;
+}
+.ra{
+	font-size: 12px;
+	text-decoration: none;	
+	color:rgb(27, 27, 27);
+}
+header{
+	height: 140px;
+}
+footer{
+	height: 80px;
+	width: 100%;
+	padding-top: 0px;
+	text-align: center;
+	background-color: rgb(65, 116, 226);
+	border-top: 2px solid rgb(65, 116, 226);
+	color: #FFF;
+	font-family: 'Anton', sans-serif;
+	
+	
+}
+/****text menu****/
+nav li{
+	list-style-type: none;
+	float: left;
+}
+nav ul{
+	margin: 0px;
+	padding: 0px;
+}
+nav{
+	width: 100%;
+	background-color: rgb(0, 81, 255);
+}
+nav a{
+	font-family: 'Anton', sans-serif;
+	display: inline-block;
+	text-decoration: none;
+	padding: 20px 40px;
+	color: #FFF;
+	text-transform: uppercase;
+	font-size: 15px;
+}
+/****menu bar****/
+.table{
+	display: table;
+	margin: 0 auto;
+}
+.acc:hover{
+	border-top: 5px solid yellow;
+	background-color: RGBa(64, 200, 130, 0;15);
+}
+.exp:hover{
+	border-top: 5px solid yellow;
+	background-color: RGBa(64, 200, 130, 0;15);
+}
+.loi:hover{
+	border-top: 5px solid yellow;
+	background-color: RGBa(64, 200, 130, 0;15);
+}
+.cont:hover{
+	border-top: 5px solid yellow;
+	background-color: RGBe(64, 200, 130, 0,15);
+}
+.lien:hover{
+	border-top: 5px solid yellow;
+	background-color: #D90611(64, 200, 130, 0,15);
+}
+.super:hover{
+	border-top: 5px solid yellow;
+	background-color: #D90611(64, 200, 130, 0,15);
+}
+/****body****/
+.1{
+	width: 100%;
+	min-height: 300px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+
+input{
+	width: 150px;
+	background-color: #E3E2E2;
+}
+label{
+	font-size: 18px;
+}
+
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
