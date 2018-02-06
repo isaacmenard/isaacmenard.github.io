@@ -17,14 +17,14 @@ body{
     background-size: cover;
 }
 .Titre{
-	font-size: 33px;
+	font-size: 280%;
 	font-weight: normal;
     text-align: center;
     font-family: 'Anton', sans-serif;
     color: white
 }
 .soustitre{
-	font-size: 25px;
+	font-size: 200%;
 	font-weight: normal;
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
@@ -32,7 +32,7 @@ body{
     color: white
 }
 .paragraphe{
-	font-size: 20px;
+	font-size: 150%;
 	font-weight: normal;
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
@@ -40,7 +40,7 @@ body{
     color: white
 }
 .para{
-	font-size: 20px;
+	font-size: 20%;
 	font-weight: normal;
     text-align: center;
     padding-top: -10px;
