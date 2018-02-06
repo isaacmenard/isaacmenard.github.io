@@ -1,12 +1,12 @@
 .tete{
-    width: 30%;
+    width: 40%;
     height: 90%;
     margin: 0 auto;
     background-color: rgb(0, 0, 0,0.8);
     
     position: fixed;
-    top:10%;
-    left:35%;
+    top:5%;
+    left:30%;
     border: 1px;
     border-radius: 12px 12px 20px;
     
@@ -17,14 +17,14 @@ body{
 }
 
 .Titre{
-	font-size: 280%;
+	font-size: 240%;
 	font-weight: normal;
     text-align: center;
     font-family: 'Anton', sans-serif;
     color: white
 }
 .soustitre{
-	font-size: 200%;
+	font-size: 180%;
 	font-weight: normal;
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
@@ -32,7 +32,7 @@ body{
     color: white
 }
 .paragraphe{
-	font-size: 150%;
+	font-size: 130%;
 	font-weight: normal;
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
