@@ -1,0 +1,163 @@
+.tete{
+    width: 30%;
+    height: 80%;
+    margin: 0 auto;
+    background-color: rgb(0, 0, 0,0.8);
+    
+    position: fixed;
+    top:10%;
+    left:35%;
+    border: 1px;
+    border-radius: 12px 12px 20px;
+    
+
+}
+body{
+    background: url("1438617991-wallhaven-91048.jpg") no-repeat;
+    background-size: cover;
+}
+h1{
+	font-size: 33px;
+	font-weight: normal;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    color: white
+}
+h2{
+	font-size: 25px;
+	font-weight: normal;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: -10px;
+    color: white
+}
+p{
+	font-size: 20px;
+	font-weight: normal;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: -10px;
+    color: white
+}
+.banniere{
+    position: relative;
+    
+}
+#cuberouge1{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255,0,0,.5);
+    border: 0px;
+    border-radius: 3px 3px 5px;
+    position:fixed;
+    transition : 0.5s;
+    
+    
+}
+#cubevert1{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(123, 255, 0, 0.5);
+    border: 0px;
+    border-radius: 3px 3px 5px;
+    position:fixed;
+    transition : 0.5s;
+    
+    
+}
+#cubebleu1{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(38, 0, 255, 0.5);
+    border: 0px;
+    border-radius: 3px 3px 5px;
+    position:fixed;
+    transition : 0.5s;
+    
+    
+}
+#cubeorange1{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 123, 0, 0.5);
+    border: 0px;
+    border-radius: 3px 3px 5px;
+    position:fixed;
+    transition : 0.5s;
+    
+    
+}
+
+
+
+.cuberouge1-1{
+    border: 1px solid black;  
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    top :200px;
+    left : 10%;
+    
+}
+.cuberouge1-2{
+    border: 1px solid black;  
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    top :200px;
+    right : 30%;
+    
+}
+.cuberouge1-3{
+    border: 1px solid black;  
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    top :430px;
+    right : 30%;
+    
+}
+.cuberouge1-4{
+    border: 1px solid black;  
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    top :430px;
+    right : 10%;
+    
+}
+.cuberouge1-5{
+    border: 1px solid black;  
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    top :200px;
+    right : 10%;
+    
+}
+.cuberouge1-7{
+    border: 1px solid black;  
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    top :430px;
+    left : 10%;
+    
+}
+.cuberouge1-8{
+    border: 1px solid black;  
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    top :430px;
+    left : 30%;
+    
+}
+.cuberouge1-9{
+    border: 1px solid black;  
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    top :200px;
+    left : 30%;
+}
