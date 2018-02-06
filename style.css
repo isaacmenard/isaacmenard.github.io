@@ -16,14 +16,14 @@ body{
     background: url("1438617991-wallhaven-91048.jpg") no-repeat;
     background-size: cover;
 }
-h1{
+.Titre{
 	font-size: 33px;
 	font-weight: normal;
     text-align: center;
     font-family: 'Anton', sans-serif;
     color: white
 }
-h2{
+.soustitre{
 	font-size: 25px;
 	font-weight: normal;
     text-align: center;
@@ -31,7 +31,7 @@ h2{
     padding-top: -10px;
     color: white
 }
-p{
+.paragraphe{
 	font-size: 20px;
 	font-weight: normal;
     text-align: center;
