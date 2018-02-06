@@ -105,6 +105,61 @@ body{
         
     }
 }
+@media only screen and (max-width:800px) {
+    .fond {
+        background-image: url("1438617991-wallhaven-91048.jpg")
+        transform: rotate(-90deg);
+    }
+    .tete{
+        width: 70%;
+        height: 80%;
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        
+        position: fixed;
+        top:10%;
+        left:15%;
+        border: 1px;
+        border-radius: 12px 12px 20px;
+        
+    
+    }
+    .Titre{
+        padding-top: 0%;
+        font-size: 150%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Anton', sans-serif;
+        color: white
+    }
+    .soustitre{
+        font-size: 120%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: -10px;
+        color: white
+    }
+    .paragraphe{
+        font-size: 70%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: -10px;
+        color: white
+    }
+    .para{
+        font-size: 20%;
+        font-weight: normal;
+        text-align: center;
+        padding-top: -10px;
+        color: white
+    }
+    .banniere{
+        position: relative;
+        
+    }
+}
 #cuberouge1{
     background-color: rgba(255,0,0,.5);
     border: 0px;
