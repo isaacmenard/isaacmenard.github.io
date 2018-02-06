@@ -39,6 +39,13 @@ body{
     padding-top: -10px;
     color: white
 }
+.para{
+	font-size: 20px;
+	font-weight: normal;
+    text-align: center;
+    padding-top: -10px;
+    color: white
+}
 .banniere{
     position: relative;
     
