@@ -78,7 +78,7 @@ h1{
 	font-weight: normal;
 	font-family: 'Bungee', cursive;
 	position: fixed;
-	left: 36%;
+	text-align: center;
 }
 #o{
     /*Couleur de fond*/
