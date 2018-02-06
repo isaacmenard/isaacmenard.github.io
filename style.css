@@ -1,6 +1,6 @@
 .tete{
     width: 30%;
-    height: 80%;
+    height: 90%;
     margin: 0 auto;
     background-color: rgb(0, 0, 0,0.8);
     
@@ -13,9 +13,9 @@
 
 }
 body{
-    background: url("1438617991-wallhaven-91048.jpg") no-repeat;
-    background-size: cover;
+    background-image: url("1438617991-wallhaven-91048.jpg")
 }
+
 .Titre{
 	font-size: 280%;
 	font-weight: normal;
@@ -49,6 +49,61 @@ body{
 .banniere{
     position: relative;
     
+}
+@media all and (orientation: portrait)
+{   
+    .fond {
+        background-image: url("1438617991-wallhaven-91048.jpg")
+        transform: rotate(-90deg);
+    }
+    .tete{
+        width: 60%;
+        height: 50%;
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        
+        position: fixed;
+        top:25%;
+        left:20%;
+        border: 1px;
+        border-radius: 12px 12px 20px;
+        
+    
+    }
+    .Titre{
+        font-size: 350%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Anton', sans-serif;
+        color: white
+    }
+    .soustitre{
+        font-size: 290%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: -10px;
+        color: white
+    }
+    .paragraphe{
+        font-size: 170%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: -10px;
+        color: white
+    }
+    .para{
+        font-size: 20%;
+        font-weight: normal;
+        text-align: center;
+        padding-top: -10px;
+        color: white
+    }
+    .banniere{
+        position: relative;
+        
+    }
 }
 #cuberouge1{
     background-color: rgba(255,0,0,.5);
