@@ -1,0 +1,339 @@
+body{
+	background-color: #F2F2F2;
+}
+#score{
+	font-size: 40px;
+	font-weight: normal;
+	font-family: 'Bungee', cursive;
+	text-align: center;
+}
+#scores{
+	font-size: 40px;
+	font-weight: normal;
+	font-family: 'Bungee', cursive;
+	text-align: center;
+}
+#scored1{
+	font-size: 30px;
+	font-weight: normal;
+	font-family: 'Bungee', cursive;
+	position: fixed;
+	top: 50.3%;
+	left: 76.4%;
+	color: black;
+}
+#scored3{
+	font-size: 30px;
+	font-weight: normal;
+	font-family: 'Bungee', cursive;
+	position: fixed;
+	top: 50.3%;
+	left: 83.4%;
+	color: black;
+}
+#scored2{
+	font-size: 30px;
+	font-weight: normal;
+	font-family: 'Bungee', cursive;
+	position: fixed;
+	top: 50.3%;
+	left: 90.4%;
+	color: black;
+}
+.scoreboard{	
+	padding: 0%;
+	/*Couleur de fond*/
+    background-color: #F951F9;
+    /*Largeur de l'élément en soi*/
+    width: 20%;
+	height: 42%;
+    /*position*/
+	position: fixed;
+	top: 29%;
+	left: 7%;
+	/*bordure*/
+	border: 0px;
+	border-radius: 3px 3px 5px;
+	/*transition*/
+	-moz-transition: background-color 0.2s;
+	-moz-transition: color 0.2s;
+}
+.niveaux{	
+	padding: 0%;
+	/*Couleur de fond*/
+    background-color: #F951F9;
+    /*Largeur de l'élément en soi*/
+    width: 20%;
+	height: 42%;
+    /*position*/
+	position: fixed;
+	top: 29%;
+	left: 74%;
+	/*bordure*/
+	border: 0px;
+	border-radius: 3px 3px 5px;
+	/*transition*/
+	-moz-transition: background-color 0.2s;
+	-moz-transition: color 0.2s;
+}
+h1{
+	font-size: 45px;
+	font-weight: normal;
+	font-family: 'Bungee', cursive;
+	position: fixed;
+	left: 40%;
+}
+#o{
+    /*Couleur de fond*/
+    background-color: #130BF3;
+    /*Largeur de l'élément en soi*/
+    width: 10%;
+	height: 20%;
+    /*position*/
+	position: fixed;
+	top: 51%;
+	left: 51%;
+	/*transition*/
+	-moz-transition: background-color 0.2s;
+	/*bordure*/	
+	border: 0px;
+	border-radius: 3px 3px 5px;
+}
+#e{
+    /*Couleur de fond*/
+    background-color: #03E71A;
+    /*Largeur de l'élément en soi*/
+    width: 10%;
+	height: 20%;
+    /*position*/
+	position: fixed;
+	top: 29%;
+	left: 51%;
+	/*transition*/
+	-moz-transition: background-color 0.2s;
+	/*bordure*/
+	border: 0px;
+	border-radius: 3px 3px 5px;
+}
+#n{
+    /*Couleur de fond*/
+    background-color: #F3A010;
+    /*Largeur de l'élément en soi*/
+    width: 10%;
+	height: 20%;
+    /*position*/
+	position: fixed;
+	top: 29%;
+	left: 40%;
+	/*transition*/
+	-moz-transition: background-color 0.2s;
+	/*bordure*/
+	border: 0px;
+	border-radius: 3px 3px 5px;
+}
+#s{
+    /*Couleur de fond*/
+    background-color: #D5220B;
+    /*Largeur de l'élément en soi*/
+    width: 10%;
+	height: 20%;
+    /*position*/
+	position: fixed;
+	top: 51%;
+	left: 40%;
+	/*transition*/
+	-moz-transition: background-color 0.2s;
+	/*bordure*/
+	border: 0px;
+	border-radius: 3px 3px 5px;
+}
+#t{
+    /*Couleur de fond*/
+    background-color: #06D8F8;
+    /*Largeur de l'élément en soi*/
+    width: 10%;
+	height: 20%;
+    /*position*/
+	position: fixed;
+	top: 29%;
+	left: 29%;
+	/*transition*/
+	-moz-transition: background-color 0.2s;
+	/*bordure*/
+	border: 0px;
+	border-radius: 3px 3px 5px;
+}
+#u{
+    /*Couleur de fond*/
+    background-color: #06F893;
+    /*Largeur de l'élément en soi*/
+    width: 10%;
+	height: 20%;
+    /*position*/
+	position: fixed;
+	top: 51%;
+	left: 29%;
+	/*transition*/
+	-moz-transition: background-color 0.2s;
+	/*bordure*/
+	border: 0px;
+	border-radius: 3px 3px 5px;
+}
+#v{
+    /*Couleur de fond*/
+    background-color: #969696;
+    /*Largeur de l'élément en soi*/
+    width: 10%;
+	height: 20%;
+    /*position*/
+	position: fixed;
+	top: 51%;
+	left: 62%;
+	/*transition*/
+	-moz-transition: background-color 0.2s;
+	/*bordure*/
+	border: 0px;
+	border-radius: 3px 3px 5px;
+}
+#w{
+    /*Couleur de fond*/
+    background-color: #7507BA;
+    /*Largeur de l'élément en soi*/
+    width: 10%;
+	height: 20%;
+    /*position*/
+	position: fixed;
+	top: 29%;
+	left: 62%;
+	/*transition*/
+	-moz-transition: background-color 0.2s;
+	/*bordure*/
+	border: 0px;
+	border-radius: 3px 3px 5px;
+}
+.start{
+	font-size: 100%;
+	font-weight: normal;
+	font-family: 'Bungee', cursive;
+	text-align: center;
+	padding: 0%;
+	/*Couleur de fond*/
+    background-color: #F951F9;
+	color: black;
+    /*Largeur de l'élément en soi*/
+    width: 21%;
+	height: 15%;
+    /*position*/
+	position: fixed;
+	top: 75%;
+	left: 40%;
+	/*transition*/
+	-moz-transition: background-color 0.2s;
+	-moz-transition: color 0.2s;
+	/*bordure*/
+	border: 0px;
+	border-radius: 3px 3px 5px;
+}
+.niveau1{
+	
+	/*Couleur de fond*/
+    background-color: #03E71A;
+    /*Largeur de l'élément en soi*/
+    width: 4%;
+	height: 8%;
+    /*position*/
+	position: fixed;
+	top: 55%;
+	left: 75%;
+	/*transition*/
+	-moz-transition: background-color 0.2s;
+	-moz-transition: color 0.2s;
+	/*bordure*/
+	border: 0px;
+	border-radius: 3px 3px 5px;
+}	
+.niveau2{
+	
+	/*Couleur de fond*/
+    background-color: #FFEE0A;
+    /*Largeur de l'élément en soi*/
+    width: 4%;
+	height: 8%;
+    /*position*/
+	position: fixed;
+	top: 55%;
+	left: 89%;
+	/*transition*/
+	-moz-transition: background-color 0.2s;
+	-moz-transition: color 0.2s;
+	/*bordure*/
+	border: 0px;
+	border-radius: 3px 3px 5px;
+}	
+#o:hover{
+	background-color: #5550F5;
+	transition: background-color 0.2s;
+}
+#s:hover{
+	background-color: #F55B46;
+	transition: background-color 0.2s;
+}
+#e:hover{
+	background-color: #55FB65;
+	transition: background-color 0.2s;
+}
+#n:hover{
+	background-color: #F9BC51;
+	transition: background-color 0.2s;
+}
+#t:hover{
+	background-color: #8EF1FF;
+	transition: background-color 0.2s;
+}
+#u:hover{
+	background-color: #6DFCBE;
+	transition: background-color 0.2s;
+}
+#v:hover{
+	background-color: #AFAFAF;
+	transition: background-color 0.2s;
+}
+#w:hover{
+	background-color: #B74EFD;
+	transition: background-color 0.2s;
+}
+.start:hover{
+	background-color: #FA6FFA;
+	transition: background-color 0.2s;
+	transition: 0.2s;
+	color: #292829;
+
+}
+.scoreboard:hover{
+	background-color: #FA6FFA;
+	transition: background-color 0.2s;
+	transition: 0.2s;
+	color: #292829;
+}
+.niveaux:hover{
+	background-color: #FA6FFA;
+	transition: background-color 0.2s;
+	transition: 0.2s;
+	color: #292829;
+}
+#testee:{
+	font-size:100px;
+	color:blue;
+}
+.niveau3:hover{
+	background-color: #F55B46;
+	transition: background-color 0.2s;
+}
+.niveau1:hover{
+	background-color: #55FB65;
+	transition: background-color 0.2s;
+}
+.niveau2:hover{
+	background-color: #F2E968;
+	transition: background-color 0.2s;
+}
