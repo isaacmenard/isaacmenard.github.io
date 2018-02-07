@@ -17,6 +17,7 @@ body{
 }
 
 .Titre{
+    margin-top: 3%;
 	font-size: 240%;
 	font-weight: normal;
     text-align: center;
@@ -24,6 +25,7 @@ body{
     color: white
 }
 .soustitre{
+    margin-top: 3%;
 	font-size: 180%;
 	font-weight: normal;
     text-align: center;
@@ -50,8 +52,20 @@ body{
     position: relative;
     
 }
+.svg-inline--fa{
+    font-size: 100px ;
+    color: white;
+    margin: 0 auto;
+    display: block;
+  }
 @media all and (orientation: portrait)
 {   
+    .svg-inline--fa{
+        font-size: 80px ;
+        color: white;
+        margin: 0 auto;
+        display: block;
+      }
     .fond {
         background-image: url("1438617991-wallhaven-91048.jpg")
         transform: rotate(-90deg);
@@ -71,6 +85,7 @@ body{
     
     }
     .Titre{
+        
         font-size: 350%;
         font-weight: normal;
         text-align: center;
@@ -105,60 +120,11 @@ body{
         
     }
 }
-@media only screen and (max-width:800px) {
-    .fond {
-        background-image: url("1438617991-wallhaven-91048.jpg")
-        transform: rotate(-90deg);
-    }
-    .tete{
-        width: 70%;
-        height: 80%;
-        margin: 0 auto;
-        background-color: rgba(0, 0, 0, 0.8);
-        
-        position: fixed;
-        top:10%;
-        left:15%;
-        border: 1px;
-        border-radius: 12px 12px 20px;
-        
-    
-    }
-    .Titre{
-        padding-top: 0%;
-        font-size: 150%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Anton', sans-serif;
-        color: white
-    }
-    .soustitre{
-        font-size: 120%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Roboto Condensed', sans-serif;
-        padding-top: -10px;
-        color: white
-    }
-    .paragraphe{
-        font-size: 70%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Roboto Condensed', sans-serif;
-        padding-top: -10px;
-        color: white
-    }
-    .para{
-        font-size: 20%;
-        font-weight: normal;
-        text-align: center;
-        padding-top: -10px;
-        color: white
-    }
-    .banniere{
-        position: relative;
-        
-    }
+@media only screen and (max-width:1200px) {
+    @import url("mediapetit.css");
+}
+@media only screen and (max-height:1200px){
+    @import url("mediapetit.css");
 }
 #cuberouge1{
     background-color: rgba(255,0,0,.5);
