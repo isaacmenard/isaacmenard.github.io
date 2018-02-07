@@ -4,6 +4,7 @@
   "description": "Page perso",
   "main": "exp.js",
   "scripts": {
+    "start":"node exp.js",
     "test": ""
   },
   "author": "",
