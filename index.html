@@ -1,308 +1,295 @@
 <html>
-    <head>
-        <title>bienvenue sur ma page perso</title>
-        <meta charset= "utf-8">
-        
-        <link rel="stylesheet" href="style.css">
-        <script src="https://use.fontawesome.com/9f7c7a6f4f.js"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-		<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
-		<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+    <title>bienvenue sur ma page perso</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/9f7c7a6f4f.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+
+
+</head>
+
+<body>
     
+    <div class="banniere">
+        <nav>
+            <div id="cubebleu1"></div>
+            <div class="cubebleu2"></div>
+            <div id="cubevert1"></div>
+            <div class="cubevert2"></div>
+            <div id="cubeorange1"></div>
+            <div class="cubeorange2"></div>
+            <div id="cuberouge1"></div>
+            <script>
+                
+                setInterval(function () {
+                    var nombrea = Math.floor(Math.random() * 8 + 1);
+                    var elmt = document.getElementById("cuberouge1");
+                    var larg = (document.body.clientWidth) / 15;
+                    var left = (3 / 9) + 28;
+                    elmt.style.width = larg + "px";
+                    elmt.style.height = larg + "px";
+                    if (nombrea == 1) {
+                        elmt.style.top = "10%";
+                        elmt.style.left = "10%";
+
+                    }
+                    if (nombrea == 2) {
+                        elmt.style.top = "10%";
+                        elmt.style.left = left + "%";
+
+                    }
+                    if (nombrea == 3) {
+                        elmt.style.top = "76%";
+                        elmt.style.left = left + "%";
+
+                    }
+                    if (nombrea == 4) {
+                        elmt.style.top = "76%";
+                        elmt.style.left = "10%";
+
+                    }
+                    if (nombrea == 5) {
+                        elmt.style.top = "10%";
+                        elmt.style.left = "85%";
+
+                    }
+                    if (nombrea == 6) {
+                        elmt.style.top = "10%";
+                        elmt.style.left = "65%";
+
+                    }
+                    if (nombrea == 7) {
+                        elmt.style.top = "76%";
+                        elmt.style.left = "65%";
+
+                    }
+                    if (nombrea == 8) {
+                        elmt.style.top = "76%";
+                        elmt.style.left = "85%";
+
+                    }
 
 
-    </head>
-	<body>
-        <div class="banniere">
-                <nav>
-                        <div id="cubebleu1"></div>
-                        <div class="cubebleu2"></div>
-                        <div id="cubevert1"></div>
-                        <div class="cubevert2"></div>
-                        <div id="cubeorange1"></div>
-                        <div class="cubeorange2"></div>
-                        <div id="cuberouge1"></div>
-                        <script>
-           setInterval( function(){
-            var nombrea = Math.floor(Math.random() * 8 + 1);
-            var elmt = document.getElementById("cuberouge1");
-            var larg = (document.body.clientWidth) / 15;
-            var left = (3/9)+28;
-            elmt.style.width = larg + "px";
-             elmt.style.height = larg + "px";
-             if (nombrea == 1){
-                elmt.style.top = "10%";
-                elmt.style.left = "10%";
+                }, 500)
+            </script>
+            <script>
+                setInterval(function () {
+                    var nombrea = Math.floor(Math.random() * 8 + 1);
+                    var larg = (document.body.clientWidth) / 15;
+                    var left = (3 / 9) + 28;
 
-            }
-            if (nombrea == 2){
-                elmt.style.top = "10%";
-                elmt.style.left = left + "%";
+                    var elmt = document.getElementById("cubevert1");
+                    elmt.style.width = larg + "px";
+                    elmt.style.height = larg + "px";
+                    if (nombrea == 1) {
+                        elmt.style.top = "10%";
+                        elmt.style.left = "10%";
 
-            }
-            if (nombrea == 3){
-                elmt.style.top = "76%";
-                elmt.style.left = left + "%";
+                    }
+                    if (nombrea == 2) {
+                        elmt.style.top = "10%";
+                        elmt.style.left = left + "%";
 
-            }
-            if (nombrea == 4){
-                elmt.style.top = "76%";
-                elmt.style.left = "10%";
+                    }
+                    if (nombrea == 3) {
+                        elmt.style.top = "76%";
+                        elmt.style.left = left + "%";
 
-            }
-            if (nombrea == 5){
-                elmt.style.top = "10%";
-                elmt.style.left = "85%";
+                    }
+                    if (nombrea == 4) {
+                        elmt.style.top = "76%";
+                        elmt.style.left = "10%";
 
-            }
-            if (nombrea == 6){
-                elmt.style.top = "10%";
-                elmt.style.left = "65%";
+                    }
+                    if (nombrea == 5) {
+                        elmt.style.top = "10%";
+                        elmt.style.left = "85%";
 
-            }
-            if (nombrea == 7){
-                elmt.style.top = "76%";
-                elmt.style.left = "65%";
+                    }
+                    if (nombrea == 6) {
+                        elmt.style.top = "10%";
+                        elmt.style.left = "65%";
 
-            }
-            if (nombrea == 8){
-                elmt.style.top = "76%";
-                elmt.style.left = "85%";
+                    }
+                    if (nombrea == 7) {
+                        elmt.style.top = "76%";
+                        elmt.style.left = "65%";
 
-            }
-        
-        
-        }, 500)
-            
-        
-       
-         
-        </script>
-        <script>
-            setInterval( function(){
-             var nombrea = Math.floor(Math.random() * 8 + 1);
-             var larg = (document.body.clientWidth) / 15;
-             var left = (3/9)+28;
-            
-             var elmt = document.getElementById("cubevert1");
-             elmt.style.width = larg + "px";
-             elmt.style.height = larg + "px";
-             if (nombrea == 1){
-                elmt.style.top = "10%";
-                elmt.style.left = "10%";
+                    }
+                    if (nombrea == 8) {
+                        elmt.style.top = "76%";
+                        elmt.style.left = "85%";
 
-            }
-            if (nombrea == 2){
-                elmt.style.top = "10%";
-                elmt.style.left = left + "%";
+                    }
 
-            }
-            if (nombrea == 3){
-                elmt.style.top = "76%";
-                elmt.style.left = left + "%";
 
-            }
-            if (nombrea == 4){
-                elmt.style.top = "76%";
-                elmt.style.left = "10%";
+                }, 500)
+            </script>
+            <script>
+                setInterval(function () {
+                    var nombrea = Math.floor(Math.random() * 8 + 1);
+                    var larg = (document.body.clientWidth) / 15;
+                    var left = (3 / 9) + 28;
+                    var elmt = document.getElementById("cubebleu1");
+                    elmt.style.width = larg + "px";
+                    elmt.style.height = larg + "px";
+                    if (nombrea == 1) {
+                        elmt.style.top = "10%";
+                        elmt.style.left = "10%";
 
-            }
-            if (nombrea == 5){
-                elmt.style.top = "10%";
-                elmt.style.left = "85%";
+                    }
+                    if (nombrea == 2) {
+                        elmt.style.top = "10%";
+                        elmt.style.left = left + "%";
 
-            }
-            if (nombrea == 6){
-                elmt.style.top = "10%";
-                elmt.style.left = "65%";
+                    }
+                    if (nombrea == 3) {
+                        elmt.style.top = "76%"
+                        elmt.style.left = left + "%";
 
-            }
-            if (nombrea == 7){
-                elmt.style.top = "76%";
-                elmt.style.left = "65%";
+                    }
+                    if (nombrea == 4) {
+                        elmt.style.top = "76%";
+                        elmt.style.left = "10%";
 
-            }
-            if (nombrea == 8){
-                elmt.style.top = "76%";
-                elmt.style.left = "85%";
+                    }
+                    if (nombrea == 5) {
+                        elmt.style.top = "10%";
+                        elmt.style.left = "85%";
 
-            }
-        
-        
-        }, 500)
-            
-        
-       
-         </script>
-         <script>
-            setInterval( function(){
-             var nombrea = Math.floor(Math.random() * 8 + 1);
-             var larg = (document.body.clientWidth) / 15;
-             var left = (3/9)+28;
-             var elmt = document.getElementById("cubebleu1");
-             elmt.style.width = larg + "px";
-             elmt.style.height = larg + "px";
-             if (nombrea == 1){
-                elmt.style.top = "10%";
-                elmt.style.left = "10%";
+                    }
+                    if (nombrea == 6) {
+                        elmt.style.top = "10%";
+                        elmt.style.left = "65%";
 
-            }
-            if (nombrea == 2){
-                elmt.style.top = "10%";
-                elmt.style.left = left + "%";
+                    }
+                    if (nombrea == 7) {
+                        elmt.style.top = "76%";
+                        elmt.style.left = "65%";
 
-            }
-            if (nombrea == 3){
-                elmt.style.top = "76%"
-                elmt.style.left = left + "%";
+                    }
+                    if (nombrea == 8) {
+                        elmt.style.top = "76%";
+                        elmt.style.left = "85%";
 
-            }
-            if (nombrea == 4){
-                elmt.style.top = "76%";
-                elmt.style.left = "10%";
+                    }
 
-            }
-            if (nombrea == 5){
-                elmt.style.top = "10%";
-                elmt.style.left = "85%";
 
-            }
-            if (nombrea == 6){
-                elmt.style.top = "10%";
-                elmt.style.left = "65%";
+                }, 500)
+            </script>
+            <script>
+                setInterval(function () {
+                    var nombrea = Math.floor(Math.random() * 8 + 1);
+                    var elmt = document.getElementById("cubeorange1");
+                    var larg = (document.body.clientWidth) / 15;
+                    var left = (3 / 9) + 28;
+                    elmt.style.width = larg + "px";
+                    elmt.style.height = larg + "px";
+                    if (nombrea == 1) {
+                        elmt.style.top = "10%";
+                        elmt.style.left = "10%";
 
-            }
-            if (nombrea == 7){
-                elmt.style.top = "76%";
-                elmt.style.left = "65%";
+                    }
+                    if (nombrea == 2) {
+                        elmt.style.top = "10%";
+                        elmt.style.left = left + "%";
 
-            }
-            if (nombrea == 8){
-                elmt.style.top = "76%";
-                elmt.style.left = "85%";
+                    }
+                    if (nombrea == 3) {
+                        elmt.style.top = "76%";
+                        elmt.style.left = left + "%";
 
-            }
-        
-        
-        }, 500)
-            
-        
-       
-         </script>
-          <script>
-            setInterval( function(){
-             var nombrea = Math.floor(Math.random() * 8 + 1);
-             var elmt = document.getElementById("cubeorange1");
-             var larg = (document.body.clientWidth) / 15;
-             var left = (3/9)+28;
-             elmt.style.width = larg + "px";
-             elmt.style.height = larg + "px";
-             if (nombrea == 1){
-                elmt.style.top = "10%";
-                elmt.style.left = "10%";
+                    }
+                    if (nombrea == 4) {
+                        elmt.style.top = "76%";
+                        elmt.style.left = "10%";
 
-            }
-            if (nombrea == 2){
-                elmt.style.top = "10%";
-                elmt.style.left = left + "%";
+                    }
+                    if (nombrea == 5) {
+                        elmt.style.top = "10%";
+                        elmt.style.left = "85%";
 
-            }
-            if (nombrea == 3){
-                elmt.style.top = "76%";
-                elmt.style.left = left + "%";
+                    }
+                    if (nombrea == 6) {
+                        elmt.style.top = "10%";
+                        elmt.style.left = "65%";
 
-            }
-            if (nombrea == 4){
-                elmt.style.top = "76%";
-                elmt.style.left = "10%";
+                    }
+                    if (nombrea == 7) {
+                        elmt.style.top = "76%";
+                        elmt.style.left = "65%";
 
-            }
-            if (nombrea == 5){
-                elmt.style.top = "10%";
-                elmt.style.left = "85%";
+                    }
+                    if (nombrea == 8) {
+                        elmt.style.top = "76%";
+                        elmt.style.left = "85%";
 
-            }
-            if (nombrea == 6){
-                elmt.style.top = "10%";
-                elmt.style.left = "65%";
+                    }
 
-            }
-            if (nombrea == 7){
-                elmt.style.top = "76%";
-                elmt.style.left = "65%";
 
-            }
-            if (nombrea == 8){
-                elmt.style.top = "76%";
-                elmt.style.left = "85%";
+                }, 500)
+            </script>
 
-            }
-        
-        
-        }, 500)
-            
-        
-           
-            
-         </script>
-                        
 
-                        <div class="cuberouge2"></div>
-                    </nav>
-            <header>
+            <div class="cuberouge2"></div>
+        </nav>
+        <header>
             <div class="tete">
+                <h1 class="Titre">Isaac</br>MENARD</h1>
+                <i class="fas fa-user-secret"></i>
+                <h2 class="soustitre">Jeune dévelopeur </h2>
+                <p class="paragraphe">
+                    Salut ! je m'appelle Isaac MENARD</br>et je te demande de lire le texte présent sur cette page
 
-            
-                
+                    </br>Tu peux aller voir ma ancienne chaine YouTube
+                    <a href="https://www.youtube.com/channel/UCOIeqg3VM2B53eiiij62L_Q?view_as=subscriber">ici</a>
+                    </br>Tu peux aller voir mon compte Instagram
+                    <a href="https://instagram.com/download/?r=4094734789">ici</a>
+                    </br>Pense à me suivre sur
+                    <a href="https://github.com/isaacmenard">GitHub</a>
+                    </br>Merci à toi pour avoir lu le premier paragraphe !
+                </p>
+                <p class="paragraphe">
+                    Donc maintenant tu peux aller voir mon site web</br>Je place le lien de mon site
+                    <a href="/moi">ici</a>
+                    </br>Si tu lis ce texte c'est sûrement que tu n'es pas aller voir ce site alors vas-y </br>mais qu'est-ce
+                    que tu attend ?
 
-                    
-                <h1 class="Titre">
-                    
-                        
-                    
-                    
-                 Isaac</br>MENARD
-                
-            </h1>
-            <i class="fas fa-user-secret"></i>
-            <h2  class="soustitre">
-                    Jeune dévelopeur           
+                </p>
+                <p class="paragraphe" id="age">
 
-            </h2>
-            <p class="paragraphe">
-                Salut ! je m'appelle Isaac MENARD</br>et je te demande de lire le texte présent sur cette page
-             
-                </br>Tu peux aller voir ma ancienne chaine YouTube <a href="https://www.youtube.com/channel/UCOIeqg3VM2B53eiiij62L_Q?view_as=subscriber">ici</a></br>Tu peux aller voir mon compte Instagram <a href="https://instagram.com/download/?r=4094734789">ici</a>
-                </br>Pense à me suivre sur <a href="https://github.com/isaacmenard">GitHub</a></br>Merci à toi pour avoir lu le premier paragraphe !
-            </p>
-            <p class="paragraphe">
-                Donc maintenant tu peux aller voir mon site web</br>Je place le lien de mon site <a href="page.html">ici</a>
-                </br>Si tu lis ce texte c'est sûrement que tu n'es pas aller voir ce site alors vas-y </br>mais qu'est-ce que tu attend ? 
-                  
-            </p>
-            <p class="paragraphe" id="age">
-                
 
-                </p> 
-            <p class="para">
-                
-            </p>
-            
-        </div>
-        </header>  
-      
+                </p>
+                <p class="para">
+
+                </p>
+
+            </div>
+        </header>
+
     </div>
-        <!-- Optional JavaScript -->
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    </body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

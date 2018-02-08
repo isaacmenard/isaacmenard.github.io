@@ -4,12 +4,15 @@
   "description": "Page perso",
   "main": "exp.js",
   "scripts": {
-    "start":"node exp.js",
+    "start": "nodemon exp.js",
     "test": ""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.12"
   }
 }
