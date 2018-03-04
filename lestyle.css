@@ -160,8 +160,8 @@ label{
 	position: relative;
 	width: 100%;
 	height: 40%;
-	
-	background: url(alex-perez-544954.jpg);
+	overflow : hidden;
+	background: url(public/alex-perez-544954.jpg);
 	background-size: 100%;
 	border: 3px solid #FFFFFF;
 	box-sizing: border-box;
@@ -184,20 +184,21 @@ label{
 }
 .proj2{
 	width: 100%;
-	height: 40%;
+	min-height: 40%;
 	background-size: 100%;
 	background-position: end;
-	background: url(andrey-grinkevich-361141.jpg);
+	background: url(public/andrey-grinkevich-361141.jpg);
 	background-size: 100%;
 	border: 4px solid #FFFFFF;
 	box-sizing: border-box;	
+	
 }
 .jsp1{
 	width: 100%;
-	height: 40%;
+	min-height: 40%;
 	background-size: 100%;
 	background-position: end;
-	background: url(joanna-kosinska-340749.jpg);
+	background: url(public/joanna-kosinska-340749.jpg);
 	background-size: 100%;
 	border: 4px solid #FFFFFF;
 	box-sizing: border-box;
@@ -205,37 +206,41 @@ label{
 }
 .contac{
 	width: 100%;
-	height: 40%;
+	min-height: 40%;
 
 	background-position: end;
-	background: url(sacha-styles-549093.jpg);
+	background: url(public/sacha-styles-549093.jpg);
 	border: 4px solid #FFFFFF;
 	background-size: 100%;
 	box-sizing: border-box;
 }
 .gauche1{
 	width: 40%;
-	height: 40%;
+	height: 78%;
 	padding: 2%;
-	
+	float:left;
+	box-sizing: border-box;
 	
 }
+
 .droite1{
 	width: 40%;
-	height: 40%;
+	height: 100%;
 	padding: 2%;
 	position: relative;
-	left: 60%;
+	float:right;
+	box-sizing: border-box;
 	 
 }
-.nmoi1{
-	width: 50%;
-	height: 1000%;
-	background-position: end;
-	background: url(IMG_0819.png);
+.image{
 	background-size: 100%;
-	background-repeat: no-repeat;
+	background-position: end;
+	background-image: url(public/IMG_0819.png);
+	width: 30%
+	height: 100%;
 }
+
+
 
 
 
