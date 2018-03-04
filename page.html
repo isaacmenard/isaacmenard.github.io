@@ -1,13 +1,16 @@
 <html>
     <head>
         <title>www.menardisaac.fr</title>
-        <meta charset= "utf-8">
+		<meta charset= "utf-8">
+		
 		<link rel="stylesheet" href="lestyle.css">
 		<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
 		<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet"> 
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet"> 
+		
 	</head>
 	<body>
 		
@@ -23,13 +26,13 @@
 			<div class="table">
 				<ul>
 					<li class="exp">
-						<a href="/experience">Les jeunes sapeurs pompiers</a>
+						<a href="#jsp">Les jeunes sapeurs pompiers</a>
 					</li>
 					<li class="loi">
-						<a href="/projets">mes projets</a>
+						<a href="#projet">mes projets</a>
 					</li>
 					<li class="cont">
-						<a href="/contacte-moi">Contactez-moi !</a>
+						<a href="#contact">Contactez-moi !</a>
 					</li>
 					
 					
@@ -39,29 +42,90 @@
 		</nav>
 		<div class="p1">
 			<div class="gauche1">
-				<p class="texte2">Bonjour je suis isaac un jeune dévelopeur qui programme en HTML en CSS et en JS. J’ai créé ce site pour présenter ce que je fais à vous ! enfin voilà je vous laisse lire la suite du texte de mon site<div class="moi1"></div></p>
+				<p class="texte2">Bonjour je suis Isaac un jeune sapeur pompier et jeune développeur qui programme en Python Scratch HTML/CSS et en JavaScript. J’ai créé ce site pour vous présenter ce que je fais ! Bonne visite !<div class="moi1"></div></p>
 			</div>
 			<div class="droite1">
-				<div class="image"></div>
+				<img class ="image4" src="public/IMG_0819.png">
 			</div>
 		</div>
-		<div class="proj">
+		
+
+
+		<div class="proj"  id="projet">
 			<p class="texte">Mes projets</p>
 		</div>
-		<div class="proj2">
+		
+		<div id="proj2">
+			<div class="gauche3">
+				
+					<h2 class="supere">Super simon</h2>
+					<img class="imagess" src="Sans titre copie.png">
+				
+			</div>
+			<div class="droite3">
+				<h2>Super simon</h2>
+				<p>Le super simon est un jeu de mémoire ou le but est de se souvenir d'une combinaison qui devient de plus en plus complexe</p>
+				<a href="niv1.html"><button type="button" class="btn btn-danger">essayer !</button><br></a>
+			</div>
+				
+		</div>
+		
 
-		</div>
-		<div class="proj">
-			<p class="texte">Les jeunes sapeurs pompiers</p>
-		</div>
-		<div class="jsp1">
 
+		<div class="proj"  id="jsp">
+			<p class="texte">Les jeunes sapeurs pompiers (JSP)</p>
 		</div>
-		<div class="proj">
-			<p class="texte">Contactez-moi !</p>
+		
+		<div id="jsp1">
+			<div class="gauche2">
+				<div class="bando">
+					<p class="texte2"><br>Je suis depuis 2 ans JSP. L'option jeune sapeur pompier est une activité complémentaire qui consiste à faire une formation de 3 ans dans le but de devenir pompier. Durant cette formation j'ai appris à sauver des personnes de malaise, blessé... grâce au PSC1 que j'ai obtenu (Certificat de prévention et secourisme premier niveau). J'ai aussi appris à utiliser une lance, maitriser des crocodiles ou des serpents et plein d'autres compétences géniales !			<br>.</p>
+				</div>
+			</div>
+			<div class="droite2">
+					<div class="bando2">
+						<p class="texte2">
+								<br>Je fais l'option jeune sapeur pompier depuis l'âge de 13 ans, et j'adore ! nous devons faire de la théorie avant les cours de jeunes sapeurs pompiers et après, ils nous font pratiquer . Il y a aussi des événements sportifs comme des cross ou des raids .<br><br> <a href="https://www.interieur.gouv.fr/Le-ministere/Securite-civile/Documentation-technique/Les-sapeurs-pompiers/Le-volontariat/Devenir-jeune-sapeur-pompier"><button type="button" class="btn btn-danger">en savoir plus ici !</button><br>.</a>
+						</p>
+					</div>
+					
+				
+			</div>
 		</div>
-		<div class="contac">
 
+		<div class="proj" id="contact">
+			<p class="texte" >Contactez-moi !</p>
+		</div>
+		<div id="contac">
+				<form>
+						<br>
+						<label> Votre nom :  </label>
+						<input name="name" placeholder="Type Here">
+						<br>
+						<br>
+						<label> Votre Email :</label>
+						<input name="email" type="email" placeholder="Type Here">
+						<br>
+						<br>	
+						<label> Votre Message :</label>
+						<textarea name="message" placeholder="Type Here"></textarea>
+						<br>
+						<br>	
+						<input id="submit" name="submit" type="submit" value="envoyer">
+						<br>
+
+							
+					</form>
+					
+		<script>var service_id = 	'my_mandrill';
+				var template_id = 'feedback';
+				var template_params = {
+				name: 'John',
+				reply_email: 'menardisaac@gmail.com',
+				message: 'This is awesome!'
+				};
+				
+				emailjs.send(service_id,template_id,template_params);"></script>
 		</div>
 		<footer>
 			<p> - Tous droits réservés à Menard Isaac</br>
