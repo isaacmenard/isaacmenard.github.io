@@ -155,6 +155,12 @@ label{
 	font-family: 'Anton', sans-serif;
 	color : white;
 }
+.soustexte{
+	text-align: center;
+	font-family: 'Anton', sans-serif;
+	color : white;
+	font-size: 0.8em;
+}
 /* alex-perez-544954 */
 .p1{
 	position: relative;
@@ -208,6 +214,13 @@ label{
 	border: 3px solid #FFFFFF;
 	box-sizing: border-box;	
 	
+}
+.sousbando{
+	width: 100%;
+	background-color: rgb(31, 138, 17);
+	border: 4px;
+	border: solid;
+	border-color: #ffffff;
 }
 
 .imagess{
