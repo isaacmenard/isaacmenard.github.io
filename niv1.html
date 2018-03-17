@@ -1,70 +1,73 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Super Simon</title>
-        <meta charset='utf-8'>
-		<link rel="stylesheet" href="public/niv1.css">
-		<link rel="javascript" href="page.js">
-		<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet"> 
-		
-	</head>
-	<body>
-		<header>
-			<div id="super">
+
+<head>
+	<title>Super Simon</title>
+	<meta charset='utf-8'>
+	<link rel="stylesheet" href="public/niv1.css">
+	<link rel="javascript" href="page.js">
+	<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+
+</head>
+
+<body>
+	<header>
+		<div id="super">
 			<h1 id="super">super simon !</h1>
-			</div>
-			<p id ="dep"></p>
-			<p id="compteurr">0</p>
-			<p id="compteurr2">1000</p>
-			<p id="depart">1</p>
-			<p id="depart3">0</p>
-			<p id="elements2s">1</p>
-			<p id="nombreaa">0</p>
-			<p id="vare"></p>
-			<p id="codea"></p>
-			<P id="color">0</p>
-			<p id="listea"></p>
-			<p id="listeb"></p>
-			<p id="teste11">01</p>
-			<script>document.getElementById('depart').innerHTML = '0';</script>
-			<script>document.getElementById('dep').style.visibility='hidden';
-			    document.getElementById('compteurr').style.visibility='hidden';
-				document.getElementById('compteurr2').style.visibility='hidden';
-				document.getElementById('depart3').style.visibility='hidden';
-				document.getElementById('elements2s').style.visibility='hidden';
-				document.getElementById('nombreaa').style.visibility='hidden';
-				document.getElementById('vare').style.visibility='hidden';
-				document.getElementById('codea').style.visibility='hidden';
-				document.getElementById('color').style.visibility='hidden';
-				document.getElementById('listea').style.visibility='hidden';
-				document.getElementById('listeb').style.visibility='hidden';
-				document.getElementById('teste11').style.visibility='hidden';
-				document.getElementById('depart').style.visibility='hidden';
-			
-			
-			</script>
-		</header>
-		<article>
-			<div class="scoreboard">
-				<h2 id="score">score :</h2>
-				
-				<h2 id="scores">0</h2>
-			</div>
-			<div class="niveaux">
-				<h2 id="score">niveaux :</h2>
-				<a href="niv1.html">
-					<div class="niveau1" >
-						<h2 id="scored1">1</h2>
-					</div>
-				</a>
-				<a href="nv2.html">
-					<div class="niveau2">
-						<h2 id="scored2">2</h2>
-					</div>
-				</a>
-			</div>
+		</div>
+		<p id="dep"></p>
+		<p id="compteurr">0</p>
+		<p id="compteurr2">1000</p>
+		<p id="depart">1</p>
+		<p id="depart3">0</p>
+		<p id="elements2s">1</p>
+		<p id="nombreaa">0</p>
+		<p id="vare"></p>
+		<p id="codea"></p>
+		<P id="color">0</p>
+		<p id="listea"></p>
+		<p id="listeb"></p>
+		<p id="teste11">01</p>
+		<script>
+			document.getElementById('depart').innerHTML = '0';
+		</script>
+		<script>
+			document.getElementById('dep').style.visibility = 'hidden';
+			document.getElementById('compteurr').style.visibility = 'hidden';
+			document.getElementById('compteurr2').style.visibility = 'hidden';
+			document.getElementById('depart3').style.visibility = 'hidden';
+			document.getElementById('elements2s').style.visibility = 'hidden';
+			document.getElementById('nombreaa').style.visibility = 'hidden';
+			document.getElementById('vare').style.visibility = 'hidden';
+			document.getElementById('codea').style.visibility = 'hidden';
+			document.getElementById('color').style.visibility = 'hidden';
+			document.getElementById('listea').style.visibility = 'hidden';
+			document.getElementById('listeb').style.visibility = 'hidden';
+			document.getElementById('teste11').style.visibility = 'hidden';
+			document.getElementById('depart').style.visibility = 'hidden';
+		</script>
+	</header>
+	<article>
+		<div class="scoreboard">
+			<h2 id="score">score :</h2>
+
+			<h2 id="scores">0</h2>
+		</div>
+		<div class="niveaux">
+			<h2 id="score">niveaux :</h2>
+			<a href="niv1.html">
+				<div class="niveau1">
+					<h2 id="scored1">1</h2>
+				</div>
+			</a>
+			<a href="nv2.html">
+				<div class="niveau2">
+					<h2 id="scored2">2</h2>
+				</div>
+			</a>
+		</div>
 		<nav>
-				
+
 			<div id="o" onclick="javascript:if (document.getElementById('depart').innerHTML == 1){
 											document.getElementById('clic').setAttribute('src', 'clic.mp3');
 											document.getElementById('clic').play();
@@ -78,11 +81,11 @@
 											else{document.getElementById('vare').innerHTML = 'a';
 											document.getElementById('dep').innerHTML = '1'
 											}
-												};">		
-											
+												};">
+
 			</div>
-			
-			
+
+
 			<div id="e" onclick="javascript:if (document.getElementById('depart').innerHTML == 1){
 											document.getElementById('clic').setAttribute('src', 'clic.mp3');
 											document.getElementById('clic').play();
@@ -96,9 +99,9 @@
 											else{document.getElementById('vare').innerHTML = 'b';
 											document.getElementById('dep').innerHTML = '1';}
 												};">
-											
+
 			</div>
-			
+
 			<div id="n" onclick="javascript:if (document.getElementById('depart').innerHTML == 1){
 											document.getElementById('clic').setAttribute('src', 'clic.mp3');
 											document.getElementById('clic').play();
@@ -114,9 +117,9 @@
 											document.getElementById('dep').innerHTML = '1'
 											}
 											};">
-			
+
 			</div>
-			
+
 			<div id="s" onclick="javascript:if (document.getElementById('depart').innerHTML == 1){
 											document.getElementById('clic').setAttribute('src', 'clic.mp3');
 											document.getElementById('clic').play();
@@ -132,8 +135,8 @@
 											
 											};">
 			</div>
-			<audio id="clic" ></audio>
-			
+			<audio id="clic"></audio>
+
 			<div id="start" onclick="javascript: 
 													document.getElementById('player').setAttribute('src', 'perdu.mp3');
 														
@@ -370,11 +373,15 @@
 													var cmr = str.charAt(elements2 - 2);
 													document.getElementById('teste11').innerHTML = cmr;
 													
-													"><audio id="player" ></audio><audio id="gg" ></audio><audio id="choix" ></audio>													
-				<h2 id='starte'>START</h2>			
+													">
+				<audio id="player"></audio>
+				<audio id="gg"></audio>
+				<audio id="choix"></audio>
+				<h2 id='starte'>START</h2>
 			</div>
-			
-	
+
+
 		</nav>
-	</body>	
+</body>
+
 </html>
