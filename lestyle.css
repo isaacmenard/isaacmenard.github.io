@@ -36,6 +36,7 @@ h2{
 	padding-top: 30px;
 	padding-block-end: 30px;
 }
+
 .btexteras{
 	
 	text-align: left;
@@ -156,6 +157,12 @@ label{
 	font-family: 'Anton', sans-serif;
 	color : white;
 }
+.texte4{
+	text-align: center;
+	font-family: 'Anton', sans-serif;
+	color : rgb(49, 49, 49);
+}
+
 .soustexte{
 	text-align: center;
 	font-family: 'Anton', sans-serif;
@@ -168,7 +175,7 @@ label{
 	width: 100%;
 	min-height: 40%;
 	overflow : hidden;
-	background: url(alex-perez-544954.jpg);
+	background: url(alex-perez-5449541.jpg);
 	background-size: 100%;
 	border: 3px solid #FFFFFF;
 	box-sizing: border-box;
@@ -179,7 +186,7 @@ label{
 	min-height: 40%;
 	overflow : hidden;
 	background-position: end;
-	background: url(joanna-kosinska-340749.jpg);
+	background: url(18880246_1547592331978684_2940538478792470787_o1.jpg);
 	background-size: 100%;
 	border: 3px solid #FFFFFF;
 	box-sizing: border-box;
@@ -204,7 +211,7 @@ label{
 	width: 100%;
 	min-height: 40%;
 	overflow : hidden;
-	background: url(thought-catalog-214785-unsplash.jpg);
+	background: url(thought-catalog-214785-unsplash1.jpg);
 	background-size: 100%;
 	border: 3px solid #FFFFFF;
 	box-sizing: border-box;
@@ -235,7 +242,7 @@ label{
 	min-height: 40%;
 	background-position: end;
 	overflow : hidden;
-	background: url(andrey-grinkevich-361141.jpg);
+	background: url(andrey-grinkevich-3611411.jpg);
 	background-size: 100%;
 	border: 3px solid #FFFFFF;
 	box-sizing: border-box;	
@@ -261,140 +268,16 @@ label{
 form{
 	color:white;
 }
-input{
-	position: absolute;
-	width: 80%;
-	height: 5%;
-	left: 8%;
-	border : solid;
-	border: 0.2% ;
-	border-color: green;
-	background-color: gainsboro
-	border-radius: 3px 3px 5px;
-}
-textarea{
-	width: 80%;
-	height: 10%;
-	left: 8%;
-	border : solid;
-	border: 0.2% ;
-	border-color: green;
-	background-color: gainsboro
-	border-radius: 3px 3px 5px;
-}
-label{
-	margin-left: 1%;
-}
-#submit{
-	width: 20%;
-	margin-left: 5%;
-}
-
-#contac{
-	width: 100%;
-	min-height: 40%;
-	background-position: end;
-	background: url(sacha-styles-549093.jpg);
-	border: 3px solid #FFFFFF;
-	background-size: 100%;
-	box-sizing: border-box;
-}
-.gauche1{
-	width: 40%;
-	min-height: 10%;
-	padding: 2%;
-	float:left;
-	box-sizing: border-box;
-	
-}
-.gauche3{
-	width: 40%;
-	min-height: 10%;
-	padding: 2%;
-	float:left;
-	box-sizing: border-box;
+.dropdown-item{
+	color:#464646;
+	font-family: anton;
+	font-style: bold;
+	font-size: 0.6em;
+	padding: 2% 0px;
 	
 }
 
-.droite1{
-	width: 40%;
-	min-height: 10%;
-	padding: 2%;
-	position: relative;
-	float:right;
-	box-sizing: border-box;
-	 
-}
-.droite2{
-	width: 40%;
-	min-height: 10%;
-	padding: 2%;
-	position: relative;
-	float:right;
-	box-sizing: border-box;
-	 
-}
-.droite3{
-	width: 40%;
-	min-height: 10%;
-	padding: 2%;
-	position: relative;
-	float:right;
-	box-sizing: border-box;
-	 
-}
-.image{
-	background-size: 100%;
-	background-position: end;
-	background-image: url(public/IMG_0819.png);
-	width: 30%
-	height: 100%;
-}
-.gauche2{
-	width: 40%;
-	min-height: 10%;
-	padding: 2%;
-	float:left;
-	box-sizing: border-box;
-	
-}
-button{
-	display: inline-block;
-	font-weight: 400;
-	text-align: center;
-	white-space: nowrap;
-	vertical-align: middle;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	border: 1px solid transparent;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-	color: #fff;
-	color: #fff;
-	background-color: #007bff;
-	border-color: #007bff;
-	padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-button:hover{
-	background-color: #3e1eb4;
-	border-color: #2d0992;
-}
-.bando{
-	background-color: rgba(0, 0, 0, 0.5);
-	border-radius: 3px 3px 5px;
-}
-.bando2{
-	background-color: rgba(0, 0, 0, 0.5);
-	border-radius: 3px 3px 5px;
-}
+
 
 
 
