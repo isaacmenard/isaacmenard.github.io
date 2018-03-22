@@ -1,0 +1,252 @@
+<html>
+
+<head>
+	<title>www.menardisaac.fr</title>
+	<meta charset="utf-8">
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery.anythingslider.js"></script>
+	<link rel="stylesheet" href="anythingslider.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="lestyle.css">
+	<link rel="stylesheet" href="lestyle2.css">
+	<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+	<div class="ban">
+		<h1 class="texte">Isaac
+			<br>MENARD</h1>
+	</div>
+
+
+
+	<nav>
+
+		<div class="table">
+			<ul>
+				<li class="exp">
+					<a href="#jsp">Les jeunes sapeurs pompiers</a>
+				</li>
+				<li class="loi">
+					<style>
+						.dropdown {
+							position: relative;
+							display: inline-block;
+						}
+
+						.dropdown-content {
+							display: none;
+							position: absolute;
+							background-color: #f9f9f9;
+							min-width: 160px;
+							box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+							padding: 12px 16px;
+							z-index: 1;
+
+						}
+
+						.dropdown:hover .dropdown-content {
+							display: block;
+
+						}
+					</style>
+
+					<div class="dropdown">
+						<span>
+							<a href="#projet">mes projets</a>
+						</span>
+						<div class="dropdown-content">
+							<div class="dropdown-menu">
+								<a id="superd" class="dropdown-item" href="#supersimon">Super simon</a>
+								<a id="gamed" class="dropdown-item" href="#game">un jeu de société</a>
+								<div class="dropdown-divider"></div>
+								<a id="joyd" class="dropdown-item" href="#joystick">Mon joy-stick</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="cont">
+					<a href="#contact">Contactez-moi !</a>
+				</li>
+
+
+
+			</ul>
+		</div>
+	</nav>
+	<div class="p1">
+		<div class="gauche1">
+			<p class="texte2">Bonjour je suis Isaac un jeune sapeur pompier et jeune développeur qui programme en Python Scratch HTML/CSS et en JavaScript.
+				J’ai créé ce site pour vous présenter ce que je fais ! Bonne visite !
+				<div class="moi1"></div>
+			</p>
+		</div>
+		<div class="droite1">
+			<img class="image4" src="public/IMG_0819.png">
+		</div>
+	</div>
+
+
+
+	<div class="proj" id="projet">
+		<p class="texte">Mes principaux projets</p>
+	</div>
+	<div class="sousbando" id="supersimon">
+		<p class="soustexte">Super Simon</p>
+	</div>
+	<div id="proj2">
+		<div class="gauche3">
+
+			<h2 class="supere">Super simon</h2>
+			<img class="imagess" src="Sans titre copie1.png">
+
+		</div>
+		<div class="droite3">
+			<h2>Super simon</h2>
+			<p>Le super simon est un jeu de mémoire fait en javascript où le but est de se souvenir d'une combinaison qui devient de
+				plus en plus complexe</p>
+			<a href="niv1.html">
+				<button type="button" class="btn btn-danger">essayer !</button>
+				<br>
+			</a>
+		</div>
+
+	</div>
+	<div class="sousbando" id="joy-stick">
+		<p class="soustexte">Mon joy-stick</p>
+	</div>
+	<div class="proj3">
+		<br>
+		<div class="droite5">
+			<p class="texte">le shemat des cables</p>
+			<img class="image5" src="iamge shema copie.jpg">
+			
+		</div>
+		<div class="gauche5">
+			<p class="texte">une photo</p>
+			<img class="image5" src="photo.jpg">
+		</div>
+	</div>
+	<div class="sousbando">
+		<p class="soustexte">un jeu de société</p>
+	</div>
+	<div class="game" id="game">
+		<p class="texte2">Mon jeu de société est cool</p>
+		<div class="w3-container">
+			
+		</div>
+
+		<div class="w3-content" style="max-width:800px">
+			<img class="mySlides" id="slide1" src="photo.jpg" style="width:100%">
+			<img class="mySlides" id="slide2" src="andrey-grinkevich-3611411.jpg" style="width:100%">
+			<img class="mySlides" id="slide3" src="rob-bates-306647-unsplash1.jpg" style="width:100%">
+			<img class="mySlides" id="slide4" src="sacha-styles-5490931.jpg" style="width:100%">
+		</div>
+
+		<div class="w3-center">
+			<div class="w3-section">
+				<button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+				<button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+			</div>
+			<button class="w3-button demo" onclick="currentDiv(1)">1</button>
+			<button class="w3-button demo" onclick="currentDiv(2)">2</button>
+			<button class="w3-button demo" onclick="currentDiv(3)">3</button>
+			<button class="w3-button demo" onclick="currentDiv(4)">4</button>
+
+		</div>
+
+		<script>
+			var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+				showDivs(slideIndex += n);
+			}
+
+			function currentDiv(n) {
+				showDivs(slideIndex = n);
+			}
+
+			function showDivs(n) {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("demo");
+				if (n > x.length) {
+					slideIndex = 1
+				}
+				if (n < 1) {
+					slideIndex = x.length
+				}
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" w3-red", "");
+				}
+				x[slideIndex - 1].style.display = "block";
+				dots[slideIndex - 1].className += " w3-red";
+			}
+		</script>
+	</div>
+	</div>
+
+
+
+
+	<div class="proj" id="jsp">
+		<p class="texte">Les jeunes sapeurs pompiers (JSP)</p>
+	</div>
+
+	<div id="jsp1">
+		<div class="gauche2">
+			<div class="bando">
+				<p class="texte2">
+					<br>L'option jeune sapeur pompier est une activité complémentaire qui consiste à faire une formation de 3 ans dans le but
+					de devenir pompier volontaire ou professionele . Durant cette formation j'ai appris à sauver des personnes de malaise,
+					blessé... grâce au PSC1 que j'ai obtenu (Certificat de prévention et secourisme premier niveau). J'ai aussi appris à
+					utiliser une lance, maitriser des crocodiles ou des serpents et plein d'autres compétences géniales !
+					<br>.</p>
+			</div>
+		</div>
+		<div class="droite2">
+			<div class="bando2">
+				<p class="texte2">
+					<br>Je fais l'option jeune sapeur pompier depuis l'âge de 13 ans, et j'adore ! nous devons faire de la théorie avant les
+					cours de jeunes sapeurs pompiers et après, ils nous font pratiquer . Il y a aussi des événements sportifs comme des
+					cross ou des raids .
+					<br>
+					<br>
+					<a href="https://www.interieur.gouv.fr/Le-ministere/Securite-civile/Documentation-technique/Les-sapeurs-pompiers/Le-volontariat/Devenir-jeune-sapeur-pompier">
+						<button type="button" class="btn btn-danger">en savoir plus ici !</button>
+						<br>.</a>
+				</p>
+			</div>
+
+
+		</div>
+	</div>
+
+	<div class="proj" id="contact">
+		<p class="texte">Contactez-moi !</p>
+	</div>
+	<div id="contac">
+		<p class="texte">Vous pouvez me contacter par mail à cette adresse : <p class="texte" id="url" >menardisaac@gmail.com</p></p>
+	</div>
+	<footer>
+		<p> - Tous droits réservés à Menard Isaac</br>
+
+			Il est strictement interdit de copier et de distribuer le contenu de ce site sans l'accord express de son propriétaire.
+			</br>
+			En continuant votre navigation sur ce site, vous acceptez l'utilisation des cookies.(Même si il n'y en a pas)</p>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Super Simon</title>
+	<meta charset='utf-8'>
+	<link rel="stylesheet" href="public/niv1.css">
+	<link rel="javascript" href="page.js">
+	<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+
+</head>
+
+<body>
+	<header>
+		<div id="super">
+			<h1 id="super">super simon !</h1>
+		</div>
+		<p id="dep"></p>
+		<p id="compteurr">0</p>
+		<p id="compteurr2">1000</p>
+		<p id="depart">1</p>
+		<p id="depart3">0</p>
+		<p id="elements2s">1</p>
+		<p id="nombreaa">0</p>
+		<p id="vare"></p>
+		<p id="codea"></p>
+		<P id="color">0</p>
+		<p id="listea"></p>
+		<p id="listeb"></p>
+		<p id="teste11">01</p>
+		<script>
+			document.getElementById('depart').innerHTML = '0';
+		</script>
+		<script>
+			document.getElementById('dep').style.visibility = 'hidden';
+			document.getElementById('compteurr').style.visibility = 'hidden';
+			document.getElementById('compteurr2').style.visibility = 'hidden';
+			document.getElementById('depart3').style.visibility = 'hidden';
+			document.getElementById('elements2s').style.visibility = 'hidden';
+			document.getElementById('nombreaa').style.visibility = 'hidden';
+			document.getElementById('vare').style.visibility = 'hidden';
+			document.getElementById('codea').style.visibility = 'hidden';
+			document.getElementById('color').style.visibility = 'hidden';
+			document.getElementById('listea').style.visibility = 'hidden';
+			document.getElementById('listeb').style.visibility = 'hidden';
+			document.getElementById('teste11').style.visibility = 'hidden';
+			document.getElementById('depart').style.visibility = 'hidden';
+		</script>
+	</header>
+	<article>
+		<div class="scoreboard">
+			<h2 id="score">score :</h2>
+
+			<h2 id="scores">0</h2>
+		</div>
+		<div class="niveaux">
+			<h2 id="score">niveaux :</h2>
+			<a href="niv1.html">
+				<div class="niveau1">
+					<h2 id="scored1">1</h2>
+				</div>
+			</a>
+			<a href="nv2.html">
+				<div class="niveau2">
+					<h2 id="scored2">2</h2>
+				</div>
+			</a>
+		</div>
+		<nav>
+
+			<div id="o" onclick="javascript:if (document.getElementById('depart').innerHTML == 1){
+											document.getElementById('clic').setAttribute('src', 'clic.mp3');
+											document.getElementById('clic').play();
+											}
+											var depart3 = document.getElementById('depart3').innerHTML;
+											var depart = document.getElementById('depart').innerHTML;
+											var dep = document.getElementById('dep').innerHTML;
+											if (depart3 == 1 ){
+											if (dep == 1){
+											document.getElementById('vare').innerHTML = document.getElementById('vare').innerHTML + 'a'}
+											else{document.getElementById('vare').innerHTML = 'a';
+											document.getElementById('dep').innerHTML = '1'
+											}
+												};">
+
+			</div>
+
+
+			<div id="e" onclick="javascript:if (document.getElementById('depart').innerHTML == 1){
+											document.getElementById('clic').setAttribute('src', 'clic.mp3');
+											document.getElementById('clic').play();
+											}
+											var depart3 = document.getElementById('depart3').innerHTML;
+											var depart = document.getElementById('depart').innerHTML;
+											var dep = document.getElementById('dep').innerHTML;
+											if (depart3 == 1 ){
+											if (dep == 1){
+											document.getElementById('vare').innerHTML = document.getElementById('vare').innerHTML + 'b'}
+											else{document.getElementById('vare').innerHTML = 'b';
+											document.getElementById('dep').innerHTML = '1';}
+												};">
+
+			</div>
+
+			<div id="n" onclick="javascript:if (document.getElementById('depart').innerHTML == 1){
+											document.getElementById('clic').setAttribute('src', 'clic.mp3');
+											document.getElementById('clic').play();
+											}
+											var depart3 = document.getElementById('depart3').innerHTML;
+											var depart = document.getElementById('depart').innerHTML;
+											var depart3 = document.getElementById('depart3').innerHTML;
+											var dep = document.getElementById('dep').innerHTML;
+											if (depart3 == 1 ){
+											if (dep == 1){
+											document.getElementById('vare').innerHTML = document.getElementById('vare').innerHTML + 'c'}
+											else{document.getElementById('vare').innerHTML = 'c';
+											document.getElementById('dep').innerHTML = '1'
+											}
+											};">
+
+			</div>
+
+			<div id="s" onclick="javascript:if (document.getElementById('depart').innerHTML == 1){
+											document.getElementById('clic').setAttribute('src', 'clic.mp3');
+											document.getElementById('clic').play();
+											}
+											var depart3 = document.getElementById('depart3').innerHTML;
+											var depart = document.getElementById('depart').innerHTML;
+											var dep = document.getElementById('dep').innerHTML;
+											if (depart3 == 1 ){
+											if (dep == 1){
+											document.getElementById('vare').innerHTML = document.getElementById('vare').innerHTML + 'd'}
+											else{document.getElementById('vare').innerHTML = 'd';
+											document.getElementById('dep').innerHTML = '1'}
+											
+											};">
+			</div>
+			<audio id="clic"></audio>
+
+			<div id="start" onclick="javascript: 
+													document.getElementById('player').setAttribute('src', 'perdu.mp3');
+														
+													
+													
+													
+													document.getElementById('starte').innerHTML = 'valider';
+													document.getElementById('dep').innerHTML = '0';
+													document.getElementById('depart3').innerHTML = '1';
+													var testee = 1;
+													var codea = 0;
+													var liste_j1 = [] ;	
+													var liste_j2 = [] ;
+													var boucleb = 1;
+													var nombrea = document.getElementById('nombreaa').innerHTML	;
+													var depart = document.getElementById('depart').innerHTML;
+													var depart2 = document.getElementById('depart').innerHTML;
+													function fftime(){
+														 var codea = document.getElementById('codea').innerHTML
+														 alert (codea)
+														 switch(codea) { 
+															
+															case 1 : var emlt = document.getElementById('o');
+																	 break;
+															case 2 : var emlt = document.getElementById('e');
+																	 break;
+															case 3 : var emlt = document.getElementById('n');
+																	 break;
+															case 4 : var emlt = document.getElementById('s');
+																	 break;
+																	 }
+														 elmt.style.border = '0px solid';
+														 
+														 }
+													if (depart2 == 1){
+														var scores = document.getElementById('scores').innerHTML
+														var scores = document.getElementById('scores').innerHTML, number;
+														number = parseInt(scores);
+														var scores = number
+														var scores = scores + 1
+														document.getElementById('scores').innerHTML = scores;
+													}
+													document.getElementById('dep').innerHTML = 'valider';
+													
+													var squaree = document.getElementById('vare').innerHTML;;													
+													
+													var elements2 = document.getElementById('elements2s').innerHTML
+													var elements2 = document.getElementById('elements2s').innerHTML, number;
+													number = parseInt(elements2);
+													var elements2 = number
+													var elements2 = elements2 + 1
+													document.getElementById('elements2s').innerHTML = elements2;
+													var bouclea = 1
+													
+													
+													document.getElementById('teste11').innerHTML = cmr;
+													liste_j1 [elements2] = nombrea
+													liste_j2 [elements2] = squaree
+													
+													document.getElementById('depart').innerHTML = '1';
+													function ftime(){
+														 
+														 elmt.style.border = '0px solid';
+														 
+														 }
+													var nombrea = Math.floor(Math.random() * 4 + 1); 
+													document.getElementById('nombreaa').innerHTML = nombrea;
+													if (nombrea == 1){var nombrea = 'a'}
+													if (nombrea == 2){var nombrea = 'b'}
+													if (nombrea == 3){var nombrea = 'c'}
+													if (nombrea == 4){var nombrea = 'd'}
+													
+													if (depart2 == 0){
+													document.getElementById('choix').setAttribute('src', 'choix.mp3');
+													document.getElementById('choix').play();
+													
+													switch(nombrea) { 
+																	case 'a' :
+																					 var elmt = document.getElementById('o');
+																					 elmt.style.border = '5px solid black';	
+																					 setTimeout(ftime, 1000)
+																					 break;
+																				
+																	case 'b' :
+																					 var elmt = document.getElementById('e');
+																					 elmt.style.border = '5px solid black';
+																					 setTimeout(ftime, 1000)
+																					 break;
+																					
+																	case 'c' :
+																					 var elmt = document.getElementById('n');
+																					 elmt.style.border = '5px solid black';	
+ 																					 setTimeout(ftime, 1000)
+																					 break;
+																					
+																	case 'd' :
+																					 var elmt = document.getElementById('s');
+																					 elmt.style.border = '5px solid black';	
+																					 setTimeout(ftime, 1000)
+																					 break;
+																	
+													}}
+													document.getElementById('compteurr').innerHTML = 0
+													function re(){
+													var elements3 = elements2
+													var compteurr = document.getElementById('compteurr').innerHTML
+													if (depart2 == 1 ){
+													var elements3 = elements2 - 2
+													var truc = 0;
+													var strez = document.getElementById('listea').innerHTML ;													
+													var codea = strez.charAt(compteurr);
+													document.getElementById('codea').innerHTML = codea
+													
+													selection()
+													
+													function selection(){
+													document.getElementById('choix').play();
+														if (codea == 'a'){				function cho(){
+																						 var elmt = document.getElementById('o');
+																						 elmt.style.border = '5px solid black';	
+																						 setTimeout(ftime, 300)
+																						 function ftime(){														 
+																							elmt.style.border = '0px solid';														 
+																						 }
+																						
+																						 var compteurr = document.getElementById('compteurr').innerHTML
+																						 var compteurr = document.getElementById('compteurr').innerHTML, number;
+																						 number = parseInt(compteurr);
+																						 var compteurr = number
+																						 var compteurr = compteurr + 1
+																						 document.getElementById('compteurr').innerHTML = compteurr;
+																						}setTimeout(cho, 300)
+																						
+																						
+																					
+														}
+														if (codea == 'b'){				function cho(){
+																						 var elmt = document.getElementById('e');
+																						 elmt.style.border = '5px solid black';
+																						 setTimeout(ftime, 300)
+																						 function ftime(){														 
+																							elmt.style.border = '0px solid';														 
+																						 }
+																						 var compteurr = document.getElementById('compteurr').innerHTML
+																						 var compteurr = document.getElementById('compteurr').innerHTML, number;
+																						 number = parseInt(compteurr);
+																						 var compteurr = number
+																						 var compteurr = compteurr + 1
+																						 document.getElementById('compteurr').innerHTML = compteurr;
+																						}setTimeout(cho, 300)
+														}
+														if (codea == 'c'){				function cho(){
+																						
+																						var elmt = document.getElementById('n');
+																						 elmt.style.border = '5px solid black';	
+																						 setTimeout(ftime, 300)
+																						 function ftime(){														 
+																							elmt.style.border = '0px solid';														 
+																						 }
+																						 var compteurr = document.getElementById('compteurr').innerHTML
+																						 var compteurr = document.getElementById('compteurr').innerHTML, number;
+																						 number = parseInt(compteurr);
+																						 var compteurr = number
+																						 var compteurr = compteurr + 1
+																						 document.getElementById('compteurr').innerHTML = compteurr;
+																						}setTimeout(cho, 300)
+																						
+														}
+														if (codea == 'd'){				function cho(){
+																						 var elmt = document.getElementById('s');
+																						 elmt.style.border = '5px solid black';	
+																						 setTimeout(ftime, 300)
+																						 function ftime(){														 
+																							elmt.style.border = '0px solid';														 
+																						 }
+																						 var compteurr = document.getElementById('compteurr').innerHTML
+																						 var compteurr = document.getElementById('compteurr').innerHTML, number;
+																						 number = parseInt(compteurr);
+																						 var compteurr = number
+																						 var compteurr = compteurr + 1
+																						 document.getElementById('compteurr').innerHTML = compteurr;
+																						}setTimeout(cho, 300)
+																					;
+														}
+														
+														if (document.getElementById('compteurr').innerHTML == elements3){
+															ok();
+															stopi();
+															
+															}
+														setTimeout(ftime, 1000)
+														}}}
+													function starti(){
+														
+														intervalId = setInterval(re, 1000);
+														
+													}
+													function stopi(){
+														
+														clearInterval(intervalId);
+														
+													}
+													if (depart == 1){
+													 starti();
+													}
+													function ok(){
+													document.getElementById('depart3').innerHTML = '1';
+													}
+													if (depart2 == 1){
+													
+													if (document.getElementById('vare').innerHTML == document.getElementById('listea').innerHTML){
+														var bouclea = bouclea + 1
+														document.getElementById('gg').setAttribute('src', 'gg.mp3');
+														document.getElementById('gg').play();}
+													else {var scores = document.getElementById('scores').innerHTML
+														var scores = document.getElementById('scores').innerHTML, number;
+														number = parseInt(scores);
+														var scores = number
+														var scores = scores -1;
+														document.getElementById('scores').innerHTML = scores;
+														document.getElementById('player').play();
+														document.getElementById('start').style.visibility='hidden';
+														alert('perdu');
+														
+														
+														window.location.reload(false);
+													}}
+													var depart2 = document.getElementById('depart').innerHTML;
+													document.getElementById('color').innerHTML = nombrea;
+													document.getElementById('listea').innerHTML = document.getElementById('listea').innerHTML + nombrea;
+													document.getElementById('listeb').innerHTML = document.getElementById('listeb').innerHTML + squaree;
+													
+													var str = document.getElementById('listea').innerHTML ;													
+													var cmr = str.charAt(elements2 - 2);
+													document.getElementById('teste11').innerHTML = cmr;
+													
+													">
+				<audio id="player"></audio>
+				<audio id="gg"></audio>
+				<audio id="choix"></audio>
+				<h2 id='starte'>START</h2>
+			</div>
+
+
+		</nav>
+</body>
+
+</html>
