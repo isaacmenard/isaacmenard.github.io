@@ -170,4 +170,20 @@ button:hover{
 	width: 100%;
 	
 }
+#chiffre{
+	font-size: 0%;
+}
 
+
+.thumbnail {
+	transition: all 1.5s ease-in-out;
+  }
+  .rotateX:hover {
+	transform: rotateX(180deg);
+  }
+  .rotateY:hover {
+	transform: rotateY(180deg);
+  }
+  .rotateZ:hover {
+	transform: rotateZ(180deg);
+  }
