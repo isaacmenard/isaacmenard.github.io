@@ -124,11 +124,11 @@
 		<br>
 		<div class="droite5">
 			<br>
-            <img class="image5" src="IMG_9743.JPG">
-            <p></p>
-            <a href="https://scratch.mit.edu/projects/embed/179725328/?autostart=true"><button type="button" class="btn btn-danger">essayer le jeu vidéo !</button></a>
+			<img class="image5" src="IMG_9743.JPG">
+
 		</div>
 		<div class="gauche5">
+			<p class="texte">une photo</p>
 			<script>
 				
 				
@@ -161,14 +161,13 @@
 			<div id="position"></div>
 			<p id="chiffre">1</p>
 			<div class="bando2">
-				<p class="texte2">j'ai fait ce joystick en bois avec un makeymakey qui est une carte permettant d'envoyer des information vers un raspberry-pi si elle recoit un courant
+				<p class="texte2">j'ai fais ce joystick avec un makeymakey qui est une carte permettant d'envoyer des information vers un raspberry-pi si elle recoit un courant
 					électrique </p>
-            </div>
-            
+			</div>
 		</div>
 
 	</div>
-	<!--<div class="sousbando">
+	<div class="sousbando">
 		<p class="soustexte">un jeu de société</p>
 	</div>
 	<div class="game" id="game">
@@ -227,7 +226,7 @@
 		</script>
 	</div>
 	</div>
-            -->
+
 
 
 
