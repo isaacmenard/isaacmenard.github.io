@@ -134,7 +134,8 @@ button:hover{
 }
 #joyd:hover,
 #gamed:hover,
-#superd:hover{
+#superd:hover,
+#labyr:hover{
 	color: rgb(185, 185, 3);	
 }
 #game{

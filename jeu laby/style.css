@@ -1,0 +1,162 @@
+body{
+    width: 100000000000000000000000000000000000000000000000000000000000000%;
+    background-image: url(carreaux.jpg);
+}
+tr{
+    float: bottom,top,left,right;
+}
+td{
+    float: bottom,top,left,right;
+}
+
+#rond {
+    display: inline-flex;
+    margin-right: 40px;
+    margin-top: 40PX;
+    color: blue;
+    background-color: #69A3B9;
+    width: 30px;
+    height: 30px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#depart {
+    display: inline-flex;
+    margin-right: 40px;
+    color: red;
+    background-color: rgb(216, 19, 19);
+    width: 30px;
+    height: 30px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#arrive {
+    display: inline-flex;
+    margin-right: 40px;
+    color: red;
+    background-color: rgb(26, 216, 19);
+    width: 30px;
+    height: 30px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#flechefinia {
+    position: relative;
+    display: inline-flex;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 10px 0 10px 10.3px;
+    border-color: transparent transparent transparent #007bff;
+}
+
+#flechea {
+    position: relative;
+    display: inline-flex;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 10px 0 10px 10.3px;
+    border-color: transparent transparent transparent #007bff;
+}
+
+#traieb {
+    position: relative;
+    display: inline-flex;
+    width: 37px;
+    height: 5px;
+    background-color: #007bff;
+}
+
+#traiefinib {
+    position: relative;
+    display: inline-flex;
+    width: 37px;
+    height: 5px;
+    background-color: #007bff;
+}
+
+img {
+    width: 20px;
+}
+
+#traiebgauche {
+    position: absolute;
+    display: inline-flex;
+    width: 37px;
+    height: 5px;
+    background-color: #007bff;
+}
+
+#traiefinibgauche {
+    position: absolute;
+    display: inline-flex;
+    width: 37px;
+    height: 5px;
+    background-color: #007bff;
+}
+
+#flechefiniagauche {
+    position: absolute;
+    display: inline-flex;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10.3px 10px 0;
+    border-color: transparent #007bff transparent
+}
+
+#flecheagauche {
+    position: absolute;
+    display: inline-flex;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 8.7px 5px 0;
+    border-color: transparent #007bff transparent
+}
+
+#flechefiniahaut {
+    position: absolute;
+    display: inline-flex;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10.3px 10px;
+    border-color: transparent transparent #007bff
+}
+
+#flechefiniabas {
+    position: absolute;
+    display: inline-flex;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10.3px 10px 0 10px;
+    border-color: #007bff transparent transparent
+}
+
+#traiefinibhaut {
+    position: absolute;
+    display: inline-flex;
+    width: 5px;
+    height: 37px;
+    background-color: #007bff;
+}
+#traiefinibbas {
+    position: absolute;
+    display: inline-flex;
+    width: 5px;
+    height: 37px;
+    background-color: #007bff;
+}
+
+.btn-default{
+    margin-left: 45%;
+}

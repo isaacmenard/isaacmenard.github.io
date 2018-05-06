@@ -190,6 +190,7 @@ label{
 	background-size: 100%;
 	border: 3px solid #FFFFFF;
 	box-sizing: border-box;
+	background-position-y: 50%
 
 }
 #slideshow {
@@ -276,6 +277,19 @@ form{
 	padding: 2% 0px;
 	
 }
+#proj4{
+	text-align: center;
+	width: 100%;
+	min-height: 40%;
+	background-position: end;
+	overflow : hidden;
+	background: url(laby.jpg);
+	background-size: 100%;
+	border: 3px solid #FFFFFF;
+	box-sizing: border-box;	
+	background-position-y: 100%
+}
+
 
 
 

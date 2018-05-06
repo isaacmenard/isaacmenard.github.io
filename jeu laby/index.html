@@ -1,0 +1,473 @@
+<html>
+
+<head>
+    <title>labyrinthe</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<body>
+    <h1 id="titre">Le labyrinthe</h1>
+    <p class="monjquery"></p>
+    <table>
+        <form method="get" action="" name="textee" id="question">
+            <label id="question4" for="test">choisis le format de ton labyrhinte</label>
+            <input type="number" name="largeur" placeholder="largeur" id="question1" />
+
+            </br>
+            </br>
+            <input value="essayer" id="question3" type="button" onclick="javascript:lancement();">
+
+
+
+        </form>
+        <div class="entonoire">
+            <script src="codefleche.js"></script>
+            <script>
+                function lancement() {
+                    //retire la question du départ
+                    document.getElementById('question1').style.visibility = 'hidden';
+                    document.getElementById('question3').style.visibility = 'hidden';
+                    document.getElementById('question4').style.visibility = 'hidden';
+                    var largeur = document.forms['textee'].elements['largeur'].value,
+                        number;
+                    number = parseInt(largeur);
+                    var largeur = number
+                    var hauteur = document.forms['textee'].elements['largeur'].value,
+                        number;
+                    number = parseInt(hauteur);
+                    var hauteur = number
+                    var ligne = largeur;
+                    var colonne = hauteur;
+                    var lignefin = ligne - 1;
+                    var colonnefin = colonne - 1;
+                    var lignefin2 = ligne - 2;
+                    var colonnefin2 = colonne - 2;
+                    var crealigne = 0;
+                    var creacolonne = 1;
+                    var ligneb = 1
+                    var colonneb = 1
+                    var lignec = 0
+                    var colonnec = 0
+                    var longeurvers = 0
+                    var hauteurvers = 0
+                    lignea = 0
+                    colonnea = 0
+                    var ligned = 1
+                    var colonned = 1
+                    var lignee = 0
+                    var colonnee = 0
+                    ligneb = 1
+                    colonneb = 1
+                    var fin = 0
+                    while (creacolonne <= colonne) {
+                        //CREATION TABLEAU
+                        var newColonne = document.createElement('tr');
+
+                        //On ajoute un attribut id à notre colonne
+                        newColonne.id = 'colone';
+
+                        var textec = document.createTextNode('');
+                        //On insère le texte dans notre ligne
+                        newColonne.appendChild(textec);
+
+                        /*On insère finalement notre élément en tant que
+                         *dernier enfant de body (auquel on accède directement
+                         *avec "document.body", tout simplement)*/
+                        document.body.appendChild(newColonne);
+
+
+
+                        while (crealigne < ligne) {
+
+                            //On crée un élément de type td
+                            var newPara = document.createElement('td');
+
+                            //On ajoute un attribut id à notre ligne
+                            newPara.id = 'ligne';
+                            if (creacolonne == 1 && crealigne == 0) {
+
+                                //On ajoute un attribut id à notre ligne
+                                //On crée un noeud de type div
+                                var texte = document.createElement('div');
+                                var textediv = document.createTextNode('');
+                                texte.appendChild(textediv);
+                                document.body.appendChild(texte);
+                                var crealigne = crealigne + 1;
+                                //on inverse depart et arrivé(jsp pk)
+                                texte.id = 'arrive';
+                                texte.className = 'point_' + creacolonne + '_' + crealigne;
+
+
+                            } else if (creacolonne == colonne && crealigne == lignefin) {
+
+                                //On ajoute un attribut id à notre ligne
+                                //On crée un noeud de type div
+                                var texte = document.createElement('div');
+                                var textediv = document.createTextNode('');
+                                texte.appendChild(textediv);
+                                document.body.appendChild(texte);
+                                var crealigne = crealigne + 1
+                                //on inverse depart et arrivé(jsp pk)
+                                texte.id = 'depart'
+                                texte.className = 'point_' + creacolonne + '_' + crealigne;
+
+
+
+
+                            } else {
+
+                                //On ajoute un attribut id à notre ligne
+                                //On crée un noeud de type div
+                                var texte = document.createElement('div');
+                                var textediv = document.createTextNode('');
+                                texte.appendChild(textediv);
+                                document.body.appendChild(texte);
+                                var crealigne = crealigne + 1;
+                                texte.id = 'rond';
+                                texte.className = 'point_' + creacolonne + '_' + crealigne;
+                            }
+
+
+                        }
+                        var crealigne = 0
+                        var creacolonne = creacolonne + 1
+                    }
+                    listeligne = new Array("1", ligne)
+                    listecolonne = new Array("1", colonne)
+                    listeligne2 = new Array("1", ligne)
+                    listecolonne2 = new Array("1", colonne)
+                    listeligne3 = new Array("1", ligne)
+                    listecolonne3 = new Array("1", colonne)
+                    listeligne4 = new Array("1", ligne)
+                    listecolonne4 = new Array("1", colonne)
+                    nombredefois = ligne / 3;
+                    nombredefois = Math.ceil(nombredefois);
+                    comteurnombredefois = 0
+                    while (nombredefois != comteurnombredefois) {
+                        generationplancheminbase()
+                        comteurnombredefois = comteurnombredefois + 1
+                    }
+                    if (nombredefois == comteurnombredefois) {
+                        fin = 1
+                        generationplancheminbase()
+                    }
+
+                    function generationplancheminbase() {
+                        validation = 0
+
+                        if (fin == 0) {
+                            longeurpos = Math.floor(Math.random() * ligne + 1);
+                            hauteurpos = Math.floor(Math.random() * colonne + 1);
+                            recherchesipointdispo()
+                            if (validation == 1) {
+                                generationplancheminbase()
+                            } else {
+                                listeligne.push(longeurpos)
+                                listecolonne.push(hauteurpos)
+                            }
+                        } else {
+                            longeurpos = ligne
+                            hauteurpos = colonne
+                        }
+                        lignee = longeurpos
+                        colonnee = hauteurpos
+                        directionpoint()
+                        var ligneb = longeurpos
+                        var colonneb = hauteurpos
+                        prems = 1
+
+                        choitdelafleche()
+                        ligned = lignea
+                        colonned = colonnea
+                                             
+                    }
+
+                    function recherchesipointdispo() {
+                        var nombredelement = listeligne.length
+                        var compteurelement = 0
+                        while (compteurelement < nombredelement) {
+                            if (listeligne[compteurelement] == longeurpos && listecolonne[compteurelement] ==
+                                hauteurpos) {
+                                validation = 1
+                            } else {}
+                            var compteurelement = compteurelement + 1
+
+                        }
+                    }
+
+                    function recherchesipointdispo2() {
+                        var nombredelement = listeligne.length
+                        var compteurelement = 0
+                        while (compteurelement < nombredelement) {
+                            if (listeligne2[compteurelement] == longeurpos && listecolonne2[compteurelement] ==
+                                hauteurpos) {
+                                validation = 1
+                            } else {}
+                            var compteurelement = compteurelement + 1
+
+                        }
+                    }
+
+
+
+                    function generationplancheminbase2() {
+                        validation = 0
+                        longeurpos = Math.floor(Math.random() * ligne + 1);
+                        hauteurpos = Math.floor(Math.random() * colonne + 1);
+                        recherchesipointdispo2()
+                        if (validation == 1) {
+                            generationplancheminbase2()
+                        } else {
+                            listeligne4.push(longeurpos)
+                            listecolonne4.push(hauteurpos)
+                        }
+                        lignee = longeurpos
+                        colonnee = hauteurpos
+                        directionpointpiege()
+                        var ligneb = longeurpos
+                        var colonneb = hauteurpos
+                        prems = 1
+
+                        choitdelafleche()
+                        ligned = lignea
+                        colonned = colonnea
+                    }
+                    
+                    
+                    function ajoutpiege() {
+                        generationplancheminbase2()
+                    }
+
+
+
+
+
+
+
+
+
+
+                    function directionpoint() {
+
+                        //faire suivre les chemins
+                        function placeligne() {
+                            lignea = positioniniligne
+                            colonnea = positioninicolonne
+                            case1ligne = ligneb
+                            case1colonne = colonneb
+                            case2ligne = lignea
+                            case2colonne = colonnea
+                        }
+
+                        function suite() {
+                            ligneb = lignea
+                            colonneb = colonnea
+                        }
+
+                        function ajoutliste() {
+                            positioniniligne.push(longeurpos)
+                            positioninicolonne.push(hauteurpos)
+                        }
+
+                        var positioniniligne = ligned
+                        var positioninicolonne = colonned
+                        var probaligne = positioniniligne
+                        var probacolonne = positioninicolonne
+                        var objligne = lignee
+                        var objcolonne = colonnee
+
+                        while (positioniniligne != objligne || positioninicolonne != objcolonne) {
+                            if (positioniniligne == objligne && positioninicolonne != objcolonne) {
+                                if (positioninicolonne < objcolonne) {
+                                    positioninicolonne = positioninicolonne + 1
+                                    listeligne2.push(positioniniligne)
+                                    listecolonne2.push(positioninicolonne)
+
+                                } else {
+                                    positioninicolonne = positioninicolonne - 1
+                                    listeligne2.push(positioniniligne)
+                                    listecolonne2.push(positioninicolonne)
+                                }
+
+                                placeligne()
+                                choitdelafleche()
+                                suite()
+                            } else if (positioniniligne != objligne && positioninicolonne == objcolonne) {
+                                if (positioniniligne < objligne) {
+                                    positioniniligne = positioniniligne + 1
+                                    listeligne2.push(positioniniligne)
+                                    listecolonne2.push(positioninicolonne)
+                                } else {
+                                    positioniniligne = positioniniligne - 1
+                                    listeligne2.push(positioniniligne)
+                                    listecolonne2.push(positioninicolonne)
+                                }
+                                placeligne()
+                                choitdelafleche()
+                                suite()
+                            } else {
+
+                                var choit = Math.floor(Math.random() * 2 + 1);
+                                if (choit == 1) {
+                                    if (positioninicolonne < objcolonne) {
+                                        positioninicolonne = positioninicolonne + 1
+                                        listeligne2.push(positioniniligne)
+                                        listecolonne2.push(positioninicolonne)
+                                    } else {
+                                        positioninicolonne = positioninicolonne - 1
+                                        listeligne2.push(positioniniligne)
+                                        listecolonne2.push(positioninicolonne)
+                                    }
+                                } else {
+                                    if (positioniniligne < objligne) {
+                                        positioniniligne = positioniniligne + 1
+                                        listeligne2.push(positioniniligne)
+                                        listecolonne2.push(positioninicolonne)
+                                    } else {
+                                        positioniniligne = positioniniligne - 1
+                                        listeligne2.push(positioniniligne)
+                                        listecolonne2.push(positioninicolonne)
+                                    }
+                                }
+                                placeligne()
+                                choitdelafleche()
+                                suite()
+
+                            }
+                            choitsipiege = Math.floor(Math.random() * 5 + 1);  
+                            if (choitsipiege == 1){
+                             setTimeout(ajoutpiege, 1000)
+                            }
+                        }
+
+                    }
+
+                    function directionpointpiege() {
+
+                        //faire suivre les chemins
+                        function placeligne() {
+                            lignea = positioniniligne
+                            colonnea = positioninicolonne
+                            case1ligne = ligneb
+                            case1colonne = colonneb
+                            case2ligne = lignea
+                            case2colonne = colonnea
+                        }
+
+                        function suite() {
+                            ligneb = lignea
+                            colonneb = colonnea
+                        }
+
+                        function ajoutliste() {
+                            positioniniligne2.push(longeurpos)
+                            positioninicolonne2.push(hauteurpos)
+                        }
+
+                        var positioniniligne = ligned
+                        var positioninicolonne = colonned
+                        var probaligne = positioniniligne
+                        var probacolonne = positioninicolonne
+                        var objligne = lignee
+                        var objcolonne = colonnee
+
+                        while (positioniniligne != objligne || positioninicolonne != objcolonne) {
+                            if (positioniniligne == objligne && positioninicolonne != objcolonne) {
+                                if (positioninicolonne < objcolonne) {
+                                    positioninicolonne = positioninicolonne + 1
+                                    listeligne3.push(positioniniligne)
+                                    listecolonne3.push(positioninicolonne)
+
+                                } else {
+                                    positioninicolonne = positioninicolonne - 1
+                                    listeligne3.push(positioniniligne)
+                                    listecolonne3.push(positioninicolonne)
+                                }
+
+                                placeligne()
+                                choitdelafleche()
+                                suite()
+                            } else if (positioniniligne != objligne && positioninicolonne == objcolonne) {
+                                if (positioniniligne < objligne) {
+                                    positioniniligne = positioniniligne + 1
+                                    listeligne3.push(positioniniligne)
+                                    listecolonne3.push(positioninicolonne)
+                                } else {
+                                    positioniniligne = positioniniligne - 1
+                                    listeligne3.push(positioniniligne)
+                                    listecolonne3.push(positioninicolonne)
+                                }
+                                placeligne()
+                                choitdelafleche()
+                                suite()
+                            } else {
+
+                                var choit = Math.floor(Math.random() * 2 + 1);
+                                if (choit == 1) {
+                                    if (positioninicolonne < objcolonne) {
+                                        positioninicolonne = positioninicolonne + 1
+                                        listeligne3.push(positioniniligne)
+                                        listecolonne3.push(positioninicolonne)
+                                    } else {
+                                        positioninicolonne = positioninicolonne - 1
+                                        listeligne3.push(positioniniligne)
+                                        listecolonne3.push(positioninicolonne)
+                                    }
+                                } else {
+                                    if (positioniniligne < objligne) {
+                                        positioniniligne = positioniniligne + 1
+                                        listeligne3.push(positioniniligne)
+                                        listecolonne3.push(positioninicolonne)
+                                    } else {
+                                        positioniniligne = positioniniligne - 1
+                                        listeligne3.push(positioniniligne)
+                                        listecolonne3.push(positioninicolonne)
+                                    }
+                                }
+                                placeligne()
+                                choitdelafleche()
+                                suite()
+
+                            }
+                        }
+
+                    }
+
+                    function choitdelafleche() {
+                        lignechoisit1 = case1ligne
+                        colonnechoisit1 = case1colonne
+                        lignechoisit2 = case2ligne
+                        colonnechoisit2 = case2colonne
+
+                        if (case1ligne == case2ligne && case1colonne < case2colonne) {
+                            lignea = case2ligne
+                            colonnea = case2colonne
+                            ajoutflechebas()
+                        }
+                        if (case1ligne == case2ligne && case1colonne > case2colonne) {
+                            lignea = case2ligne
+                            colonnea = case2colonne
+                            ajoutflechehaut()
+                        }
+                        if (case1ligne < case2ligne && case1colonne == case2colonne) {
+                            lignea = case2ligne
+                            colonnea = case2colonne
+                            ajoutflechedroite()
+                        }
+                        if (case1ligne > case2ligne && case1colonne == case2colonne) {
+                            lignea = case2ligne
+                            colonnea = case2colonne
+                            ajoutflechegauche()
+                        }
+                    }
+
+
+
+                }
+            </script>
+        </div>
+    </table>
+</body>
