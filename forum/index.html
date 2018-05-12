@@ -28,6 +28,7 @@
 	<link rel="stylesheet" href="style.css"/>-->
 	<link rel="stylesheet" href="style3.css" />
 	<link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
 
 
 
@@ -52,8 +53,16 @@
 
 <body>
 
-
-	<!--bar du haut-->
+	<div id="headerMover">
+		<div id="headerProxy"></div>
+	
+	<div id="content" class="forum_list">
+		<div class="pageWidth">
+			<div class="pageContent">		
+					<div class="mainContainer">
+						<div class="mainContent">							
+							<div class="breadBoxTop ">
+<header>
 	<nav>
 
 
@@ -73,15 +82,13 @@
 
 				<span class="crust selectedTabCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
 					<a href="https://energygaming.fr/forum/index.php" id="lienhaut" class="crumb" rel="up" itemprop="url">
-						<span itemprop="title"></span>
 						<p id="titrehaut">FORUMS</p>
 				</span>
 				</a>
 			</span>
 
 
-
-
+			Membres
 		</div>
 	</nav>
 	<div class="fondtab"></div>
@@ -96,25 +103,51 @@
 			<div class="boardTitle">
 				<strong></strong>
 			</div>
-
 			<span class="crumbs">
-
-				<span class="crust homeCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
-					<a href="http://energygaming.fr" class="crumb" rel="up" itemprop="url">
-						<span itemprop="title">Accueil</span>
+					<a href="http://energygaming.fr" id="lienhaut" class="crumb" rel="up" itemprop="url">
+						<p class="textetabbas">ACCUEIL</p>
 					</a>
-					<span class="arrow">
-						<span></span>
-					</span>
-				</span>
+					
+						<a href="https://energygaming.fr/forum/index.php?members/" class="navLink"><p class="textetabbas">MEMBRES</p></a>
+						<a href="https://energygaming.fr/forum/index.php?members/" class="SplitCtrl" rel="Menu"></a>
+						<!--<li class="navTab members Popup PopupControl PopupClosed">
+						<div class="Menu JsOnly tabMenu membersTabLinks">
+							<div class="primaryContent menuHeader">
+								<h3>Membres</h3>
+								<div class="muted">Liens rapides</div>
+							</div>
+							<ul class="secondaryContent blockLinksList">
 
+								<li>
+									<a href="index.php?members/">Membres notables</a>
+								</li>
+								<li>
+									<a href="index.php?members/list">Membres inscrits</a>
+								</li>
+								<li>
+									<a href="index.php?online/">Visiteurs actuels</a>
+								</li>
+								<li>
+									<a href="index.php?recent-activity/">Activités récentes</a>
+								</li>
+								<li>
+									<a href="index.php?find-new/profile-posts">Nouveaux messages de profil</a>
+								</li>
 
+							</ul>
+						</div>
+					</li>-->
 
-
+					</div>
 
 			</span>
-		</div>
 	</nav>
+	<nav>
+		<center>
+			<img class="logo" src="EnergyLogo.png"/>
+		</center>
+	</nav>
+</header>
 	</div>
 
 
@@ -2634,7 +2667,7 @@
 					<h3>
 						<i class="fa fa-share-square-o"></i>Partager cette page</h3>
 
-
+						
 
 					<div class="tweet shareControl">
 						<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="fr-FR" data-url="http://energygaming.fr/forum/index.php">Tweeter</a>
@@ -2784,37 +2817,7 @@
 
 									<!-- members -->
 
-									<li class="navTab members Popup PopupControl PopupClosed">
-
-										<a href="https://energygaming.fr/forum/index.php?members/" class="navLink">Membres</a>
-										<a href="https://energygaming.fr/forum/index.php?members/" class="SplitCtrl" rel="Menu"></a>
-
-										<div class="Menu JsOnly tabMenu membersTabLinks">
-											<div class="primaryContent menuHeader">
-												<h3>Membres</h3>
-												<div class="muted">Liens rapides</div>
-											</div>
-											<ul class="secondaryContent blockLinksList">
-
-												<li>
-													<a href="index.php?members/">Membres notables</a>
-												</li>
-												<li>
-													<a href="index.php?members/list">Membres inscrits</a>
-												</li>
-												<li>
-													<a href="index.php?online/">Visiteurs actuels</a>
-												</li>
-												<li>
-													<a href="index.php?recent-activity/">Activités récentes</a>
-												</li>
-												<li>
-													<a href="index.php?find-new/profile-posts">Nouveaux messages de profil</a>
-												</li>
-
-											</ul>
-										</div>
-									</li>
+									
 
 
 									<!-- extra tabs: end -->
