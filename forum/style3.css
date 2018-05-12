@@ -1,0 +1,38 @@
+#lienhaut {
+    text-decoration: none;
+}
+#titrehaut {
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Paytone One', sans-serif;
+    Text-Align: Center;
+    color:rgb(255, 255, 255);
+    font-size: 1.5em;  
+}
+.tabhaut{
+    margin:0;
+    padding: 0;
+    width: 100%;
+    height: 15%;
+    background-color: black;
+
+}
+
+.tabbas{
+    width: 100%;
+    height: 15%;
+    background-color: black;
+}
+.fondtab{
+    background-image: url(fondtab.png);
+    width: 100%;
+    height: 400px;
+    background-position-y: 50%;
+} 
+html,body {
+    margin:0;
+    padding: 0;
+    height: 720px;
+}
+
