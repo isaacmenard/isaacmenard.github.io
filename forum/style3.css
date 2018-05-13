@@ -100,15 +100,17 @@
     margin: 0;
     padding: 0;
 }
-
-nav {
-    margin: 0;
-    padding: 0;
-}
-
 html,
 body {
     margin: 0;
     padding: 0;
-    height: 720px;
+   
+}
+.intro{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    background-color: #343232;
+
 }
