@@ -14,6 +14,8 @@
 }
 
 .logo {
+    margin: 0;
+    padding: 0;
     width: 400px;
     height: auto;
     position: absolute;
@@ -21,34 +23,26 @@
     margin-left: -200px;
     text-align: center;
 }
-@media only screen and (max-width:1000px) {
-    .logo {
-        width: 300px;
-        margin-left: -150px;
-        top: 300px;
-    }
-}
+
+
+
 @media only screen and (max-width:1200px) {
     .logo {
-        width: 350px;
+        width: 0px;
         margin-left: -175px;
         top: 300px;
     }
 }
-@media only screen and (max-width:900px) {
-    .logo {
-        width: 0px;
-        margin-left: -150px;
-        top: 300px;
-    }
-}
+
+
 @media only screen and (min-width:2000px) {
     .logo {
-        width: 600px;
-        margin-left: -300px;
+        width: 500px;
+        margin-left: -250px;
         top: 130px;
     }
 }
+
 .textetabbasgauche {
     font-family: 'Oswald', sans-serif;
     font-style: normal;
@@ -62,6 +56,7 @@
     margin-block-end: 0px;
     display: inline-block;
 }
+
 .textetabbasdroite {
     text-align: right;
     font-family: 'Oswald', sans-serif;
@@ -82,6 +77,7 @@
     width: 100%;
     height: 15%;
     background-color: black;
+    vertical-align: top;
 }
 
 .tabbas {
@@ -90,6 +86,7 @@
     padding: 0;
     width: 100%;
     background-color: black;
+    vertical-align: top;
 }
 
 .fondtab {
@@ -99,18 +96,114 @@
     background-position-y: 50%;
     margin: 0;
     padding: 0;
+    vertical-align: top;
 }
+
 html,
 body {
     margin: 0;
     padding: 0;
-   
+    vertical-align: top;
 }
-.intro{
+
+nav {
+    margin: 0;
+    padding: 0;
+    background-color: #EB5757;
+    vertical-align: top;
+}
+
+.intro {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: auto;
     background-color: #343232;
+    vertical-align: top;
+    display: inline-block;
+}
 
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.droite {
+    float: right;
+    width: 50%;
+    text-align: center;
+}
+
+.gauche {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.bandohorisontal {
+    margin: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    background-color: #EB5757;
+    height: 7px;
+}
+.textestrong{
+    text-decoration: none;
+    color:#EB5757;
+}
+.textecentrer{
+    width: 60%;
+}
+.texteintro {
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    display: inline-block;
+    margin-top: -15px;
+    margin-bottom: -15px;
+}
+.lienvisible{
+    text-decoration: none;
+    color: #2D9CDB;
+
+}
+.transaction{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+}
+.corp{
+    width: 80%;
+    background-color: #343232;
+    margin: 0;
+    padding: 0;
+    border-right: solid black 5px;
+    float: left;
+}
+.bardroite{
+    width: 20%;
+    background-color: #343232;
+    padding: 0;
+    margin-left: 10px;
+    border-right: solid black 5px;
+    float: right;
+}
+h1{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+    color: white;
+}
+.pagecontent{
+    display: inline-block;
 }
