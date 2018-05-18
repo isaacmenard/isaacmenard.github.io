@@ -189,12 +189,11 @@ p {
     float: left;
 }
 .bardroite{
-    width: 20%;
+    width: calc(20% - 5px);
     background-color: #343232;
     padding: 0;
-    margin-left: 10px;
-    border-right: solid black 5px;
     float: right;
+
 }
 h1{
     margin: 0;
@@ -206,4 +205,44 @@ li{
 }
 .pagecontent{
     display: inline-block;
+}
+.grandtitre{
+    width: 80%;
+    background: #EB5757;
+    margin: 50px;
+    border: solid #EB5757;
+    border-radius: 3px 3px 2px;
+}
+#titre{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 30px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.titre2{
+    display: inline-block;
+}
+.blokpage{
+    height: 40px;
+    width: 6px;
+    background-color: red;
+    float: left;
+}
+.textetitre2{
+    margin-bottom: 5px;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 30px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    float: right;
+    position: relative;
+    margin-left: 5px;
+    margin-top: -2.5px;
 }
