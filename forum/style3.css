@@ -208,6 +208,7 @@ li{
 }
 .grandtitre{
     width: 80%;
+    height: auto;
     background: #EB5757;
     margin: 50px;
     border: solid #EB5757;
@@ -229,7 +230,7 @@ li{
 .blokpage{
     height: 40px;
     width: 6px;
-    background-color: red;
+    background-color: #EB5757;
     float: left;
 }
 .textetitre2{
@@ -244,5 +245,50 @@ li{
     float: right;
     position: relative;
     margin-left: 5px;
-    margin-top: -2.5px;
+    margin-top: -4px;
+}
+.nodeDescription{
+    font-size: 0em;
+}
+.grandtitre:hover ~ .nodeDescription{
+    width: 80%;
+    height: auto;
+    background: #EB5757;
+    margin: 50px;
+    border: solid #EB5757;
+    border-radius: 3px 3px 2px;
+    margin-bottom: 5px;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    float: center;
+    position: relative;
+}
+.nodeLastPost{
+    width: 25%;
+    height: auto;
+    margin: 50px;
+    border: solid rgb(101, 101, 101);
+    border-radius: 3px 3px 2px;
+    margin-bottom: 5px;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    float: right;
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color: #2D9CDB;
+}
+h1,h2,h3,li,dl,div{
+    color:white;
 }
