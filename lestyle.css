@@ -292,15 +292,15 @@ form{
 #proj5{
 	text-align: center;
 	width: 100%;
-	min-height: 40%;
+	min-height: 60%;
 	background-position: end;
 	overflow : hidden;
-	background-color:rgb(4, 222, 233);
+	background-image: url(Capture.jpg);
 	background-size: 100%;
 	border: 3px solid #FFFFFF;
 	box-sizing: border-box;	
 	background-position-y: 100%;
-	background-position-y: 50%;
+	background-position-y: 0%;
 }
 
 
