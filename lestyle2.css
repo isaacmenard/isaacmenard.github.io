@@ -132,6 +132,11 @@ button:hover{
 	background-color: rgba(0, 0, 0, 0.8);
 	border-radius: 3px 3px 5px;
 }
+.bando3{
+	width: 80%;
+	background-color: rgb(24, 24, 24, 0.8);
+	border-radius: 3px 3px 5px;
+}
 #joyd:hover,
 #gamed:hover,
 #superd:hover,
@@ -148,7 +153,8 @@ button:hover{
 	box-sizing: border-box;
 }
 #url{
-	color: rgba(59, 198, 253)
+	color: rgba(59, 198, 253);
+	text-decoration: none;
 }
 .droite5{
 	width: 40%;
