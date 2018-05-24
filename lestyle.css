@@ -302,6 +302,19 @@ form{
 	background-position-y: 100%;
 	background-position-y: 0%;
 }
+#proj6{
+	text-align: center;
+	width: 100%;
+	min-height: 60%;
+	background-position: end;
+	overflow : hidden;
+	background-image: url(plateau2.png);
+	background-size: 100%;
+	border: 3px solid #FFFFFF;
+	box-sizing: border-box;	
+	background-position-y: 100%;
+	background-position-y: 0%;
+}
 
 
 
