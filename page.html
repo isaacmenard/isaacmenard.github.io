@@ -134,34 +134,37 @@
 			</a>
 		</div>
 		<div class="gauche5">
-			<script>
-				function re() {
-					var image = document.getElementById('chiffre').innerHTML
+			<div class="imageanim">
+				<script>
+					function re() {
+						var image = document.getElementById('chiffre').innerHTML
 
 
-					if (image == 1) {
-						document.getElementById('position').innerHTML = "<img class='image5' src='milieu.jpg'>";
-						document.getElementById('chiffre').innerHTML = 2;
+						if (image == 1) {
+							document.getElementById('position').innerHTML = "<img class='image5' src='milieu.jpg'>";
+							document.getElementById('chiffre').innerHTML = 2;
+						}
+						if (image == 2) {
+							document.getElementById('position').innerHTML = "<img class='image5' src='gauche.jpg'>";
+							document.getElementById('chiffre').innerHTML = 3;
+						}
+						if (image == 3) {
+							document.getElementById('position').innerHTML = "<img class='image5' src='milieu.jpg'>";
+							document.getElementById('chiffre').innerHTML = 4;
+						}
+						if (image == 4) {
+							document.getElementById('position').innerHTML = "<img class='image5' src='droite.jpg'>";
+							document.getElementById('chiffre').innerHTML = 1;
+						}
 					}
-					if (image == 2) {
-						document.getElementById('position').innerHTML = "<img class='image5' src='gauche.jpg'>";
-						document.getElementById('chiffre').innerHTML = 3;
-					}
-					if (image == 3) {
-						document.getElementById('position').innerHTML = "<img class='image5' src='milieu.jpg'>";
-						document.getElementById('chiffre').innerHTML = 4;
-					}
-					if (image == 4) {
-						document.getElementById('position').innerHTML = "<img class='image5' src='droite.jpg'>";
-						document.getElementById('chiffre').innerHTML = 1;
-					}
-				}
 
-				setInterval(re, 500)
-			</script>
+					setInterval(re, 500)
+				</script>
 
-			<div id="position"></div>
-			<p id="chiffre">1</p>
+
+				<div id="position"></div>
+				<p id="chiffre">1</p>
+			</div>
 			<div class="bando2">
 				<p class="texte2">J'ai fait ce joystick en bois avec un makeymakey qui est une carte permettant d'envoyer des informations vers un raspberry-pi
 					si elle reçoit un courant électrique. J'ai programmé un jeu avec scratch pour utiliser le joystick.Vous pouvez le tester
@@ -244,18 +247,24 @@
 		</a>
 		<p></p>
 	</div>
-	<div class="sousbando" id="societe">
-		<p class="soustexte">Le jeu de société (un jeu en création)</p>
+	<div class="sousbando" id="game">
+		<p class="soustexte">Le jeu de société (un jeu de société en cours de création)</p>
 	</div>
 	<div id="proj6">
 		<div class="gauche1">
-			<p class="texte3">Avec Alexandre TROUVE-MOSSERON, nous créons un jeu de société.<br> Avec alexandre pour les dessins (plateaux, personnages ....) et moi pour le reste!
+			<p class="texte3">Avec Alexandre TROUVE-MOSSERON, nous sommes en train de créer un jeu de société.
+				<br> Alexandre pour les dessins (plateaux, personnages ....) et moi pour le reste !
 			</p>
 			<h2 class="texte3">Le plateau de jeu</h2>
 			<img class="imagess" src="plateau.png">
 		</div>
 		<div class="droite1">
-			<p class="texte3">"‘Le roi est mort , vive le Roi’. Le fils du défunt roi Aymar IV vient d’être couronné. Il réunit l’ensemble de ses contre-maîtres dont vous faites parti dans la salle d’arme de son château  : « Notre royaume, celui de Grôme est maintenant, grâce à feu mon père, notre précédent roi, en paix. Il a beaucoup souffert des guerres déclarées par nos ennemis. Il faut le reconstruire. Nous avons besoin de moulins pour moudre le blé, de ponts pour circuler, de remparts pour se protéger. Mon conseiller va vous proposer des quêtes. Je donnerai un titre de noblesse au meilleur d’entre vous, celui qui en réussira le plus ! »"
+			<p class="texte3">"‘Le roi est mort, vive le Roi’. Le fils du défunt roi Aymar IV vient d’être couronné. Il réunit l’ensemble de ses contre-maîtres
+				dont vous faites parti dans la salle d’armes de son château  : « Notre royaume, celui de Grôme est maintenant, grâce
+				à feu mon père, notre précédent roi, en paix. Il a beaucoup souffert des guerres déclarés par nos ennemis. Il faut le
+				reconstruire. Nous avons besoin de moulins pour moudre le blé, de ponts pour circuler, de remparts pour se protéger.
+				Mon conseiller va vous proposer des quêtes. Je donnerai un titre de noblesse au meilleur d’entre vous, celui qui en réussira
+				le plus ! »"
 			</p>
 		</div>
 		</a>

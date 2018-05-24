@@ -147,7 +147,6 @@ button:hover{
 	width: 100%;
 	min-height: 40%;
 	background-position: end;
-	background: url(jeu.jpg);
 	border: 3px solid #FFFFFF;
 	background-size: 100%;
 	box-sizing: border-box;
@@ -194,3 +193,6 @@ button:hover{
   .rotateZ:hover {
 	transform: rotateZ(180deg);
   }
+.imageanim{
+	height: 432px;
+}
