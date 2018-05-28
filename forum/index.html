@@ -27,8 +27,10 @@
 	<!--<link rel="stylesheet" href="style2.css"/>
 	<link rel="stylesheet" href="style.css"/>-->
 	<link rel="stylesheet" href="style3.css" />
+	<link rel="stylesheet" href="responsive.css" />
 	<link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	
 
 
 
@@ -88,7 +90,7 @@
 											</span>
 
 
-											Membres
+
 										</div>
 									</nav>
 									<div class="fondtab"></div>
@@ -99,7 +101,7 @@
 											<a href="index.php?misc/quick-navigation-menu" class="OverlayTrigger jumpMenuTrigger" data-cacheOverlay="true" title="Ouvrir la navigation rapide">
 												<!--Sauter à...-->
 											</a>
-
+											<div class="imagetab"></div>
 											<div class="boardTitle">
 												<strong></strong>
 											</div>
@@ -108,10 +110,11 @@
 													<a href="http://energygaming.fr " id="lienhaut " class="crumb " rel="up " itemprop="url ">
 														<p class="textetabbasgauche ">ACCUEIL</p>
 													</a>
-
-													<a href="https://energygaming.fr/forum/index.php?members/ " class="navLink ">
-														<p class="textetabbasgauche " id="membretab">MEMBRES</p>
-													</a>
+													<div id="membretab">
+														<a href="https://energygaming.fr/forum/index.php?members/ " class="navLink ">
+															<p class="textetabbasgauche ">MEMBRES</p>
+														</a>
+													</div>
 													<div class="Menu JsOnly tabMenu membersTabLinks ">
 														<div class="primaryContent menuHeader ">
 															<h3>Membres</h3>
@@ -120,26 +123,26 @@
 														<ul class="secondaryContent blockLinksList ">
 
 															<li>
-																<a href="index.php?members/ ">Membres notables</a>
+																<a class="lienpop" href="index.php?members/ ">Membres notables</a>
 															</li>
 															<li>
-																<a href="index.php?members/list ">Membres inscrits</a>
+																<a class="lienpop" href="index.php?members/list ">Membres inscrits</a>
 															</li>
 															<li>
-																<a href="index.php?online/ ">Visiteurs actuels</a>
+																<a class="lienpop" href="index.php?online/ ">Visiteurs actuels</a>
 															</li>
 															<li>
-																<a href="index.php?recent-activity/ ">Activités récentes</a>
+																<a class="lienpop" href="index.php?recent-activity/ ">Activités récentes</a>
 															</li>
 															<li>
-																<a href="index.php?find-new/profile-posts ">Nouveaux messages de profil</a>
+																<a class="lienpop" href="index.php?find-new/profile-posts ">Nouveaux messages de profil</a>
 															</li>
 
 														</ul>
 													</div>
 													<a href="https://energygaming.fr/forum/index.php?members/ " class="SplitCtrl " rel="Menu "></a>
 													<li class="navTab members Popup PopupControl PopupClosed ">
-														
+
 													</li>
 												</div>
 												<div class="droitetab " style="float:right; ">
@@ -168,6 +171,22 @@
 							</div>
 							<nav>
 								<div class="intro">
+									<div class="gauche">
+										<div class="bandohorisontal">
+											<p></p>
+										</div>
+										<center>
+											<div class="textecentrer">
+												<p class="texteintro">Bienvenue sur le forum d’
+													<a href="https://energygaming.fr/" class="textestrong">Energygaming !</a>
+													Inscrivez-vous dès maintenant pour discuter du serveur, demander de l’aide ou proposer des idées géniales pour aider le serveur
+													à être le meilleur possible !</p>
+											</div>
+										</center>
+										<div class="bandohorisontal">
+											<p></p>
+										</div>
+									</div>
 									<div class="droite">
 										<div class="bandohorisontal">
 											<p></p>
@@ -185,22 +204,7 @@
 											<p></p>
 										</div>
 									</div>
-									<div class="gauche">
-										<div class="bandohorisontal">
-											<p></p>
-										</div>
-										<center>
-											<div class="textecentrer">
-												<p class="texteintro">Bienvenue sur le forum d’
-													<a href="https://energygaming.fr/" class="textestrong">Energygaming !</a>
-													Inscrivez-vous dès maintenant pour discuter du serveur, demander de l’aide ou proposer des idées géniales pour aider le serveur
-													à être le meilleur possible !</p>
-											</div>
-										</center>
-										<div class="bandohorisontal">
-											<p></p>
-										</div>
-									</div>
+
 								</div>
 							</nav>
 							<div class="transaction">
@@ -362,7 +366,6 @@
 														</span>
 
 													</div>
-													Liens rapides
 													<div class="nodeControls ">
 														<a href="index.php?forums/annonces-r%C3%A8glements.2/index.rss " class="tinyIcon feedIcon " title="RSS ">
 															<i class="fa fa-rss "></i>RSS</a>

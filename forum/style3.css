@@ -3,7 +3,7 @@
 }
 
 #titrehaut {
-    margin: 0;
+    margin: 0px;
     padding: 0;
     text-decoration: none;
     font-family: 'Paytone One', sans-serif;
@@ -24,31 +24,12 @@
     text-align: center;
 }
 
-
-
-@media only screen and (max-width:1200px) {
-    .logo {
-        width: 0px;
-        margin-left: -175px;
-        top: 300px;
-    }
-}
-
-
-@media only screen and (min-width:2000px) {
-    .logo {
-        width: 500px;
-        margin-left: -250px;
-        top: 130px;
-    }
-}
-
 .textetabbasgauche {
     font-family: 'Oswald', sans-serif;
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    font-size: 2em;
+    font-size: 32px;
     text-align: left;
     margin-left: 15px;
     color: rgb(255, 255, 255);
@@ -63,7 +44,7 @@
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    font-size: 2em;
+    font-size: 32px;
     margin-right: 15px;
     color: rgb(255, 255, 255);
     margin-block-start: 0px;
@@ -72,10 +53,8 @@
 }
 
 .tabhaut {
-    margin: 0;
-    padding: 0;
+    padding-block-end: 15px;
     width: 100%;
-    height: 15%;
     background-color: black;
     vertical-align: top;
 }
@@ -147,13 +126,16 @@ p {
     background-color: #EB5757;
     height: 7px;
 }
-.textestrong{
+
+.textestrong {
     text-decoration: none;
-    color:#EB5757;
+    color: #EB5757;
 }
-.textecentrer{
+
+.textecentrer {
     width: 60%;
 }
+
 .texteintro {
     font-family: 'Oswald', sans-serif;
     font-style: normal;
@@ -168,19 +150,21 @@ p {
     margin-top: -15px;
     margin-bottom: -15px;
 }
-.lienvisible{
+
+.lienvisible {
     text-decoration: none;
     color: #2D9CDB;
-
 }
-.transaction{
+
+.transaction {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 5px;
     background-color: black;
 }
-.corp{
+
+.corp {
     width: 80%;
     background-color: #343232;
     margin: 0;
@@ -188,25 +172,29 @@ p {
     border-right: solid black 5px;
     float: left;
 }
-.bardroite{
+
+.bardroite {
     width: calc(20% - 5px);
     background-color: #343232;
     padding: 0;
     float: right;
-
 }
-h1{
+
+h1 {
     margin: 0;
     padding: 0;
 }
-li{
+
+li {
     list-style-type: none;
     color: white;
 }
-.pagecontent{
+
+.pagecontent {
     display: inline-block;
 }
-.grandtitre{
+
+.grandtitre {
     width: 80%;
     height: auto;
     background: #EB5757;
@@ -214,7 +202,8 @@ li{
     border: solid #EB5757;
     border-radius: 3px 3px 2px;
 }
-#titre{
+
+#titre {
     text-align: center;
     font-family: 'Oswald', sans-serif;
     font-style: normal;
@@ -224,16 +213,19 @@ li{
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
-.titre2{
+
+.titre2 {
     display: inline-block;
 }
-.blokpage{
+
+.blokpage {
     height: 40px;
     width: 6px;
     background-color: #EB5757;
     float: left;
 }
-.textetitre2{
+
+.textetitre2 {
     margin-bottom: 5px;
     font-family: 'Oswald', sans-serif;
     font-style: normal;
@@ -247,10 +239,12 @@ li{
     margin-left: 5px;
     margin-top: -4px;
 }
-.nodeDescription{
+
+.nodeDescription {
     font-size: 0em;
 }
-.grandtitre:hover ~ .nodeDescription{
+
+.grandtitre:hover~.nodeDescription {
     width: 80%;
     height: auto;
     background: #EB5757;
@@ -268,7 +262,8 @@ li{
     float: center;
     position: relative;
 }
-.nodeLastPost{
+
+.nodeLastPost {
     width: 25%;
     height: auto;
     margin: 50px;
@@ -285,20 +280,48 @@ li{
     float: right;
     position: relative;
 }
-a{
+
+a {
     text-decoration: none;
     color: #2D9CDB;
 }
-h1,h2,h3,li,dl,div{
-    color:white;
+
+h1,
+h2,
+h3,
+li,
+dl,
+div {
+    color: white;
 }
-.membersTabLinks{
+
+.membersTabLinks {
     font-size: 0ex;
 }
-#membretab:hover .membersTabLinks{
-    color:red;
-    font-size: 20px;
-    height: 100px;
-    width: 100px;
-    background-color: indigo;
+
+#membretab:hover~.membersTabLinks,
+.membersTabLinks:hover {
+    color: red;
+    text-align: center;
+    font-size: 15px;
+    background-color: rgb(232, 232, 232);
+    position: absolute;
+    margin-left: 100px;
+    border: solid rgb(232, 232, 232);
+    border-radius: 3px 3px 2px;
+}
+
+#membretab {
+    display: inline-block;
+}
+.subForumList,.pairsInline,.nodeControls{
+    font-size:0px;
+    transition: 1s;
+}
+.lienpop {
+    color: green;
+    text-align: left;
+}
+.nodeText:hover ~ .subForumList,.subForumList:hover ,.nodeText:hover .pairsInline{
+    font-size:20px;
 }
