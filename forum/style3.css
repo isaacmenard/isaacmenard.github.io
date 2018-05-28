@@ -329,3 +329,35 @@ div {
 .nodeText:active,.nodeText:active ~ .subForumList,.subForumList:hover ,.nodeText:active .pairsInline{
     font-size:20px;
 }
+footer{
+    background-color: black;
+    display: inline-block;
+    width: 100%;
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.footer{
+    width: 100%;
+}
+.listefoot{
+    float: right;
+    
+}
+.listeleft{
+    float: left;
+    
+}
+.lienbarfoot{
+    margin-right: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+#final{
+    text-align: center;
+}
