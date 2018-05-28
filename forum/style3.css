@@ -216,6 +216,7 @@ li {
 
 .titre2 {
     display: inline-block;
+    margin-bottom: 30px;
 }
 
 .blokpage {
@@ -234,7 +235,7 @@ li {
     font-size: 30px;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    float: right;
+    float: left;
     position: relative;
     margin-left: 5px;
     margin-top: -4px;
@@ -279,6 +280,7 @@ li {
     color: rgb(255, 255, 255);
     float: right;
     position: relative;
+    text-align: center;
 }
 
 a {
@@ -314,14 +316,16 @@ div {
 #membretab {
     display: inline-block;
 }
+
 .subForumList,.pairsInline,.nodeControls{
     font-size:0px;
-    transition: 1s;
+    transition-duration: 1s;
 }
 .lienpop {
     color: green;
     text-align: left;
+    transition-duration: 1s;
 }
-.nodeText:hover ~ .subForumList,.subForumList:hover ,.nodeText:hover .pairsInline{
+.nodeText:active,.nodeText:active ~ .subForumList,.subForumList:hover ,.nodeText:active .pairsInline{
     font-size:20px;
 }
