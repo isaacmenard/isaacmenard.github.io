@@ -1,3 +1,11 @@
+<!--$("button").click(function(){
+    var x = $("p").position();
+    alert("Top: " + x.top + " Left: " + x.left);
+});-->
+
+
+
+
 <!DOCTYPE html>
 <html id="XenForo" lang="fr-FR" dir="LTR" class="Public NoJs LoggedIn Sidebar  Responsive" xmlns:fb="http://www.facebook.com/2008/fbml">
 
@@ -49,8 +57,30 @@
 
 	<link rel="canonical" href="http://energygaming.fr/forum/index.php" />
 	<meta name="description" content="EnergyGaming" />
-
-
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+		$(window).scroll(function (event) {
+			aciennepos = $(".intro").position();
+			// A chaque fois que l'utilisateur va scroller
+			var y = $(this).scrollTop(); // On récupérer la valeur du scroll vertical
+			
+			var pos = $(".tabbas").position(),
+				number;
+			number = parseInt(pos);
+			var height = $('.tabbas').height(),
+				number;
+			number = parseInt(height);
+			var height = number
+			var soustraction = pos.top - height
+			if (y >= soustraction) {
+				$('.tabbas').addClass('fixed');
+			}
+			if (y <= aciennepos.top) {
+				// sinon, on l'enlève
+				$('.tabbas').removeClass('fixed');
+			}
+		});
+	</script>
 </head>
 
 <body>
@@ -94,74 +124,75 @@
 										</div>
 									</nav>
 									<div class="fondtab"></div>
-									<nav>
 
 
-										<div class="tabbas" style="display:inline-block;">
-											<a href="index.php?misc/quick-navigation-menu" class="OverlayTrigger jumpMenuTrigger" data-cacheOverlay="true" title="Ouvrir la navigation rapide">
-												<!--Sauter à...-->
-											</a>
-											<div class="imagetab"></div>
-											<div class="boardTitle">
-												<strong></strong>
-											</div>
-											<span class="crumbs">
-												<div class="gauchetab" style="float:left;">
-													<a href="http://energygaming.fr " id="lienhaut " class="crumb " rel="up " itemprop="url ">
-														<p class="textetabbasgauche ">ACCUEIL</p>
-													</a>
-													<div id="membretab">
-														<a href="https://energygaming.fr/forum/index.php?members/ " class="navLink ">
-															<p class="textetabbasgauche ">MEMBRES</p>
-														</a>
-													</div>
-													<div class="Menu JsOnly tabMenu membersTabLinks ">
-														<div class="primaryContent menuHeader ">
-															<h3>Membres</h3>
-															<div class="muted ">Liens rapides</div>
-														</div>
-														<ul class="secondaryContent blockLinksList ">
 
-															<li>
-																<a class="lienpop" href="index.php?members/ ">Membres notables</a>
-															</li>
-															<li>
-																<a class="lienpop" href="index.php?members/list ">Membres inscrits</a>
-															</li>
-															<li>
-																<a class="lienpop" href="index.php?online/ ">Visiteurs actuels</a>
-															</li>
-															<li>
-																<a class="lienpop" href="index.php?recent-activity/ ">Activités récentes</a>
-															</li>
-															<li>
-																<a class="lienpop" href="index.php?find-new/profile-posts ">Nouveaux messages de profil</a>
-															</li>
-
-														</ul>
-													</div>
-													<a href="https://energygaming.fr/forum/index.php?members/ " class="SplitCtrl " rel="Menu "></a>
-													<li class="navTab members Popup PopupControl PopupClosed ">
-
-													</li>
-												</div>
-												<div class="droitetab " style="float:right; ">
-													<a href="index.php?conversations/ " id="lienhaut">
-														<p class="textetabbasdroite ">CONVERSATIONS</p>
-														<strong class="itemCount Zero " id="VisitorExtraMenu_ConversationsCounter ">
-															<span class="Total" id="lienhaut"></span>
-														</strong>
-													</a>
-													<a href="index.php?account/alerts " id="lienhaut">
-														<p class="textetabbasdroite ">ALERTES</p>
-														<strong class="itemCount Zero " id="VisitorExtraMenu_AlertsCounter ">
-															<span class="Total" id="lienhaut"></span>
-														</strong>
-													</a>
-												</div>
+									<div class="tabbas" style="display:inline-block;">
+										<a href="index.php?misc/quick-navigation-menu" class="OverlayTrigger jumpMenuTrigger" data-cacheOverlay="true" title="Ouvrir la navigation rapide">
+											<!--Sauter à...-->
+										</a>
+										<div class="imagetab"></div>
+										<div class="boardTitle">
+											<strong></strong>
 										</div>
-										</span>
-									</nav>
+										<span class="crumbs">
+											<div class="gauchetab" style="float:left;">
+												<a href="http://energygaming.fr " id="lienhaut " class="crumb " rel="up " itemprop="url ">
+													<p class="textetabbasgauche ">ACCUEIL</p>
+												</a>
+												<div id="membretab">
+													<a href="https://energygaming.fr/forum/index.php?members/ " class="navLink ">
+														<p class="textetabbasgauche ">MEMBRES</p>
+													</a>
+												</div>
+												<div class="Menu JsOnly tabMenu membersTabLinks ">
+													<div class="primaryContent menuHeader ">
+														<h3>Membres</h3>
+														<div class="muted ">Liens rapides</div>
+													</div>
+													<ul class="secondaryContent blockLinksList ">
+
+														<li>
+															<a class="lienpop" href="index.php?members/ ">Membres notables</a>
+														</li>
+														<li>
+															<a class="lienpop" href="index.php?members/list ">Membres inscrits</a>
+														</li>
+														<li>
+															<a class="lienpop" href="index.php?online/ ">Visiteurs actuels</a>
+														</li>
+														<li>
+															<a class="lienpop" href="index.php?recent-activity/ ">Activités récentes</a>
+														</li>
+														<li>
+															<a class="lienpop" href="index.php?find-new/profile-posts ">Nouveaux messages de profil</a>
+														</li>
+
+													</ul>
+												</div>
+												<a href="https://energygaming.fr/forum/index.php?members/ " class="SplitCtrl " rel="Menu "></a>
+												<li class="navTab members Popup PopupControl PopupClosed ">
+
+												</li>
+											</div>
+											<div class="droitetab " style="float:right; ">
+												<a href="index.php?conversations/ " id="lienhaut">
+													<p class="textetabbasdroite ">CONVERSATIONS</p>
+													<strong class="itemCount Zero " id="VisitorExtraMenu_ConversationsCounter ">
+														<span class="Total" id="lienhaut"></span>
+													</strong>
+												</a>
+												<a href="index.php?account/alerts " id="lienhaut">
+													<p class="textetabbasdroite ">ALERTES</p>
+													<strong class="itemCount Zero " id="VisitorExtraMenu_AlertsCounter ">
+														<span class="Total" id="lienhaut"></span>
+													</strong>
+												</a>
+											</div>
+									</div>
+
+									</span>
+
 									<nav>
 										<center>
 											<img class="logo " src="EnergyLogo.png " />
@@ -3370,52 +3401,52 @@
 			<div class="pageWidth">
 				<div class="pageContent">
 
+					<div class="bandogristabbas">
 
-					<ul class="footerLinks">
+						<ul class="footerLinks">
 
 
-						<li class="listefoot">
-							<a class="lienbarfoot" href="index.php?misc/contact" class="OverlayTrigger" data-overlayOptions="{&quot;fixed&quot;:false}">NOUS CONTACTER</a>
-						</li>
+							<li class="listefoot">
+								<a class="lienbarfoot" href="index.php?misc/contact" class="OverlayTrigger" data-overlayOptions="{&quot;fixed&quot;:false}">NOUS CONTACTER</a>
+							</li>
 
-						<li class="listefoot">
-							<a class="lienbarfoot" href="index.php?help/">AIDE</a>
-						</li>
-						<li class="listefoot">
-							<a class="lienbarfoot" href="http://energygaming.fr" class="homeLink">ACCEUIL</a>
-						</li>
-						<li class="listefoot">
-							<a class="lienbarfoot" href="/forum/index.php#navigation" class="topLink">HAUT</a>
-						</li>
-						<li class="listefoot">
-							<a class="lienbarfoot" href="index.php?forums/-/index.rss" rel="alternate" class="globalFeed" target="_blank" title="Flux RSS pour EnergyGaming">RSS</a>
-						</li>
+							<li class="listefoot">
+								<a class="lienbarfoot" href="index.php?help/">AIDE</a>
+							</li>
+							<li class="listefoot">
+								<a class="lienbarfoot" href="http://energygaming.fr" class="homeLink">ACCEUIL</a>
+							</li>
+							<li class="listefoot">
+								<a class="lienbarfoot" href="/forum/index.php#navigation" class="topLink">HAUT</a>
+							</li>
+							<li class="listefoot">
+								<a class="lienbarfoot" href="index.php?forums/-/index.rss" rel="alternate" class="globalFeed" target="_blank" title="Flux RSS pour EnergyGaming">RSS</a>
+							</li>
 
-					</ul>
-
+						</ul>
+					</div>
 					<span class="helper"></span>
 				</div>
 			</div>
 		</div>
-
 		<div class="footerLegal">
 			<div class="pageWidth">
 				<div class="pageContent">
 					<ul id="legal">
 
-						<li class="listefootleft">
+						<li class="listefootright">
 							<a class="lienbarfoot" href="index.php?help/terms">CONDITIONS ET REGLES</a>
 						</li>
 
 
 					</ul>
-					<center>
-						<div id="copyright">
-							<a class="lienbarfoot" id="final" href="http://energygaming.fr/" class="concealed">EnergyGaming
-								<span>&copy; 2015-2018 Inc.</span>
-							</a>
-						</div>
-					</center>
+
+					<div id="copyright">
+						<a class="lienbarfoot" id="final" href="http://energygaming.fr/" class="concealed">EnergyGaming
+							<span>&copy; 2015-2018 Inc.</span>
+						</a>
+					</div>
+
 
 
 
@@ -3427,19 +3458,18 @@
 		<center>
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- Forum -->
-			<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-2856993605392259" data-ad-slot="3193166725"></ins>
+			<ins class="adsbygoogle" style="display:inline-block;width:728px;height:0px" data-ad-client="ca-pub-2856993605392259" data-ad-slot="3193166725"></ins>
 			<script>
 				(adsbygoogle = window.adsbygoogle || []).push({});
 			</script>
 
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- Forum 2 -->
-			<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-2856993605392259" data-ad-slot="1576832726"></ins>
+			<ins class="adsbygoogle" style="display:inline-block;width:728px;height:0px" data-ad-client="ca-pub-2856993605392259" data-ad-slot="1576832726"></ins>
 			<script>
 				(adsbygoogle = window.adsbygoogle || []).push({});
 			</script>
 		</center>
-
 	</footer>
 
 	<script>
