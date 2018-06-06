@@ -19,7 +19,20 @@
     }
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width:2000px) {
+    .texteintro{
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width:1500px) {
+    .texteintro{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width:1200px) {
+    .texteintro{
+        font-size: 28px;
+    }
     .droite {
         float: none;
         width: 100%;
@@ -27,6 +40,9 @@
     .gauche {
         float: none;
         width: 100%;
+    }
+    .milieu{
+        float: none;
     }
 }
 

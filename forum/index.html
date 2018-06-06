@@ -63,7 +63,7 @@
 			aciennepos = $(".intro").position();
 			// A chaque fois que l'utilisateur va scroller
 			var y = $(this).scrollTop(); // On récupérer la valeur du scroll vertical
-			
+
 			var pos = $(".tabbas").position(),
 				number;
 			number = parseInt(pos);
@@ -218,10 +218,111 @@
 											<p></p>
 										</div>
 									</div>
+									<div class="milieu">
+										<center>
+										<div id="searchBar" class="pageWidth">
+
+											<span id="QuickSearchPlaceholder" title="Rechercher">Rechercher</span>
+											<fieldset id="QuickSearch">
+												<form action="index.php?search/search" method="post" class="formPopup">
+
+													<div class="primaryControls">
+														<!-- block: primaryControls -->
+														<input type="search" name="keywords" value="" class="textCtrl" placeholder="Rechercher..." results="0" title="Entrez votre recherche et appuyez sur entrer"
+														    id="QuickSearchQuery" />
+														<!-- end block: primaryControls -->
+													</div>
+
+													<div class="secondaryControls">
+														<div class="controlsWrapper">
+
+															<!-- block: secondaryControls -->
+															<dl class="ctrlUnit">
+																<dt></dt>
+																<dd>
+																	<ul>
+																		<li>
+																			<label>
+																				<input type="checkbox" name="title_only" value="1" id="search_bar_title_only" class="AutoChecker" data-uncheck="#search_bar_thread"
+																				/> Rechercher par titre uniquement</label>
+																		</li>
+																	</ul>
+																</dd>
+															</dl>
+
+															<dl class="ctrlUnit">
+																<dt>
+																	<label for="searchBar_users">Posté par un membre:</label>
+																</dt>
+																<dd>
+																	<input type="text" name="users" value="" class="textCtrl AutoComplete" id="searchBar_users" />
+																	<p class="explain">Séparer les noms avec une virgule.</p>
+																</dd>
+															</dl>
+
+															<dl class="ctrlUnit">
+																<dt>
+																	<label for="searchBar_date">Plus récent que:</label>
+																</dt>
+																<dd>
+																	<input type="date" name="date" value="" class="textCtrl" id="searchBar_date" />
+																</dd>
+															</dl>
+
+
+														</div>
+														<!-- end block: secondaryControls -->
+
+														<dl class="ctrlUnit submitUnit">
+															<dt></dt>
+															<dd>
+																<input type="submit" value="Rechercher" class="button primary Tooltip" title="Trouver maintenant" />
+																<div class="Popup" id="commonSearches">
+																	<a rel="Menu" class="button NoPopupGadget Tooltip" title="Recherches utiles" data-tipclass="flipped">
+																		<span class="arrowWidget"></span>
+																	</a>
+																	<div class="Menu">
+																		<div class="primaryContent menuHeader">
+																			<h3>Recherches utiles</h3>
+																		</div>
+																		<ul class="secondaryContent blockLinksList">
+																			<!-- block: useful_searches -->
+																			<li>
+																				<a href="index.php?find-new/posts&amp;recent=1" rel="nofollow">Messages récents</a>
+																			</li>
+
+																			<li>
+																				<a href="index.php?search/member&amp;user_id=638&amp;content=thread">Vos discussions</a>
+																			</li>
+																			<li>
+																				<a href="index.php?search/member&amp;user_id=638&amp;content=post">Vos messages</a>
+																			</li>
+																			<li>
+																				<a href="index.php?search/member&amp;user_id=638&amp;content=profile_post">Vos messages de profil</a>
+																			</li>
+
+																			<!-- end block: useful_searches -->
+																		</ul>
+																	</div>
+																</div>
+																<a href="index.php?search/" class="button moreOptions Tooltip" title="Recherche avancée">Plus...</a>
+															</dd>
+														</dl>
+
+													</div>
+
+													<input type="hidden" name="_xfToken" value="638,1526024684,8e37c79cf3fed996c79fdbe4385a592a1470eb54" />
+												</form>
+											</fieldset>
+
+										</div>
+									</center>
+									</div>
 									<div class="droite">
 										<div class="bandohorisontal">
 											<p></p>
 										</div>
+
 										<center>
 											<div class="textecentrer">
 												<p class="texteintro">Nous vous proposons divers topics de discussions comme
@@ -3290,264 +3391,168 @@
 			</div>
 
 
-			<div id="searchBar" class="pageWidth">
-
-				<span id="QuickSearchPlaceholder" title="Rechercher">Rechercher</span>
-				<fieldset id="QuickSearch">
-					<form action="index.php?search/search" method="post" class="formPopup">
-
-						<div class="primaryControls">
-							<!-- block: primaryControls -->
-							<input type="search" name="keywords" value="" class="textCtrl" placeholder="Rechercher..." results="0" title="Entrez votre recherche et appuyez sur entrer"
-							    id="QuickSearchQuery" />
-							<!-- end block: primaryControls -->
-						</div>
-
-						<div class="secondaryControls">
-							<div class="controlsWrapper">
-
-								<!-- block: secondaryControls -->
-								<dl class="ctrlUnit">
-									<dt></dt>
-									<dd>
-										<ul>
-											<li>
-												<label>
-													<input type="checkbox" name="title_only" value="1" id="search_bar_title_only" class="AutoChecker" data-uncheck="#search_bar_thread"
-													/> Rechercher par titre uniquement</label>
-											</li>
-										</ul>
-									</dd>
-								</dl>
-
-								<dl class="ctrlUnit">
-									<dt>
-										<label for="searchBar_users">Posté par un membre:</label>
-									</dt>
-									<dd>
-										<input type="text" name="users" value="" class="textCtrl AutoComplete" id="searchBar_users" />
-										<p class="explain">Séparer les noms avec une virgule.</p>
-									</dd>
-								</dl>
-
-								<dl class="ctrlUnit">
-									<dt>
-										<label for="searchBar_date">Plus récent que:</label>
-									</dt>
-									<dd>
-										<input type="date" name="date" value="" class="textCtrl" id="searchBar_date" />
-									</dd>
-								</dl>
 
 
-							</div>
-							<!-- end block: secondaryControls -->
 
-							<dl class="ctrlUnit submitUnit">
-								<dt></dt>
-								<dd>
-									<input type="submit" value="Rechercher" class="button primary Tooltip" title="Trouver maintenant" />
-									<div class="Popup" id="commonSearches">
-										<a rel="Menu" class="button NoPopupGadget Tooltip" title="Recherches utiles" data-tipclass="flipped">
-											<span class="arrowWidget"></span>
-										</a>
-										<div class="Menu">
-											<div class="primaryContent menuHeader">
-												<h3>Recherches utiles</h3>
-											</div>
-											<ul class="secondaryContent blockLinksList">
-												<!-- block: useful_searches -->
-												<li>
-													<a href="index.php?find-new/posts&amp;recent=1" rel="nofollow">Messages récents</a>
-												</li>
+			-->
 
-												<li>
-													<a href="index.php?search/member&amp;user_id=638&amp;content=thread">Vos discussions</a>
-												</li>
-												<li>
-													<a href="index.php?search/member&amp;user_id=638&amp;content=post">Vos messages</a>
-												</li>
-												<li>
-													<a href="index.php?search/member&amp;user_id=638&amp;content=profile_post">Vos messages de profil</a>
-												</li>
-
-												<!-- end block: useful_searches -->
-											</ul>
-										</div>
-									</div>
-									<a href="index.php?search/" class="button moreOptions Tooltip" title="Recherche avancée">Plus...</a>
-								</dd>
-							</dl>
-
-						</div>
-
-						<input type="hidden" name="_xfToken" value="638,1526024684,8e37c79cf3fed996c79fdbe4385a592a1470eb54" />
-					</form>
-				</fieldset>
-
-			</div>
 		</div>
 
-
-		-->
-
-	</div>
-
-	<footer>
+		<footer>
 
 
 
-		<div class="footer">
-			<div class="pageWidth">
-				<div class="pageContent">
+			<div class="footer">
+				<div class="pageWidth">
+					<div class="pageContent">
 
-					<div class="bandogristabbas">
+						<div class="bandogristabbas">
 
-						<ul class="footerLinks">
+							<ul class="footerLinks">
 
 
-							<li class="listefoot">
-								<a class="lienbarfoot" href="index.php?misc/contact" class="OverlayTrigger" data-overlayOptions="{&quot;fixed&quot;:false}">NOUS CONTACTER</a>
+								<li class="listefoot">
+									<a class="lienbarfoot" href="index.php?misc/contact" class="OverlayTrigger" data-overlayOptions="{&quot;fixed&quot;:false}">NOUS CONTACTER</a>
+								</li>
+
+								<li class="listefoot">
+									<a class="lienbarfoot" href="index.php?help/">AIDE</a>
+								</li>
+								<li class="listefoot">
+									<a class="lienbarfoot" href="http://energygaming.fr" class="homeLink">ACCEUIL</a>
+								</li>
+								<li class="listefoot">
+									<a class="lienbarfoot" href="/forum/index.php#navigation" class="topLink">HAUT</a>
+								</li>
+								<li class="listefoot">
+									<a class="lienbarfoot" href="index.php?forums/-/index.rss" rel="alternate" class="globalFeed" target="_blank" title="Flux RSS pour EnergyGaming">RSS</a>
+								</li>
+
+							</ul>
+						</div>
+						<span class="helper"></span>
+					</div>
+				</div>
+			</div>
+			<div class="footerLegal">
+				<div class="pageWidth">
+					<div class="pageContent">
+						<ul id="legal">
+
+							<li class="listefootright">
+								<a class="lienbarfoot" href="index.php?help/terms">CONDITIONS ET REGLES</a>
 							</li>
 
-							<li class="listefoot">
-								<a class="lienbarfoot" href="index.php?help/">AIDE</a>
-							</li>
-							<li class="listefoot">
-								<a class="lienbarfoot" href="http://energygaming.fr" class="homeLink">ACCEUIL</a>
-							</li>
-							<li class="listefoot">
-								<a class="lienbarfoot" href="/forum/index.php#navigation" class="topLink">HAUT</a>
-							</li>
-							<li class="listefoot">
-								<a class="lienbarfoot" href="index.php?forums/-/index.rss" rel="alternate" class="globalFeed" target="_blank" title="Flux RSS pour EnergyGaming">RSS</a>
-							</li>
 
 						</ul>
+
+						<div id="copyright">
+							<a class="lienbarfoot" id="final" href="http://energygaming.fr/" class="concealed">EnergyGaming
+								<span>&copy; 2015-2018 Inc.</span>
+							</a>
+						</div>
+
+
+
+
+
+						<span class="helper"></span>
 					</div>
-					<span class="helper"></span>
 				</div>
 			</div>
-		</div>
-		<div class="footerLegal">
-			<div class="pageWidth">
-				<div class="pageContent">
-					<ul id="legal">
+			<center>
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- Forum -->
+				<ins class="adsbygoogle" style="display:inline-block;width:728px;height:0px" data-ad-client="ca-pub-2856993605392259" data-ad-slot="3193166725"></ins>
+				<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
 
-						<li class="listefootright">
-							<a class="lienbarfoot" href="index.php?help/terms">CONDITIONS ET REGLES</a>
-						</li>
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- Forum 2 -->
+				<ins class="adsbygoogle" style="display:inline-block;width:728px;height:0px" data-ad-client="ca-pub-2856993605392259" data-ad-slot="1576832726"></ins>
+				<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</center>
+		</footer>
 
+		<script>
+			jQuery.extend(true, XenForo, {
+				visitor: {
+					user_id: 638
+				},
+				serverTimeInfo: {
+					now: 1526024684,
+					today: 1525989600,
+					todayDow: 5
+				},
+				_lightBoxUniversal: "0",
+				_enableOverlays: "1",
+				_animationSpeedMultiplier: "1",
+				_overlayConfig: {
+					top: "10%",
+					speed: 200,
+					closeSpeed: 100,
+					mask: {
+						color: "rgb(0, 0, 0)",
+						opacity: "0.6",
+						loadSpeed: 200,
+						closeSpeed: 100
+					}
+				},
+				_ignoredUsers: [],
+				_loadedScripts: {
+					"node_list": true,
+					"node_category": true,
+					"node_forum": true,
+					"profile_post_list_simple": true,
+					"bb_code": true,
+					"sidebar_share_page": true,
+					"titangamer": true,
+					"js\/xenforo\/quick_reply_profile.js?_v=97d870c3": true
+				},
+				_cookieConfig: {
+					path: "/",
+					domain: "",
+					prefix: "xf_"
+				},
+				_csrfToken: "638,1526024684,8e37c79cf3fed996c79fdbe4385a592a1470eb54",
+				_csrfRefreshUrl: "index.php?login/csrf-token-refresh",
+				_jsVersion: "97d870c3"
+			});
+			jQuery.extend(XenForo.phrases, {
+				cancel: "Annuler",
 
-					</ul>
+				a_moment_ago: "Il y a un instant",
+				one_minute_ago: "il y a 1 minute",
+				x_minutes_ago: "il y a %minutes% minutes",
+				today_at_x: "Aujourd'hui à %time%",
+				yesterday_at_x: "Hier à %time%",
+				day_x_at_time_y: "%day% à %time%",
 
-					<div id="copyright">
-						<a class="lienbarfoot" id="final" href="http://energygaming.fr/" class="concealed">EnergyGaming
-							<span>&copy; 2015-2018 Inc.</span>
-						</a>
-					</div>
+				day0: "Dimanche",
+				day1: "Lundi",
+				day2: "Mardi",
+				day3: "Mercredi",
+				day4: "Jeudi",
+				day5: "Vendredi",
+				day6: "Samedi",
 
+				_months: "Janvier,Février,Mars,Avril,Mai,Juin,Juillet,Août,Septembre,Octobre,Novembre,Décembre",
+				_daysShort: "Dim,Lun,Mar,Mer,Jeu,Ven,Sam",
 
+				following_error_occurred: "L'erreur suivante s'est produite",
+				server_did_not_respond_in_time_try_again: "Le serveur n'a pas répondu à temps. S'il vous  plaît, essayez de nouveau.",
+				logging_in: "Connexion",
+				click_image_show_full_size_version: "Cliquez sur l'image pour afficher sa version complète.",
+				show_hidden_content_by_x: "Afficher le contenu caché par {names}"
+			});
 
-
-
-					<span class="helper"></span>
-				</div>
-			</div>
-		</div>
-		<center>
-			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			<!-- Forum -->
-			<ins class="adsbygoogle" style="display:inline-block;width:728px;height:0px" data-ad-client="ca-pub-2856993605392259" data-ad-slot="3193166725"></ins>
-			<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
-
-			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			<!-- Forum 2 -->
-			<ins class="adsbygoogle" style="display:inline-block;width:728px;height:0px" data-ad-client="ca-pub-2856993605392259" data-ad-slot="1576832726"></ins>
-			<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
-		</center>
-	</footer>
-
-	<script>
-		jQuery.extend(true, XenForo, {
-			visitor: {
-				user_id: 638
-			},
-			serverTimeInfo: {
-				now: 1526024684,
-				today: 1525989600,
-				todayDow: 5
-			},
-			_lightBoxUniversal: "0",
-			_enableOverlays: "1",
-			_animationSpeedMultiplier: "1",
-			_overlayConfig: {
-				top: "10%",
-				speed: 200,
-				closeSpeed: 100,
-				mask: {
-					color: "rgb(0, 0, 0)",
-					opacity: "0.6",
-					loadSpeed: 200,
-					closeSpeed: 100
-				}
-			},
-			_ignoredUsers: [],
-			_loadedScripts: {
-				"node_list": true,
-				"node_category": true,
-				"node_forum": true,
-				"profile_post_list_simple": true,
-				"bb_code": true,
-				"sidebar_share_page": true,
-				"titangamer": true,
-				"js\/xenforo\/quick_reply_profile.js?_v=97d870c3": true
-			},
-			_cookieConfig: {
-				path: "/",
-				domain: "",
-				prefix: "xf_"
-			},
-			_csrfToken: "638,1526024684,8e37c79cf3fed996c79fdbe4385a592a1470eb54",
-			_csrfRefreshUrl: "index.php?login/csrf-token-refresh",
-			_jsVersion: "97d870c3"
-		});
-		jQuery.extend(XenForo.phrases, {
-			cancel: "Annuler",
-
-			a_moment_ago: "Il y a un instant",
-			one_minute_ago: "il y a 1 minute",
-			x_minutes_ago: "il y a %minutes% minutes",
-			today_at_x: "Aujourd'hui à %time%",
-			yesterday_at_x: "Hier à %time%",
-			day_x_at_time_y: "%day% à %time%",
-
-			day0: "Dimanche",
-			day1: "Lundi",
-			day2: "Mardi",
-			day3: "Mercredi",
-			day4: "Jeudi",
-			day5: "Vendredi",
-			day6: "Samedi",
-
-			_months: "Janvier,Février,Mars,Avril,Mai,Juin,Juillet,Août,Septembre,Octobre,Novembre,Décembre",
-			_daysShort: "Dim,Lun,Mar,Mer,Jeu,Ven,Sam",
-
-			following_error_occurred: "L'erreur suivante s'est produite",
-			server_did_not_respond_in_time_try_again: "Le serveur n'a pas répondu à temps. S'il vous  plaît, essayez de nouveau.",
-			logging_in: "Connexion",
-			click_image_show_full_size_version: "Cliquez sur l'image pour afficher sa version complète.",
-			show_hidden_content_by_x: "Afficher le contenu caché par {names}"
-		});
-
-		// Facebook Javascript SDK
-		XenForo.Facebook.appId = "";
-		XenForo.Facebook.forceInit = true;
-	</script>
+			// Facebook Javascript SDK
+			XenForo.Facebook.appId = "";
+			XenForo.Facebook.forceInit = true;
+		</script>
 
 
 

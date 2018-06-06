@@ -1,6 +1,7 @@
-body{
+body {
     transition: 1s;
 }
+
 #lienhaut {
     text-decoration: none;
 }
@@ -19,11 +20,11 @@ body{
 .logo {
     margin: 0;
     padding: 0;
-    width: 400px;
+    width: 500px;
     height: auto;
     position: absolute;
     top: 210px;
-    margin-left: -200px;
+    margin-left: -250px;
     text-align: center;
     z-index: 4;
 }
@@ -71,11 +72,12 @@ body{
     background-color: black;
     vertical-align: top;
 }
-.tabbas.fixed{
-    position:fixed;
-    top:0;
-    z-index:3;
-  }
+
+.tabbas.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
 
 .fondtab {
     background-image: url(fondtab.png);
@@ -117,13 +119,18 @@ p {
 
 .droite {
     float: right;
-    width: 50%;
+    width: 35%;
     text-align: center;
 }
 
 .gauche {
     float: left;
-    width: 50%;
+    width: 35%;
+    text-align: center;
+}
+.milieu{
+    float: left;
+    width: 30%;
     text-align: center;
 }
 
@@ -143,6 +150,104 @@ p {
 
 .textecentrer {
     width: 60%;
+}
+#searchBar {
+    position: relative;
+    z-index: 1;
+    /* higher than breadcrumb arrows */
+    top:200px;
+}
+
+#QuickSearchPlaceholder {
+    
+
+    position: absolute;
+    right: 20px;
+    top: -31px;
+    display: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 11px;
+    height: 16px;
+    width: 16px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+#QuickSearchQuery {
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 18px;
+    text-align: left;
+    margin-left: 15px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    color:rgb(74, 74, 74);
+
+    width: 80%;
+    height: 40px;;
+    display: block;
+    position: relative;
+    margin: 0;
+    background-color: rgb(230, 230, 230);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 4px;
+    padding-top: 5px;
+    _padding-top: 3px;
+    z-index: 7500;
+    border: 0ch;
+    outline:  none;
+}
+#QuickSearch{
+    border: none;
+}
+
+#QuickSearch .secondaryControls {
+    display: none;
+}
+
+
+#QuickSearch .submitUnit .button {
+    min-width: 0;
+}
+
+#QuickSearch input.button.primary {
+    float: left;
+    width: 110px;
+    border: 0ch;
+}
+
+#QuickSearch #commonSearches {
+    float: right;
+}
+
+#QuickSearch #commonSearches .button {
+    width: 23px;
+    padding: 0;
+}
+
+#QuickSearch #commonSearches .arrowWidget {
+    margin: 0;
+    float: left;
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+#QuickSearch .moreOptions {
+    display: block;
+    margin: 0 24px 0 110px;
+    width: auto;
 }
 
 .texteintro {
@@ -326,40 +431,51 @@ div {
     display: inline-block;
 }
 
-.subForumList,.pairsInline,.nodeControls{
-    font-size:0px;
+.subForumList,
+.pairsInline,
+.nodeControls {
+    font-size: 0px;
     transition-duration: 1s;
 }
+
 .lienpop {
     color: green;
     text-align: left;
     transition-duration: 1s;
 }
-.nodeText:active,.nodeText:active ~ .subForumList,.subForumList:hover ,.nodeText:active .pairsInline{
-    font-size:20px;
+
+.nodeText:active,
+.nodeText:active~.subForumList,
+.subForumList:hover,
+.nodeText:active .pairsInline {
+    font-size: 20px;
 }
-footer{
-    border-top: solid black 5px;;
+
+footer {
+    border-top: solid black 5px;
+    ;
     background-color: black;
     width: 100%;
     margin: 0rem;
     padding: 0rem;
 }
 
-.footer{
+.footer {
     width: 100%;
     height: 16px;
 }
-.listefoot{
+
+.listefoot {
     float: right;
     margin: 0%;
     padding: 0%;
 }
-.listefootright{
-    float: right;
 
+.listefootright {
+    float: right;
 }
-.lienbarfoot{
+
+.lienbarfoot {
     margin-right: 20px;
     font-family: 'Oswald', sans-serif;
     font-style: normal;
@@ -369,10 +485,12 @@ footer{
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
-#final{
+
+#final {
     margin-left: 20px;
 }
-.bandogristabbas{
+
+.bandogristabbas {
     width: 100%;
     height: 32px;
     background-color: rgb(92, 92, 92);
