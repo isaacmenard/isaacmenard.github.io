@@ -6,6 +6,73 @@ body {
     text-decoration: none;
 }
 
+#AccountMenu {
+    width: 274px;
+}
+
+
+#AccountMenu .menuHeader {
+    position: relative;
+}
+
+#AccountMenu .menuHeader .avatar {
+    float: left;
+    margin-right: 10px;
+}
+
+#AccountMenu .menuHeader .visibilityForm {
+    margin-top: 10px;
+    color: rgb(60, 60, 60);
+}
+
+#AccountMenu .menuHeader .links .fl {
+    position: absolute;
+    bottom: 10px;
+    left: 116px;
+}
+
+#AccountMenu .menuHeader .links .fr {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+#AccountMenu .menuColumns {
+    overflow: hidden;
+    zoom: 1;
+    padding: 2px;
+}
+
+#AccountMenu .menuColumns ul {
+    float: left;
+    padding: 0;
+    max-height: none;
+    overflow: hidden;
+}
+
+#AccountMenu .menuColumns a,
+#AccountMenu .menuColumns label {
+    width: 115px;
+}
+
+#AccountMenu .statusPoster textarea {
+    width: 245px;
+    margin: 0;
+    resize: vertical;
+    overflow: hidden;
+}
+
+#AccountMenu .statusPoster .submitUnit {
+    margin-top: 5px;
+    text-align: right;
+}
+
+#AccountMenu .statusPoster .submitUnit .statusEditorCounter {
+    float: left;
+    line-height: 23px;
+    height: 23px;
+}
+
 #titrehaut {
     margin: 0px;
     padding: 0;
@@ -128,7 +195,8 @@ p {
     width: 35%;
     text-align: center;
 }
-.milieu{
+
+.milieu {
     float: left;
     width: 30%;
     text-align: center;
@@ -151,16 +219,15 @@ p {
 .textecentrer {
     width: 60%;
 }
+
 #searchBar {
     position: relative;
     z-index: 1;
     /* higher than breadcrumb arrows */
-    top:200px;
+    top: 200px;
 }
 
 #QuickSearchPlaceholder {
-    
-
     position: absolute;
     right: 20px;
     top: -31px;
@@ -181,6 +248,11 @@ p {
     overflow: hidden;
 }
 
+.textCtrl {
+    padding-bottom: 5.5px;
+    padding-left: 6px;
+}
+
 #QuickSearchQuery {
     font-family: 'Oswald', sans-serif;
     font-style: normal;
@@ -191,10 +263,10 @@ p {
     margin-left: 15px;
     margin-block-start: 0px;
     margin-block-end: 0px;
-    color:rgb(74, 74, 74);
-
+    color: rgb(74, 74, 74);
     width: 80%;
-    height: 40px;;
+    height: 40px;
+    ;
     display: block;
     position: relative;
     margin: 0;
@@ -207,16 +279,16 @@ p {
     _padding-top: 3px;
     z-index: 7500;
     border: 0ch;
-    outline:  none;
+    outline: none;
 }
-#QuickSearch{
+
+#QuickSearch {
     border: none;
 }
 
 #QuickSearch .secondaryControls {
     display: none;
 }
-
 
 #QuickSearch .submitUnit .button {
     min-width: 0;
@@ -279,7 +351,7 @@ p {
 }
 
 .corp {
-    width: 80%;
+    width: 75%;
     background-color: #343232;
     margin: 0;
     padding: 0;
@@ -288,7 +360,7 @@ p {
 }
 
 .bardroite {
-    width: calc(20% - 5px);
+    width: calc(25% - 5px);
     background-color: #343232;
     padding: 0;
     float: right;
@@ -340,7 +412,17 @@ li {
     float: left;
 }
 
-.textetitre2 {
+.blokpage2 {
+    margin-left: 5px;
+    height: 30px;
+    width: 4px;
+    background-color: #EB5757;
+    float: left;
+}
+
+.textetitre2,
+.textetitre3,
+.textetitre4 {
     margin-bottom: 5px;
     font-family: 'Oswald', sans-serif;
     font-style: normal;
@@ -353,6 +435,17 @@ li {
     position: relative;
     margin-left: 5px;
     margin-top: -4px;
+}
+
+.textetitre3 {
+    font-size: 20px;
+    margin: 0;
+    margin-left: 2px;
+}
+
+.textetitre4 {
+    font-size: 25px;
+    text-align: center;
 }
 
 .nodeDescription {
@@ -451,18 +544,39 @@ div {
     font-size: 20px;
 }
 
+
+
+.avatar1 {
+    width: 180px;
+    height: 180px;
+    border: solid white;
+    border-radius: 3px 3px 2px;
+}
+
 footer {
     border-top: solid black 5px;
-    ;
     background-color: black;
     width: 100%;
     margin: 0rem;
     padding: 0rem;
 }
 
+.conteneurprofil {
+    padding: 10px;
+    width: auto;
+    height: auto;
+}
+
 .footer {
     width: 100%;
     height: 16px;
+}
+
+.tweeter,
+.facebook {
+    width: 80px;
+    height: auto;
+    margin: 5px;
 }
 
 .listefoot {
