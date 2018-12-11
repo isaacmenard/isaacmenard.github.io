@@ -1,525 +1,115 @@
-.tete{
-    width: 40%;
-    height: 90%;
-    margin: 0 auto;
-    background-color: rgb(0, 0, 0,0.8);
-    
-    position: fixed;
-    top:5%;
-    left:30%;
-    border: 1px;
-    border-radius: 12px 12px 20px;
-    
-
+﻿body,p,div,nav
+{
+    margin:0px;
 }
-.bodye{
-    transition: 2s;
-    -webkit-transition: 2s;
-    background-size: 100% 100%;
+a{
+    text-decoration:none;
+    color:white;
 }
-
-.Titre{
-    margin-top: 3%;
-	font-size: 240%;
-	font-weight: normal;
+body {
+    background-color: #F29E0A;
+    font-family: 'Roboto', sans-serif;
+}
+.encadrement {
+    background-color: #333333;
+    height: 3px;
+    width: 100%;
+    border-bottom: solid black 3px;
+    border-top: solid black 3px;
+}
+header {
+    background-color: #333333;
+    color:white;
+}
+.titreHeader {
+    display: inline-block;
+    font-size: 30px;
     text-align: center;
     font-family: 'Anton', sans-serif;
-    color: white
+    width: 40%;
+    text-align: left;
+    margin-left:10%;
 }
-.soustitre{
-    margin-top: 3%;
-	font-size: 180%;
-	font-weight: normal;
+.liensHeader {
+    display: inline-block;
+    width: 40%;
+    text-align: right;
+}
+.bouttonLien {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: -20px;
+    padding-bottom: 10px;
+    background-image: url("icon.png");
+    background-size: 100%;
+    width: 90px;
+    height: 90px;
+    font-family: 'Anton', sans-serif;
     text-align: center;
-    font-family: 'Roboto Condensed', sans-serif;
-    padding-top: -10px;
-    color: white
-}
-.paragraphe{
-	font-size: 130%;
-	font-weight: normal;
-    text-align: center;
-    font-family: 'Roboto Condensed', sans-serif;
-    padding-top: -10px;
-    color: white
-}
-.para{
-	font-size: 20%;
-	font-weight: normal;
-    text-align: center;
-    padding-top: -10px;
-    color: white
-}
-.banniere{
-    position: relative;
-    
-}
-.svg-inline--fa{
-    font-size: 100px ;
+    font-size: 20px;
+    line-height: 125px;
+    white-space: nowrap;
     color: white;
-    margin: 0 auto;
-    display: block;
-  }
-@media all and (orientation: portrait)
-{   
-    .svg-inline--fa{
-        font-size: 80px ;
-        color: white;
-        margin: 0 auto;
-        display: block;
-      }
-    .fond {
-        background-image: url("1438617991-wallhaven-91048.jpg")
-        transform: rotate(-90deg);
-    }
-    .tete{
-        width: 60%;
-        height: 50%;
-        margin: 0 auto;
-        background-color: rgba(0, 0, 0, 0.8);
-        
-        position: fixed;
-        top:25%;
-        left:20%;
-        border: 1px;
-        border-radius: 12px 12px 20px;
-        
-    
-    }
-    .Titre{
-        
-        font-size: 350%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Anton', sans-serif;
-        color: white
-    }
-    .soustitre{
-        font-size: 290%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Roboto Condensed', sans-serif;
-        padding-top: -10px;
-        color: white
-    }
-    .paragraphe{
-        font-size: 170%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Roboto Condensed', sans-serif;
-        padding-top: -10px;
-        color: white
-    }
-    .para{
-        font-size: 20%;
-        font-weight: normal;
-        text-align: center;
-        padding-top: -10px;
-        color: white
-    }
-    .banniere{
-        position: relative;
-        
-    }
 }
-@media only screen and (max-width:1200px) {
-    .svg-inline--fa{
-        font-size: 0px ;
-        
-      }
-    .fond {
-        background-image: url("1438617991-wallhaven-91048.jpg")
-        transform: rotate(-90deg);
-    }
-    .tete{
-        width: 70%;
-        height: 80%;
-        margin: 0 auto;
-        background-color: rgba(0, 0, 0, 0.8);
-        
-        position: fixed;
-        top:10%;
-        left:15%;
-        border: 1px;
-        border-radius: 12px 12px 20px;
-        
-    
-    }
-    .Titre{
-        padding-top: 0%;
-        font-size: 150%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Anton', sans-serif;
-        color: white
-    }
-    .soustitre{
-        font-size: 120%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Roboto Condensed', sans-serif;
-        padding-top: -10px;
-        color: white
-    }
-    .paragraphe{
-        font-size: 70%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Roboto Condensed', sans-serif;
-        padding-top: -10px;
-        color: white
-    }
-    .para{
-        font-size: 20%;
-        font-weight: normal;
-        text-align: center;
-        padding-top: -10px;
-        color: white
-    }
-    .banniere{
-        position: relative;
-        
-    }
+.corpAvant {
+    background-image: url("background.png");
+    background-size: 100%; 
+    width: 100%;
+    margin: 0px;
+    font-family: 'Anton', sans-serif;
+    text-align: right;
+    height: 700px;
+    font-size: 70px;
+    border-top: 1px solid #656464;
+    box-sizing: border-box;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+    padding-right: 20px;
+    background-repeat:no-repeat;
 }
-@media only screen and (max-height:500px){
-    .svg-inline--fa{
-        font-size: 0px ;
-        
-      }
-    .fond {
-        background-image: url("1438617991-wallhaven-91048.jpg")
-        transform: rotate(-90deg);
-    }
-    .tete{
-        width: 70%;
-        height: 80%;
-        margin: 0 auto;
-        background-color: rgba(0, 0, 0, 0.8);
-        
-        position: fixed;
-        top:10%;
-        left:15%;
-        border: 1px;
-        border-radius: 12px 12px 20px;
-        
-    
-    }
-    .Titre{
-        padding-top: 0%;
-        font-size: 150%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Anton', sans-serif;
-        color: white
-    }
-    .soustitre{
-        font-size: 120%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Roboto Condensed', sans-serif;
-        padding-top: -10px;
-        color: white
-    }
-    .paragraphe{
-        font-size: 70%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Roboto Condensed', sans-serif;
-        padding-top: -10px;
-        color: white
-    }
-    .para{
-        font-size: 20%;
-        font-weight: normal;
-        text-align: center;
-        padding-top: -10px;
-        color: white
-    }
-    .banniere{
-        position: relative;
-        
-    }
+.texteTitre {
+    height: 100%;
+    margin-top:250px;
 }
-@media only screen and (max-height:400px){
-    .svg-inline--fa{
-        font-size: 0px ;
-        
-      }
-    .fond {
-        background-image: url("1438617991-wallhaven-91048.jpg")
-        transform: rotate(-90deg);
-    }
-    .tete{
-        width: 70%;
-        height: 80%;
-        margin: 0 auto;
-        background-color: rgba(0, 0, 0, 0.8);
-        
-        position: fixed;
-        top:10%;
-        left:15%;
-        border: 1px;
-        border-radius: 12px 12px 20px;
-        
-    
-    }
-    .Titre{
-        margin-top: 0%;
-        font-size: 150%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Anton', sans-serif;
-        color: white
-    }
-    .soustitre{
-        font-size: 120%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Roboto Condensed', sans-serif;
-        padding-top: -10px;
-        color: white
-    }
-    .paragraphe{
-        font-size: 70%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Roboto Condensed', sans-serif;
-        padding-top: -10px;
-        color: white
-    }
-    .para{
-        font-size: 20%;
-        font-weight: normal;
-        text-align: center;
-        padding-top: -10px;
-        color: white
-    }
-    .banniere{
-        position: relative;
-        
-    }
+.paragraphe {
+    border: solid white 5px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background-color: #B15151;
 }
-@media only screen and (max-height:700px){
-    .svg-inline--fa{
-        font-size: 0px ;
-        
-      }
-    .fond {
-        background-image: url("1438617991-wallhaven-91048.jpg")
-        transform: rotate(-90deg);
-    }
-    .tete{
-        width: 70%;
-        height: 80%;
-        margin: 0 auto;
-        background-color: rgba(0, 0, 0, 0.8);
-        
-        position: fixed;
-        top:10%;
-        left:15%;
-        border: 1px;
-        border-radius: 12px 12px 20px;
-        
-    
-    }
-    .Titre{
-        padding-top: 0%;
-        font-size: 150%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Anton', sans-serif;
-        color: white
-    }
-    .soustitre{
-        font-size: 120%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Roboto Condensed', sans-serif;
-        padding-top: -10px;
-        color: white
-    }
-    .paragraphe{
-        font-size: 70%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Roboto Condensed', sans-serif;
-        padding-top: -10px;
-        color: white
-    }
-    .para{
-        font-size: 20%;
-        font-weight: normal;
-        text-align: center;
-        padding-top: -10px;
-        color: white
-    }
-    .banniere{
-        position: relative;
-        
-    }
+.corpArriere {
+    margin: 0px;
+    border-top: 30px solid #F29E0A;
 }
-@media only screen and (max-width:800px){
-    .svg-inline--fa{
-        font-size: 0px ;
-        
-      }
-    .fond {
-        background-image: url("1438617991-wallhaven-91048.jpg")
-        transform: rotate(-90deg);
-    }
-    .tete{
-        width: 70%;
-        height: 80%;
-        margin: 0 auto;
-        background-color: rgba(0, 0, 0, 0.8);
-        
-        position: fixed;
-        top:10%;
-        left:15%;
-        border: 1px;
-        border-radius: 12px 12px 20px;
-        
-    
-    }
-    .Titre{
-        padding-top: 0%;
-        font-size: 100%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Anton', sans-serif;
-        color: white;
-    }
-    .soustitre{
-        font-size: 120%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Roboto Condensed', sans-serif;
-        padding-top: -10px;
-        color: white;
-    }
-    .paragraphe{
-        font-size: 70%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Roboto Condensed', sans-serif;
-        padding-top: -10px;
-        color: white;
-    }
-    .para{
-        font-size: 20%;
-        font-weight: normal;
-        text-align: center;
-        padding-top: -10px;
-        color: white;
-    }
-    .banniere{
-        position: relative;
-        
-    }
+.middle {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: inline-block;
+    height: 200px;
+    width: 10px;
+    background-color: white;
 }
-#cuberouge1{
-    top: 100%;
-    left: 100%;
-    background-color: rgba(255,0,0,.5);
-    border: 0px;
-    border-radius: 3px 3px 5px;
-    position:fixed;
-    transition : 2s;
-    
-    
+.gauche {
+    text-align:center;
+    margin:20px;
+    display: inline-block;
+    min-height: 10em;
+    width: 45%;
+    vertical-align: top;
 }
-#cubevert1{
-    top: 100%;
-    left: 0%;
-    background-color: rgba(123, 255, 0, 0.5);
-    border: 0px;
-    border-radius: 3px 3px 5px;
-    position:fixed;
-    transition : 2s;
-    
-    
+.droite {
+    margin: 20px;
+    display: inline-block;
+    min-height: 10em;
+    width: 40%;
+    vertical-align: top
 }
-#cubebleu1{
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    background-color: rgba(38, 0, 255, 0.5);
-    border: 0px;
-    border-radius: 3px 3px 5px;
-    position:fixed;
-    transition : 2s;
-    
-    
+footer {
+    background-color: #333333;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align:center;
+    color:white;
 }
-#cubeorange1{
-    top: 0%;
-    left: 100%;
-    background-color: rgba(255, 123, 0, 0.5);
-    border: 0px;
-    border-radius: 3px 3px 5px;
-    position:fixed;
-    transition : 2s;
-    
-    
-}
-@media only screen and (max-width:310px){
-    .svg-inline--fa{
-        font-size: 0px ;
-        
-      }
-    .fond {
-        background-image: url("1438617991-wallhaven-91048.jpg")
-        transform: rotate(-90deg);
-    }
-    .tete{
-        width: 70%;
-        height: 80%;
-        margin: 0 auto;
-        background-color: rgba(0, 0, 0, 0.8);
-        
-        position: fixed;
-        top:10%;
-        left:15%;
-        border: 1px;
-        border-radius: 12px 12px 20px;
-        
-    
-    }
-    .Titre{
-        padding-top: 0%;
-        font-size: 120%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Anton', sans-serif;
-        color: white
-    }
-    .soustitre{
-        font-size: 100%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Roboto Condensed', sans-serif;
-        padding-top: -10px;
-        color: white
-    }
-    .paragraphe{
-        font-size: 60%;
-        font-weight: normal;
-        text-align: center;
-        font-family: 'Roboto Condensed', sans-serif;
-        padding-top: -10px;
-        color: white
-    }
-    .para{
-        font-size: 20%;
-        font-weight: normal;
-        text-align: center;
-        padding-top: -10px;
-        color: white
-    }
-    .banniere{
-        position: relative;
-        
-    }
-}
-
 
