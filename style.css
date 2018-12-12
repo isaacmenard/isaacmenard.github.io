@@ -1,0 +1,525 @@
+.tete{
+    width: 40%;
+    height: 90%;
+    margin: 0 auto;
+    background-color: rgb(0, 0, 0,0.8);
+    
+    position: fixed;
+    top:5%;
+    left:30%;
+    border: 1px;
+    border-radius: 12px 12px 20px;
+    
+
+}
+.bodye{
+    transition: 2s;
+    -webkit-transition: 2s;
+    background-size: 100% 100%;
+}
+
+.Titre{
+    margin-top: 3%;
+	font-size: 240%;
+	font-weight: normal;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    color: white
+}
+.soustitre{
+    margin-top: 3%;
+	font-size: 180%;
+	font-weight: normal;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: -10px;
+    color: white
+}
+.paragraphe{
+	font-size: 130%;
+	font-weight: normal;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: -10px;
+    color: white
+}
+.para{
+	font-size: 20%;
+	font-weight: normal;
+    text-align: center;
+    padding-top: -10px;
+    color: white
+}
+.banniere{
+    position: relative;
+    
+}
+.svg-inline--fa{
+    font-size: 100px ;
+    color: white;
+    margin: 0 auto;
+    display: block;
+  }
+@media all and (orientation: portrait)
+{   
+    .svg-inline--fa{
+        font-size: 80px ;
+        color: white;
+        margin: 0 auto;
+        display: block;
+      }
+    .fond {
+        background-image: url("1438617991-wallhaven-91048.jpg");
+        transform: rotate(-90deg);
+    }
+    .tete{
+        width: 60%;
+        height: 50%;
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        
+        position: fixed;
+        top:25%;
+        left:20%;
+        border: 1px;
+        border-radius: 12px 12px 20px;
+        
+    
+    }
+    .Titre{
+        
+        font-size: 350%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Anton', sans-serif;
+        color: white
+    }
+    .soustitre{
+        font-size: 290%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: -10px;
+        color: white
+    }
+    .paragraphe{
+        font-size: 170%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: -10px;
+        color: white
+    }
+    .para{
+        font-size: 20%;
+        font-weight: normal;
+        text-align: center;
+        padding-top: -10px;
+        color: white
+    }
+    .banniere{
+        position: relative;
+        
+    }
+}
+@media only screen and (max-width:1200px) {
+    .svg-inline--fa{
+        font-size: 0px ;
+        
+      }
+    .fond {
+        background-image: url("1438617991-wallhaven-91048.jpg");
+        transform: rotate(-90deg);
+    }
+    .tete{
+        width: 70%;
+        height: 80%;
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        
+        position: fixed;
+        top:10%;
+        left:15%;
+        border: 1px;
+        border-radius: 12px 12px 20px;
+        
+    
+    }
+    .Titre{
+        padding-top: 0%;
+        font-size: 150%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Anton', sans-serif;
+        color: white
+    }
+    .soustitre{
+        font-size: 120%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: -10px;
+        color: white
+    }
+    .paragraphe{
+        font-size: 70%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: -10px;
+        color: white
+    }
+    .para{
+        font-size: 20%;
+        font-weight: normal;
+        text-align: center;
+        padding-top: -10px;
+        color: white
+    }
+    .banniere{
+        position: relative;
+        
+    }
+}
+@media only screen and (max-height:500px){
+    .svg-inline--fa{
+        font-size: 0px ;
+        
+      }
+    .fond {
+        background-image: url("1438617991-wallhaven-91048.jpg")
+        transform: rotate(-90deg);
+    }
+    .tete{
+        width: 70%;
+        height: 80%;
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        
+        position: fixed;
+        top:10%;
+        left:15%;
+        border: 1px;
+        border-radius: 12px 12px 20px;
+        
+    
+    }
+    .Titre{
+        padding-top: 0%;
+        font-size: 150%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Anton', sans-serif;
+        color: white
+    }
+    .soustitre{
+        font-size: 120%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: -10px;
+        color: white
+    }
+    .paragraphe{
+        font-size: 70%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: -10px;
+        color: white
+    }
+    .para{
+        font-size: 20%;
+        font-weight: normal;
+        text-align: center;
+        padding-top: -10px;
+        color: white
+    }
+    .banniere{
+        position: relative;
+        
+    }
+}
+@media only screen and (max-height:400px){
+    .svg-inline--fa{
+        font-size: 0px ;
+        
+      }
+    .fond {
+        background-image: url("1438617991-wallhaven-91048.jpg")
+        transform: rotate(-90deg);
+    }
+    .tete{
+        width: 70%;
+        height: 80%;
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        
+        position: fixed;
+        top:10%;
+        left:15%;
+        border: 1px;
+        border-radius: 12px 12px 20px;
+        
+    
+    }
+    .Titre{
+        margin-top: 0%;
+        font-size: 150%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Anton', sans-serif;
+        color: white
+    }
+    .soustitre{
+        font-size: 120%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: -10px;
+        color: white
+    }
+    .paragraphe{
+        font-size: 70%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: -10px;
+        color: white
+    }
+    .para{
+        font-size: 20%;
+        font-weight: normal;
+        text-align: center;
+        padding-top: -10px;
+        color: white
+    }
+    .banniere{
+        position: relative;
+        
+    }
+}
+@media only screen and (max-height:700px){
+    .svg-inline--fa{
+        font-size: 0px ;
+        
+      }
+    .fond {
+        background-image: url("1438617991-wallhaven-91048.jpg")
+        transform: rotate(-90deg);
+    }
+    .tete{
+        width: 70%;
+        height: 80%;
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        
+        position: fixed;
+        top:10%;
+        left:15%;
+        border: 1px;
+        border-radius: 12px 12px 20px;
+        
+    
+    }
+    .Titre{
+        padding-top: 0%;
+        font-size: 150%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Anton', sans-serif;
+        color: white
+    }
+    .soustitre{
+        font-size: 120%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: -10px;
+        color: white
+    }
+    .paragraphe{
+        font-size: 70%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: -10px;
+        color: white
+    }
+    .para{
+        font-size: 20%;
+        font-weight: normal;
+        text-align: center;
+        padding-top: -10px;
+        color: white
+    }
+    .banniere{
+        position: relative;
+        
+    }
+}
+@media only screen and (max-width:800px){
+    .svg-inline--fa{
+        font-size: 0px ;
+        
+      }
+    .fond {
+        background-image: url("1438617991-wallhaven-91048.jpg")
+        transform: rotate(-90deg);
+    }
+    .tete{
+        width: 70%;
+        height: 80%;
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        
+        position: fixed;
+        top:10%;
+        left:15%;
+        border: 1px;
+        border-radius: 12px 12px 20px;
+        
+    
+    }
+    .Titre{
+        padding-top: 0%;
+        font-size: 100%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Anton', sans-serif;
+        color: white;
+    }
+    .soustitre{
+        font-size: 120%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: -10px;
+        color: white;
+    }
+    .paragraphe{
+        font-size: 70%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: -10px;
+        color: white;
+    }
+    .para{
+        font-size: 20%;
+        font-weight: normal;
+        text-align: center;
+        padding-top: -10px;
+        color: white;
+    }
+    .banniere{
+        position: relative;
+        
+    }
+}
+#cuberouge1{
+    top: 100%;
+    left: 100%;
+    background-color: rgba(255,0,0,.5);
+    border: 0px;
+    border-radius: 3px 3px 5px;
+    position:fixed;
+    transition : 2s;
+    
+    
+}
+#cubevert1{
+    top: 100%;
+    left: 0%;
+    background-color: rgba(123, 255, 0, 0.5);
+    border: 0px;
+    border-radius: 3px 3px 5px;
+    position:fixed;
+    transition : 2s;
+    
+    
+}
+#cubebleu1{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(38, 0, 255, 0.5);
+    border: 0px;
+    border-radius: 3px 3px 5px;
+    position:fixed;
+    transition : 2s;
+    
+    
+}
+#cubeorange1{
+    top: 0%;
+    left: 100%;
+    background-color: rgba(255, 123, 0, 0.5);
+    border: 0px;
+    border-radius: 3px 3px 5px;
+    position:fixed;
+    transition : 2s;
+    
+    
+}
+@media only screen and (max-width:310px){
+    .svg-inline--fa{
+        font-size: 0px ;
+        
+      }
+    .fond {
+        background-image: url("1438617991-wallhaven-91048.jpg")
+        transform: rotate(-90deg);
+    }
+    .tete{
+        width: 70%;
+        height: 80%;
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        
+        position: fixed;
+        top:10%;
+        left:15%;
+        border: 1px;
+        border-radius: 12px 12px 20px;
+        
+    
+    }
+    .Titre{
+        padding-top: 0%;
+        font-size: 120%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Anton', sans-serif;
+        color: white
+    }
+    .soustitre{
+        font-size: 100%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: -10px;
+        color: white
+    }
+    .paragraphe{
+        font-size: 60%;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: -10px;
+        color: white
+    }
+    .para{
+        font-size: 20%;
+        font-weight: normal;
+        text-align: center;
+        padding-top: -10px;
+        color: white
+    }
+    .banniere{
+        position: relative;
+        
+    }
+}
+
+
