@@ -1,6 +1,7 @@
 ﻿body,p,div,nav
 {
     margin:0px;
+    position:relative;
 }
 a{
     text-decoration:none;
@@ -52,24 +53,26 @@ header {
     color: white;
 }
 .corpAvant {
+    position: initial;
     background-image: url("background.png");
-    background-size: 100%; 
+    background-size: 100%;
     width: 100%;
+    background-attachment:initial;
     margin: 0px;
     font-family: 'Anton', sans-serif;
     text-align: right;
-    height: 700px;
     font-size: 70px;
     border-top: 1px solid #656464;
     box-sizing: border-box;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     color: white;
     padding-right: 20px;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
 }
 .texteTitre {
     height: 100%;
-    margin-top:250px;
+    margin-top: 20%;
+    padding-bottom: 30%;
 }
 .paragraphe {
     border: solid white 5px;
@@ -79,8 +82,9 @@ header {
     background-color: #B15151;
 }
 .corpArriere {
+    margin-top:1000px;
+    position: relative;
     margin: 0px;
-    border-top: 30px solid #F29E0A;
 }
 .middle {
     margin-top: 5%;
@@ -112,4 +116,9 @@ footer {
     text-align:center;
     color:white;
 }
+#arriere{
+    height:10000px;
+}
+
+
 
