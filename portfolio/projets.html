@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" type="text/css" href="bosstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Roboto" rel="stylesheet">
+    <link rel="shortcut icon" href="Icon.ico">
+    <title>Mon Site WEB</title>
+    <script>var image = 1 
+    </script>
+</head>
+<body>
+    <header>
+        <div class="encadrement"></div>
+        <div class="titreHeader">ISAAC</div>
+        <div class="liensHeader">
+            <div class="bouttonLien">
+                <a href="index.html" class="Lien">ACCUEIL</a>
+            </div>
+            <div class="bouttonLien">
+                <a href="projets.html" class="Lien">PROJETS</a>
+            </div>
+            <div class="bouttonLien">
+                <a href="cours.html" class="Lien" style="font-size: 18px;">COURS HTML</a>
+            </div>
+            <div class="bouttonLien">
+                <a href="contact.html" class="Lien">CONTACT</a>
+            </div>
+        </div>
+        <div class="encadrement"></div>
+
+    </header>
+    <nav class="corpAvant">
+        <div class="texteTitre">
+            PROJETS,<br />
+            JOYSTICK, JDR,<br /> JDS, ET DEVELOPPEMENT.
+        </div>
+    </nav>
+    <nav class="corpArriere">
+        <div class="paragraphe" id="1 1">
+            <div class="texte">
+                <h1>JOYSTICK</h1>
+                Pour jouer à un jeu que j'ai créé il y a quelques temps,
+                <br>J'ai créé ce joystick en bois avec un makeymakey. C'est une carte permettant d'envoyer des informations vers un raspberry-pi si elle reçoit un courant électrique.
+            </div>
+            <div class="middle" id="1 2"></div>
+            <div class="texte">
+                <h1>Les images</h1>
+                <img id="position" src=""/>
+                <img style="visibility: hidden; width: 0px;height: auto;" src='milieu.jpg'>
+                <img style="visibility: hidden; width: 0px;height: auto;" src='gauche.jpg'>
+                <img style="visibility: hidden; width: 0px;height: auto;" src='droite.jpg'>
+                <script>
+                    
+                    function reImage() {
+                        
+                        if (image == 1) {
+                            document.getElementById('position').src = "milieu.jpg";   
+                        }
+                        else if (image == 2) {
+                            document.getElementById('position').src = "gauche.jpg";
+                        }
+                        else if (image == 3) {
+                            document.getElementById('position').src = "milieu.jpg";
+                        }
+                        else if (image == 4) {
+                            document.getElementById('position').src = "droite.jpg";
+                            image = 0;
+                        }
+                        image += 1
+
+				    }
+                
+                window.onload=function()   
+                    {
+                        setInterval(reImage, 500);
+                    }
+                </script>
+            </div>
+        </div>
+
+        <div class="paragraphe" id="2 1">
+            <div class="texte">
+                <h1>JEU DE RÔLE</h1>
+                Colonisation de Madagascar par des Austronésiens à partir du début début de l’ère chrétienne3. L’île de Madagascar est peuplée de Pygmées venus d’Afrique (les mystérieux Vazimbas). Au début de l’ère chrétienne, des Indonésiens auraient débarqué dans l’île après avoir longé la côte orientale de l’Afrique. Vers la même époque, ces Indonésiens auraient introduit des plantes asiatiques jusqu’alors inconnues dans cette région, telles l’igname, la banane et la noix de coco.
+                <br /><br /><br /><br />
+                <button type="button" class="btn btn-success btn-lg">Success</button>
+            </div>
+            <div class="middle" id="2 2"></div>
+            <div class="texte">
+                <h1>ACF</h1>
+                L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne.  L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne.  L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne.  L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne.  L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne. Second berceau de la civilisation occidentale après Athènes, la ville fut successivement le centre de la monarchie romaine, de la république romaine (509 av. J.-C. – 27 av. J.-C.), puis de l'Empire romain (27 av. J.-C. – 330). Durant cette période, où nait la célèbre expression proverbiale « tous les chemins mènent à Rome », la ville aurait compté entre un et deux millions d'habitants et domine l'Europe, l'Afrique du Nord et le Moyen-Orient tant militairement que culturellement, diffusant dans ces territoires la langue latine, ses arts et techniques ainsi que la religion chrétienne. Depuis le ier siècle elle abrite le siège de l'Église catholique romaine, au sein des États pontificaux (752-1870) puis de la Cité du Vatican.
+            </div>
+        </div>
+
+        <div class="paragraphe" id="3 1">
+            <div class="texte">
+                <h1>JEU DE SOCIETE</h1>
+                Colonisation de Madagascar par des Austronésiens à partir du début début de l’ère chrétienne3. L’île de Madagascar est peuplée de Pygmées venus d’Afrique (les mystérieux Vazimbas). Au début de l’ère chrétienne, des Indonésiens auraient débarqué dans l’île après avoir longé la côte orientale de l’Afrique. Vers la même époque, ces Indonésiens auraient introduit des plantes asiatiques jusqu’alors inconnues dans cette région, telles l’igname, la banane et la noix de coco.
+                <br /><br /><br /><br />
+                <button type="button" class="btn btn-danger btn-lg">Success</button>
+            </div>
+            <div class="middle" id="3 2"></div>
+            <div class="texte">
+                <br />
+                L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne.  L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne.  L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne.  L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne.  L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne. Second berceau de la civilisation occidentale après Athènes, la ville fut successivement le centre de la monarchie romaine, de la république romaine (509 av. J.-C. – 27 av. J.-C.), puis de l'Empire romain (27 av. J.-C. – 330). Durant cette période, où nait la célèbre expression proverbiale « tous les chemins mènent à Rome », la ville aurait compté entre un et deux millions d'habitants et domine l'Europe, l'Afrique du Nord et le Moyen-Orient tant militairement que culturellement, diffusant dans ces territoires la langue latine, ses arts et techniques ainsi que la religion chrétienne. Depuis le ier siècle elle abrite le siège de l'Église catholique romaine, au sein des États pontificaux (752-1870) puis de la Cité du Vatican.
+            </div>
+        </div>
+
+        <div class="paragraphe" id="4 1">
+            <div class="texte">
+                <h1>DEVELOPPEMENT</h1>
+                    J'ai créé plusieurs projets en développement, tel un Super simon ou d'autres jeu sur srcatch, JS finis ou pas.... 
+                <br /><br /><br /><br />
+                <a href="Barcotopya/index.html"><button type="button" class="btn btn-success btn-lg">Tester !</button></a>
+            </div>
+            <div class="middle" id="4 2"></div>
+            <div class="texte">
+                <h1>Mon histoire</h1>
+                Je code depuis l'age de 8 ans, J'ai découvert le code grâce à un magazine qui proposais de créer un jeu sur scratch, et c'est là que tout a commencé !
+                <br />
+                Depuis j'ai créé plusieurs jeux sur scratch, python , jusqu'a aujourd'hui où je code en HTML, CSS et JS.<br />
+                <a href="projetsdev.html"><button type="button" class="btn btn-primary btn-lg">Voir la page des différents projets</button></a>
+            </div>
+        </div>
+        <div class="encadrement"></div>
+        <footer>
+                Tout droit réservé à Isaac MENARD<br>En continuant votre navigation sur ce site, vous acceptez l'utilisation des cookies.(Même si il n'y en a pas)
+            </footer>
+        <div class="encadrement"></div>
+    </nav>
+</body>
+</html>
