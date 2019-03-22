@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" type="text/css" href="bosstrap.css">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Roboto" rel="stylesheet">
+    <link rel="shortcut icon" href="Icon.ico">
+    <title>Mon Site WEB</title>
+</head>
+<body>
+    <header>
+        <div class="encadrement"></div>
+        <div class="titreHeader">ISAAC</div>
+        <div class="liensHeader">
+            <div class="bouttonLien">
+                <a href="index.html" class="Lien">ACCUEIL</a>
+            </div>
+            <div class="bouttonLien">
+                <a href="projets.html" class="Lien">PROJETS</a>
+            </div>
+            <div class="bouttonLien">
+                <a href="cours.html" class="Lien" style="font-size: 18px;">COURS HTML</a>
+            </div>
+            <div class="bouttonLien">
+                <a href="contact.html" class="Lien">CONTACT</a>
+            </div>
+        </div>
+        <div class="encadrement"></div>
+
+    </header>
+    <div class="encadrement">
+        <nav class="corpAvant">
+            <div class="texteTitre">
+                ACCUEIL,<br />
+                DEVELOPPEMENTS, PROJETS,<br /> INTERACTIVITE, DESIGN AND FREE !
+            </div>
+        </nav>
+
+        <nav class="corpArriere">
+            <div class="paragraphe" id="1 1">
+                <div class="texte">
+                    <h1>Mon profil</h1>
+                    Je suis Isaac, un jeune développeur web qui code en HTML, CSS, js, php, Mysql et un peu en java.
+                    J'ai créé beaucoup de petits projets assez simpa qui sont disponibles <a href="projets.html" class="Lien">ici</a> !
+                </div>
+                <div class="middle" id="1 2"></div>
+                <div class="texte">
+                    <h1>Mes activitées</h1>
+                    Actuelement, je suis développeur mais aussi Sapeur Pompier ! <br>
+                    Enfin.. je serais recruté le 1 juillet 2019. Car en attendant, je suis en formation depuis 3 ans :<br> j'ai appris à maîtriser des <a>crocodiles</a> , 
+                    des <a>serpents</a> ou encore à faire des <a>acouchements</a> 
+                </div>
+            </div>
+            <div class="encadrement"></div>
+            <footer>
+                Tout droit réservé à Isaac MENARD<br />
+                En continuant votre navigation sur ce site, vous acceptez l'utilisation des cookies (Même si il n'y en a pas).
+            </footer>
+            <div class="encadrement"></div>
+        </nav>
+    </div>
+    <script>
+        function resize() {
+            for (var i = 1; i <= 2; i++) {
+                document.getElementById(i + " 2").style.height = (document.getElementById(i + " 1").offsetHeight) + "px";
+            }
+        }
+    </script>
+</body>
+
+</html>

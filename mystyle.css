@@ -7,6 +7,14 @@ a{
     text-decoration:none;
     color:white;
 }
+#position{
+    width: auto;
+    height: 300px;
+}
+em{
+    text-decoration:none;
+    color:white;
+}
 body {
     background-color: #F29E0A;
     font-family: 'Roboto', sans-serif;
@@ -80,6 +88,7 @@ header {
     margin-right: 30px;
     margin-bottom: 30px;
     background-color: #B15151;
+    padding-bottom : 20px;
 }
 .corpArriere {
     margin-top:1000px;
@@ -87,27 +96,21 @@ header {
     margin: 0px;
 }
 .middle {
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
     display: inline-block;
-    height: 200px;
-    width: 10px;
+    height: 10px;
+    width: 90%;
     background-color: white;
 }
-.gauche {
-    text-align:center;
-    margin:20px;
-    display: inline-block;
-    min-height: 10em;
-    width: 45%;
-    vertical-align: top;
-}
-.droite {
+.texte {
     margin: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align:center;
     display: inline-block;
-    min-height: 10em;
-    width: 40%;
-    vertical-align: top
+    width: 90%;
+    vertical-align: top;
 }
 footer {
     background-color: #333333;

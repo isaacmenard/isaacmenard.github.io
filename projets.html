@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Anton|Roboto" rel="stylesheet">
     <link rel="shortcut icon" href="Icon.ico">
     <title>Mon Site WEB</title>
+    <script>var image = 1 
+    </script>
 </head>
 <body>
     <header>
@@ -15,10 +17,13 @@
         <div class="titreHeader">ISAAC</div>
         <div class="liensHeader">
             <div class="bouttonLien">
-                <a href="newPage.html" class="Lien">ACCUEIL</a>
+                <a href="index.html" class="Lien">ACCUEIL</a>
             </div>
             <div class="bouttonLien">
                 <a href="projets.html" class="Lien">PROJETS</a>
+            </div>
+            <div class="bouttonLien">
+                <a href="cours.html" class="Lien" style="font-size: 18px;">COURS HTML</a>
             </div>
             <div class="bouttonLien">
                 <a href="contact.html" class="Lien">CONTACT</a>
@@ -35,71 +40,104 @@
     </nav>
     <nav class="corpArriere">
         <div class="paragraphe" id="1 1">
-            <div class="gauche">
+            <div class="texte">
                 <h1>JOYSTICK</h1>
-                Colonisation de Madagascar par des Austronésiens à partir du début début de l’ère chrétienne3. L’île de Madagascar est peuplée de Pygmées venus d’Afrique (les mystérieux Vazimbas). Au début de l’ère chrétienne, des Indonésiens auraient débarqué dans l’île après avoir longé la côte orientale de l’Afrique. Vers la même époque, ces Indonésiens auraient introduit des plantes asiatiques jusqu’alors inconnues dans cette région, telles l’igname, la banane et la noix de coco.
+                Pour jouer à un jeu que j'ai créé il y a quelques temps,
+                <br>J'ai créé ce joystick en bois avec un makeymakey. C'est une carte permettant d'envoyer des informations vers un raspberry-pi si elle reçoit un courant électrique.
             </div>
             <div class="middle" id="1 2"></div>
-            <div class="droite">
-                <h1>SON JEU</h1>
-                L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne.  L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne.  L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne.  L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne.  L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne. Second berceau de la civilisation occidentale après Athènes, la ville fut successivement le centre de la monarchie romaine, de la république romaine (509 av. J.-C. – 27 av. J.-C.), puis de l'Empire romain (27 av. J.-C. – 330). Durant cette période, où nait la célèbre expression proverbiale « tous les chemins mènent à Rome », la ville aurait compté entre un et deux millions d'habitants et domine l'Europe, l'Afrique du Nord et le Moyen-Orient tant militairement que culturellement, diffusant dans ces territoires la langue latine, ses arts et techniques ainsi que la religion chrétienne. Depuis le ier siècle elle abrite le siège de l'Église catholique romaine, au sein des États pontificaux (752-1870) puis de la Cité du Vatican.
-            </div>
-        </div>
+            <div class="texte">
+                <h1>Les images</h1>
+                <img id="position" src=""/>
+                <img style="visibility: hidden; width: 0px;height: auto;" src='milieu.jpg'>
+                <img style="visibility: hidden; width: 0px;height: auto;" src='gauche.jpg'>
+                <img style="visibility: hidden; width: 0px;height: auto;" src='droite.jpg'>
+                <img src="joystick.JPG" style="width: auto;height: 300px;">
+                <script>
+                    
+                    function reImage() {
+                        
+                        if (image == 1) {
+                            document.getElementById('position').src = "milieu.jpg";   
+                        }
+                        else if (image == 2) {
+                            document.getElementById('position').src = "gauche.jpg";
+                        }
+                        else if (image == 3) {
+                            document.getElementById('position').src = "milieu.jpg";
+                        }
+                        else if (image == 4) {
+                            document.getElementById('position').src = "droite.jpg";
+                            image = 0;
+                        }
+                        image += 1
 
-        <div class="paragraphe" id="2 1">
-            <div class="gauche">
-                <h1>JEU DE RÔLE</h1>
-                Colonisation de Madagascar par des Austronésiens à partir du début début de l’ère chrétienne3. L’île de Madagascar est peuplée de Pygmées venus d’Afrique (les mystérieux Vazimbas). Au début de l’ère chrétienne, des Indonésiens auraient débarqué dans l’île après avoir longé la côte orientale de l’Afrique. Vers la même époque, ces Indonésiens auraient introduit des plantes asiatiques jusqu’alors inconnues dans cette région, telles l’igname, la banane et la noix de coco.
-                <br /><br /><br /><br />
-                <button type="button" class="btn btn-success btn-lg">Success</button>
-            </div>
-            <div class="middle" id="2 2"></div>
-            <div class="droite">
-                <h1>ACF</h1>
-                L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne.  L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne.  L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne.  L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne.  L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne. Second berceau de la civilisation occidentale après Athènes, la ville fut successivement le centre de la monarchie romaine, de la république romaine (509 av. J.-C. – 27 av. J.-C.), puis de l'Empire romain (27 av. J.-C. – 330). Durant cette période, où nait la célèbre expression proverbiale « tous les chemins mènent à Rome », la ville aurait compté entre un et deux millions d'habitants et domine l'Europe, l'Afrique du Nord et le Moyen-Orient tant militairement que culturellement, diffusant dans ces territoires la langue latine, ses arts et techniques ainsi que la religion chrétienne. Depuis le ier siècle elle abrite le siège de l'Église catholique romaine, au sein des États pontificaux (752-1870) puis de la Cité du Vatican.
+				    }
+                
+                window.onload=function()   
+                    {
+                        setInterval(reImage, 500);
+                    }
+                </script>
             </div>
         </div>
 
         <div class="paragraphe" id="3 1">
-            <div class="gauche">
-                <h1>JEU DE SOCIETE</h1>
-                Colonisation de Madagascar par des Austronésiens à partir du début début de l’ère chrétienne3. L’île de Madagascar est peuplée de Pygmées venus d’Afrique (les mystérieux Vazimbas). Au début de l’ère chrétienne, des Indonésiens auraient débarqué dans l’île après avoir longé la côte orientale de l’Afrique. Vers la même époque, ces Indonésiens auraient introduit des plantes asiatiques jusqu’alors inconnues dans cette région, telles l’igname, la banane et la noix de coco.
-                <br /><br /><br /><br />
-                <button type="button" class="btn btn-danger btn-lg">Success</button>
+            <div class="texte">
+                <h1>Ma fiction sonore</h1>
+                Notre lycée propose divers projets appelé MID (module inter-disiplinaire).<br>
+                Avec ma classe, nous avons créé une fiction sonore incluant <a>français</a> et <a>espagnol</a><br>
             </div>
             <div class="middle" id="3 2"></div>
-            <div class="droite">
-                <br />
-                L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne.  L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne.  L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne.  L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne.  L'histoire de Rome s'étend sur plus de vingt-huit siècles, depuis sa fondation mythique par Romulus en 753 av. J.-C. jusqu'à son rôle actuel de capitale de la république italienne. Second berceau de la civilisation occidentale après Athènes, la ville fut successivement le centre de la monarchie romaine, de la république romaine (509 av. J.-C. – 27 av. J.-C.), puis de l'Empire romain (27 av. J.-C. – 330). Durant cette période, où nait la célèbre expression proverbiale « tous les chemins mènent à Rome », la ville aurait compté entre un et deux millions d'habitants et domine l'Europe, l'Afrique du Nord et le Moyen-Orient tant militairement que culturellement, diffusant dans ces territoires la langue latine, ses arts et techniques ainsi que la religion chrétienne. Depuis le ier siècle elle abrite le siège de l'Église catholique romaine, au sein des États pontificaux (752-1870) puis de la Cité du Vatican.
+            <div class="texte">
+                    <script>
+                            var activeSong;
+                            //Plays the song. Just pass the id of the audio element.
+                            function play(id){
+                                //Sets the active song to the song being played. All other functions depend on this.
+                                activeSong = document.getElementById(id);
+                                //Plays the song defined in the audio tag.
+                                activeSong.play();
+        
+                                //Calculates the starting volume percentage of the song.
+                                var percentageOfVolume = activeSong.volume / 1;
+                                var percentageOfVolumeMeter = document.getElementById('volumeMeter').offsetWidth * percentageOfVolume;
+        
+                                //Fills out the volume status bar.
+                                document.getElementById('volumeStatus').style.width = Math.round(percentageOfVolumeSlider) + "px";
+                            }
+                        </script>
+                        <div id="songPlay" onclick="alert('c\'est parti !');play('song')"><a>Cliquez ici pour écouter la fiction sonore !</a></div>
+                        <audio id="song" width="300" height="32"><source src="fictionSonore.mp3" type="audio/mp3" /></audio>
             </div>
         </div>
 
         <div class="paragraphe" id="4 1">
-            <div class="gauche">
+            <div class="texte">
                 <h1>DEVELOPPEMENT</h1>
-                    J'ai créé plusieurs projets en développement, tel un Super simon ou d'autres jeu sur srcatch, JS finis ou pas.... 
-                <br /><br /><br /><br />
-                <a href="Barcotopya/index.html"><button type="button" class="btn btn-success btn-lg">Tester !</button></a>
+                    J'ai créé plusieurs projets en développement, tel un Super simon ou d'autres jeu sur srcatch, JS finis ou pas.... <br> Quelles que exemples ici :
             </div>
             <div class="middle" id="4 2"></div>
-            <div class="droite">
-                <h1>Mon histoire</h1>
-                Je code depuis l'age de 8 ans, J'ai découvert le code grâce à un magazine qui proposais de créer un jeu sur scratch, et c'est là que tout a commencé !
-                <br />
-                Depuis j'ai créé plusieurs jeux sur scratch, python , jusqu'a aujourd'hui où je code en HTML, CSS et JS.<br />
-                <a href="projetsdev.html"><button type="button" class="btn btn-primary btn-lg">Voir la page des différents projets</button></a>
+            <div class="texte">
+                <h1>Donjon sans dragon !</h1>
+                Votre but : survivre dans un monde hostile : <br>
+                Jeu codé en Javascript, Php et Mysql. <br><br>
+                <a href="https://orphean-hangars.000webhostapp.com/"><button type="button" class="btn btn-success btn-lg">C'est parti !</button></a>
+            </div>
+            <div class="middle" id="4 2"></div>
+            <div class="texte">
+                <h1>Barcotopya !</h1>
+                Vous gérez une ville. Mais attention à ne pas être endetté <br>
+                Jeu codé en javascript.<br><br>
+                <a href="Barcotopya/index.html"><button type="button" class="btn btn-success btn-lg">Tester !</button></a>
             </div>
         </div>
+        
         <div class="encadrement"></div>
         <footer>
-            Tout droit réservé à Isaac MENARD
-        </footer>
+                Tout droit réservé à Isaac MENARD<br>En continuant votre navigation sur ce site, vous acceptez l'utilisation des cookies.(Même si il n'y en a pas)
+            </footer>
         <div class="encadrement"></div>
     </nav>
 </body>
-<script>
-    for (var i = 1; i <= 4; i++) {
-        document.getElementById(i + " 2").style.height = document.getElementById(i + " 1").offsetHeight + "px";
-    }
-</script>
 </html>
