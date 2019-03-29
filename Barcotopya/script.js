@@ -53,7 +53,7 @@ function batiment(effect, montant, pop, satisf, conso) {
         alert("vous n'avez pas assez d'argent pour faire ceci !");
     }
     else if (centrale <= batiments / centraleFournie && effect != 6) {
-        alert("vous n'avez pas assez d'electricitee pour faire ceci !");
+        alert("vous n'avez pas assez d'electricite pour faire ceci !");
     }
     else {
         var passagecentrale = 0
