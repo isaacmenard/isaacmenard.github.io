@@ -37,6 +37,9 @@
             ET LE CSS
         </div>
     </nav>
+    <img src="http://www.photos-public-domain.com/wp-content/uploads/2012/10/purple-fur-texture.jpg" style="visibility: hidden; width: 0; height: 0;">
+        <img src="https://abstracthdwallpapers.files.wordpress.com/2012/09/black-background-metal-texture-wallpaper-2560x1600.jpg" style="visibility: hidden; width: 0; height: 0;">
+        <img src="https://www.wallpaperup.com/uploads/wallpapers/2013/03/24/63291/33f7f41c039f6a720de18ff351fbf35c.jpg" style="visibility: hidden; width: 0; height: 0;">
     <nav class="corpArriere">
         <div class="paragraphe" id="1 1">
             <div class="texte">
@@ -60,7 +63,7 @@
                 <h1>Les balises :</h1>
                 <p>Une balise en html se construit comme ceci :</p>
                 <br>
-                <img src="element-p-exemple-html.png" />
+                <img src="element-p-exemple-html.png" style="width: 60%;height: auto;" />
                 <br>
                 <br>
                 <p>L'élément "p" nous permet de créer un paragraphe</p>
@@ -102,7 +105,7 @@
                 <p>Pour faire des liens, vous allez devoir renseigner ce qu'on appelle l'attribut.</p>
                 <p>L'attribut ce met dans la balise comme ceci :</p>
                 <br>
-                <img src="element-a-exemple-html.png">
+                <img src="element-a-exemple-html.png" style="width: 60%;height: auto;">
                 <br>
                 <br>
                 <p>Pour faire un lien comme <a href="https://google.fr">ici</a>, vous devrez faire une balise <code> < a > </code>.</p>
@@ -117,19 +120,19 @@
                 <p>Pour les différencier, les liens <a>externes</a> commencent par "https://" tandis que les liens <a>internes</a> portent le même nom que leur nom de fichier :</p>
                 <p>Pour appeler un fichier <a>interne</a> il faut qu'il soit dans le même dossier que le premier :</p>
                 <br>
-                <img src="fichierCours.PNG" style="width: 900px;height: auto;">
+                <img src="fichierCours.PNG" style="width: 90%;height: auto;">
                 <br>
                 <br>
                 <p>Pour le mettre comme un lien, vous devrez simplement mettre son nom dans l'attribut href : <img src="lienInterne.PNG"></p>
                 <h3>Pour mettre un lien se trouvant dans un dossier en dessous : </h3>
                 <br>
-                <img src="dossierLienInterne.PNG" style="width: 900px;height: auto;">
+                <img src="dossierLienInterne.PNG" style="width: 90%;height: auto;">
                 <br>
                 <br>
                 <p>Pour le mettre comme un lien, vous devrez simplement mettre le nom du dossier suivi d'un <a>/</a> et du nom du fichier dans l'attribut href : <img src="lienInterneSousDoc.PNG"></p>
                 <h3>Pour mettre un lien se trouvant dans un dossier au dessus : </h3>
                 <br>
-                <img src="dossierLienInterneDessus.PNG" style="width: 900px;height: auto;">
+                <img src="dossierLienInterneDessus.PNG" style="width: 90%;height: auto;">
                 <br>
                 <br>
                 <p>Pour le mettre comme un lien, vous devrez simplement mettre <a>../</a> et du nom du fichier dans l'attribut href : <img src="lienInterneSurDoc.PNG"></p>
@@ -156,6 +159,21 @@
         </footer>
         <div class="encadrement"></div>
     </nav>
+    <script>
+            window.onload=function()   
+                        {
+                            document.body.style.backgroundImage = "url(https://www.wallpaperup.com/uploads/wallpapers/2013/03/24/63291/33f7f41c039f6a720de18ff351fbf35c.jpg)"
+                            for(var i =0; i < document.getElementsByClassName("paragraphe").length ;i++){
+                                document.getElementsByClassName("paragraphe")[i].style.backgroundImage = "url(http://www.photos-public-domain.com/wp-content/uploads/2012/10/purple-fur-texture.jpg)"
+                            }
+                            for(var i =0; i < document.getElementsByClassName("encadrement").length ;i++){
+                                document.getElementsByClassName("encadrement")[i].style.backgroundImage = "url(https://abstracthdwallpapers.files.wordpress.com/2012/09/black-background-metal-texture-wallpaper-2560x1600.jpg)"
+                            }
+                            document.getElementsByTagName("header")[0].style.backgroundImage = "url(https://abstracthdwallpapers.files.wordpress.com/2012/09/black-background-metal-texture-wallpaper-2560x1600.jpg)"
+                            document.getElementsByTagName("footer")[0].style.backgroundImage = "url(https://abstracthdwallpapers.files.wordpress.com/2012/09/black-background-metal-texture-wallpaper-2560x1600.jpg)"
+                        }
+    
+        </script>
 </body>
 
 </html>

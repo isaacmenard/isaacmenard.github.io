@@ -10,6 +10,7 @@
     <title>Mon Site WEB</title>
 </head>
 <body>
+
     <header>
         <div class="encadrement"></div>
         <div class="titreHeader">ISAAC</div>
@@ -36,6 +37,9 @@
             DE DEVELOPPEMENT.
         </div>
     </nav>
+    <img src="http://www.photos-public-domain.com/wp-content/uploads/2012/10/purple-fur-texture.jpg" style="visibility: hidden; width: 0; height: 0;">
+        <img src="https://abstracthdwallpapers.files.wordpress.com/2012/09/black-background-metal-texture-wallpaper-2560x1600.jpg" style="visibility: hidden; width: 0; height: 0;">
+        <img src="https://www.wallpaperup.com/uploads/wallpapers/2013/03/24/63291/33f7f41c039f6a720de18ff351fbf35c.jpg" style="visibility: hidden; width: 0; height: 0;">
     <nav class="corpArriere">
         <div class="paragraphe" id="1 1">
             <div class="gauche">
@@ -69,5 +73,20 @@
             </footer>
         <div class="encadrement"></div>
     </nav>
+    <script>
+            window.onload=function()   
+                        {
+                            document.body.style.backgroundImage = "url(https://www.wallpaperup.com/uploads/wallpapers/2013/03/24/63291/33f7f41c039f6a720de18ff351fbf35c.jpg)"
+                            for(var i =0; i < document.getElementsByClassName("paragraphe").length ;i++){
+                                document.getElementsByClassName("paragraphe")[i].style.backgroundImage = "url(http://www.photos-public-domain.com/wp-content/uploads/2012/10/purple-fur-texture.jpg)"
+                            }
+                            for(var i =0; i < document.getElementsByClassName("encadrement").length ;i++){
+                                document.getElementsByClassName("encadrement")[i].style.backgroundImage = "url(https://abstracthdwallpapers.files.wordpress.com/2012/09/black-background-metal-texture-wallpaper-2560x1600.jpg)"
+                            }
+                            document.getElementsByTagName("header")[0].style.backgroundImage = "url(https://abstracthdwallpapers.files.wordpress.com/2012/09/black-background-metal-texture-wallpaper-2560x1600.jpg)"
+                            document.getElementsByTagName("footer")[0].style.backgroundImage = "url(https://abstracthdwallpapers.files.wordpress.com/2012/09/black-background-metal-texture-wallpaper-2560x1600.jpg)"
+                        }
+    
+        </script>
 </body>
 </html>
