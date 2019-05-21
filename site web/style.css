@@ -1,0 +1,164 @@
+
+#lienhaut {
+	text-decoration: none;
+}
+
+#titrehaut {
+	margin: 0px;
+	padding: 0;
+	text-decoration: none;
+	font-family: 'Paytone One', sans-serif;
+	Text-Align: Center;
+	color: rgb(255, 255, 255);
+	font-size: 2.5em;
+	margin-block-end: -12px;
+}
+
+.block {
+	width: 140px;
+	height: auto;
+	text-align: center;
+	display: inline-block;
+	margin: 20px;
+}
+.paragraphe{
+
+	background-color: rgba(0, 0, 0, 0.445);
+	width: 35%;
+	padding: 10px;
+	height: auto;
+	margin-left: auto;
+	  margin-right: auto;
+	  border-radius: 10px;
+	  margin-bottom: 60px;
+}
+.part{
+	width: 100%;
+	height: 1000px;
+	background-size: 100%;
+	background-position-y: 50%;
+	background-repeat: no-repeat;
+	margin-bottom: 10px;
+	padding-left: 50px;
+	color: white;
+	height: auto;
+}
+.part2{
+	background-image: url("tom-parkes-114466-unsplash.jpg");
+}
+.part1{
+	background-image: url("yeshi-kangrang-338592-unsplash.jpg");
+}
+.part3{
+	background-image: url("yusuf-evli-1300023-unsplash.jpg");
+}
+.part4{
+	background-image: url("ben-o-bro-170472-unsplash.jpg");
+	color: white;
+}
+.part5{
+	background-image: url("benjamin-suter-1562567-unsplash.jpg");
+	margin-bottom: 0px;
+}
+.para4{
+	width: 50%;
+}
+img{
+	border: solid white 5px;
+	width: 250px;
+	height: auto;
+	margin-left : auto;
+	margin-right: auto;
+}
+.avatar2 {
+	width: 110px;
+	height: 110px;
+	background-size: cover;
+	border: solid white;
+	border-radius: 3px 3px 2px;
+	background-position: center;
+}
+
+.logo {
+	margin: 0;
+	padding: 0;
+	width: 400px;
+	height: auto;
+	position: absolute;
+	top: 450px;
+	left: 50%;
+	/* à 50%/50% du parent référent */
+	transform: translate(-50%, -50%);
+	/* décalage de 50% de sa propre taille */
+	text-align: center;
+	z-index: 4;
+}
+
+.tabhaut {
+	position: fixed;
+	top: 0px;
+	padding-block-end: 15px;
+	width: 100%;
+	background-color: black;
+	vertical-align: top;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.avatar1 {
+	width: 180px;
+	height: 180px;
+	background-size: cover;
+	border: solid white;
+	border-radius: 3px 3px 2px;
+	background-position: center;
+}
+
+.avatar1 img {
+	display: none;
+}
+
+h1,
+h2,
+h3,
+li,
+dl,
+div {
+	color: white;
+}
+
+footer {
+	border-top: solid black 5px;
+	background-color: black;
+	width: 100%;
+	margin: 0rem;
+	padding: 0rem;
+}
+
+.conteneurprofil {
+	padding: 10px;
+	width: auto;
+	height: auto;
+}
+
+.lienvisible {
+	text-decoration: none;
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
+.menu {
+	position: fixed;
+	bottom: 0px;
+	margin: 0;
+	background-color: black;
+	display: inline-block;
+	width: 100%;
+	padding: 15px;
+	text-align: center;
+}
