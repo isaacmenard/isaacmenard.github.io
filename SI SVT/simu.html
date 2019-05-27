@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" onkeypress="showChar(event);">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SI-SVT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div class="tabhaut">
+        <h2 id="titrehaut">SI SVT</h2>
+        <p
+            style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: right;margin: 0%;margin-right: 10px;">
+            Page 3</p>
+    </div>
+    <a href="desy.html">
+        <div id="Fgauche">
+        </div>
+    </a>
+    <a href="">
+        <div id="Fdroite">
+        </div>
+    </a>
+    <div class="panel">
+        <h2>Votre poubelle fait <a id="kg">100</a> KG</h2>
+        <h2>Votre rendement en énergie est de <a id="kj">100</a> KJ soit <a id="kJ-kg">100</a> KJ/Kg</h2>
+        <div class="boutton">
+            <div class="slider" id="1.1">
+                <div class="cursor" id="1.2"></div>
+            </div>
+            <div class="texteSlider" id="1.3">26</div>
+            <div class="botton" id="1.4" onclick="botton(this)"><br>embalages en plastiques</div>
+        </div>
+        <div class="boutton">
+            <div class="slider" id="2.1">
+                <div class="cursor" id="2.2"></div>
+            </div>
+            <div class="texteSlider" id="2.3">4</div>
+            <div class="botton" id="2.4" onclick="botton(this)"><br>embalages métaliques</div>
+        </div>
+        <div class="boutton">
+            <div class="slider" id="3.1">
+                <div class="cursor" id="3.2"></div>
+            </div>
+            <div class="texteSlider" id="3.3">9</div>
+            <div class="botton" id="3.4" onclick="botton(this)"><br>journaux/papier</div>
+        </div>
+        <div class="boutton">
+            <div class="slider" id="4.1">
+                <div class="cursor" id="4.2"></div>
+            </div>
+            <div class="texteSlider" id="4.3">16</div>
+            <div class="botton" id="4.4" onclick="botton(this)"><br>déchets putrécibles</div>
+        </div>
+        <div class="boutton">
+            <div class="slider" id="6.1">
+                <div class="cursor" id="6.2"></div>
+            </div>
+            <div class="texteSlider" id="6.3">14</div>
+            <div class="botton" id="6.4" onclick="botton(this)"><br>embalages en papier/cartons</div>
+        </div>
+        <div class="boutton">
+            <div class="slider" id="7.1">
+                <div class="cursor" id="7.2"></div>
+            </div>
+            <div class="texteSlider" id="7.3">7</div>
+            <div class="botton" id="7.4" onclick="botton(this)"><br>embalages en verre</div>
+        </div>
+        <div class="boutton">
+            <div class="slider" id="5.1">
+                <div class="cursor" id="5.2"></div>
+            </div>
+            <div class="texteSlider" id="5.3">26</div>
+            <div class="botton" id="5.4" onclick="botton(this)"><br>divers</div>
+        </div>
+        <div class="boutton">
+            <div class="botton" id="sece" onclick="ben()">poubelle normale</div>
+        </div>
+    </div>
+    <script>
+        clique = null;
+        type = "humide"
+        nbBotton = 7;
+        kg = 100
+        cursorY = [0, 270, 380, 355, 320, 270, 330, 360]
+        infoY = [0, 26, 4, 9, 16, 26, 14, 7]
+        document.getElementById("kj").innerHTML = parseInt(document.getElementById("1.3").innerHTML) * 30939 +
+            parseInt(document.getElementById("4.3").innerHTML) * 15773 + parseInt(document.getElementById("3.3")
+                .innerHTML) * 15695 + parseInt(document.getElementById("6.3").innerHTML) * 15695
+        document.getElementById("kJ-kg").innerHTML = Math.round(parseInt(document.getElementById("kj").innerHTML) /
+            parseInt(document.getElementById("kg").innerHTML))
+
+        function ben() {
+            if (type == "humide") {
+                type = "sec";
+                document.getElementById("sece").innerHTML = "poubelle déshydratée";
+                document.getElementById("kj").innerHTML = parseInt(document.getElementById("1.3").innerHTML) * 30939 +
+                    parseInt(document.getElementById("4.3").innerHTML) * 15773 + parseInt(document.getElementById("3.3")
+                        .innerHTML) * 15695 + parseInt(document.getElementById("6.3").innerHTML) * 15695
+                document.getElementById("kJ-kg").innerHTML = Math.round(parseInt(document.getElementById("kj")
+                    .innerHTML) / parseInt(document.getElementById("kg").innerHTML))
+            } else if (type == "sec") {
+                type = "humide";
+                document.getElementById("sece").innerHTML = "poubelle normale";
+                document.getElementById("kj").innerHTML = parseInt(document.getElementById("1.3").innerHTML) * 22883 +
+                    parseInt(document.getElementById("4.3").innerHTML) * 4246 + parseInt(document.getElementById("3.3")
+                        .innerHTML) * 9516 + parseInt(document.getElementById("6.3").innerHTML) * 9516
+                document.getElementById("kJ-kg").innerHTML = Math.round(parseInt(document.getElementById("kj")
+                    .innerHTML) / parseInt(document.getElementById("kg").innerHTML))
+            }
+        }
+        for (var i = 1; i <= nbBotton; i++) {
+            document.getElementById(i + ".2").style.top = cursorY[i] + "px";
+        }
+
+        function botton(x) {
+            for (var i = 1; i <= nbBotton; i++) {
+                document.getElementById(i + ".4").style.background = "red";
+            }
+            clique = x.id.slice(0, 1)
+            x.style.background = "yellow";
+        }
+
+        function showChar(e) {}
+        window.addEventListener("keydown", function (event) {
+            if (event.code == "ArrowUp" && cursorY[clique] > 0) {
+                cursorY[clique] -= 5
+                infoY[clique] += 1
+                kg += 1
+            }
+            if (event.code == "ArrowDown" && cursorY[clique] < 400) {
+                cursorY[clique] += 5
+                infoY[clique] -= 1
+                kg -= 1
+            }
+            document.getElementById(clique + ".2").style.top = cursorY[clique] + "px"
+            document.getElementById(clique + ".3").innerHTML = infoY[clique]
+            document.getElementById("kg").innerHTML = kg
+            if (type == "humide") {
+                document.getElementById("kj").innerHTML = parseInt(document.getElementById("1.3").innerHTML) *
+                    22883 + parseInt(document.getElementById("4.3").innerHTML) * 4246 + parseInt(document
+                        .getElementById("3.3").innerHTML) * 9516 + parseInt(document.getElementById("6.3")
+                        .innerHTML) * 9516
+            }
+            if (type == "sec") {
+                document.getElementById("kj").innerHTML = parseInt(document.getElementById("1.3").innerHTML) *
+                    30939 + parseInt(document.getElementById("4.3").innerHTML) * 15773 + parseInt(document
+                        .getElementById("3.3").innerHTML) * 15695 + parseInt(document.getElementById("6.3")
+                        .innerHTML) * 15695
+            }
+            document.getElementById("kJ-kg").innerHTML = Math.round(parseInt(document.getElementById("kj")
+                .innerHTML) / parseInt(document.getElementById("kg").innerHTML))
+        }, true);
+    </script>
+</body>
+
+</html>
