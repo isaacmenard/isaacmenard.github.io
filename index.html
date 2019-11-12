@@ -1,85 +1,75 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
-    
-    <link rel="stylesheet" type="text/css" href="bosstrap.css">
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
-    <link href="https://fonts.googleapis.com/css?family=Anton|Roboto" rel="stylesheet">
-    <link rel="shortcut icon" href="Icon.ico">
-    <title>Mon Site WEB</title>
+    <meta charset="utf-8">
+    <title>Portfolio V2</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Squada+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap" rel="stylesheet">
 </head>
+
 <body>
-        
-    <header>
-        <div class="encadrement"></div>
-        <div class="titreHeader">ISAAC</div>
-        <div class="liensHeader">
-            <div class="bouttonLien">
-                <a href="index.html" class="Lien">ACCUEIL</a>
-            </div>
-            <div class="bouttonLien">
-                <a href="projets.html" class="Lien">PROJETS</a>
-            </div>
-            <div class="bouttonLien">
-                <a href="cours.html" class="Lien" style="font-size: 18px;">COURS HTML</a>
-            </div>
-            <div class="bouttonLien">
-                <a href="contact.html" class="Lien">CONTACT</a>
-            </div>
+
+
+
+    <ul>
+        <li><a class="page1 active" onclick="page(this)"><i class="fas fa-home"></i></a></li>
+        <li><a class="page2" onclick="page(this)"><i class="fas fa-clipboard-list"></i></a></li>
+        <li><a class="page3" onclick="page(this)"><i class="fas fa-code"></i></a></li>
+        <li><a class="page4" onclick="page(this)"><i class="fas fa-fire-extinguisher"></i></a></li>
+        <li><a class="page5" onclick="page(this)"><i class="fas fa-quote-right"></i></i></a></li>
+    </ul>
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+    <div class="page page1Div">
+        <div class="titleDiv">
+                <img class="cursor" src="https://www.searchpng.com/wp-content/uploads/2019/03/Ccursor-Icon-PNG-715x715.png"/>
+            <h1 class="title1 title">
+                welcome
+            </h1>
+            <h1 class="title2 title">to my portfolio</h1>
+            <img src="https://img.icons8.com/carbon-copy/2x/arrow.png" class="next" onmousedown='this.style.marginTop = "2000px"; setTimeout(() => {
+                this.style.marginTop = "0px"
+            }, 1000); page(document.getElementsByClassName("page2")[0])'>
         </div>
-        <div class="encadrement"></div>
-
-    </header>
-    <div class="encadrement">
-        <nav class="corpAvant">
-            <div class="texteTitre">
-                ACCUEIL,<br />
-                DEVELOPPEMENTS, PROJETS,<br /> INTERACTIVITE, DESIGN AND FREE !
-            </div>
-        </nav>
-        <img src="http://www.photos-public-domain.com/wp-content/uploads/2012/10/purple-fur-texture.jpg" style="visibility: hidden; width: 0; height: 0;">
-        <img src="https://abstracthdwallpapers.files.wordpress.com/2012/09/black-background-metal-texture-wallpaper-2560x1600.jpg" style="visibility: hidden; width: 0; height: 0;">
-        <img src="https://www.wallpaperup.com/uploads/wallpapers/2013/03/24/63291/33f7f41c039f6a720de18ff351fbf35c.jpg" style="visibility: hidden; width: 0; height: 0;">
-        <nav class="corpArriere">
-            <div class="paragraphe" id="1 1">
-                <div class="texte">
-                    <h1>Mon profil</h1>
-                    Je suis Isaac, un jeune développeur web qui code en HTML, CSS, js, php, Mysql et un peu en java.
-                    J'ai créé beaucoup de petits projets assez sympas qui sont disponibles <a href="projets.html" class="Lien">ici</a> !
-                </div>
-                <div class="middle" id="1 2"></div>
-                <div class="texte">
-                    <h1>Mes activitées</h1>
-                    Actuelement, je suis développeur mais aussi Sapeur Pompier ! <br>
-                    Enfin.. je serais recruté le 1 juillet 2019 car en attendant, je suis en formation depuis 3 ans :<br> j'ai appris à maîtriser des <a>crocodiles</a> , 
-                    des <a>serpents</a> ou encore à intervenir face à des <a>accouchements</a> 
-                </div>
-            </div>
-            <div class="encadrement"></div>
-            <footer>
-                Tout droit réservé à Isaac MENARD<br />
-                En continuant votre navigation sur ce site, vous acceptez l'utilisation des cookies (Même si il n'y en a pas).
-            </footer>
-            <div class="encadrement"></div>
-        </nav>
     </div>
-    <script>
-        window.onload=function()   
-                    {
-                        document.body.style.backgroundImage = "url(https://www.wallpaperup.com/uploads/wallpapers/2013/03/24/63291/33f7f41c039f6a720de18ff351fbf35c.jpg)"
-                        for(var i =0; i < document.getElementsByClassName("paragraphe").length ;i++){
-                            document.getElementsByClassName("paragraphe")[i].style.backgroundImage = "url(http://www.photos-public-domain.com/wp-content/uploads/2012/10/purple-fur-texture.jpg)"
-                        }
-                        for(var i =0; i < document.getElementsByClassName("encadrement").length ;i++){
-                            document.getElementsByClassName("encadrement")[i].style.backgroundImage = "url(https://abstracthdwallpapers.files.wordpress.com/2012/09/black-background-metal-texture-wallpaper-2560x1600.jpg)"
-                        }
-                        document.getElementsByTagName("header")[0].style.backgroundImage = "url(https://abstracthdwallpapers.files.wordpress.com/2012/09/black-background-metal-texture-wallpaper-2560x1600.jpg)"
-                        document.getElementsByTagName("footer")[0].style.backgroundImage = "url(https://abstracthdwallpapers.files.wordpress.com/2012/09/black-background-metal-texture-wallpaper-2560x1600.jpg)"
-                    }
-
-    </script>
+    <div class="page page2Div">
+        <h2>Hi !</h2>
+        <p>Je suis isaac, un jeune lycéen Sapeur pompier et développeur web.</p>
+        <p>naviguez sur le site ici à l'aide du menu à gauche</p>
+    </div>
+    <div class="page page3Div">
+        <div class="titleDiv ">
+            <h1 class="title3 title">
+                Mes Projets :
+            </h1>
+            <p>Etant développeur, j'ai déjà créé différents projets avec l'utilisation de différents languages comme l'Html, le Css, le Php, le Js, le Mysql, le Python ainsi que d'autres languages. <br>Avec jusqu'ici mon plus gros projet, celui de <a target="_blank" href="https://donjonsansdragon.space">Donjon Sans Dragon</a>. C'est un Rpg où votre but est d'accomplir différentes quêtes dans un monde isométric !</p>
+        </div>
+    </div>
+    <div class="page page4Div">
+        <div class="titleDiv ">
+            <h1 class="title3 title">
+                Les Sapeurs Pompiers :
+            </h1>
+            <br>
+            <p>Aujourd'hui, je suis SAP 2 à Poitiers Pont Achard avec une formation initiale terminée :<br> aujourd'hui je suis formé et j'interviens en secours à la personne, incendie, déshincarcération ou encore NAC (nouveaux animaux de compagnie par exemple des serpents, des crocodiles).</p>
+        </div>
+    </div>
+    <div class="page page5Div">
+        <div class="titleDiv ">
+            <h1 class="title3 title">
+                Me contacter :
+            </h1>
+            <p>Vous pouvez me contacter par eMail sur <a href="mailto:menardisaac@gmail.com">menardisaac@gmail.com</a></p>
+        </div>
+    </div>
 </body>
+<!-- scripts -->
+<script src="particles.js"></script>
+<script src="js/app.js"></script>
+<script src="script.js"></script>
 
 </html>
