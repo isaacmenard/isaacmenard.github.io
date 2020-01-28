@@ -80,6 +80,68 @@ video {
   background: transparent
 }
 
+@media (max-width:768px)  {
+	html{
+		zoom:40%;
+	}
+	i{
+		zoom:120%;
+	}
+	#particles-js{
+		zoom:200%;
+	}
+}
+.paysage{
+		visibility: hidden;
+}
+.portrait{
+		visibility: visible;
+}
+@media  (orientation: portrait) {
+	.paysage{
+		visibility: visible;
+	}
+	.portrait{
+		visibility: hidden;
+	}
+	.paysage a{
+		font-size: 30px;
+		margin: 20px;
+		text-decoration: none;
+		color:white;
+		font-size: 25px;
+		opacity: 0.5;
+		height: 2%;
+		display: inline-block;
+		vertical-align: middle;
+		transition: 0.2s;
+ 	 }
+	.paysage a.active, .paysage a:hover{
+	  opacity: 0.8;
+	  transition: 0.2s;
+	  color: rgb(250, 250, 85) !important;
+	}
+	ul {
+		z-index: 10000000;
+		list-style-type: none;
+		margin: 0;
+		padding: 7%;
+		width: 400px !important;
+		display: inline-block !important;
+		color: white;
+		position: absolute;
+		top : 0 !important;
+		left: 50%; /* poussé de la moitié de hauteur du référent */
+		transform: translateX(-50%)!important ; /* tiré de la moitié de sa propre hauteur */
+		height: auto;
+		overflow: hidden;
+	  }
+	li{
+		width: 30px !important;
+		height: 3px !important;
+	}
+}
+
 body {
   line-height: 1;
 }
