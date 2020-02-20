@@ -80,7 +80,14 @@ video {
   background: transparent
 }
 
-@media (max-width:768px)  {
+
+.paysage{
+		visibility: hidden;
+}
+.portrait{
+		visibility: visible;
+}
+@media  (orientation: portrait) {
 	html{
 		zoom:40%;
 	}
@@ -90,14 +97,6 @@ video {
 	#particles-js{
 		zoom:200%;
 	}
-}
-.paysage{
-		visibility: hidden;
-}
-.portrait{
-		visibility: visible;
-}
-@media  (orientation: portrait) {
 	.paysage{
 		visibility: visible;
 	}
