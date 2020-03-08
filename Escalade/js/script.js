@@ -1,13 +1,14 @@
 function startWall(wall) {
   document.getElementById("listeDesMurs").style.visibility = "hidden"
 	document.getElementById("listeDesMurs").style.position = "fixed"
-
+	var vertical = true;
   function start() {
 	document.body.removeChild(document.getElementById("loadingAnimation"))
     document.getElementById("wallPage").style.visibility = "visible"
     window.onkeydown = logKey;
 	document.getElementById("next").onclick = function(){changeSlide("+1")}
 	document.getElementById("prev").onclick = function(){changeSlide("-1")}
+	resize()
   }
   var listeMurs = {
     "laListe": ["Mur1", "Mur2"]
@@ -16,19 +17,21 @@ function startWall(wall) {
   var listeDesMurs = {
     "Mur1": {
       slide: 16,
-      folder: "Mur1"
+      folder: "Mur1",
+		vertical:true
     },
     "Mur2": {
-      slide: 2,
-      folder: "Mur2"
+      slide: 10,
+      folder: "Mur2",
+		vertical:false
     },
   };
-  resize()
+
 
   function resize() {
     var width = $(window).width();
     var height = $(window).height();
-    if (width < height) {
+    if (width < height && vertical == false) {
       document.getElementById("mur").style.width = "90%"
       document.getElementById("mur").style.marginLeft = "5%"
       document.getElementById("mur").style.marginRight = "5%"
@@ -58,7 +61,7 @@ function startWall(wall) {
   folder = notreMur.folder
   slide = 0
   slideMax = notreMur.slide
-
+	vertical = notreMur.vertical
 
   function changeSlide(direction) {
     if (direction == "+1") {
