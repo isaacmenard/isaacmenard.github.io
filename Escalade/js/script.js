@@ -8,6 +8,7 @@ function startWall(wall) {
     window.onkeydown = logKey;
 	document.getElementById("next").onclick = function(){changeSlide("+1")}
 	document.getElementById("prev").onclick = function(){changeSlide("-1")}
+	document.getElementById("return").onclick = function(){window.location = ""}
 	resize()
   }
   var listeMurs = {
@@ -31,11 +32,11 @@ function startWall(wall) {
   function resize() {
     var width = $(window).width();
     var height = $(window).height();
-    if (width < height && vertical == false) {
+    if (width < height) {
       document.getElementById("mur").style.width = "90%"
       document.getElementById("mur").style.marginLeft = "5%"
       document.getElementById("mur").style.marginRight = "5%"
-    } else {
+    } else if(vertical == true){
       document.getElementById("mur").style.width = "30%"
       document.getElementById("mur").style.marginLeft = "35%"
       document.getElementById("mur").style.marginRight = "35%"
@@ -111,3 +112,4 @@ for (var i = 0; i <= slideMax; i++) {
   
 	refreshPage()
 }
+

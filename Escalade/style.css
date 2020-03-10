@@ -17,6 +17,11 @@ header{
 	max-width: 1000px;
 	width: 80%
 }
+#return{
+	position: fixed;
+	left: 3%;
+	bottom: 5%;
+}
 a:hover{
 	text-decoration: none;
 }
@@ -33,6 +38,7 @@ header h1{
 body{
 	background-color: rgba(31,31,31,0.90);
 	height: 100%;
+	overflow: hidden;
 }
 html{
 	background-image: url("imagesEscalades/pieces/sabrina-wendl-h2NlwNkA2h8-unsplash.jpg");
@@ -48,7 +54,10 @@ html{
 		max-width: 700px;
 	}
 	header h1{
-		font-size:50px;
+		font-size:35px;
+	}
+	p{
+		font-size: 10px;
 	}
 }
 #boutton{
