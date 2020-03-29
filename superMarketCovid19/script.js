@@ -201,7 +201,7 @@ function start(){
 	//document.getElementById("benBoutton").style.visibility = "visible"
 	document.getElementsByClassName("left")[0].style.left="0"
 	addMinute()
-	setInterval(addMinute,500)
+	setInterval(addMinute,750)
 	buy(0,'masques',document.getElementById("firstBat"))
 	buy(0,'gels',document.getElementById("firstBat"))
 	buy(0,'pq',document.getElementById("firstBat"))
