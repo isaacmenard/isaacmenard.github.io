@@ -183,13 +183,14 @@ div{
 .batiment, .stock{
 		background-image: url("img/floor.png");
 	z-index: 100;
-	position: absolute; /* postulat de départ */
-  top: 57%; left: 50%; /* à 50%/50% du parent référent */
-  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+	position: fixed; /* postulat de départ */
+  top: 15%; left: 16%; /* à 50%/50% du parent référent */
+
 }
 .stock{
 	top: 50%; 
 	left: 100%;
+	position: absolute;
 	transform: translate(0%, -50%); /* décalage de 50% de sa propre taille */
 }
 .batiment .int{
