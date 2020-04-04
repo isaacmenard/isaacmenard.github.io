@@ -12,11 +12,14 @@ var batimentConfig = []
 var hourDep = 8
 var hourFinish = 22
 var hours = 7
-var canMouve = true
+var canMouve1 = true
+var canMouve2 = false
 var minutes = 29
-var perso = document.getElementById("perso")
 var canSpeak = true;
 var benVar = false
+var cursors = document.createElement("style")
+cursors.innerHTML = ".batElement{cursor: not-allowed}"
+cursors.id = "cursors"
 
 refreshMoney()
 document.getElementsByClassName("textDialogue")[0].style.bottom = "-400px"
@@ -30,8 +33,11 @@ document.getElementsByClassName("stock")[0].style.height = sizeStockTop + "px"
 document.getElementsByClassName("batiment")[0].style.marginLeft = 0
 document.getElementsByClassName("batiment")[0].style.marginTop = 0
 addMinute()
-document.getElementById("perso").style.top = "80%";
-document.getElementById("perso").style.left = (sizeStockLeft/2.3) + sizeLeft + "px";
+document.getElementById("perso2").style.top = "80%";
+document.getElementById("perso2").style.left = (sizeStockLeft/2.5) + sizeLeft + "px";
+document.getElementById("perso2").style.visibility = "hidden"
+document.getElementById("perso1").style.top = "60%";
+document.getElementById("perso1").style.left = (sizeStockLeft/2.3) + sizeLeft + "px";
 document.getElementsByClassName("leftWallContenaire")[0].style.marginTop = -((sizeLeft / 50 * 57)/22)+ "px";
 document.getElementsByClassName("rightWallContenaire")[0].style.marginTop = -((sizeLeft / 50 * 57)/22)+ "px"
 document.getElementsByClassName("right2WallContenaire")[0].style.marginTop = -((sizeLeft / 50 * 57)/22)+ "px"
@@ -150,6 +156,11 @@ function update(){
 			batimentConfig[i].element.className = " batElement "+batimentConfig[i].id
 		}
 	}
+	if(canMouve1 == false && canMouve2 == false){
+		document.body.appendChild(cursors)
+	}else if(document.getElementById("cursors")){
+		document.body.removeChild(document.getElementById("cursors"))
+	}
 }
 
 
@@ -202,13 +213,13 @@ function start(){
 	document.getElementsByClassName("left")[0].style.left="0"
 	addMinute()
 	setInterval(addMinute,1000)
-	buy(0,'masques',document.getElementById("firstBat"))
-	buy(0,'gels',document.getElementById("firstBat"))
-	buy(0,'pq',document.getElementById("firstBat"))
-	buy(0,'pates',document.getElementById("firstBat"))
-	buy(0,'alcool',document.getElementById("firstBat"))
-	buy(0,'preservatif',document.getElementById("firstBat"))
-	buy(0,'chloroquine',document.getElementById("firstBat"))
+	buy(0,'masques',document.getElementById("firstBat"),false)
+	buy(0,'gels',document.getElementById("firstBat"),false)
+	buy(0,'pq',document.getElementById("firstBat"),false)
+	buy(0,'pates',document.getElementById("firstBat"),false)
+	buy(0,'alcool',document.getElementById("firstBat"),false)
+	buy(0,'preservatif',document.getElementById("firstBat"),false)
+	buy(0,'chloroquine',document.getElementById("firstBat"),false)
 }
 
 function ben(){
@@ -242,8 +253,15 @@ function destroyBat(element,cursors){
 function refreshMoney(){
 	document.getElementById("money").innerHTML = money
 }
-function buy(prix,element,Elelement){
-	if(batimentConfig.length <  14 && money - prix >= 0){
+function buy(prix,element,Elelement,car){
+	if(car == true && money - prix >= 0){
+		canMouve2 = true
+		document.getElementById("perso2").style.visibility = "visible"
+		document.getElementById("textCar").style.visibility = "hidden"
+		money -= prix
+		refreshMoney()
+	}
+	else if(batimentConfig.length <  14 && money - prix >= 0){
 		var newElement = []
 		money -= prix
 		refreshMoney()
@@ -297,9 +315,9 @@ function addMinute(){
 		document.getElementById("hour").innerHTML = hours+"h"+minutes
 	}
 	if(hours >= hourDep && minutes == 0 || hours >= hourDep && minutes == 30){
-		launchVague(randomNum(hours*0.8,hours*2))
+		launchVague(randomNum(hours*0.8,hours*3))
 	}else if(hours >= hourDep){
-		launchVague(randomNum(0,hours/4))
+		launchVague(randomNum(0,hours/3))
 	}
 }
 function launchVague(number){
@@ -442,11 +460,9 @@ function backPos(element){
 	},randomNum(800,1200))
 }
 function rechargerBat(element, id,key){
-	if(canMouve == true){
-		canMouve = false
-		var cursors = document.createElement("style")
-		cursors.innerHTML = ".batElement{cursor: not-allowed}"
-		document.body.appendChild(cursors)
+	if(canMouve1 == true){
+		var perso = document.getElementById("perso1")
+		canMouve1 = false
 		perso.style.transition = "1s";
 		perso.style.top = "20%"
 		var posCalc = key < 7 ? (key+1) : key-6
@@ -469,7 +485,39 @@ function rechargerBat(element, id,key){
 							element.className =  "batElement "+id
 							findBat(key)['stock'] = 100
 							element.innerHTML = findBat(key)['stock']
-							retourBat(0.8*(posCalcDist)+(randomNum(0,10)/10),cursors)
+							retourBat(0.8*(posCalcDist)+(randomNum(0,10)/10),perso,"80",1)
+						},1000)
+					},(0.8*(posCalcDist)+(randomNum(0,10)/10))*1000)
+				},700)
+			},100)
+		},1500)
+	}
+	else if(canMouve2 == true){
+		var perso = document.getElementById("perso2")
+		canMouve2 = false
+		perso.style.transition = "1s";
+		perso.style.top = "20%"
+		var posCalc = key < 7 ? (key+1) : key-6
+		var posCalcDist = key < 7 ? (7 - key+1) : 14 - key
+		setTimeout(function(){
+			perso.style.transition = "0s";
+			perso.className="reverseLift forkLift"
+			setTimeout(function(){
+				perso.style.transition = "0.5s";
+				perso.src="img/forkLiftPlein.png"
+				perso.style.top = "35%"
+				setTimeout(function(){
+					perso.style.transition = (0.8*(posCalcDist)+(randomNum(0,10)/10))+"s"
+					perso.style.left = ((sizeLeft / 8) * (posCalc))+randomNum(35,60) +"px"
+					setTimeout(function(){
+						perso.style.transition = "1s"
+						perso.style.top = key < 7 ? "20%" : "60%"
+						setTimeout(function(){
+							findBat(key)['id'] = id
+							element.className =  "batElement "+id
+							findBat(key)['stock'] = 100
+							element.innerHTML = findBat(key)['stock']
+							retourBat(0.8*(posCalcDist)+(randomNum(0,10)/10),perso,"60",2)
 						},1000)
 					},(0.8*(posCalcDist)+(randomNum(0,10)/10))*1000)
 				},700)
@@ -477,7 +525,7 @@ function rechargerBat(element, id,key){
 		},1500)
 	}
 }
-function retourBat(time,cursor){
+function retourBat(time,perso,y,id){
 	perso.style.transition = "0s";
 	perso.className="forkLift"
 	perso.src="img/forkLiftVide.png"
@@ -486,12 +534,15 @@ function retourBat(time,cursor){
 		perso.style.top = "35%"
 		setTimeout(function(){
 			perso.style.transition = time+"s";
-			perso.style.left = (sizeStockLeft/2.3) + sizeLeft + "px";
+			perso.style.left = (sizeStockLeft/2.5) + sizeLeft + "px";
 			setTimeout(function(){
 				perso.style.transition = "0.8s";
-				perso.style.top = "80%";
-				canMouve = true
-				document.body.removeChild(cursor)
+				perso.style.top = y+"%";
+				if(id == 1){
+					canMouve1 = true
+				}else if(id == 2){
+					canMouve2 = true
+				}
 			},time*1000)
 		},800)
 	},1000)

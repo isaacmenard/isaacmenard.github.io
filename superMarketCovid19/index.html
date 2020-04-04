@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>SuperMarcket</title>
   <link rel="stylesheet" href="style.css">
+	
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -18,13 +19,15 @@
 	</header>
 	<nav class="left">
 		<ul>
-			<li>Masques : <h3> 30 $ </h3> <img id="firstBat" onClick="buy(30,'masques',this)" src="img/icons/MonsterGameAssets-022.png" alt="icon"></li>
-			<li>Gels : <h3> 40 $ </h3> <img onClick="buy(40,'gels',this)" src="img/icons/MonsterGameAssets-022.png" alt="icon"></li>
-			<li>Papier Toilette : <h3> 60 $ </h3> <img onClick="buy(60,'pq',this)" src="img/icons/MonsterGameAssets-022.png" alt="icon"></li>
-			<li>Pâtes : <h3> 40 $ </h3> <img onClick="buy(40,'pates',this)" src="img/icons/MonsterGameAssets-022.png" alt="icon"></li>
-			<li>Alcool : <h3> 100 $ </h3> <img onClick="buy(100,'alcool',this)" src="img/icons/MonsterGameAssets-022.png" alt="icon"></li>
-			<li>Préservatif : <h3> 30 $ </h3> <img onClick="buy(30,'preservatif',this)" src="img/icons/MonsterGameAssets-022.png" alt="icon"></li>
-			<li>Chloroquine : <h3> 200 $ </h3> <img onClick="buy(200,'chloroquine',this)" src="img/icons/MonsterGameAssets-022.png" alt="icon"></li>
+			<li>Masques : <h3> 30 $ </h3> <img id="firstBat" onClick="buy(30,'masques',this,false)" src="img/icons/MonsterGameAssets-022.png" alt="icon"></li>
+			<li>Gels : <h3> 40 $ </h3> <img onClick="buy(40,'gels',this,false)" src="img/icons/MonsterGameAssets-022.png" alt="icon"></li>
+			<li>Papier Toilette : <h3> 60 $ </h3> <img onClick="buy(60,'pq',this,false)" src="img/icons/MonsterGameAssets-022.png" alt="icon"></li>
+			<li>Pâtes : <h3> 40 $ </h3> <img onClick="buy(40,'pates',this,false)" src="img/icons/MonsterGameAssets-022.png" alt="icon"></li>
+			<li>Alcool : <h3> 100 $ </h3> <img onClick="buy(100,'alcool',this,false)" src="img/icons/MonsterGameAssets-022.png" alt="icon"></li>
+			<li>Préservatif : <h3> 30 $ </h3> <img onClick="buy(30,'preservatif',this,false)" src="img/icons/MonsterGameAssets-022.png" alt="icon"></li>
+			<li>Chloroquine : <h3> 200 $ </h3> <img onClick="buy(200,'chloroquine',this,false)" src="img/icons/MonsterGameAssets-022.png" alt="icon"></li>
+			<br>
+			<li>Nouveau Vehicule : <h3> 1000 $ </h3> <img id="textCar" onClick="buy(1000,'car',this,true)" src="img/icons/MonsterGameAssets-022.png" alt="icon"></li>
 		</ul>
 	</nav>
 	<div  class="grass" >
@@ -50,7 +53,8 @@
 			<div class="stock">
 				<img class="stockIMG" src="img/box.png" />
 			</div>
-			<img id="perso" class="forkLift" src="img/forkLiftVide.png" alt="forkLift"/>
+			<img id="perso1" class="forkLift" src="img/forkLiftVide.png" alt="forkLift"/>
+			<img id="perso2" class="forkLift" src="img/forkLiftVide.png" alt="forkLift"/>
 			<div class="leftWallContenaire"></div>
 			<div class="rightWallContenaire"></div>
 			<div class="right2WallContenaire"></div>
