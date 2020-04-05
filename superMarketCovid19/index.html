@@ -17,6 +17,20 @@
 			<h1 style="color: antiquewhite" id="hour">00h00</h1> <h1 style="color: antiquewhite"> - </h1> <h1 id="money" style="color: antiquewhite">100</h1><h1 style="color: antiquewhite"> $</h1>
 		</div>
 	</header>
+	<div class="end">
+		<center>
+			<h1>GAME OVER</h1>
+			<br>
+			<h3 id="textEnd"></h3>
+			<br>
+			<hr>
+			<div id="listScore"></div>
+			<form id="formEnd" class="form-style-2">
+				<label for="field1"><span>Pseudo <span class="required">*</span></span><input id="pseudoInput" type="text" class="input-field" name="field1" value="" /></label>
+				<label><span> </span><input  onclick="sendEnd(document.getElementById('pseudoInput').value)" type="submit" value="Submit" /></label>
+			</form>
+		</center>
+	</div>
 	<nav class="left">
 		<ul>
 			<li>Masques : <h3> 30 $ </h3> <img id="firstBat" onClick="buy(30,'masques',this,false)" src="img/icons/MonsterGameAssets-022.png" alt="icon"></li>
