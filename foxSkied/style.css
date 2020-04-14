@@ -128,8 +128,13 @@ header .right{
 	width: 20%;
 }
 header .center a {
+	color: white;
 	cursor: pointer;
+		text-decoration: none;
 	border-bottom: rgba(248,84,87,1.00) 3px solid;
+}
+header .center a:hover {
+	text-decoration: none;
 }
 header .center .active {
 	border-bottom: rgba(248,84,87,1.00) 0px solid;

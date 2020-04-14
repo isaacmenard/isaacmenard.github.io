@@ -3,6 +3,7 @@ $(document).ready(function() {
 	newStyle.innerHTML = ".background{height:100%;width:auto;visibility:visible}";
 	document.body.appendChild(newStyle)
 });
+
 var hover = false
 function load(){
 	if(hover == false){
