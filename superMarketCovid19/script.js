@@ -35,9 +35,9 @@ function sendEnd(pseudo) {
     }
   };
   if (minutes < 10) {
-    xhttp.open("GET", "https://donjonsansdragon.space/scoreCodivMarket.php?pseudo=" + pseudo + "&score=" + hours + "h0" + minutes + "", false);
+    xhttp.open("GET", "https://donjonsansdragon.space/scoreCodivMarket.php?pseudo=" + pseudo + "&score=" + hours + ":0" + minutes + ":00", false);
   } else {
-    xhttp.open("GET", "https://donjonsansdragon.space/scoreCodivMarket.php?pseudo=" + pseudo + "&score=" + hours + "h" + minutes + "", false);
+    xhttp.open("GET", "https://donjonsansdragon.space/scoreCodivMarket.php?pseudo=" + pseudo + "&score=" + hours + ":" + minutes + ":00", false);
   }
   xhttp.send();
 	document.getElementById("formEnd").parentNode.removeChild(document.getElementById("formEnd"))

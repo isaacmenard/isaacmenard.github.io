@@ -1,0 +1,47 @@
+body,html{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+}
+html{
+	background-image: url("https://toppng.com/uploads/preview/textured-background-clipart-11553972785h5paa6qz7b.jpg");
+	background-size: 20%;
+}
+body{
+	background-color: rgba(255,221,0,0.97);
+}
+.bar{
+	width: 120%;
+	position: absolute;
+	left:-10%;
+	height: 3px;
+	background-color: black;
+}
+.sign{
+	position: absolute;
+	left:50%;
+	top:50%;
+	font-size: 40px;
+	transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+	font-family: 'Lobster', cursive;
+}
+.sign h1{
+		margin: 15px;
+		text-align: center;
+}
+.next{
+	position: absolute;
+	left:50%;
+	top:80%;
+	text-align: center;
+	font-size: 40px;
+	transform: translate(-50%, -20%); /* décalage de 50% de sa propre taille */
+}
+.rotate{
+	transform: rotate(90deg);
+	cursor: pointer;
+}
+.next:hover .next2{
+	top:75%;
+}
