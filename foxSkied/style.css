@@ -24,8 +24,10 @@ body:before {
 	width: 80%;
 	position: absolute;
 	left:10%;
+	filter: drop-shadow(0 0 0.75rem black);
 	height: 6px;
 	background-color: white;
+	margin-bottom: 15px;
 }
 .sign{
 	position: absolute;
@@ -43,23 +45,95 @@ body:before {
   transform: translate(-50%); /* décalage de 50% de sa propre taille */
 }
 .sign h1{
-		margin: 15px;
+		margin: 5px;
 		text-transform: uppercase;
-	text-shadow: 1px 1px 2px rgb(0, 0, 0, 0.80);
+		filter: drop-shadow(0 0 0.75rem black);
 		text-align: center;
+}
+.sign p{
+	margin: 30px;
+	text-transform: uppercase;
+	filter: drop-shadow(0 0 0.75rem black);
+	text-align: center;
+	font-size: 15px;
+	color: rgba(241,241,241,1.00);
 }
 .next{
 	position: absolute;
 	left:50%;
-	top:80%;
+	top:90%;
 	text-align: center;
 	font-size: 40px;
 	transform: translate(-50%, -20%); /* décalage de 50% de sa propre taille */
 }
-.rotate{
+.next img{
 	transform: rotate(90deg);
+}
+.arrow{
+	width: 10%;
+	height: auto;
+	filter: drop-shadow(0 0 0.75rem black);
 	cursor: pointer;
 }
+.leftArrow{
+	width: 5%;
+	position: absolute;
+	left:5%;
+	top:50%;
+	transform: translate(0%, -50%) rotate(180deg); /* décalage de 50% de sa propre taille */
+}
+.rightArrow{
+	width: 5%;
+	position: absolute;
+	right:5%;
+	top:50%;
+	transform: translate(0%, -50%); /* décalage de 50% de sa propre taille */
+}
+
 .next:hover .next2{
 	top:75%;
+}
+header{
+	filter: drop-shadow(0 0 1.00rem black);
+	position: fixed;
+	top:5px;;
+	left:0;
+	padding: 3px;
+	height: 30px;
+	color: white;
+	width: 100%;
+}
+header div{
+	font-size: 25px;
+	display: inline-block;
+	position: absolute;
+}
+header .left{
+	left:10px;
+}
+header .center{
+	left:50%;
+	transform: translate(-50%); /* décalage de 50% de sa propre taille */
+}
+header .center a{
+	margin: 15px;
+}
+header .right{
+	right:10px;
+	height: 100%;
+}
+header .center a {
+	cursor: pointer;
+	border-bottom: rgba(248,84,87,1.00) 3px solid;
+}
+header .center .active {
+	border-bottom: rgba(248,84,87,1.00) 0px solid;
+	background-color: rgba(248,84,87,1.00);
+	padding: 3px;
+}
+header .right img{
+	width: auto;
+	margin-right: 10px;
+	height: 80%;
+	cursor: pointer;
 }
