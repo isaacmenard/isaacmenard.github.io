@@ -140,6 +140,7 @@ header .center .active {
 	border-bottom: rgba(248,84,87,1.00) 0px solid;
 	background-color: rgba(248,84,87,1.00);
 	padding: 3px;
+	color: white;
 }
 header .right img{
 	width: auto;
@@ -158,6 +159,7 @@ header .right img{
 	transform: translate(-50%); /* décalage de 50% de sa propre taille */
 }
 #textHome{
+	color: white;
 	width: 100%;
 	position: absolute;
 	height: 100%;

@@ -15,7 +15,26 @@
 </head>
 
 <body>
-		<img src="backgroundMontage.jpg" style="width: 100%;height: auto;" class="background"/>
+	<style>body:before{background-image: url("backgroundMontagebad.png");}
+		body,header,header .center a{
+			color: rgba(15,15,15,1.00);
+		}
+		header{
+			filter: drop-shadow(0 0 0.05rem black);
+		}
+		header .right{
+			filter: drop-shadow(0 0 0.75rem rgba(15,15,15,0.40););
+		}
+		.sign h1{
+			filter: drop-shadow(0 0 0.05rem black);
+		}
+		.sign p{
+			filter: drop-shadow(0 0 0.05rem black);
+			color: rgba(15,15,15,1.00);
+		}
+	</style>
+	
+	<img src="backgroundMontage.jpg" style="width: 100%;height: auto;" class="background"/>
 	<header>
 		<div class="left">SKIEDFOX</div>
 		<div class="center">
