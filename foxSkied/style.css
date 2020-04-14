@@ -121,6 +121,7 @@ header .center a{
 header .right{
 	right:10px;
 	height: 100%;
+	width: 20%;
 }
 header .center a {
 	cursor: pointer;
@@ -135,5 +136,6 @@ header .right img{
 	width: auto;
 	margin-right: 10px;
 	height: 80%;
+	float: right;
 	cursor: pointer;
 }
