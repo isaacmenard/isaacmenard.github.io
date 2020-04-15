@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SkiedFox</title>
+<meta name="description" content="Bienvenue sur mon portfolio ! Je suis Isaac, un lycéen sapeur pompier et développeur !" />
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+<link rel="stylesheet" media="screen" href="style.css">
+	<script src="script.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Squada+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<style>body:before{background-image: url("backgroundWebsiteBad.png");}
+		body,header,header .center a{
+			color: rgba(15,15,15,1.00);
+		}
+		header{
+			filter: drop-shadow(0 0 0.05rem black);
+		}
+		header .right{
+			filter: drop-shadow(0 0 0.75rem rgba(15,15,15,0.40););
+		}
+		.sign h1{
+			filter: drop-shadow(0 0 0.05rem black);
+		}
+		.sign p{
+			filter: drop-shadow(0 0 0.05rem black);
+			color: rgba(15,15,15,1.00);
+		}
+	</style>
+	
+	<img src="backgroundWebsite.jfif" style="width: 100%;height: auto;" class="background"/>
+	<header>
+		<div class="left">SKIEDFOX</div>
+		<div class="center">
+			<a href="index.html">HOME</a>
+			<a href="montage.html">MONTAGE</a>
+			<a href="siteWeb.html" class="active">VOTRE SITE WEB</a>
+			<a href="gaming.html">GAMING</a>
+			<a href="minecraft.html">MINECRAFT</a>
+			<a href="about.html" >ABOUT ME</a>
+		</div>
+		<div class="right">
+			<img src="insta.png"><img src="youtube.png"><img src="facebook.png"><img src="twitter.png">
+		</div>
+	</header>
+	<div id="home">
+		<div class="sign" style="width: 70%;">
+			 <h1>Création de site web</h1>
+			<div class="bar"></div>
+			<p>Some text here but je sais pas quoi mais un truc genre hyper coo, tu vois le genre</p>
+		 </div>
+	</div>
+	<div id="textHome">
+		<div class="centerDiv">
+			<div class="card"><p>Vidéo simple</p><hr><br><br><br><br><hr><p class="bottom">10 €</p></div>
+			<div class="card"><p>Court métrage</p><hr><br><br><br><br><hr><p class="bottom">30 €</p></div>
+			<div class="card"><p>Long métrage</p><hr><br><br><br><br><hr><p class="bottom">Prix sur demande</p></div>
+		</div>
+	</div>
+		<img src="arrow.png" class="arrow leftArrow"  onclick="window.location = 'montage.html'">
+	<img src="arrow.png" class="arrow rightArrow"  onclick="window.location = 'gaming.html'">
+	<div class="next" onclick="load()"><img id="montageNext"  src="arrow.png" class="arrow"></div>
+</body>
+</html>
