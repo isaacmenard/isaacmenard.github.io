@@ -185,6 +185,18 @@ header .right img{
 	top: 20%;
 	left:10%;
 }
+.warning{
+	position: absolute;
+	width: 70%;
+	height: 10%;
+	top: 85%;
+	left:15%;
+	padding: 3px;
+	text-align: center;
+	border: 3px solid white;
+	background-color: rgba(0,0,0,0.75);
+}
 .top{
 	transform: rotate(-90deg) !important;
+	opacity: 0.7;
 }
