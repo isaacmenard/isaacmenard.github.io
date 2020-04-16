@@ -4,18 +4,19 @@
 <meta charset="utf-8">
 <title>SkiedFox</title>
 <meta name="description" content="Bienvenue sur mon portfolio ! Je suis Isaac, un lycéen sapeur pompier et développeur !" />
-	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 <link rel="stylesheet" media="screen" href="style.css">
-	<script src="script.js"></script>
+<script src="script.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Squada+One&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap" rel="stylesheet">
 </head>
 
 <body>
-	<style>body:before{background-image: url("backgroundMontageBad.png");}
+<style>
+body:before{background-image: url("backgroundMontageBad.png");}
 		body,header,header .center a{
 			color: rgba(15,15,15,1.00);
 		}
@@ -33,37 +34,81 @@
 			color: rgba(15,15,15,1.00);
 		}
 	</style>
-	
-	<img src="backgroundMontage.jpg" style="width: 100%;height: auto;" class="background"/>
-	<header>
-		<div class="left">FOXSKIED</div>
-		<div class="center">
-			<a href="index.html">HOME</a>
-			<a href="montage.html" class="active">MONTAGE</a>
-			<a href="siteWeb.html">VOTRE SITE WEB</a>
-			<a href="gaming.html">GAMING</a>
-			<a href="minecraft.html">MINECRAFT</a>
-			<a href="about.html" >ABOUT ME</a>
-		</div>
-		<div class="right">
-			<img src="insta.png"><img src="youtube.png"><img src="facebook.png"><img src="twitter.png">
-		</div>
-	</header>
-	<div id="home">
-		<div class="sign">
-			 <h1>Montage</h1>
-			<div class="bar"></div>
-			<p>Some text here but je sais pas quoi mais un truc genre hyper coo, tu vois le genre</p>
-		 </div>
-	</div>
-	<div id="textHome">
-		<div class="centerDiv">
-			<div class="card"><p>Vidéo simple</p><hr><br><br><br><br><hr><p class="bottom">10 €</p></div>
-			<div class="card"><p>Court métrage</p><hr><br><br><br><br><hr><p class="bottom">30 €</p></div>
-			<div class="card"><p>Long métrage</p><hr><br><br><br><br><hr><p class="bottom">Prix sur demande</p></div>
-		</div>
-	</div>
-	<img src="arrow.png" class="arrow rightArrow" onclick="window.location = 'siteWeb.html'">
-	<div class="next" onclick="load()"><img id="montageNext"  src="arrow.png" class="arrow"></div>
+<img src="backgroundMontage.jpg" style="width: 100%;height: auto;" class="background"/>
+<header>
+  <div class="left">FOXSKIED</div>
+  <div class="center"> <a href="index.html">HOME</a> <a href="montage.html" class="active">MONTAGE</a> <a href="siteWeb.html">VOTRE SITE WEB</a> <a href="gaming.html">GAMING</a> <a href="minecraft.html">MINECRAFT</a> <a href="about.html" >ABOUT ME</a> </div>
+  <div class="right"> <img src="insta.png"><img src="youtube.png"><img src="facebook.png"><img src="twitter.png"> </div>
+</header>
+<div id="home">
+  <div class="sign" style="width: 60%">
+    <h1>Montage</h1>
+    <div class="bar"></div>
+    <p>Vous êtes YouTubeur et vous n'avez pas le temps de faire le montage de vos vidéos ? Foxskied production est là !</p>
+  </div>
+</div>
+<div id="textHome">
+  <div class="warningTop">
+    <p> Je suis monteur vidéo professionnel (cf mon CV).
+      Je travaillerai plusieurs heures sur vos rushs afin de vous fournir la vidéo la plus perfectionnée et de satisfaire au mieux votre demande. N'hésitez pas à me contacter afin d'analyser votre projet et de partir sur un éventuel devis.</p>
+  </div>
+  <div class="centerDiv" style="display: flex;">
+    <div class="card" style="width: 20%">
+      <div class="topCard"> Vidéo simple<hr></div>
+      <div class="midCard">
+		  <br>
+		  Du dérushage, des coupures, du mixages son et incrustation d'intro et d'outro.<br>
+		  Durée finale : 10 MIN 
+		  <br>
+      </div>
+      <div class="bottom"><hr>10 €</div>
+    </div>
+    <div class="card" style="width: 20%">
+       <div class="topCard"> Vidéo Complexe<hr></div>
+      <div class="midCard">
+		  <br>
+		  Du dérushage, des coupures, du mixage son, Webcam avec zoom et interaction, incrustation de blague et de zoom et incrustation d'intro et d'outro.<br>
+Durée finale : 10 MIN
+		  <br>
+      </div>
+      <div class="bottom"><hr>17 €</div>
+    </div>
+    <div class="card" style="width: 20%">
+      <div class="topCard"> Montage Dynamique<hr></div>
+      <div class="midCard">
+		  <br>
+		  Le top du top !<br>
+		  Durée finale : 10 MIN 
+		  <br>
+      </div>
+      <div class="bottom"><hr>37 €</div>
+    </div>
+	 <div class="card" style="width: 20%">
+      <div class="topCard"> Clip Dynamique<hr></div>
+      <div class="midCard">
+		  <br>
+		  Pour une vidéo folle !<br>
+		  Durée finale : 4 MIN 
+		  <br>
+      </div>
+      <div class="bottom"><hr>17 €</div>
+    </div>
+    <div class="card" style="width: 20%">
+      <div class="topCard">AUTRE<hr></div>
+      <div class="midCard">
+		  <br>
+		  Les projets sur demande sont disponibles, pour plus d'information contacter le monteur.
+		  <br>
+      </div>
+      <div class="bottom"><hr>Sur demande</div>
+	  </div>
+  </div>
+  <div class="warning">
+    <p>Les facturations seront réglées par PayPal.
+      Vous pouvez contacter le monteur sur Facebook, Discord, Instagram et mail : informations sur la page contact</p>
+  </div>
+</div>
+<img src="arrow.png" class="arrow rightArrow" onclick="window.location = 'siteWeb.html'">
+<div class="next" onclick="load()"><img id="montageNext"  src="arrow.png" class="arrow"></div>
 </body>
 </html>

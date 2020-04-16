@@ -115,7 +115,7 @@ header .left{
 }
 header .center{
 	left:50%;
-		width: 59%;
+		width: 79%;
 	text-align: center;
 	transform: translate(-50%); /* décalage de 50% de sa propre taille */
 }
@@ -171,12 +171,14 @@ header .right img{
 .card{
 	width: calc(32% - 40px);
 	height: 70%;
-	margin: 20px;
+	margin: 10px;
 	display: inline-block;
 	border: 3px solid white;
 	background-color: rgba(0,0,0,0.75);
 	text-align: center;
-	font-size: 20px;
+	font-size: 16px;
+	padding: 3px;
+	overflow: auto;
 }
 .centerDiv{
 	position: absolute;
@@ -189,14 +191,43 @@ header .right img{
 	position: absolute;
 	width: 70%;
 	height: 10%;
-	top: 85%;
+	top: 82%;
 	left:15%;
 	padding: 3px;
 	text-align: center;
 	border: 3px solid white;
 	background-color: rgba(0,0,0,0.75);
 }
+.warningTop{
+	position: absolute;
+	width: 70%;
+	height: 10%;
+	top: 8%;
+	left:15%;
+	padding: 3px;
+	text-align: center;
+	border: 3px solid white;
+	background-color: rgba(0,0,0,0.75);
+}
+.warningTop p{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top:50%;
+	transform: translate(0%, -50%); /* décalage de 50% de sa propre taille */
+}
 .top{
 	transform: rotate(-90deg) !important;
 	opacity: 0.7;
+}
+.topCard{
+	padding: 3px;
+	height: 10%;
+}
+.midCard{
+	height: 70%;
+}
+.bottom{
+	padding: 3px;
+	height: 10%;
 }

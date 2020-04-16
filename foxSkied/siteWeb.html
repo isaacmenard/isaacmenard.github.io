@@ -4,18 +4,19 @@
 <meta charset="utf-8">
 <title>SkiedFox</title>
 <meta name="description" content="Bienvenue sur mon portfolio ! Je suis Isaac, un lycéen sapeur pompier et développeur !" />
-	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 <link rel="stylesheet" media="screen" href="style.css">
-	<script src="script.js"></script>
+<script src="script.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Squada+One&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap" rel="stylesheet">
 </head>
 
 <body>
-	<style>body:before{background-image: url("backgroundWebsiteBad.png");}
+<style>
+body:before{background-image: url("backgroundWebsiteBad.png");}
 		body,header,header .center a{
 			color: rgba(15,15,15,1.00);
 		}
@@ -33,41 +34,58 @@
 			color: rgba(15,15,15,1.00);
 		}
 	</style>
-	
-	<img src="backgroundWebsite.jfif" style="width: 100%;height: auto;" class="background"/>
-	<header>
-		<div class="left">FOXSKIED</div>
-		<div class="center">
-			<a href="index.html">HOME</a>
-			<a href="montage.html">MONTAGE</a>
-			<a href="siteWeb.html" class="active">VOTRE SITE WEB</a>
-			<a href="gaming.html">GAMING</a>
-			<a href="minecraft.html">MINECRAFT</a>
-			<a href="about.html" >ABOUT ME</a>
-		</div>
-		<div class="right">
-			<img src="insta.png"><img src="youtube.png"><img src="facebook.png"><img src="twitter.png">
-		</div>
-	</header>
-	<div id="home">
-		<div class="sign" style="width: 70%;">
-			 <h1>Création de site web</h1>
-			<div class="bar"></div>
-			<p>Un portFolio ? Un forum ? Un réseau social ? Une application Mobile ? Tout est possible !</p>
-		 </div>
-	</div>
-	<div id="textHome">
-		<div class="centerDiv" style="display:flex;">
-			<div class="card"><p>Portfolio simple</p><hr><br>Vous voulez une simple présentation de vous ? <br>Avec un design moderne et personnalisable<br>Environ Une journée<br><hr><p class="bottom">10 €</p></div>
-			<div class="card"><p>Site Utilisant du PHP</p><hr><br>Vous souhaitez une liste de membres ? Faire en sorte de pouvoir automatiser vos taches / posts ? <br> Le PHP vas vous permettre avec une Base de donnée de faire ce que vous voulez<br><br><hr><p class="bottom">20 €</p></div>
-			<div class="card"><p>Réseau social / application android / Tâche complexe</p><hr><br>Tout est possible à partir de là !<br><br><br><hr><p class="bottom">Prix sur demande</p></div>
-		</div>
-		<div class="warning">
-			<p>Attention Tout les prix ne comprennent pas l'hébergement ni le domaine du site web, pour plus d'information, veuillez me contacter sur <a style="color: aqua;text-decoration: none;" href="mailto:menardisaac@gmail.com">menardisaac@gmail.com</a> ou sur discord avec <a style="color: aqua;text-decoration: none;" href="https://discord.com">𝕴𝖘𝖆𝖆𝖈 | développeur#0647</a></p>
-		</div>
-	</div>
-		<img src="arrow.png" class="arrow leftArrow"  onclick="window.location = 'montage.html'">
-	<img src="arrow.png" class="arrow rightArrow"  onclick="window.location = 'gaming.html'">
-	<div class="next" onclick="load()"><img id="montageNext"  src="arrow.png" class="arrow"></div>
+<img src="backgroundWebsite.jfif" style="width: 100%;height: auto;" class="background"/>
+<header>
+  <div class="left">FOXSKIED</div>
+  <div class="center"> <a href="index.html">HOME</a> <a href="montage.html">MONTAGE</a> <a href="siteWeb.html" class="active">VOTRE SITE WEB</a> <a href="gaming.html">GAMING</a> <a href="minecraft.html">MINECRAFT</a> <a href="about.html" >ABOUT ME</a> </div>
+  <div class="right"> <img src="insta.png"><img src="youtube.png"><img src="facebook.png"><img src="twitter.png"> </div>
+</header>
+<div id="home">
+  <div class="sign" style="width: 70%;">
+    <h1>Création de site web</h1>
+    <div class="bar"></div>
+    <p>Un portFolio ? Un forum ? Un réseau social ? Une application Mobile ? Tout est possible !</p>
+  </div>
+</div>
+<div id="textHome">
+  <div class="centerDiv" style="display:flex;">
+    <div class="card">
+      <div class="topCard">Portfolio Design<hr></div>
+      <div class="midCard">
+		  <br>
+		  Vous voulez une simple présentation de vous ?<br>
+			Avec un design moderne en fonction de vos goûts !<br>
+		  <br>
+      </div>
+      <div class="bottom"><hr>9 €</div>
+    </div>
+    <div class="card">
+      <div class="topCard">Un site dynamique<hr></div>
+      <div class="midCard">
+		  <br>
+		  	Vous souhaitez automatiser vos tâches ? AJouter un email sécurisé sur votre site ou encore avoir des avis de la part de vos clients ?<br>
+			Utilisez un site dynamique ! 
+		  <br>
+      </div>
+      <div class="bottom"><hr>19 €</div>
+    </div>
+    <div class="card">
+      <div class="topCard">Une application !<hr></div>
+      <div class="midCard">
+		  <br>
+		  	Plus loin encore ! Vous voulez un forum, votre propre réseau social ? Un site personnalisable à l'infini ? Une application mobile ?
+		  <br>
+		   Tout vos projets sont possibles ! 
+		  <br>
+      </div>
+      <div class="bottom"><hr>Sur demande</div>
+    </div>
+  </div>
+  <div class="warning">
+    <p>Attention les prix ne comprennent ni l'hébergement ni le domaine du site web, avant d'acheter quoi que ce soit veuillez me contacter sur <a style="color: aqua;text-decoration: none;" href="mailto:menardisaac@gmail.com">menardisaac@gmail.com</a> ou sur discord avec <a style="color: aqua;text-decoration: none;" href="https://discord.com">𝕴𝖘𝖆𝖆𝖈 | développeur#0647</a></p>
+  </div>
+</div>
+<img src="arrow.png" class="arrow leftArrow"  onclick="window.location = 'montage.html'"> <img src="arrow.png" class="arrow rightArrow"  onclick="window.location = 'gaming.html'">
+<div class="next" onclick="load()"><img id="montageNext"  src="arrow.png" class="arrow"></div>
 </body>
 </html>

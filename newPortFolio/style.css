@@ -9,6 +9,7 @@ html{
 	background-size: 20%;
 }
 body{
+	overflow: hidden;
 	background-color: rgba(255,221,0,0.97);
 }
 .bar{
@@ -27,21 +28,38 @@ body{
 	font-family: 'Lobster', cursive;
 }
 .sign h1{
-		margin: 15px;
-		text-align: center;
+	margin: 15px;
+	text-align: center;
+	font-weight: normal;
 }
 .next{
 	position: absolute;
 	left:50%;
 	top:80%;
+	filter: invert();
+	width: 5%;
+	height: auto;
 	text-align: center;
-	font-size: 40px;
-	transform: translate(-50%, -20%); /* décalage de 50% de sa propre taille */
+	transform: translate(-50%, -20%) rotate(90deg); /* décalage de 50% de sa propre taille */
+	cursor: pointer;
 }
 .rotate{
 	transform: rotate(90deg);
 	cursor: pointer;
 }
-.next:hover .next2{
-	top:75%;
+header{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	padding: 8px;
+	font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+}
+header a{
+	margin: 30px;
+	margin-top: 0;
+	color: black;
+	text-decoration: none;
+	text-transform: uppercase;
+	cursor: pointer;
 }
