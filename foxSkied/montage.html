@@ -16,41 +16,39 @@
 
 <body>
 <style>
+	
 body:before{background-image: url("backgroundMontageBad.png");}
-		body,header,header .center a{
-			color: rgba(15,15,15,1.00);
-		}
-		header{
-			filter: drop-shadow(0 0 0.05rem black);
-		}
-		header .right{
-			filter: drop-shadow(0 0 0.75rem rgba(15,15,15,0.40););
-		}
-		.sign h1{
-			filter: drop-shadow(0 0 0.05rem black);
-		}
-		.sign p{
-			filter: drop-shadow(0 0 0.05rem black);
-			color: rgba(15,15,15,1.00);
-		}
+	header{
+		background-color: rgba(21,21,21,1.00);
+		margin: -5px;
+		padding: 10px;
+		height: 45px;
+	}body{
+		margin: 0;
+		padding: 0;
+	}
+	header .right img{
+		height: 50%;
+	}
 	</style>
-<img src="backgroundMontage.jpg" style="width: 100%;height: auto;" class="background"/>
 <header>
   <div class="left">FOXSKIED</div>
-  <div class="center"> <a href="index.html">HOME</a> <a href="montage.html" class="active">MONTAGE</a> <a href="siteWeb.html">VOTRE SITE WEB</a> <a href="gaming.html">GAMING</a> <a href="minecraft.html">MINECRAFT</a> <a href="about.html" >ABOUT ME</a> </div>
+  <div class="center"> <a href="index.html">HOME</a> <a href="montage.html" class="active">MONTAGE</a> <a href="siteWeb.html">VOTRE SITE WEB</a> <a href="minecraft.html">MINECRAFT</a> <a href="about.html" >ABOUT ME</a> </div>
   <div class="right"> <img src="insta.png"><img src="youtube.png"><img src="facebook.png"><img src="twitter.png"> </div>
 </header>
-<div id="home">
-  <div class="sign" style="width: 60%">
-    <h1>Montage</h1>
-    <div class="bar"></div>
-    <p>Montage de toutes sortes de vidéos</p>
-  </div>
+	<img src="backgroundMontage.jpg" style="width: 100%;height: auto;" class="background"/>
+<div id="right">
+	<div>
+	</div>
 </div>
+<div id="left">
+	<div>
+	</div>
+</div>
+	<div class="sign signLeft" onClick="window.location = 'montageRealisation.html'"><h1>MONTAGE Réalisation</h1></div>
+	<div class="sign signRight" onClick="window.location = 'gaming.html'"><h1>MONTAGE YOUTUBE</h1></div>
 <div id="textHome">
   
 </div>
-<img src="arrow.png" class="arrow rightArrow" onclick="window.location = 'siteWeb.html'">
-<div class="next" onclick="load()"><img id="montageNext"  src="arrow.png" class="arrow"></div>
 </body>
 </html>

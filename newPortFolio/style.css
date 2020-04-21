@@ -3,14 +3,20 @@ body,html{
 	margin: 0px;
 	width: 100%;
 	height: 100%;
+	background-color:rgba(21,21,21,1.00);
 }
-html{
-	background-image: url("https://toppng.com/uploads/preview/textured-background-clipart-11553972785h5paa6qz7b.jpg");
-	background-size: 20%;
-}
+
 body{
-	overflow: hidden;
-	background-color: rgba(255,221,0,0.97);
+ background-image: url("./paysage.jpg");
+  overflow: hidden;
+  background-size: 105% 105%;
+	
+}
+/* Sur tous types d'écrans orientés verticalement */
+@media all and (orientation: portrait){
+	body{
+		background-image: url("./portrait.jpg");
+	} 
 }
 .bar{
 	width: 120%;
@@ -20,17 +26,22 @@ body{
 	background-color: black;
 }
 .sign{
+	width: 100%;
 	position: absolute;
 	left:50%;
 	top:50%;
 	font-size: 40px;
 	transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
-	font-family: 'Lobster', cursive;
+    font-family: 'Oswald', sans-serif;
 }
 .sign h1{
+	cursor: pointer;
+	width: 100%;
+	text-transform: uppercase;
 	margin: 15px;
 	text-align: center;
-	font-weight: normal;
+	color: rgba(255,255,255,1);
+	text-shadow: 1px 1px 3px rgba(255,255,255,0.49);
 }
 .next{
 	position: absolute;
@@ -63,3 +74,115 @@ header a{
 	text-transform: uppercase;
 	cursor: pointer;
 }
+
+.glitch {
+  text-decoration: none;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+	
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0;
+  color: #fff;
+  letter-spacing: 5px;
+}
+.glitch:before, .glitch:after {
+  display: block;
+  content: attr(data-glitch);
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: .8;
+}
+.glitch:after {
+  color: #f0f;
+  z-index: -2;
+}
+.glitch:before {
+  color: #0ff;
+  z-index: -1;
+}
+.glitch:hover:before {
+  -webkit-animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 5;
+          animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 5;
+}
+.glitch:hover:after {
+  animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both 5;
+}
+
+.glitchAnim:before {
+  -webkit-animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 5;
+          animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 5;
+}
+.glitchAnim:after {
+  animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both 5;
+}
+
+@media only screen and (max-width: 400px) {
+  .glitch {
+    font-size: 3em;
+  }
+}
+@-webkit-keyframes glitch {
+  0% {
+	  cursor: pointer;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-5px, 5px);
+            transform: translate(-5px, 5px);
+  }
+  40% {
+    -webkit-transform: translate(-5px, -5px);
+            transform: translate(-5px, -5px);
+  }
+  60% {
+    -webkit-transform: translate(5px, 5px);
+            transform: translate(5px, 5px);
+  }
+  80% {
+    -webkit-transform: translate(5px, -5px);
+            transform: translate(5px, -5px);
+  }
+  to {
+	  cursor: none;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes glitch {
+  0% {
+	cursor: pointer;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-5px, 5px);
+            transform: translate(-5px, 5px);
+  }
+  40% {
+    -webkit-transform: translate(-5px, -5px);
+            transform: translate(-5px, -5px);
+  }
+  60% {
+    -webkit-transform: translate(5px, 5px);
+            transform: translate(5px, 5px);
+  }
+  80% {
+    -webkit-transform: translate(5px, -5px);
+            transform: translate(5px, -5px);
+  }
+  to {
+	  cursor: none;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+
