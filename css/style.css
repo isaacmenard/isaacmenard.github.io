@@ -299,8 +299,8 @@ div{
   font-size: 2em;
   visibility: hidden;
   position: absolute; /* postulat de départ */
-  top: 45%; left: 50%; /* à 50%/50% du parent référent */
-  transform: translate(-50%, -55%); /* décalage de 50% de sa propre taille */
+  top: 50%; left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
 }
 .title{
   font-variant: small-caps;
@@ -346,7 +346,7 @@ div{
 
 @keyframes slidein {
   from {
-    right: -80%; 
+    right: -80%;
     bottom: -65%;
   }
 
@@ -384,7 +384,7 @@ div{
     transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
     height: auto;
     overflow: hidden;
-    
+
   }
 
   li a {

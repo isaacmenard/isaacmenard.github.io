@@ -1,0 +1,16 @@
+/* CSS Document */
+
+.card{
+	border: solid 2px rgba(0,0,0,1.00);
+	width: 30%; display: inline-block;
+	margin: 1%;
+	max-height: 500px;
+	padding: 5px;
+}
+.code{
+	background-color: rgba(19,20,31,1.00);
+	color: greenyellow;
+	border: 2px rgba(255,245,0,1.00) solid;
+	padding: 15px;
+	overflow: auto;
+}

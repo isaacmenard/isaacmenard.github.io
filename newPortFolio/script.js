@@ -60,8 +60,8 @@ function lineAnim() {
                         }, Math.random() * (2000 - 200) + 200)
                     }, Math.random() * (1000 - 200) + 200)
 				  }
-              }, 200) 
-			 line1Text.innerHTML = "développement Informatique"; 
+              }, 200)
+			 line1Text.innerHTML = "développement Informatique !"; 
 			 line2Text.innerHTML = "Sapeur Pompier";
              line1.appendChild(line1Text);
 			  line2.appendChild(line2Text);
