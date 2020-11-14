@@ -31,8 +31,10 @@ class selectWorld extends Phaser.Scene{
 			props = this.physics.add.staticGroup();
 			tree.create(50, 590, 'tree').setScale(5.5).refreshBody();
 			tree.create(711, 690, 'tree').setScale(3.5).refreshBody();
+			tree.create(2011, 745, 'tree').setScale(4.5).refreshBody();
 			tree.create(1211, 790, 'tree').setScale(3.5).refreshBody();
 			tree.create(1411, 790, 'tree').setScale(3.5).refreshBody();
+		    tree.create(2711, 845, 'tree').setScale(4.5).refreshBody();
 			platforms.create(50, 250, 'ground').setScale(2.5).refreshBody();
 			platforms.create(200, 568, 'ground').setScale(2.5).refreshBody();
 			platforms.create(700, 468, 'ground').setScale(2.5).refreshBody();
@@ -40,16 +42,23 @@ class selectWorld extends Phaser.Scene{
 			platforms.create(2000, 468, 'ground').setScale(2.5).refreshBody();
 			platforms.create(2700, 568, 'ground').setScale(2.5).refreshBody();
 			props.create(50, 552, 'prop1').setScale(1.5).refreshBody();
+			props.create(2750, 552, 'prop1').setScale(1.5).refreshBody();
+			props.create(2650, 552, 'prop1').setScale(1.5).refreshBody();
 			props.create(1150, 554, 'prop1').setScale(1.2).refreshBody();
 			props.create(1350, 552, 'prop1').setScale(1.5).refreshBody();
 			props.create(780, 488, 'prop2').setScale(3).refreshBody();
+			props.create(2100, 488, 'prop2').setScale(3).refreshBody();
 			props.create(80, 588, 'prop2').setScale(3).refreshBody();
+			props.create(2780, 588, 'prop2').setScale(3).refreshBody();
 			props.create(180, 268, 'prop3').setScale(3).refreshBody();
 			props.create(1380, 583, 'prop3').setScale(3).refreshBody();
 			props.create(260, 552, 'prop4').setScale(3).refreshBody();
 			props.create(20, 229, 'chest').setScale(2).refreshBody();
 			props.create(80, 235, 'prop1').setScale(1.7).refreshBody();
 			props.create(680, 452, 'prop1').setScale(1.4).refreshBody();
+			props.create(2000, 452, 'prop1').setScale(1.4).refreshBody();
+			props.create(2080, 454, 'prop1').setScale(1.7).refreshBody();
+			props.create(1900, 452, 'prop4').setScale(3).refreshBody();
 
 			text0 = this.physics.add.sprite(150, -100, 'texte1').setScale(0.4);
 			text0.body.allowGravity = false;
@@ -71,10 +80,9 @@ class selectWorld extends Phaser.Scene{
 			checkPoint2 = this.physics.add.sprite(1310, 510, 'checkPoint').setScale(2.5);
 			checkPoint2.body.allowGravity = false
 			listCheckPoint.push(checkPoint2)
-			portal = this.physics.add.sprite(2700, 510, 'portal').setScale(2.5);
+			portal = this.physics.add.sprite(2708, 510, 'portal').setScale(2.5);
 			portal.body.allowGravity = false
-
-			boom = this.add.sprite(-10000, 450, 'boom').setScale(1.5);
+			boom = this.add.sprite(-10000, (window.screen.height-(309/2)) , 'boom').setScale(1.5);
 			boom.rotation = 4.7
 
 			player = this.physics.add.sprite(checkPoint[0],checkPoint[1], 'dude').setScale(3);
@@ -205,6 +213,7 @@ class selectWorld extends Phaser.Scene{
 							portal.anims.play('portalAnim')
 							setTimeout(function(){
 								game.scene.start("scene2");
+								game.scene.stop("selectWorld");
 							},1000	)
 						},400)
 					}else{
@@ -219,6 +228,7 @@ class selectWorld extends Phaser.Scene{
 							player.anims.play('attackRight', true)
 							setTimeout(function(){
 								game.scene.start("scene2");
+								game.scene.stop("selectWorld");
 							},1000)
 						},400)
 					}else{
@@ -266,7 +276,7 @@ class selectWorld extends Phaser.Scene{
 			}
 			//deplacement + saut
 			if (cursors.left.isDown) {
-				player.setVelocityX(-260);
+				player.setVelocityX(speedPerso * -1);
 				if (player.body.touching.down) { 
 					player.anims.play('left', true);
 				}else{
@@ -275,7 +285,7 @@ class selectWorld extends Phaser.Scene{
 				lastPos = "left"
 			}
 			else if (cursors.right.isDown) {
-				player.setVelocityX(260);
+				player.setVelocityX(speedPerso);
 				if (player.body.touching.down) { 
 					player.anims.play('right', true);
 				}else{
@@ -284,7 +294,7 @@ class selectWorld extends Phaser.Scene{
 				lastPos = "right"
 			}
 			if (cursors.up.isDown && player.body.touching.down && !cursors.space.isDown) { 
-			   player.setVelocityY(-430)
+			   player.setVelocityY(jumpPerso * -1)
 			   if(lastPos == "left"){
 					player.anims.play('turnLeft');
 				}

@@ -29,42 +29,24 @@ class scene2 extends Phaser.Scene{
 			platforms = this.physics.add.staticGroup();
 			tree = this.physics.add.staticGroup();
 			props = this.physics.add.staticGroup();
-			tree.create(50, 590, 'tree').setScale(5.5).refreshBody();
+			tree.create(50, 910, 'tree').setScale(5.5).refreshBody();
 			tree.create(711, 690, 'tree').setScale(3.5).refreshBody();
 			tree.create(1211, 790, 'tree').setScale(3.5).refreshBody();
 			tree.create(1411, 790, 'tree').setScale(3.5).refreshBody();
-			platforms.create(50, 250, 'ground').setScale(2.5).refreshBody();
 			platforms.create(200, 568, 'ground').setScale(2.5).refreshBody();
 			platforms.create(700, 468, 'ground').setScale(2.5).refreshBody();
 			platforms.create(1300, 568, 'ground').setScale(2.5).refreshBody();
-			platforms.create(2000, 468, 'ground').setScale(2.5).refreshBody();
-			platforms.create(2700, 568, 'ground').setScale(2.5).refreshBody();
 
 
-			text0 = this.physics.add.sprite(150, -100, 'texte1').setScale(0.4);
-			text0.body.allowGravity = false;
-			//textList.push(text0);
-			text1 = this.physics.add.sprite(750, -100, 'texte1').setScale(0.4);
-			text1.body.allowGravity = false;
-			//textList.push(text1);
-
-			textTuto = this.physics.add.sprite(755, 400, 'checkpointText').setScale(0.2);
-			textTuto.body.allowGravity = false;
 
 			
 			checkPoint0 = this.physics.add.sprite(100, 510, 'checkPoint').setScale(2.5);
 			checkPoint0.body.allowGravity = false
 			listCheckPoint.push(checkPoint0)
-			checkPoint1 = this.physics.add.sprite(710, 410, 'checkPoint').setScale(2.5);
-			checkPoint1.body.allowGravity = false
-			listCheckPoint.push(checkPoint1)
-			checkPoint2 = this.physics.add.sprite(1310, 510, 'checkPoint').setScale(2.5);
-			checkPoint2.body.allowGravity = false
-			listCheckPoint.push(checkPoint2)
-			portal = this.physics.add.sprite(2700, 510, 'portal').setScale(2.5);
+			portal = this.physics.add.sprite(1310, 510, 'portal').setScale(2.5);
 			portal.body.allowGravity = false
 
-			boom = this.add.sprite(-10000, 450, 'boom').setScale(1.5);
+			boom = this.add.sprite(-10000,(window.screen.height-(309/2)), 'boom').setScale(1.5);
 			boom.rotation = 4.7
 
 			player = this.physics.add.sprite(checkPoint[0],checkPoint[1], 'dude').setScale(3);
@@ -114,10 +96,8 @@ class scene2 extends Phaser.Scene{
 
 			//listCheckPoint
 			this.physics.add.overlap(player, checkPoint0, function(){checkPointF(0)});
-			this.physics.add.overlap(player, checkPoint1, function(){checkPointF(1)});
-			this.physics.add.overlap(player, checkPoint2, function(){checkPointF(2)});
 			
-			
+			 	
 			//list animation
 			this.anims.create({
 				key: 'boom',
@@ -195,6 +175,7 @@ class scene2 extends Phaser.Scene{
 							portal.anims.play('portalAnim')
 							setTimeout(function(){
 								game.scene.start("selectWorld");
+								game.scene.stop("scene2");
 							},1000	)
 						},400)
 					}else{
@@ -209,6 +190,7 @@ class scene2 extends Phaser.Scene{
 							player.anims.play('attackRight', true)
 							setTimeout(function(){
 								game.scene.start("selectWorld");
+								game.scene.stop("scene2");
 							},1000)
 						},400)
 					}else{
@@ -256,7 +238,7 @@ class scene2 extends Phaser.Scene{
 			}
 			//deplacement + saut
 			if (cursors.left.isDown) {
-				player.setVelocityX(-260);
+				player.setVelocityX(speedPerso * -1);
 				if (player.body.touching.down) { 
 					player.anims.play('left', true);
 				}else{
@@ -265,7 +247,7 @@ class scene2 extends Phaser.Scene{
 				lastPos = "left"
 			}
 			else if (cursors.right.isDown) {
-				player.setVelocityX(260);
+				player.setVelocityX(speedPerso);
 				if (player.body.touching.down) { 
 					player.anims.play('right', true);
 				}else{
@@ -274,7 +256,7 @@ class scene2 extends Phaser.Scene{
 				lastPos = "right"
 			}
 			if (cursors.up.isDown && player.body.touching.down && !cursors.space.isDown) { 
-			   player.setVelocityY(-430)
+			   player.setVelocityY(jumpPerso * -1)
 			   if(lastPos == "left"){
 					player.anims.play('turnLeft');
 				}
