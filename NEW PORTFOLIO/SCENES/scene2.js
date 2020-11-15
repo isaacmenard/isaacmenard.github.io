@@ -63,9 +63,9 @@ class scene2 extends Phaser.Scene{
 				if(firstZoom){
 					cam
 						.setPosition(cam.x,-vertical - 800)
-						.setSize(window.innerWidth, window.innerHeight*2)
+						.setSize(window.innerWidth, window.innerHeight*3)
 						.setZoom(2);
-					background.y += 200
+					background.y +=  window.innerHeight/2
 					firstZoom = false
 				}else{
 					cam

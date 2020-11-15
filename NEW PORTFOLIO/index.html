@@ -35,13 +35,18 @@ canvas {
 		height: 25%;
 		background-color: rgba(23,23,23,1.00);
 		border-top: solid 15px black;
+		border-bottom: solid 15px black;
 		z-index: 100;
 		touch-action: manipulation;
+		text-align: center;
 	}
 	.button{
+		image-rendering: pixelated;
 		font-size : 40px;
-		width: 49%;
+		width: auto;
 		height: 49%;
+		margin-left: 10%;
+		margin-right: 10%;
 		display: inline-block;
 		background-color: greenyellow;
 		text-align: center;
@@ -56,10 +61,11 @@ canvas {
 <body>
 
 	<div id="buttonContenaire">
-		<div class="button" id="buttonLeft">(--</div>
-		<div class="button" id="buttonRight">--)</div>
-		<div class="button" id="buttonJump">JUMP</div>
-		<div class="button" id="buttonInteract">!</div>
+		<img src="ASSETS/BOUTTONS/left_null.png" class="button" id="buttonLeft">
+		<img src="ASSETS/BOUTTONS/right_null.png" class="button" id="buttonRight">
+		<br>
+		<img src="ASSETS/BOUTTONS/jump_null.png" class="button" id="buttonJump">
+		<img src="ASSETS/BOUTTONS/interact_null.png" class="button" id="buttonInteract">
 	</div>
 
 	
@@ -166,13 +172,19 @@ canvas {
   	 el4.addEventListener("touchstart", function(){handleStart(this)}, true);
   	 el4.addEventListener("touchend", function(){handleEnd(this)}, true);
 	el4['idForKey'] = 3
-		function handleEnd(element){
-			element.style.backgroundColor = "greenyellow"
-			keyDown[element.idForKey] = false
-		}
 		function handleStart(element){
 			element.style.backgroundColor = "green"
 			keyDown[element.idForKey] = true
+			var part1 = element.src.split("_")[0]
+			var part2 = "_press.png"
+			element.src = part1 + part2
+		}
+		function handleEnd(element){
+			element.style.backgroundColor = "greenyellow"
+			keyDown[element.idForKey] = false
+			var part1 = element.src.split("_")[0]
+			var part2 = "_null.png"
+			element.src = part1 + part2
 		}
 
 </script>

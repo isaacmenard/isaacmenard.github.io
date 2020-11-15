@@ -28,13 +28,13 @@ class selectWorld extends Phaser.Scene{
 			platforms = this.physics.add.staticGroup();
 			tree = this.physics.add.staticGroup();
 			props = this.physics.add.staticGroup();
-			tree.create(50, 590+vertical, 'tree').setScale(5.5).refreshBody();
+			tree.create(50, 540+vertical, 'tree').setScale(5.5).refreshBody();
 			tree.create(711, 640+vertical, 'tree').setScale(3.5).refreshBody();
 			tree.create(2011, 745+vertical, 'tree').setScale(4.5).refreshBody();
 			tree.create(1211, 790+vertical, 'tree').setScale(3.5).refreshBody();
 			tree.create(1411, 790+vertical, 'tree').setScale(3.5).refreshBody();
 		    tree.create(2711, 845+vertical, 'tree').setScale(4.5).refreshBody();
-			platforms.create(50, 250+vertical, 'ground').setScale(2.5).refreshBody();
+			platforms.create(50, 200+vertical, 'ground').setScale(2.5).refreshBody();
 			platforms.create(200, 568+vertical, 'ground').setScale(2.5).refreshBody();
 			platforms.create(700, 418+vertical, 'ground').setScale(2.5).refreshBody();
 			platforms.create(1300, 568+vertical, 'ground').setScale(2.5).refreshBody();
@@ -49,11 +49,11 @@ class selectWorld extends Phaser.Scene{
 			props.create(2100, 488+vertical, 'prop2').setScale(3).refreshBody();
 			props.create(80, 588+vertical, 'prop2').setScale(3).refreshBody();
 			props.create(2780, 588+vertical, 'prop2').setScale(3).refreshBody();
-			props.create(180, 268+vertical, 'prop3').setScale(3).refreshBody();
+			props.create(180, 218+vertical, 'prop3').setScale(3).refreshBody();
 			props.create(1380, 583+vertical, 'prop3').setScale(3).refreshBody();
 			props.create(260, 552+vertical, 'prop4').setScale(3).refreshBody();
-			props.create(20, 229+vertical, 'chest').setScale(2).refreshBody();
-			props.create(80, 235+vertical, 'prop1').setScale(1.7).refreshBody();
+			props.create(20, 179+vertical, 'chest').setScale(2).refreshBody();
+			props.create(80, 185+vertical, 'prop1').setScale(1.7).refreshBody();
 			props.create(680, 402+vertical, 'prop1').setScale(1.4).refreshBody();
 			props.create(2000, 452+vertical, 'prop1').setScale(1.4).refreshBody();
 			props.create(2080, 454+vertical, 'prop1').setScale(1.7).refreshBody();
@@ -97,9 +97,9 @@ class selectWorld extends Phaser.Scene{
 				if(firstZoom){
 					cam
 						.setPosition(cam.x,-vertical - 800)
-						.setSize(window.innerWidth, window.innerHeight*2)
+						.setSize(window.innerWidth, window.innerHeight*3)
 						.setZoom(2);
-					background.y += 200
+					background.y += window.innerHeight/2
 					firstZoom = false
 				}else{
 					cam
