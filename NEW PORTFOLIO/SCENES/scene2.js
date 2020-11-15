@@ -48,7 +48,11 @@ class scene2 extends Phaser.Scene{
 			portal = this.physics.add.sprite(1310, 510+vertical, 'portal').setScale(2.5);
 			portal.body.allowGravity = false
 
-			boom = this.add.sprite(-10000,( (window.innerHeight - (303*1.5/2))), 'boom').setScale(1.5);
+			if(!window.mobileCheck){
+				boom = this.add.sprite(-10000, (window.innerHeight - (303*1.5/2)) , 'boom').setScale(1.5);
+			}else{
+				boom = this.add.sprite(-10000, (window.innerHeight - (303*1.5/2) - window.innerHeight*0.20) , 'boom').setScale(1.5);
+			}
 			boom.rotation = 4.7
 
 			player = this.physics.add.sprite(checkPoint[0],checkPoint[1], 'dude').setScale(3);
