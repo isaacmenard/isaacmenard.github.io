@@ -43,34 +43,36 @@ canvas {
 	.button{
 		image-rendering: pixelated;
 		font-size : 40px;
-		width: auto;
+		width: 49%;
 		height: 49%;
-		margin-left: 10%;
-		margin-right: 10%;
+		background-size: 50%;
+		background-repeat: no-repeat;
+
 		display: inline-block;
-		background-color: greenyellow;
 		text-align: center;
 		 -moz-user-select: none; /* Firefox */
 		 -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
 		 -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
 		 user-select: none; /* Propriété standard */
 		touch-action: manipulation;
+		background-image: url('ASSETS/BOUTTONS/interact_null.png')
 	}
 </style>
 </head>
 <body>
 
 	<div id="buttonContenaire">
-		<img src="ASSETS/BOUTTONS/left_null.png" class="button" id="buttonLeft">
-		<img src="ASSETS/BOUTTONS/right_null.png" class="button" id="buttonRight">
+		<div style="background-image: url(ASSETS/BOUTTONS/left_null.png)" class="button" id="buttonLeft"></div>
+		<div style="background-image: url(ASSETS/BOUTTONS/right_null.png)" class="button" id="buttonRight"></div>
 		<br>
-		<img src="ASSETS/BOUTTONS/jump_null.png" class="button" id="buttonJump">
-		<img src="ASSETS/BOUTTONS/interact_null.png" class="button" id="buttonInteract">
+		<div style="background-image: url(ASSETS/BOUTTONS/jump_null.png)" class="button" id="buttonJump"></div>
+		<div style="background-image: url(ASSETS/BOUTTONS/interact_null.png)" class="button" id="buttonInteract"></div>
 	</div>
 
 	
 <img src="ASSETS/FIGHTGAME_Assets/POSTPRO/vignette.png" class="vignette"> <img src="ASSETS/FIGHTGAME_Assets/POSTPRO/overlay.png" class="vignette opacity"> <img src="ASSETS/FIGHTGAME_Assets/POSTPRO/lineardodge.png" class="vignette opacity"> 
 <script type="text/javascript">
+	var srcSelect = ["ASSETS/BOUTTONS/right_null.png","ASSETS/BOUTTONS/left_null.png","ASSETS/BOUTTONS/jump_null.png","ASSETS/BOUTTONS/interact_null.png"]
 	var platforms;
 	var player;
 	var cursors;
@@ -173,18 +175,16 @@ canvas {
   	 el4.addEventListener("touchend", function(){handleEnd(this)}, true);
 	el4['idForKey'] = 3
 		function handleStart(element){
-			element.style.backgroundColor = "green"
 			keyDown[element.idForKey] = true
-			var part1 = element.src.split("_")[0]
+			var part1 = srcSelect[element.idForKey].split("_")[0]
 			var part2 = "_press.png"
-			element.src = part1 + part2
+			element.style.backgroundImage = "url("+ part1 + part2 + ")"
 		}
 		function handleEnd(element){
-			element.style.backgroundColor = "greenyellow"
 			keyDown[element.idForKey] = false
-			var part1 = element.src.split("_")[0]
+			var part1 = srcSelect[element.idForKey].split("_")[0]
 			var part2 = "_null.png"
-			element.src = part1 + part2
+			element.style.backgroundImage = "url("+ part1 + part2 + ")"
 		}
 
 </script>
