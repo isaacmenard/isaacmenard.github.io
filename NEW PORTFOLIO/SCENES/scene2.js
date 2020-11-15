@@ -58,13 +58,25 @@ class scene2 extends Phaser.Scene{
 			var cam = this.cameras.main
 			cam.setBounds(0, 0, 3800, 600);
 			cam.startFollow(player,cam.FOLLOW_LOCKON, 0.1, 0.1);
-			
+			var firstZoom = true
 			function zoomCamera(){
-				cam
-					.setPosition(cam.x,-vertical - 600)
-					.setSize(window.innerWidth, window.innerHeight*2)
-					.setZoom(2);
-				background.y += 200
+				if(firstZoom){
+					cam
+						.setPosition(cam.x,-vertical - 800)
+						.setSize(window.innerWidth, window.innerHeight*2)
+						.setZoom(2);
+					background.y += 200
+					firstZoom = false
+				}else{
+					cam
+						.setPosition(0,-vertical*3.8)
+						.setSize(window.innerWidth, window.innerHeight*3)
+						.setZoom(3);
+					background.y += vertical
+				}
+			}
+			if(window.innerHeight > 1500){
+				zoomCamera()
 			}
 			background.setScrollFactor(0.5);
 
@@ -169,7 +181,7 @@ class scene2 extends Phaser.Scene{
 			
 			
 			//coup épée space
-			this.input.keyboard.on('keyup_SPACE', function (event) {
+			sword = function (){
 				
 				player.setVelocityX(0);
 				//action si il est à coté du portal sinon juste attaque
@@ -203,10 +215,22 @@ class scene2 extends Phaser.Scene{
 						player.anims.play('attackRight', true)
 					}
 				}
+			}
 			
+			this.input.keyboard.on('keyup_SPACE', function (event) {
+				sword()
 			})
 		}
 		update () {
+			
+			//spaceUp pour mobile
+			if(keyDown[3] == true){
+				spaceDown = true
+			}
+			if(spaceDown == true && keyDown[3] == false){
+				spaceDown = false;
+				sword()
+			}
 			
 			//animation pnj 
 			if(player.x < pnj1.x){
@@ -252,7 +276,7 @@ class scene2 extends Phaser.Scene{
 				}
 			}
 			//deplacement + saut
-			if (cursors.left.isDown) {
+			if (cursors.left.isDown || keyDown[1] == true) {
 				player.setVelocityX(speedPerso * -1);
 				if (player.body.touching.down) { 
 					player.anims.play('left', true);
@@ -261,7 +285,7 @@ class scene2 extends Phaser.Scene{
 				}
 				lastPos = "left"
 			}
-			else if (cursors.right.isDown) {
+			else if (cursors.right.isDown || keyDown[0] == true) {
 				player.setVelocityX(speedPerso);
 				if (player.body.touching.down) { 
 					player.anims.play('right', true);
@@ -270,7 +294,7 @@ class scene2 extends Phaser.Scene{
 				}
 				lastPos = "right"
 			}
-			if (cursors.up.isDown && player.body.touching.down && !cursors.space.isDown) { 
+			if ((cursors.up.isDown || keyDown[2] == true ) && player.body.touching.down && !cursors.space.isDown  && keyDown[3] == false) { 
 			   player.setVelocityY(jumpPerso * -1)
 			   if(lastPos == "left"){
 					player.anims.play('turnLeft');

@@ -5,6 +5,7 @@
 <title>PORTFOLIO </title>
 <script
 src="phaser.js"></script>
+	<script src="jquery-3.5.1.min.js"></script>
 <script src="SCENES/scene1.js"></script>
 <script src="SCENES/scene2.js"></script>
 <style type="text/css">
@@ -31,23 +32,28 @@ canvas {
 		left: 0;
 		bottom: 0;
 		width: 100%;
-		height: 18%;
+		height: 25%;
 		background-color: rgba(23,23,23,1.00);
 		border-top: solid 15px black;
 		z-index: 100;
 	}
 	.button{
-		width: 30%;
-		height: 30%;
-		background-color: aqua;
+		font-size : 40px;
+		width: 49%;
+		height: 49%;
+		display: inline-block;
+		background-color: greenyellow;
+		text-align: center;
 	}
 </style>
 </head>
 <body>
 
 	<div id="buttonContenaire">
-		<div class="button" id="buttonLeft"></div>
-		<div class="button" id="buttonRight"></div>
+		<div class="button" id="buttonLeft">(--</div>
+		<div class="button" id="buttonRight">--)</div>
+		<div class="button" id="buttonJump">JUMP</div>
+		<div class="button" id="buttonInteract">!</div>
 	</div>
 
 	
@@ -69,16 +75,20 @@ canvas {
 	var props;
 	var text0;
 	var text1;
+	var sword = function () {};
 	var textTuto;
 	var checkPoint0;
 	var checkPoint1;
 	var checkPoint2;
 	var checkPoint3;
-	var speedPerso = 500;
+	var speedPerso = 250;
 	var jumpPerso = 470;
 	var startAnim = false;
 	var lastPos= "right";
 	var vertical = 0;
+	var keyDown = [false,false,false,false]
+	var spaceUp = false
+	var spaceDown = false
 	if(window.innerWidth < window.innerHeight){
 		vertical =  window.innerHeight /2 -200
 	}
@@ -133,25 +143,32 @@ canvas {
 		document.dispatchEvent(keyboardEvent);
 	}
 	
-	 var el = document.getElementById("buttonRight");
-  	 el.addEventListener("touchstart", handleStart, true);
-		function handleStart(evt){
-			el.style.backgroundColor = "red"
-		}
-	 el.addEventListener("touchend", handleEnd, true);
-		function handleEnd(evt){
-			el.style.backgroundColor = "aqua"
-		}
-	var el2 = document.getElementById("buttonLeft");
-  	 el2.addEventListener("touchstart", handleStart2, true);
-		function handleStart2(evt){
-			el2.style.backgroundColor = "red"
-		}
-  	 el2.addEventListener("touchend", handleEnd2, true);
-		function handleEnd2(evt){
-			el2.style.backgroundColor = "aqua"
-		}
 	
+	 var el = document.getElementById("buttonRight");
+	el['idForKey'] = 0
+  	 el.addEventListener("touchstart", function(){handleStart(this)}, true);
+	 el.addEventListener("touchend", function(){handleEnd(this)}, true);
+	var el2 = document.getElementById("buttonLeft");
+  	 el2.addEventListener("touchstart", function(){handleStart(this)}, true);
+  	 el2.addEventListener("touchend", function(){handleEnd(this)}, true);
+	el2['idForKey'] = 1
+		var el3 = document.getElementById("buttonJump");
+  	 el3.addEventListener("touchstart", function(){handleStart(this)}, true);
+  	 el3.addEventListener("touchend", function(){handleEnd(this)}, true);
+	el3['idForKey'] = 2
+		var el4 = document.getElementById("buttonInteract");
+  	 el4.addEventListener("touchstart", function(){handleStart(this)}, true);
+  	 el4.addEventListener("touchend", function(){handleEnd(this)}, true);
+	el4['idForKey'] = 3
+		function handleEnd(element){
+			element.style.backgroundColor = "greenyellow"
+			keyDown[element.idForKey] = false
+		}
+		function handleStart(element){
+			element.style.backgroundColor = "green"
+			keyDown[element.idForKey] = true
+		}
+
 </script>
 	
 </body>
