@@ -133,9 +133,9 @@ canvas {
 	}
 	
 	 var el = document.getElementById("buttonRight");
-  	 el.addEventListener("touchstart", handleStart, false);
-	 el.addEventListener("onclick", handleStart, false);
+  	 el.addEventListener("touchstart", handleStart, true);
 		function handleStart(evt){
+			alert("hey")
 			simuleTouche(39)
 		}
 	
