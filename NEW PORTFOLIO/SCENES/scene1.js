@@ -29,14 +29,14 @@ class selectWorld extends Phaser.Scene{
 			tree = this.physics.add.staticGroup();
 			props = this.physics.add.staticGroup();
 			tree.create(50, 590+vertical, 'tree').setScale(5.5).refreshBody();
-			tree.create(711, 690+vertical, 'tree').setScale(3.5).refreshBody();
+			tree.create(711, 640+vertical, 'tree').setScale(3.5).refreshBody();
 			tree.create(2011, 745+vertical, 'tree').setScale(4.5).refreshBody();
 			tree.create(1211, 790+vertical, 'tree').setScale(3.5).refreshBody();
 			tree.create(1411, 790+vertical, 'tree').setScale(3.5).refreshBody();
 		    tree.create(2711, 845+vertical, 'tree').setScale(4.5).refreshBody();
 			platforms.create(50, 250+vertical, 'ground').setScale(2.5).refreshBody();
 			platforms.create(200, 568+vertical, 'ground').setScale(2.5).refreshBody();
-			platforms.create(700, 468+vertical, 'ground').setScale(2.5).refreshBody();
+			platforms.create(700, 418+vertical, 'ground').setScale(2.5).refreshBody();
 			platforms.create(1300, 568+vertical, 'ground').setScale(2.5).refreshBody();
 			platforms.create(2000, 468+vertical, 'ground').setScale(2.5).refreshBody();
 			platforms.create(2700, 568+vertical, 'ground').setScale(2.5).refreshBody();
@@ -45,7 +45,7 @@ class selectWorld extends Phaser.Scene{
 			props.create(2650, 552+vertical, 'prop1').setScale(1.5).refreshBody();
 			props.create(1150, 554+vertical, 'prop1').setScale(1.2).refreshBody();
 			props.create(1350, 552+vertical, 'prop1').setScale(1.5).refreshBody();
-			props.create(780, 488+vertical, 'prop2').setScale(3).refreshBody();
+			props.create(780, 438+vertical, 'prop2').setScale(3).refreshBody();
 			props.create(2100, 488+vertical, 'prop2').setScale(3).refreshBody();
 			props.create(80, 588+vertical, 'prop2').setScale(3).refreshBody();
 			props.create(2780, 588+vertical, 'prop2').setScale(3).refreshBody();
@@ -54,7 +54,7 @@ class selectWorld extends Phaser.Scene{
 			props.create(260, 552+vertical, 'prop4').setScale(3).refreshBody();
 			props.create(20, 229+vertical, 'chest').setScale(2).refreshBody();
 			props.create(80, 235+vertical, 'prop1').setScale(1.7).refreshBody();
-			props.create(680, 452+vertical, 'prop1').setScale(1.4).refreshBody();
+			props.create(680, 402+vertical, 'prop1').setScale(1.4).refreshBody();
 			props.create(2000, 452+vertical, 'prop1').setScale(1.4).refreshBody();
 			props.create(2080, 454+vertical, 'prop1').setScale(1.7).refreshBody();
 			props.create(1900, 452+vertical, 'prop4').setScale(3).refreshBody();
@@ -67,14 +67,14 @@ class selectWorld extends Phaser.Scene{
 			text1.body.allowGravity = false;
 			//textList.push(text1);
 
-			textTuto = this.physics.add.sprite(755, 400+vertical, 'checkpointText').setScale(0.2);
+			textTuto = this.physics.add.sprite(755, 350+vertical, 'checkpointText').setScale(0.2);
 			textTuto.body.allowGravity = false;
 
 			
 			checkPoint0 = this.physics.add.sprite(100, 510+vertical, 'checkPoint').setScale(2.5);
 			checkPoint0.body.allowGravity = false
 			listCheckPoint.push(checkPoint0)
-			checkPoint1 = this.physics.add.sprite(710, 410+vertical, 'checkPoint').setScale(2.5);
+			checkPoint1 = this.physics.add.sprite(710, 360+vertical, 'checkPoint').setScale(2.5);
 			checkPoint1.body.allowGravity = false
 			listCheckPoint.push(checkPoint1)
 			checkPoint2 = this.physics.add.sprite(1310, 510+vertical, 'checkPoint').setScale(2.5);

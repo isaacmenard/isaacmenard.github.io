@@ -17,6 +17,7 @@ class scene2 extends Phaser.Scene{
 			this.load.image('texte1', 'ASSETS/TEXTE/texte1.png');
 			this.load.image('checkpointText', 'ASSETS/TEXTE/checkpoint.png');
 			this.load.spritesheet('dude', 'ASSETS/FIGHTGAME_Assets/CHARAs/NAMKA/running/running.png', { frameWidth: 19, frameHeight: 41 });
+			this.load.image('pnj1', 'ASSETS/FIGHTGAME_Assets/CHARAs/MCCREE/Idle.png');
 			this.load.spritesheet('dudeAttack', 'ASSETS/FIGHTGAME_Assets/CHARAs/NAMKA/attack/attack.png', { frameWidth: 71, frameHeight: 41 });
 			this.load.spritesheet('boom', 'ASSETS/FIGHTGAME_Assets/FXs/BOUM/BOOM_1.png', { frameWidth: 303, frameHeight: 79 });
 		}
@@ -39,6 +40,7 @@ class scene2 extends Phaser.Scene{
 
 
 
+			pnj1 = this.physics.add.sprite(830, 310+vertical, 'pnj1').setScale(3.75);
 			
 			checkPoint0 = this.physics.add.sprite(100, 510+vertical, 'checkPoint').setScale(2.5);
 			checkPoint0.body.allowGravity = false
@@ -51,7 +53,7 @@ class scene2 extends Phaser.Scene{
 
 			player = this.physics.add.sprite(checkPoint[0],checkPoint[1], 'dude').setScale(3);
 			this.physics.add.collider(player, platforms);
-
+			this.physics.add.collider(pnj1, platforms);
 			cursors = this.input.keyboard.createCursorKeys()
 			var cam = this.cameras.main
 			cam.setBounds(0, 0, 3800, 600);
@@ -123,15 +125,15 @@ class scene2 extends Phaser.Scene{
 			});
 			this.anims.create({
 				key: 'leftJump',
-				frames: this.anims.generateFrameNumbers('dude', { start: 18, end: 18 }),
+				frames: this.anims.generateFrameNumbers('dude', { start: 18, end: 19 }),
 				frameRate: 7,
-				repeat: 2
+				repeat: -1
 			});
 			this.anims.create({
 				key: 'rightJump',
-				frames: this.anims.generateFrameNumbers('dude', { start: 21, end: 21 }),
+				frames: this.anims.generateFrameNumbers('dude', { start: 20, end: 21 }),
 				frameRate: 7,
-				repeat: 2
+				repeat: -1
 			});
 			this.anims.create({
 				key: 'attackRight',
@@ -205,6 +207,15 @@ class scene2 extends Phaser.Scene{
 			})
 		}
 		update () {
+			
+			//animation pnj 
+			if(player.x < pnj1.x){
+				pnj1.flipX = true;
+			}else{
+				pnj1.flipX = false;
+			}
+			
+			
 			//animation checkpoint
 			for(var i = 0; i < listCheckPoint.length;i++){
 				if(listCheckPoint[i].angle != 0 && checkPoint[2] != listCheckPoint[i]){

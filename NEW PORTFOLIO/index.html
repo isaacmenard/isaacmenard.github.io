@@ -58,6 +58,7 @@ canvas {
 	var cursors;
 	var textList = [];
 	var boom;
+	var pnj1;
 	var listCheckPoint = [];
 	var background;
 	var checkPoint = [100,450,null];
@@ -74,7 +75,7 @@ canvas {
 	var checkPoint2;
 	var checkPoint3;
 	var speedPerso = 500;
-	var jumpPerso = 430;
+	var jumpPerso = 470;
 	var startAnim = false;
 	var lastPos= "right";
 	var vertical = 0;
@@ -135,8 +136,20 @@ canvas {
 	 var el = document.getElementById("buttonRight");
   	 el.addEventListener("touchstart", handleStart, true);
 		function handleStart(evt){
-			alert("hey")
-			simuleTouche(39)
+			el.style.backgroundColor = "red"
+		}
+	 el.addEventListener("touchend", handleEnd, true);
+		function handleEnd(evt){
+			el.style.backgroundColor = "aqua"
+		}
+	var el2 = document.getElementById("buttonLeft");
+  	 el2.addEventListener("touchstart", handleStart2, true);
+		function handleStart2(evt){
+			el2.style.backgroundColor = "red"
+		}
+  	 el2.addEventListener("touchend", handleEnd2, true);
+		function handleEnd2(evt){
+			el2.style.backgroundColor = "aqua"
 		}
 	
 </script>
