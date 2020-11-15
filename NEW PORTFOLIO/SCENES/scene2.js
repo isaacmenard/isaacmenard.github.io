@@ -22,31 +22,31 @@ class scene2 extends Phaser.Scene{
 		}
 		create () {
 			listCheckPoint = [];
-			checkPoint = [100,450,null]
+			checkPoint = [100,450+vertical,null]
 			
 			//ajout images Map
-			background = this.add.image(2900, window.screen.height/2, 'background').setScale(1.5);
+			background = this.add.image(2000, window.innerHeight - (300*window.innerHeight/600), 'background').setScale(window.innerHeight/600);
 			platforms = this.physics.add.staticGroup();
 			tree = this.physics.add.staticGroup();
 			props = this.physics.add.staticGroup();
-			tree.create(50, 910, 'tree').setScale(5.5).refreshBody();
-			tree.create(711, 690, 'tree').setScale(3.5).refreshBody();
-			tree.create(1211, 790, 'tree').setScale(3.5).refreshBody();
-			tree.create(1411, 790, 'tree').setScale(3.5).refreshBody();
-			platforms.create(200, 568, 'ground').setScale(2.5).refreshBody();
-			platforms.create(700, 468, 'ground').setScale(2.5).refreshBody();
-			platforms.create(1300, 568, 'ground').setScale(2.5).refreshBody();
+			tree.create(50, 910+vertical, 'tree').setScale(5.5).refreshBody();
+			tree.create(711, 690+vertical, 'tree').setScale(3.5).refreshBody();
+			tree.create(1211, 790+vertical, 'tree').setScale(3.5).refreshBody();
+			tree.create(1411, 790+vertical, 'tree').setScale(3.5).refreshBody();
+			platforms.create(200, 568+vertical, 'ground').setScale(2.5).refreshBody();
+			platforms.create(700, 468+vertical, 'ground').setScale(2.5).refreshBody();
+			platforms.create(1300, 568+vertical, 'ground').setScale(2.5).refreshBody();
 
 
 
 			
-			checkPoint0 = this.physics.add.sprite(100, 510, 'checkPoint').setScale(2.5);
+			checkPoint0 = this.physics.add.sprite(100, 510+vertical, 'checkPoint').setScale(2.5);
 			checkPoint0.body.allowGravity = false
 			listCheckPoint.push(checkPoint0)
-			portal = this.physics.add.sprite(1310, 510, 'portal').setScale(2.5);
+			portal = this.physics.add.sprite(1310, 510+vertical, 'portal').setScale(2.5);
 			portal.body.allowGravity = false
 
-			boom = this.add.sprite(-10000,(window.screen.height-(309/2)), 'boom').setScale(1.5);
+			boom = this.add.sprite(-10000,( (window.innerHeight - (303*1.5/2))), 'boom').setScale(1.5);
 			boom.rotation = 4.7
 
 			player = this.physics.add.sprite(checkPoint[0],checkPoint[1], 'dude').setScale(3);
@@ -58,7 +58,11 @@ class scene2 extends Phaser.Scene{
 			cam.startFollow(player,cam.FOLLOW_LOCKON, 0.1, 0.1);
 			
 			function zoomCamera(){
-				cam.zoomTo(2,200)
+				cam
+					.setPosition(cam.x,-vertical - 600)
+					.setSize(window.innerWidth, window.innerHeight*2)
+					.setZoom(2);
+				background.y += 200
 			}
 			background.setScrollFactor(0.5);
 
@@ -219,7 +223,7 @@ class scene2 extends Phaser.Scene{
 			}
 			
 			//retourCheckPoint
-			if(player.y > 800){
+			if(player.y >  (window.innerHeight +100)){
 				boom.x = player.x
 				player.x = checkPoint[0]
 				player.y = checkPoint[1]
