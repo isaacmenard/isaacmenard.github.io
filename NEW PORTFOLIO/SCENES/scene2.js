@@ -270,7 +270,7 @@ class scene2 extends Phaser.Scene{
 			}
 			
 			//animation arret
-			if(cursors.left.isUp && cursors.right.isUp && player.body.velocity.x != 0){
+			if(cursors.left.isUp && cursors.right.isUp && keyDown[0] == false && keyDown[1] == false && player.body.velocity.x != 0){
 				player.setVelocityX(0)
 				if(lastPos == "left"){
 					player.anims.play('turnLeft');
