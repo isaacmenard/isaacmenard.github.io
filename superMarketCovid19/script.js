@@ -225,7 +225,7 @@ function tutoriel() {
     start()
   }, 33000)
 }
-
+var intervalMinute= null
 function start() {
   if (document.getElementById("tutoBoutton")) {
     document.getElementsByTagName("header")[0].removeChild(document.getElementById("tutoBoutton"))
@@ -234,7 +234,7 @@ function start() {
   //document.getElementById("benBoutton").style.visibility = "visible"
   document.getElementsByClassName("left")[0].style.left = "0"
   addMinute()
-  setInterval(addMinute, 1000 / jour)
+  intervalMinute = setInterval(addMinute, 1000 / jour)
   buy(0, 'masques', document.getElementById("firstBat"), false)
   buy(0, 'gels', document.getElementById("firstBat"), false)
   buy(0, 'pq', document.getElementById("firstBat"), false)
@@ -332,6 +332,8 @@ function addMinute() {
   if(hours >= hourFinish +1){
     hours = 7
     jour += 1
+    clearInterval(intervalMinute)
+    intervalMinute = setInterval(addMinute, 1000 / jour)
   }
 
   if (minutes + 1 < 60) {
@@ -346,9 +348,9 @@ function addMinute() {
     document.getElementById("hour").innerHTML = hours + "h" + minutes
   }
   if (hours >= hourDep && minutes == 0 && hours != 12 && hours < hourFinish || hours >= hourDep && hours < hourFinish &&  minutes == 30 && hours != 12) {
-    launchVague(randomNum(hours * 0.00000000000003, hours * 0.3))
+    launchVague(randomNum(hours * 0.3, hours * 3))
   } else if (hours >= hourDep  && hours < hourFinish) {
-    launchVague(randomNum(0, hours / 300000000))
+    launchVague(randomNum(0, hours / 3))
   }
 }
 
