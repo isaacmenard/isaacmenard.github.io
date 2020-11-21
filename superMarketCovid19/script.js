@@ -10,8 +10,9 @@ var sizeStockTop = window.innerHeight * 0.75
 var money = 500
 var batimentConfig = []
 var hourDep = 8
-var hourFinish = 22
+var hourFinish = 18
 var hours = 7
+var jour = 1
 var canMouve1 = true
 var canMouve2 = false
 var minutes = 39
@@ -35,9 +36,9 @@ function sendEnd(pseudo) {
     }
   };
   if (minutes < 10) {
-    xhttp.open("GET", "https://donjonsansdragon.space/scoreCodivMarket.php?pseudo=" + pseudo + "&score=" + hours + ":0" + minutes + ":00", false);
+    xhttp.open("GET", "https://donjonsansdragon.space/scoreCodivMarket.php?pseudo=" + pseudo + "&score=" + hours + ":0" + minutes + ":00&jour="+jour, false);
   } else {
-    xhttp.open("GET", "https://donjonsansdragon.space/scoreCodivMarket.php?pseudo=" + pseudo + "&score=" + hours + ":" + minutes + ":00", false);
+    xhttp.open("GET", "https://donjonsansdragon.space/scoreCodivMarket.php?pseudo=" + pseudo + "&score=" + hours + ":" + minutes + ":00&jour="+jour, false);
   }
   xhttp.send();
 	document.getElementById("formEnd").parentNode.removeChild(document.getElementById("formEnd"))
@@ -233,7 +234,7 @@ function start() {
   //document.getElementById("benBoutton").style.visibility = "visible"
   document.getElementsByClassName("left")[0].style.left = "0"
   addMinute()
-  setInterval(addMinute, 1000)
+  setInterval(addMinute, 1000 / jour)
   buy(0, 'masques', document.getElementById("firstBat"), false)
   buy(0, 'gels', document.getElementById("firstBat"), false)
   buy(0, 'pq', document.getElementById("firstBat"), false)
@@ -328,8 +329,13 @@ function addBatiment(element) {
 }
 
 function addMinute() {
+  if(hours >= hourFinish +1){
+    hours = 7
+    jour += 1
+  }
+
   if (minutes + 1 < 60) {
-    minutes++
+    minutes+=1
   } else {
     minutes = 0
     hours++
@@ -339,10 +345,10 @@ function addMinute() {
   } else {
     document.getElementById("hour").innerHTML = hours + "h" + minutes
   }
-  if (hours >= hourDep && minutes == 0 || hours >= hourDep && minutes == 30) {
-    launchVague(randomNum(hours * 0.8, hours * 3))
-  } else if (hours >= hourDep) {
-    launchVague(randomNum(0, hours / 3))
+  if (hours >= hourDep && minutes == 0 && hours != 12 && hours < hourFinish || hours >= hourDep && hours < hourFinish &&  minutes == 30 && hours != 12) {
+    launchVague(randomNum(hours * 0.00000000000003, hours * 0.3))
+  } else if (hours >= hourDep  && hours < hourFinish) {
+    launchVague(randomNum(0, hours / 300000000))
   }
 }
 
