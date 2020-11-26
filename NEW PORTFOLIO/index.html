@@ -8,6 +8,10 @@ src="phaser.js"></script>
 	<script src="jquery-3.5.1.min.js"></script>
 <script src="SCENES/scene1.js"></script>
 <script src="SCENES/scene2.js"></script>
+	<script src="SCENES/sceneTiled.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
 <style type="text/css">
 body {
     margin: 0;
@@ -57,6 +61,29 @@ canvas {
 		touch-action: manipulation;
 		background-image: url('ASSETS/BOUTTONS/interact_null.png')
 	}
+	#dialogue{
+		position: fixed;
+		top :2%;
+		left:10%;
+		width: 80%;
+		height: 30%;
+		text-align: center;
+		display: flex; /* contexte sur le parent */
+		flex-direction: column; /* direction d'affichage verticale */
+ 		justify-content: center; /* alignement vertical */
+	}
+	.imageBox{
+		position: absolute;
+		top:0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.textBox{
+		font-family: 'Lobster', cursive;
+		font-size: 40px;
+		z-index: 100;
+	}
 </style>
 </head>
 <body>
@@ -68,7 +95,7 @@ canvas {
 		<div style="background-image: url(ASSETS/BOUTTONS/jump_null.png)" class="button" id="buttonJump"></div>
 		<div style="background-image: url(ASSETS/BOUTTONS/interact_null.png)" class="button" id="buttonInteract"></div>
 	</div>
-
+	<div id="dialogue"><img class="imageBox" src="ASSETS/TEXTE/dialogueBox.png"><p id="textDialogue" class="textBox">Heyyy</p></div>
 	
 <img src="ASSETS/FIGHTGAME_Assets/POSTPRO/vignette.png" class="vignette"> <img src="ASSETS/FIGHTGAME_Assets/POSTPRO/overlay.png" class="vignette opacity"> <img src="ASSETS/FIGHTGAME_Assets/POSTPRO/lineardodge.png" class="vignette opacity"> 
 <script type="text/javascript">
@@ -82,24 +109,35 @@ canvas {
 	var listCheckPoint = [];
 	var background;
 	var checkPoint = [100,450,null];
+	var checkPoints;
 	var checkPoint1;
 	var checkPoint2;
 	var portal;
 	var tree;
 	var props;
-	var text0;
-	var text1;
+	var textPortfolio;
+	var textIam;
+	var textProjet;
+	var textWelcome;
 	var sword = function () {};
 	var textTuto;
 	var checkPoint0;
 	var checkPoint1;
 	var checkPoint2;
+	var canMove =true;
+	var map;
+	var scaleMap = 6;
 	var checkPoint3;
-	var speedPerso = 250;
+	var deadTouchTiled;
+	var backgroundTiled;
+	var platformsTiled;
+	var elementsTiled;
+	var speedPerso = 350;
 	var jumpPerso = 470;
 	var startAnim = false;
 	var lastPos= "right";
 	var vertical = 0;
+	var dialoguePnj1 = false;
 	var keyDown = [false,false,false,false]
 	var spaceUp = false
 	var spaceDown = false
@@ -112,7 +150,7 @@ canvas {
 		width: window.innerWidth,
 		height: window.innerHeight,
 		pixelArt: true,
-		scene: [selectWorld,scene2],
+		scene: [selectWorld,scene2,sceneTiled],
 		physics: {
 			default: 'arcade',
 			arcade: {
@@ -186,6 +224,14 @@ canvas {
 			var part2 = "_null.png"
 			element.style.backgroundImage = "url("+ part1 + part2 + ")"
 		}
+	document.getElementById("dialogue").style.visibility = "hidden"
+	function dialogue(text,time){
+		document.getElementById("dialogue").style.visibility = "visible"
+		document.getElementById("textDialogue").innerHTML = text
+		setTimeout(function (){
+			document.getElementById("dialogue").style.visibility = "hidden"
+		},time)
+	}
 
 </script>
 	
