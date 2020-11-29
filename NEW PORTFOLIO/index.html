@@ -114,6 +114,7 @@ canvas {
 	var checkPoint2;
 	var portal;
 	var tree;
+	var posPlatformsTiled;
 	var props;
 	var textPortfolio;
 	var textIam;
@@ -126,14 +127,16 @@ canvas {
 	var checkPoint2;
 	var canMove =true;
 	var map;
-	var scaleMap = 6;
+	var scaleMap = window.innerHeight/120;
 	var checkPoint3;
 	var deadTouchTiled;
 	var backgroundTiled;
 	var platformsTiled;
 	var elementsTiled;
-	var speedPerso = 350;
-	var jumpPerso = 470;
+	var inFrontOfPersoTiled;
+	var backgroundElementTiled;
+	var speedPerso = 40 * window.innerWidth/120;
+	var jumpPerso = 60 * window.innerWidth/120;
 	var startAnim = false;
 	var lastPos= "right";
 	var vertical = 0;
@@ -141,20 +144,28 @@ canvas {
 	var keyDown = [false,false,false,false]
 	var spaceUp = false
 	var spaceDown = false
+	var scaleItem = window.innerHeight/170;
+	var heightCanvas = window.innerHeight
 	if(window.innerWidth < window.innerHeight){
 		vertical =  window.innerHeight /2 -200
+		scaleMap = window.innerWidth/120
+		scaleItem = window.innerWidth/170;
+		heightCanvas = heightCanvas * 3/4
+		speedPerso = 70 * window.innerWidth/120;
+	 	jumpPerso = 100 * window.innerWidth/120;
 	}
+		console.log(scaleItem)
 	
 	var config = {
 		type: Phaser.AUTO,
 		width: window.innerWidth,
-		height: window.innerHeight,
+		height: heightCanvas,
 		pixelArt: true,
 		scene: [selectWorld,scene2,sceneTiled],
 		physics: {
 			default: 'arcade',
 			arcade: {
-				gravity: { y: 600 },
+				gravity: { y: 1000 },
 				debug: false
 			}
 		}

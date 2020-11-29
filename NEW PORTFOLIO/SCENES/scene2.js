@@ -275,7 +275,7 @@ class scene2 extends Phaser.Scene{
 					else{
 						player.anims.play('turnRight')
 					}
-				dialogue("Hey, Hyacinthe ! <br> ca fait si longtemps ! ",5000)
+				dialogue("Hey, Hyacinthe ! <br> ça fait si longtemps ! ",5000)
 				setTimeout(function (){
 				},3000)
 			}

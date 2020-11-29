@@ -19,15 +19,18 @@ class selectWorld extends Phaser.Scene{
 			this.load.image('textPortfolio', 'ASSETS/TEXTE/portfolio.png');
 			this.load.image('textProjet', 'ASSETS/TEXTE/projetsAnnonce.png');
 			this.load.image('textIam', 'ASSETS/TEXTE/textIam.png');
+			this.load.image('snow', 'ASSETS/particles/snow.png');
 			this.load.image('checkpointText', 'ASSETS/TEXTE/checkpoint.png');
 			this.load.spritesheet('dude', 'ASSETS/FIGHTGAME_Assets/CHARAs/NAMKA/running/running.png', { frameWidth: 19, frameHeight: 41 });
 			this.load.spritesheet('dudeAttack', 'ASSETS/FIGHTGAME_Assets/CHARAs/NAMKA/attack/attack.png', { frameWidth: 71, frameHeight: 41 });
 			this.load.spritesheet('boom', 'ASSETS/FIGHTGAME_Assets/FXs/BOUM/BOOM_1.png', { frameWidth: 303, frameHeight: 79 });
-			this.load.image('tiles', 'ASSETS/adve/tiles.png');
+			this.load.image('tiles', 'ASSETS/adve/tiles_new.png');
   			// Load the export Tiled JSON
   			this.load.tilemapTiledJSON('map', 'ASSETS/Map/mapStart.json');
 		}
 		create () {
+			
+			
 			listCheckPoint = [];
 			checkPoint = [100,450+vertical,null]
 			//ajout images Map
@@ -37,27 +40,31 @@ class selectWorld extends Phaser.Scene{
 			map = this.make.tilemap({ key: 'map' });
 			const tileset = map.addTilesetImage('test', 'tiles');
 			backgroundTiled = map.createStaticLayer('BACKGROUND', tileset, 0, 0).setScale(scaleMap);
-			platformsTiled = map.createStaticLayer('COLLIDE', tileset, 0, 0).setScale(scaleMap);
+			backgroundElementTiled = map.createStaticLayer('BACKGROUND ELEMENT', tileset, 0, 0).setScale(scaleMap);
+			backgroundElementTiled.alpha = 0.75
+			platformsTiled = map.createStaticLayer('COLLIDE', tileset,  0, 0).setScale(scaleMap);
 			deadTouchTiled = map.createStaticLayer('DEADTOUCH', tileset, 0, 0).setScale(scaleMap);
 			elementsTiled = map.createStaticLayer('ELEMENTS', tileset, 0, 0).setScale(scaleMap);
-			platformsTiled.setCollisionByExclusion(-1, true);			
+			platformsTiled.setCollisionByExclusion(-1,true);	
+			platformsTiled.allowGravity=  false;
 	
 			const spawnPoint = map.getObjectLayer('SPAWNPOINT')['objects'][0];
 			checkPoint = [spawnPoint.x*scaleMap,spawnPoint.y*scaleMap,null]
 			
 			if(window.mobileCheck() == false){
-				boom = this.add.sprite(-10000, (map.heightInPixels*scaleMap - (303*1.5/2)) , 'boom').setScale(1.5);
+				boom = this.add.sprite(-10000, (map.heightInPixels*scaleMap - (303*1.5/2)) , 'boom').setScale(scaleItem*1.5);
 			}else{
-				boom = this.add.sprite(-10000, (map.heightInPixels*scaleMap- (303*1.5/2) - map.heightInPixels*scaleMap*0.20) , 'boom').setScale(1.5);
+				boom = this.add.sprite(-10000, (map.heightInPixels*scaleMap - (303*1.5/2) - map.heightInPixels*scaleMap  ) , 'boom').setScale(scaleItem*1.5);
 			}
 			boom.rotation = 4.7
 
-			player = this.physics.add.sprite(checkPoint[0],checkPoint[1], 'dude').setScale(3);
+			player = this.physics.add.sprite(checkPoint[0],checkPoint[1], 'dude').setScale(scaleItem);
 			this.physics.add.collider(player, platformsTiled);
+
 
 			cursors = this.input.keyboard.createCursorKeys()
 			var cam = this.cameras.main
-			cam.setBounds(0, 0, map.widthInPixels*scaleMap, map.heightInPixels*scaleMap);
+			cam.setBounds(0, vertical/2, map.widthInPixels*scaleMap, map.heightInPixels*scaleMap-vertical/2);
 			cam.startFollow(player,cam.FOLLOW_LOCKON, 0.1, 0.1);
 			var firstZoom = true
 
@@ -69,22 +76,13 @@ class selectWorld extends Phaser.Scene{
 						.setZoom(2);
 					background.y +=  window.innerHeight/2
 					firstZoom = false
-				}else{
-					cam
-						.setPosition(0,-vertical*3.8)
-						.setSize(window.innerWidth, window.innerHeight*3)
-						.setZoom(3);
-					background.y += vertical
 				}
-			}
-			if(window.innerHeight > 1500){
-				zoomCamera()
 			}
 			background.setScrollFactor(0.5);
 
 					//anim CHeckPoint
 			function checkPointF(checkPointSelect){
-					checkPoint=[checkPointSelect.x,checkPointSelect.y-200,checkPointSelect]
+					checkPoint=[checkPointSelect.x,checkPointSelect.y,checkPointSelect]
 					if(startAnim == false){
 						startAnim = true;
 						var interval = setInterval(function (){
@@ -112,7 +110,7 @@ class selectWorld extends Phaser.Scene{
 			// Now we create spikes in our sprite group for each object in our map
 			checkPointObjects.forEach(checkPointS => {
 			  // Add new spikes to our sprite group, change the start y position to meet the platform
-			  var myCheckPoint = this.physics.add.sprite(checkPointS.x*scaleMap, checkPointS.y*scaleMap  , 'checkPoint').setScale(2.5);
+			  var myCheckPoint = this.physics.add.sprite(checkPointS.x*scaleMap, checkPointS.y*scaleMap  , 'checkPoint').setScale(scaleItem);
 			
 			  myCheckPoint.body.allowGravity = false;
 			  myCheckPoint['idS'] = listCheckPoint.length
@@ -126,7 +124,7 @@ class selectWorld extends Phaser.Scene{
 			// Now we create spikes in our sprite group for each object in our map
 			portalPointObjects.forEach(checkPointS => {
 			  // Add new spikes to our sprite group, change the start y position to meet the platform
-			  var myPortalPoint = this.physics.add.sprite(checkPointS.x*scaleMap, checkPointS.y*scaleMap  , 'portal').setScale(2.5);
+			  var myPortalPoint = this.physics.add.sprite(checkPointS.x*scaleMap, checkPointS.y*scaleMap  , 'portal').setScale(scaleItem);
 			myPortalPoint['sceneGo'] = checkPointS.properties[0].value
 			  myPortalPoint.body.allowGravity = false;
 				portalObjects.push(myPortalPoint)
@@ -195,7 +193,7 @@ class selectWorld extends Phaser.Scene{
 			//position départ
 			player.anims.play('turnRight');
 			
-			
+			var presseSpace = false
 			
 			//coup épée space
 			sword = function (){
@@ -209,7 +207,10 @@ class selectWorld extends Phaser.Scene{
 				
 				//action si il est à coté du portal sinon juste attaque
 				if(lastPos == "left"){
-					if(checkPointS.x - player.x > -100 && checkPointS.x - player.x < 0){
+					var numberS = 100 * scaleItem / 2.5
+					console.log(numberS)
+					if(checkPointS.x - player.x > -numberS && checkPointS.x - player.x < 0 && !presseSpace){
+						presseSpace = true
 						zoomCamera()
 						setTimeout(function(){
 							player.anims.play('attackLeft', true);
@@ -224,7 +225,11 @@ class selectWorld extends Phaser.Scene{
 					}
 				}
 				else{
-					if(checkPointS.x - player.x < 100){
+					
+					var numberS = 100 * scaleItem / 2.5
+					console.log(numberS)
+					if(checkPointS.x - player.x < numberS && !presseSpace){
+						presseSpace = true
 						zoomCamera()
 						setTimeout(function(){
 							checkPointS.anims.play('portalAnim')
@@ -245,8 +250,39 @@ class selectWorld extends Phaser.Scene{
 			this.input.keyboard.on('keyup_SPACE', function (event) {
 				sword()
 			})
+			
+			var particles = this.add.particles('snow');
+
+			var emitter = particles.createEmitter({
+				x: { min: 0, max: map.widthInPixels*scaleMap },
+				y: player.y,
+				speed: 600,
+				lifespan: 1000,
+				gravityY: -350,
+				quantity:0.0005,
+				alpha:0.9
+			});
+			var emitter = particles.createEmitter({
+				x: { min: 0, max: map.widthInPixels*scaleMap },
+				y: player.y+600,
+				speed: 600,
+				lifespan: 1000,
+				gravityY: -350,
+				quantity:0.0005,
+				alpha:0.9
+			});
+			var emitter = particles.createEmitter({
+				x: { min: 0, max: map.widthInPixels*scaleMap },
+				y: player.y-600,
+				speed: 600,
+				lifespan: 1000,
+				gravityY: -350,
+				quantity:0.0005,
+				alpha:0.9
+			});
 		}
 		update () {
+			
 			
 			//spaceUp pour mobile
 			if(keyDown[3] == true){
@@ -268,8 +304,10 @@ class selectWorld extends Phaser.Scene{
 			//retourCheckPoint
 			if(player.y >  (map.heightInPixels*scaleMap +100)){
 				boom.x = player.x
+				boom.y = player.y - vertical
 				player.x = checkPoint[0]
 				player.y = checkPoint[1]
+				player.body.setVelocityY(0)
 				boom.anims.play('boom', true);
 			}
 		
