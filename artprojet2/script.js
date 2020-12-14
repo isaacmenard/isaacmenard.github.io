@@ -54,7 +54,7 @@ for(var i = 0; i < elList.length; i++){
 
 function sendEnd() {
   var xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "http://localhost/DonjonSansDragons/artPlaCase.php?case='" + caseSelectId + "'&tableau=" + arraySelect + "&couleur='"+colorSelect+"'", false);
+  xhttp.open("GET", "https://donjonsansdragon.space/artPlaCase.php?case='" + caseSelectId + "'&tableau=" + arraySelect + "&couleur='"+colorSelect+"'", false);
   xhttp.send();
 }
 
