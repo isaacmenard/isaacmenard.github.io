@@ -5,16 +5,20 @@ table {
   padding:0px;
   margin: 0px;
   display: inline-block;
+
 }
+
 tbody{
   margin: 0;
 }
- tr {
+
+tr{
    width: 300%;
    height: 100%;
    padding: 0; margin: 0;
 }
- td {
+
+td{
   padding:0px;
 }
 
@@ -32,4 +36,15 @@ body{
   margin: 0;
   padding: 0;
   display: table;
+}
+
+#demo td{
+  border: 1px solid gray;
+}
+#conteanire{
+  width: calc(100% + 6px);
+  border: 3px solid black
+}
+#conteanire table{
+    BORDER-COLLAPSE:COLLAPSE;
 }

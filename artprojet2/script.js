@@ -85,6 +85,7 @@ if(window.innerWidth > window.innerHeight){
   for(var i = 0; i < listeTd.length;i++){
     listeTd[i].style.width = window.innerWidth/1.2/9+"px";
     listeTd[i].style.height = window.innerWidth/1.2/9+"px";
+      listeTd[i].style.border = "1px solid gray"
   }
   for(var i = 0; i < listeTable.length;i++){
     listeTable[i].style.width = window.innerWidth/1.2+"px";
