@@ -54,6 +54,11 @@ for(var i = 0; i < elList.length; i++){
 
 function sendEnd() {
   var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      window.location="affichageAll.html"
+    }
+  }
   xhttp.open("GET", "https://donjonsansdragon.space/artPlaCase.php?case='" + caseSelectId + "'&tableau=" + arraySelect + "&couleur='"+colorSelect+"'", false);
   xhttp.send();
 }
