@@ -32,22 +32,22 @@ if(window.innerWidth > window.innerHeight){
   document.body.style.width = window.innerHeight+"px";
   document.body.style.height = window.innerHeight+"px";
   for(var i = 0; i < listeTd.length;i++){
-    listeTd[i].style.width = window.innerHeight/3/9+"px";
-    listeTd[i].style.height = window.innerHeight/3/9+"px";
+    listeTd[i].style.width = window.innerHeight/3/9-1+"px";
+    listeTd[i].style.height = window.innerHeight/3/9-1+"px";
   }
   for(var i = 0; i < listeTable.length;i++){
-    listeTable[i].style.width = window.innerHeight/3+"px";
-    listeTable[i].style.height = window.innerHeight/3+"px";
+    listeTable[i].style.width = window.innerHeight/3-1+"px";
+    listeTable[i].style.height = window.innerHeight/3-1+"px";
   }
 }else{
   document.body.style.width = window.innerWidth+"px";
   document.body.style.height = window.innerWidth+"px";
   for(var i = 0; i < listeTd.length;i++){
-    listeTd[i].style.width = window.innerWidth/3/9+"px";
-    listeTd[i].style.height = window.innerWidth/3/9+"px";
+    listeTd[i].style.width = window.innerWidth/3/9-1+"px";
+    listeTd[i].style.height = window.innerWidth/3/9-1+"px";
   }
   for(var i = 0; i < listeTable.length;i++){
-    listeTable[i].style.width = window.innerWidth/3+"px";
-    listeTable[i].style.height = window.innerWidth/3+"px";
+    listeTable[i].style.width = window.innerWidth/3-1+"px";
+    listeTable[i].style.height = window.innerWidth/3-1+"px";
   }
 }

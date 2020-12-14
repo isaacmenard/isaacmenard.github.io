@@ -71,8 +71,8 @@ if(window.innerWidth > window.innerHeight){
   document.body.style.width = window.innerHeight+"px";
   document.body.style.height = window.innerHeight+"px";
   for(var i = 0; i < listeTd.length;i++){
-    listeTd[i].style.width = window.innerHeight/1.2/9-1+"px";
-    listeTd[i].style.height = window.innerHeight/1.2/9-1+"px";
+    listeTd[i].style.width = window.innerHeight/1.2/9+"px";
+    listeTd[i].style.height = window.innerHeight/1.2/9+"px";
     listeTd[i].style.border = "1px solid gray"
   }
   for(var i = 0; i < listeTable.length;i++){
@@ -83,8 +83,8 @@ if(window.innerWidth > window.innerHeight){
   document.body.style.width = window.innerWidth+"px";
   document.body.style.height = window.innerWidth+"px";
   for(var i = 0; i < listeTd.length;i++){
-    listeTd[i].style.width = window.innerWidth/1.2/9-1+"px";
-    listeTd[i].style.height = window.innerWidth/1.2/9-1+"px";
+    listeTd[i].style.width = window.innerWidth/1.2/9+"px";
+    listeTd[i].style.height = window.innerWidth/1.2/9+"px";
   }
   for(var i = 0; i < listeTable.length;i++){
     listeTable[i].style.width = window.innerWidth/1.2+"px";
