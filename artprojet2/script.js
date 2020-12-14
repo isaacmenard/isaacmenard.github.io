@@ -3,7 +3,7 @@ var caseSelect = null
 var colorSelect = null
 var caseSelectId = null;
 var infoCases = null;
-var arraySelect = 7;
+
 document.getElementById("palette").style.visibility = "hidden"
 
   var xhttp = new XMLHttpRequest();
