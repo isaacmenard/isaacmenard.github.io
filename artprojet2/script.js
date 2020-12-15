@@ -3,7 +3,7 @@ var caseSelect = null
 var colorSelect = null
 var caseSelectId = null;
 var infoCases = null;
-
+var listeDesElements = 0
 document.getElementById("palette").style.visibility = "hidden"
 
   var xhttp = new XMLHttpRequest();
@@ -18,8 +18,10 @@ document.getElementById("palette").style.visibility = "hidden"
         }
         if(item[1] == arraySelect){
           elList[item[0]].style.backgroundColor = item[2]
+          listeDesElements++
         }
       });
+        document.body.innerHTML = "<h3>Tu es la "+ listeDesElements + " ème personne à avoir trouvé ce QR code, félicitation :)</h3>"+document.body.innerHTML
     }
   };
   xhttp.open("GET", "https://donjonsansdragon.space/artPlaCaseGet.php", false);
