@@ -42,7 +42,7 @@ body{
   border: 1px solid gray;
 }
 #conteanire{
-  width: calc(100% + 6px);
+  width: calc(100% - 22px);
   border: 3px solid black
 }
 #conteanire table{
