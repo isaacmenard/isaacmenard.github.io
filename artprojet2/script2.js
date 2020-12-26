@@ -10,6 +10,7 @@ var infoCases = null;
       infoCases = this.responseText;
       infoCases = infoCases.split("$")
       for(var j = 0; j < infoCases.length;j++){
+                console.log(infoCases[j])
         var item = infoCases[j]
         item = item.split("/")
         for(var i = 0; i < item.length;i++){
@@ -17,6 +18,7 @@ var infoCases = null;
         }
           var elList = document.getElementById(item[1]).getElementsByTagName("td");
           if(elList[item[0]-10]){
+
             elList[item[0]-10].style.backgroundColor = item[2]
           }
       };
