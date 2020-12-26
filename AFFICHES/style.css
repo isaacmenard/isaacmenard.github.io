@@ -226,9 +226,30 @@ h2:after {
   width: 100%;
   height: 100%;
 }
+#parDessus{
+  width: 53.3333333333333%;
+  height: 80%;
+  position: absolute; /* postulat de départ */
+  top: 50%; left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+  background-color: #24282f;
+  z-index: 1000000;
+}
 @media (orientation: portrait) {
   #ENGRAND img{
     width: 80%;
     height: auto;
   }
+  #parDessus{
+    width: 80%;
+    height: 80%;
+  }
+}
+
+#parDessus img{
+  width: 6%;
+  height: auto;
+  position: absolute; /* postulat de départ */
+  top: 50%; left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
 }

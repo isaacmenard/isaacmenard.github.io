@@ -15,10 +15,11 @@
 </script>
 </head>
 <body>
-  <div id="ENGRAND">
+  <div id="ENGRAND" style="visibility: hidden">
       <div id="close" onclick="closeImg()"></div>
     	<img id="imageToChange" src="nulle.png" />
-      <img style="opacity:0" src="spinner.gif" />
+      <div id="parDessus"><img src="spinner.gif"/></div>
+      <img  onclick="closeImg()" style="opacity:0" src="spinner.gif" />
   </div>
   <div class="wrapper">
 
