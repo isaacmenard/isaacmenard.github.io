@@ -26,6 +26,7 @@
       };
       setTimeout(delay_completion, settings.fake_delay);
       this.each(function() {
+        if(this.id != "imageToChange"){
         var $image, $placeholder, $spinner_img, offset_left, offset_top;
         $image = $(this);
         offset_top = $image.offset().top;
@@ -59,7 +60,7 @@
         });
         return $spinner_img.attr({
           src: settings.spinner_src
-        });
+        });}
       });
       i = 0;
       for (_i = 0, _len = image_stack.length; _i < _len; _i++) {

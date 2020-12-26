@@ -6,6 +6,7 @@ for(var i = 0; i< document.getElementsByClassName('card').length;i++){
     document.getElementById("ENGRAND").style.visibility = "visible"
   }
 }
+
 function closeImg(){
   document.getElementById("ENGRAND").style.visibility = "hidden"
 }
