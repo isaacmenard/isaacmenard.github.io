@@ -20,5 +20,6 @@ for(var i = 0; i< document.getElementsByClassName('card').length;i++){
 }
 function closeImg(){
   clearInterval(interval)
+  document.getElementById("parDessus").style.visibility = "hidden"
   document.getElementById("ENGRAND").style.visibility = "hidden"
 }
