@@ -62,4 +62,4 @@ function getRandomArbitrary(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-setInterval(generateAFace,50)
+setInterval(generateAFace,200)
