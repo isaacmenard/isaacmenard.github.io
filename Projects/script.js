@@ -1,6 +1,21 @@
 // I will be creating a different pen with touch support but right // now I have no time for it due to school
 
 var title = ["MOI","DONJON SANS DRAGON", "COVID MARKET", "PROJET ART GENERATION VISAGE", "PROJET ART QR CODE","PROTOTYPE JEU DE SOCIETE", "MES DESSINS","MES APPLICATIONS MOBILES"]
+var more = false
+
+function plus(){
+	if(!more){
+		more = true
+		document.getElementById("moins").style.top = "-50%"
+		document.getElementById("more").style.top = "0%"
+		document.getElementById("PLUS").innerHTML = "RETOUR"
+	}else{
+		more = false
+		document.getElementById("moins").style.top = "50%"
+		document.getElementById("more").style.top = "100%"
+				document.getElementById("PLUS").innerHTML = "PLUS"
+	}
+}
 
 const slider = document.querySelector(".items");
 		const slides = document.querySelectorAll(".item");
