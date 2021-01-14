@@ -1,54 +1,71 @@
-  <!doctype html>
+    <!doctype html>
   <html lang="fr">
+
   <head>
     <meta charset="utf-8">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+    <!--load all styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-      <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
 
   </head>
+
   <body>
     <div id="moins">
-    <h1 id="title">MOI</h1>
-    <div class="items">
-    		<div class="item active">
-    			<img src="images/moi.png">
-    		</div>
-    		<div class=" item next" style="background-color : #7FD4FC;">
-    			<img style="  width: 100%;  height: 100%;" src="images/mapExemple.png">
-    		</div>
-    		<div class="item">
-    			<img src="images/covid2.png">
-    		</div>
-    		<div class="item">
-    			<img src="images/artPlaVisages3.png">
-    		</div>
+      <h1 id="title">MOI</h1>
+      <div class="items">
+        <div class="item active">
+          <img src="images/moi.png">
+        </div>
+        <div class=" item next" style="background-color : #7FD4FC;">
+          <img style="  width: 100%;  height: 100%;" src="images/mapExemple.png">
+        </div>
         <div class="item">
-    			<img src="images/captures.PNG">
-    		</div>
+          <img src="images/covid2.png">
+        </div>
         <div class="item">
-    			<img src="images/jeu.jpg">
-    		</div>
+          <img src="images/artPlaVisages3.png">
+        </div>
         <div class="item">
-    			<img src="images/dictateur.png">
-    		</div>
-    		<div class="item prev">
-    			<img src="images/screen.jpg">
-    		</div>
-    		<div class="button-container">
-    			<div class="button"><i class="fas fa-angle-left"></i></div>
-    			<div class="button"><i class="fas fa-angle-right"></i></div>
-    		</div>
-    	</div>
+          <img src="images/captures.PNG">
+        </div>
+        <div class="item">
+          <img src="images/jeu.jpg">
+        </div>
+        <div class="item">
+          <img src="images/dictateur.png">
+        </div>
+        <div class="item">
+          <img src="images/screen.jpg">
+        </div>
+        <div class="item"><!-- CODE WARS -->
+          <img src="images/codewars.png">
+        </div>
+        <div class="item"><!-- GITHUB -->
+          <img src="images/githubLogo.png">
+        </div>
+        <div class="item"><!-- AFTER EFFECT -->
+          <img src="images/AfterEffectLogo.png">
+        </div>
+        <div class="item prev"><!-- MINI POSTERS https://isaacmenard.github.io/AFFICHES/ -->
+          <img src="images/ATTAQUE DES TITANS 5.png">
+        </div>
+        <div class="button-container">
+          <div class="button"><i class="fas fa-angle-left"></i></div>
+          <div class="button"><i class="fas fa-angle-right"></i></div>
+        </div>
+      </div>
     </div>
     <h1 id="PLUS" onclick="plus()">PLUS</h1>
-    <div id="more"><h1>HELLOOOO WORLD</h1></div>
+    <div id="more">
+      <h1>HELLOOOO WORLD</h1>
+    </div>
     <script src="script.js"></script>
 
     <div style="visibility:hidden">
@@ -58,57 +75,92 @@
         <h1>MOI</h1>
         <p>Je suis Isaac Ménard, élève en Terminale au Lycée Pilote Innovant International,
           <br>en spécialité Mathématiques <i class="fas fa-square-root-alt"></i> et Arts plastiques <i class="fas fa-palette"></i>.</p>
-          <br><br>
-          <h1><i  class="fas fa-fire"></i></h1>
-          <p>Je suis aussi Sapeur pompier volontaire !<br> A la caserne de Poitiers la Blaiserie depuis maintenant 2 ans.
-        </div>
+        <br><br>
+        <h1><i class="fas fa-fire"></i></h1>
+        <p>Je suis aussi Sapeur pompier volontaire !<br> A la caserne de Poitiers la Blaiserie depuis maintenant 2 ans.
+      </div>
 
 
       <div class="page" id="page1">
         <h1>DONJON SANS DRAGON</h1>
         <p>Donjon sans dragon est un rpg Réalisé en HTML <i class="fab fa-html5"></i>, CSS <i class="fab fa-css3-alt"></i>, JS <i class="fab fa-js-square"></i>,
-           PHP <i class="fab fa-php"></i> et MYSQL <i class="fas fa-database"></i> pendant une période de 2 ans.<br>
-          <br><br>  </p>
-          <h1><i class="fas fa-chess-rook"></i></h1>
-          <p>Plusieurs prototypes on été essayé avec l'utilisation de <a href="https://nodejs.org/en/" target="_blank">Node JS</a> pour permettre une meilleur rapidité <br>
-            lors du jeu en ligne ainsi que de la bibliothèque <a href="https://phaser.io/" target="_blank">PHASER</a>.</p>
-            <br><br>
-            <h1>  <i class="fas fa-dungeon"></i></h1>
-            <p>A se jour, le jeu a été testé par plus de 250 joueurs -- <a href="https://donjonsansdragon.space/" target="_blank">Y jouer mainteant </a>!</p>
+          PHP <i class="fab fa-php"></i> et MYSQL <i class="fas fa-database"></i> pendant une période de 2 ans.<br>
+          <br><br> </p>
+        <h1><i class="fas fa-chess-rook"></i></h1>
+        <p>Plusieurs prototypes on été essayé avec l'utilisation de <a href="https://nodejs.org/en/" target="_blank">Node JS</a> pour permettre une meilleur rapidité <br>
+          lors du jeu en ligne ainsi que de la bibliothèque <a href="https://phaser.io/" target="_blank">PHASER</a>.</p>
+        <br><br>
+        <h1> <i class="fas fa-dungeon"></i></h1>
+        <p>A se jour, le jeu a été testé par plus de 250 joueurs -- <a href="https://donjonsansdragon.space/" target="_blank">Y jouer mainteant </a>!</p>
 
-        </div>
+      </div>
 
 
       <div class="page" id="page2">
         <h1>Le covid market !</h1>
 
-          <p>Imaginez vous, responsable inventaire de supermarché !</p>
-            <p>Tâche relativement simple, puisque vous avez déjà de l'expérience<br> grâce à votre stage de 3ème dans la boutique de votre oncle</p>
-              <p>Mais Imaginez cela pendant le premier confinement du covid 19 !</p>
-            <br><br>
-            <h1> <i class="fas fa-hamburger"></i></h1>
-            <p>Le covid market est un jeu ou vous devrez ne pas vous laisser submerger par la panique de voir la pénurie arriver !<br> Vous vous en sentez capable ? <a target="_blank" href="https://isaacmenard.github.io/superMarketCovid19/"> testez ici ! </a>!</p>
-        </div>
+        <p>Imaginez vous, responsable inventaire de supermarché !</p>
+        <p>Tâche relativement simple, puisque vous avez déjà de l'expérience<br> grâce à votre stage de 3ème dans la boutique de votre oncle</p>
+        <p>Mais Imaginez cela pendant le premier confinement du covid 19 !</p>
+        <br><br>
+        <h1> <i class="fas fa-hamburger"></i></h1>
+        <p>Le covid market est un jeu ou vous devrez ne pas vous laisser submerger par la panique de voir la pénurie arriver !<br> Vous vous en sentez capable ? <a target="_blank" href="https://isaacmenard.github.io/superMarketCovid19/"> testez ici !
+          </a>!</p>
+      </div>
 
 
-        <div class="page" id="page3">
-          <h1>PROJET ART : Génération de visages aléatoires</h1>
-              <p>Dans le cadre d'un projet d'art au lycée, nous devions présenter un projet sur le hasard</p>
-              <p>L'objectif du spectateur va être de choisir avec qui a se reproduire un individu parmis 3 personnes générés aléatoirements<br> pour générer son enfant avec les caractéristiques des deux parents (le second parent est le fils de la génération précédente)</p>
-              <br><br>
-              <h1><i class="fas fa-sitemap"></i></h1>
+      <div class="page" id="page3">
+        <h1>PROJET ART : Génération de visages aléatoires</h1>
+        <p>Dans le cadre d'un projet d'art au lycée, nous devions présenter un projet sur le hasard</p>
 
-              <p>L'utilisateur va alors répéter cette manipulation plusieurs fois pour ainsi, après une dizaine de générations, créer un individu qui ressemble à nos goûts.</p>
-              <p>Le projet n'est pas encore totalement fonctionnel et permet juste de générer les visages aléatoirement mais est testable <a target="_blank" href="https://isaacmenard.github.io/art/"> ICI </a>!</p>
-          </div>
-
-
-
-
+        <p class="c1"><span class="c2"></span></p>
+        <p class="c4"><span class="c2">Inspir&eacute; du livre MONDIALE de Beb-deum, cette oeuvre &agrave; pour but de cr&eacute;er un visage ressemblant &agrave; votre personnalit&eacute;, par exemple celui ci :</span></p>
+        <p class="c4"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"><img alt=""
+              src="imagesCartel/image2.png" style="width: 70%; height: auto; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+        <p class="c1"><span class="c2"></span></p>
+        <p class="c4"><span class="c2">Pour cela l&rsquo;utilisateur vas pouvoir choisir dans un premier temps un homme et une femme qui vont alors cr&eacute;er un nouvel individu en prenant la moyenne des deux personnages (par exemple si l&rsquo;un
+            &agrave; un grand visage et l&rsquo;autre petit, sauf exception du au hasard, l&rsquo;ordinateur choisira un visage de taille moyenne) alors nous aurons un nouvel individu soit homme ou femme et choisirons entre plusieurs personnes du sexe
+            oppos&eacute; g&eacute;n&eacute;r&eacute;s al&eacute;atoirement pour recr&eacute;er un nouvel individu. Ce processus fait une dizaine de fois, nous aurons le droit &agrave; un personnage final ressemblant logiquement &agrave; nos go&ucirc;ts.
+            <br><br>Comment cr&eacute;er un personnage al&eacute;atoirement ? Premi&egrave;rement il faut cr&eacute;er chaque partie du visage et les s&eacute;parer (comme le nez ou la forme du visage&hellip;) </span></p>
+        <p class="c4"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"><img alt=""
+              src="imagesCartel/image3.png" style="width: 70%; height: auto;; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+        <p class="c1"><span class="c2"></span></p>
+        <p class="c4"><span class="c2">Une fois cela fait, nous allons cr&eacute;er un script permettant de choisir al&eacute;atoirement 1 nez une bouche.. parmi toute notre galerie et un visage qui sera &eacute;largi, agrandi ou r&eacute;tr&eacute;ci de
+            fa&ccedil;on al&eacute;atoire. Alors les autres &eacute;l&eacute;ments du visage seront plac&eacute;s en fonction de la taille de ce visage. exemple du code :</span></p>
+        <p class="c1"><span class="c2"></span></p>
+        <p class="c4"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); "><img alt=""
+              src="imagesCartel/image1.png" style="width: 70%; height: auto; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+        <p class="c1"><span class="c2"></span></p>
+        <p class="c4"><span>Voici &agrave; quoi ressemble le projet actuellement (n&eacute;cessite une bonne connexion internet) : </span><span class="c8"><a class="c5"
+              href="https://www.google.com/url?q=https://isaacmenard.github.io/art&amp;sa=D&amp;ust=1610570734704000&amp;usg=AOvVaw1KrQxZtNddUQx4j80MyHDD">https://isaacmenard.github.io/art</a></span><span><br><br><br><br></span><span class="c6">Comment la
+            production sera expos&eacute; : </span></p>
+        <p class="c1"><span class="c2"></span></p>
+        <p class="c4"><span class="c2">La production finale sera affich&eacute;e sur un QR code de taille 1m/1m expos&eacute; sur un mur du lyc&eacute;e sans aucune information &agrave; c&ocirc;t&eacute;. Cette forme est assez int&eacute;ressante car un QR
+            est d&eacute;j&agrave; une forme certe contr&ocirc;l&eacute; mais un peu al&eacute;atoire (on ne sait jamais &agrave; quoi cela ressemblera en d&eacute;tail) mais surtout si quelqu&#39;un veut savoir ce qu&rsquo;il se cache derri&egrave;re ce
+            QR il devra le scanner, sans avoir le contr&ocirc;le de ce qu&rsquo;il verra derri&egrave;re. Cette perte de contr&ocirc;le est pour moi ce qui d&eacute;fini le hasard et doit donc &ecirc;tre exploit&eacute; &agrave; son maximum</span></p>
+        <p class="c1"><span class="c2"></span></p>
+        <p class="c4"><img></p>
 
       </div>
+
+    <div class="page" id="page8">
+      <h1>Codewars</h1>
+      <p><a href="https://www.codewars.com/" target="_blank">CODEWARS</a> est un Site permettant l'apprentissage de la programmations via différents exercices.<br>
+        Mon niveau actuel en Javascript est de 5, les missions peuvent aller de renvoyer nombre négatif en un positif jusqu'a recréer une base de donnée.<br>
+        <BR>
+        <img src="images/codewars.PNG"/>
     </div>
-          </div>
-                </div>
+    <div class="page" id="page9">
+      <h1>Mon github</h1>
+      <p><a href="https://github.com/" target="_blank">GITHUB</a> est un logiciel permettant l'hébergement à la collaboration de fichiers de programmations.<br> Le code de mes projets est disponible dessus !
+        <br><br> Mon profil est disponible <a href="https://github.com/isaacmenard" target="_blank">Node JS</a> </p>
+        <BR>
+        <img src="images/githubPage.PNG"/>
+    </div>
+    </div>
   </body>
+
   </html>
