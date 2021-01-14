@@ -1,6 +1,6 @@
 // I will be creating a different pen with touch support but right // now I have no time for it due to school
 
-var title = ["MOI", "DONJON SANS DRAGON", "COVID MARKET", "GENERATION DE VISAGE", "LES QR CODES CACHEES", "PROTOTYPE JEU DE SOCIETE", "MES DESSINS", "MES APPLICATIONS MOBILES", "CODEWARS", "GITHUB", "AFTER EFFECT", "POSTERS", "ESSAI PLATEFORMER"]
+var title = ["MOI", "DONJON SANS DRAGON", "COVID MARKET","ESSAI PLATEFORMER", "GENERATION DE VISAGE", "AFTER EFFECT", "LES QR CODES CACHES", "PROTOTYPE JEU DE SOCIETE", "MES DESSINS", "MES APPLICATIONS MOBILES", "CODEWARS", "GITHUB", "POSTERS" ]
 var more = false
 
 function plus() {
@@ -20,7 +20,7 @@ function plus() {
     more = false
     document.getElementById("moins").style.top = "50%"
     document.getElementById("more").style.top = "100%"
-    document.getElementById("PLUS").innerHTML = "PLUS"
+    document.getElementById("PLUS").innerHTML = "DETAILS"
   }
 }
 
