@@ -117,8 +117,8 @@ body {
 #more {
   position: fixed;
   top: 100%;
-  left: 0;
-  width: 100%;
+  left: 2.5% ;
+  width: 95%;
   height: auto;
   max-height: 67vh;
   overflow: auto;

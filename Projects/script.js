@@ -1,6 +1,6 @@
 // I will be creating a different pen with touch support but right // now I have no time for it due to school
 
-var title = ["MOI", "DONJON SANS DRAGON", "COVID MARKET", "GENERATION DE VISAGE", "LES QR CODES CACHEES", "PROTOTYPE JEU DE SOCIETE", "MES DESSINS", "MES APPLICATIONS MOBILES", "CODEWARS", "GITHUB", "AFTER EFFECT", "POSTERS"]
+var title = ["MOI", "DONJON SANS DRAGON", "COVID MARKET", "GENERATION DE VISAGE", "LES QR CODES CACHEES", "PROTOTYPE JEU DE SOCIETE", "MES DESSINS", "MES APPLICATIONS MOBILES", "CODEWARS", "GITHUB", "AFTER EFFECT", "POSTERS", "ESSAI PLATEFORMER"]
 var more = false
 
 function plus() {
@@ -29,7 +29,7 @@ const slides = document.querySelectorAll(".item");
 const button = document.querySelectorAll(".button");
 
 let current = 0;
-let prev = 11;
+let prev = 12;
 let next = 1;
 
 for (let i = 0; i < button.length; i++) {
@@ -38,7 +38,7 @@ for (let i = 0; i < button.length; i++) {
 
 const gotoPrev = () => current > 0 ? gotoNum(current - 1) : gotoNum(slides.length - 1);
 
-const gotoNext = () => current < 11 ? gotoNum(current + 1) : gotoNum(0);
+const gotoNext = () => current < 12 ? gotoNum(current + 1) : gotoNum(0);
 
 const gotoNum = number => {
   current = number;
@@ -53,12 +53,12 @@ const gotoNum = number => {
 
   document.getElementById("title").innerHTML = title[current]
 
-  if (next == 12) {
+  if (next == 13) {
     next = 0;
   }
 
   if (prev == -1) {
-    prev = 11;
+    prev = 12;
   }
 
   slides[current].classList.add("active");
