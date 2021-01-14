@@ -1,6 +1,6 @@
 // I will be creating a different pen with touch support but right // now I have no time for it due to school
 
-var title = ["MOI", "DONJON SANS DRAGON", "COVID MARKET", "GENERATION DE VISAGE", "LES QR CODES CACHEE", "PROTOTYPE JEU DE SOCIETE", "MES DESSINS", "MES APPLICATIONS MOBILES", "CODEWARS", "GITHUB", "AFTER EFFECT", "POSTERS"]
+var title = ["MOI", "DONJON SANS DRAGON", "COVID MARKET", "GENERATION DE VISAGE", "LES QR CODES CACHEES", "PROTOTYPE JEU DE SOCIETE", "MES DESSINS", "MES APPLICATIONS MOBILES", "CODEWARS", "GITHUB", "AFTER EFFECT", "POSTERS"]
 var more = false
 
 function plus() {
