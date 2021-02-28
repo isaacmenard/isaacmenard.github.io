@@ -1,7 +1,8 @@
-body {
+body,html {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  height: 100%;
 }
 
 .items {
@@ -120,12 +121,10 @@ body {
   left: 2.5% ;
   width: 95%;
   height: auto;
-  max-height: 67vh;
+  max-height: 100%;
   overflow: auto;
   transition: 1s;
   padding: 5px;
-  border-top: 7px solid #495057;
-  border-bottom: 7px solid #495057;
 }
 
 @media (orientation: portrait) {

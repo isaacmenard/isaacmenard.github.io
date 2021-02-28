@@ -15,12 +15,17 @@ function plus() {
     more = true
     document.getElementById("moins").style.top = "-50%"
     document.getElementById("more").style.top = "-10%"
+    document.getElementById("PLUS").style.top = "3%"
     document.getElementById("PLUS").innerHTML = "RETOUR"
+    document.getElementById("lienSite").innerHTML = ""
+
   } else {
     more = false
     document.getElementById("moins").style.top = "50%"
     document.getElementById("more").style.top = "100%"
+    document.getElementById("PLUS").style.top = ""
     document.getElementById("PLUS").innerHTML = "DETAILS"
+    document.getElementById("lienSite").innerHTML = "isaacmenard.github.io"
   }
 }
 

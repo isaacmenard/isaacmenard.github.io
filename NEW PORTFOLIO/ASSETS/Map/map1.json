@@ -94,7 +94,7 @@
                         {
                          "name":"world",
                          "type":"string",
-                         "value":"scene2"
+                         "value":"map2.json"
                         }],
                  "rotation":0,
                  "type":"",

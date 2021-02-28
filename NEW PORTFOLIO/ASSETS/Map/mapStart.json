@@ -94,14 +94,14 @@
                         {
                          "name":"world",
                          "type":"string",
-                         "value":"sceneTiled"
+                         "value":"map1.json"
                         }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":635.666666666667,
-                 "y":182.166666666667
+                 "x":638.636473629214,
+                 "y":187.512319199253
                 }],
          "opacity":1,
          "type":"objectgroup",
