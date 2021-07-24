@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+html{
+	width: 100vw;
+		overflow: auto;
+}
+body{
+	background-color: #1A0D0D;
+	color:white;
+	width: 100vw;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 40px;
+	text-align: center;
+	height : 100%;
+}
+.centerNavBAr{
+	width: 100%;
+	position: absolute;
+	top: 60%;
+	left: 0;
+}
+.centerNavBAr h2{
+	display: inline-block;
+	width:35%;
+	color: #efefef;
+	vertical-align: middle;
+}
+.nextBlock{
+	text-align: left;
+	position: absolute;
+	width: calc(100% );
+	left:0;
+	overflow: hidden;
+	top: 70%;
+}
+.nextBlock2{
+	top: 92%;
+}
+.scrollZone{
+	display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.nextBlock img{
+	flex: 0 0 auto;
+	width: 35%;
+	height: auto;
+	margin: 20px;
+}
+.nextBlock h2{
+	margin-left: 20px;
+	color: white;
+	font-size: 40px;
+}
+.middleBox{
+	vertical-align: middle;
+	display: inline-block;
+	width:20%;
+	padding: 2%;
+	background-color: #ffffff;
+	border-radius: 15px;
+	position: relative;
+}
+.middleBox h2{
+	display: inline;
+	width: auto;
+	font-size: 40px;
+	color: #111111;
+}
+h2 strong{
+	font-weight: normal;
+	font-size: 40px;
+}
+.backgroundProject{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left:0;
+	top: -10%;
+	background-image: url("homeProject.png");
+	background-size: 150%;
+	background-repeat: no-repeat;
+	background-position-x:center;
+}
+.logoIndex{
+	position: absolute;
+	top: -1%;
+	left: 5%;
+	width: 30%;
+	height: auto;
+}
+.centerBox{
+	width: 100%;
+	position: absolute; /* postulat de départ */
+  top: 50%; left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+}
+.box{
+	width: 275px;
+	height: 275px;
+	margin: 20px;
+	display: inline-block;
+	background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png");
+	background-size: 100%;
+
+}
+.box p{
+	margin-top: 300px;
+}
+
+
+
+@media screen and (orientation: landscape) {
+	html {
+		/* Rotate the content container */
+		transform: rotate(-90deg);
+		transform-origin: left top;
+		/* Set content width to viewport height */
+		width: 100vh;
+		/* Set content height to viewport width */
+		height: 100vw;
+		overflow-x: hidden;
+		position: absolute;
+		top: 100%;
+		left: 0;
+	}
+}
