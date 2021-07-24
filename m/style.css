@@ -16,7 +16,7 @@ body{
 .centerNavBAr{
 	width: 100%;
 	position: absolute;
-	top: 60%;
+	top: 70%;
 	left: 0;
 }
 .centerNavBAr h2{
@@ -31,10 +31,10 @@ body{
 	width: calc(100% );
 	left:0;
 	overflow: hidden;
-	top: 70%;
+	top: 82%;
 }
 .nextBlock2{
-	top: 92%;
+	top: 110%;
 }
 .scrollZone{
 	display: flex;
@@ -106,6 +106,8 @@ h2 strong{
 }
 .box p{
 	margin-top: 300px;
+	font-size: 1em;
+	white-space: nowrap;
 }
 
 
