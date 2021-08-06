@@ -4,3 +4,10 @@ for(var i = 0; i < document.getElementsByClassName('logoIndex').length;i++){
     window.location = 'index.html'
   }
 }
+
+
+$(window).on('load', function(){
+  if(document.getElementsByClassName("loadingDiv")){
+    document.getElementsByClassName("loadingDiv")[0].style.visibility = "hidden"
+  }
+});

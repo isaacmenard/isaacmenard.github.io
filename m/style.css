@@ -82,6 +82,23 @@ h2 strong{
 	background-repeat: no-repeat;
 	background-position-x:center;
 }
+.loadingDiv{
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+	position: fixed;
+	left:0;
+	top:0;
+	background-color: #1A0D0D;
+	display: flex;
+  justify-content: center;
+	align-items: center;
+}
+.loadingDiv img{
+	width: auto;
+	height: 20%;
+
+}
 .logoIndex{
 	position: absolute;
 	top: -1%;
