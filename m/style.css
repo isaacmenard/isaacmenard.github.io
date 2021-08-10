@@ -1,10 +1,199 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700&display=swap');
 html{
 	width: 100vw;
 		overflow: auto;
+		margin: 0;
+}
+.BodyBoxPacours {
+	width: 90%;
+	height: 65vh;
+	color: white;
+	padding-left: 5%;
+	position: relative;
+	text-align: left;
+	border-top: solid black 6px;
+}
+.BodyBoxPacours .headerBodyBox{
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 300;
+	word-spacing: 60px;
+}
+.BodyBoxPacours .headerBodyBox div{
+	display: inline-block;
+	width: auto;
+	padding-top: 0.6vh;
+	font-size: 0.9em;
+}
+
+.BodyBoxPacours .headerBodyBox .episodes{
+	font-weight: 700;
+	border-top: solid red 9px;
+}
+.BodyBoxPacours .headerBodyBox .seasons{
+	word-spacing: normal;
+}
+
+.seasonsBox p{
+	position: relative;
+	margin-top: 3vh;
+	font-size: 0.8em;
+	color: #707070;
+	font-weight: 400;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+.seasonsBox .boxEp{
+	width: 100%;
+	display: inline-flex;
+	align-content:center;
+	margin-bottom: 2vh;
+}
+
+.seasonsBox .boxEp div{
+	margin-left:30px;
+}
+.seasonsBox .boxEp div:first-child {
+	margin-left:0px;
+}
+
+
+.seasonsBox .boxEp .centerBoxEp{
+	width: 45%;
+	height: auto;
+
+}
+.seasonsBox .boxEp .centerBoxEp h1{
+	font-size: 0.8em;
+	line-height: 0;
+}
+.seasonsBox .boxEp .centerBoxEp p{
+	line-height: 0;
+	font-size: 0.6em;
+}
+
+.seasonsBox .boxEp .rightBoxEp{
+	width: 5%;
+	margin-left: 5%;
+	margin-top: 5%;
+}
+.seasonsBox .boxEp .leftBoxEp{
+	width: 35%;
+}
+.seasonsBox .boxEp .leftBoxEp img{
+	width: 100%;
+	height: auto;
+}
+
+
+.header{
+	width: 90%;
+	height: 65vh;
+	color: white;
+	font-size: 2em;
+	padding: 5%;
+	display: inline-block;
+	position: relative
+}
+.middleNavMenu{
+	width: 100%;
+	height: auto;
+		text-align: left;
+		margin-top: 1vh;
+}
+.middleNavMenu .boxNavMenu{
+	width: 20%;
+	display: inline-block;
+	text-align: center;
+	font-size: 0.8em;
+	margin-bottom: 1vh;
+}
+.middleNavMenu .boxNavMenu:first-child{
+	margin-left: 5%;
+}
+.middleNavMenu .boxNavMenu i{
+	font-size: 1.6em;
+}
+.middleNavMenu .boxNavMenu p{
+	font-size: 0.8em;
+	color: #707070;
+	font-weight: 500;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+.backgroundHeader{
+	background-image: url("temp/spotify.png");
+	background-size: 100%;
+	background-position: center;
+	position: absolute;
+	width: 100%;
+	height: 55vh;
+	-webkit-filter: blur(100px);
+	opacity: 80%;
+}
+
+.header .textUnderImage{
+	text-align: left;
+	margin-top: 4vh;
+}
+
+.header .textUnderImage h1{
+	font-size: 30px;
+	font-weight: 700;
+	font-family: 'Noto Sans JP', sans-serif;
+
+}
+.header .textUnderImage p{
+	font-size: 30px;
+	font-weight: 500;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+.header .textUnderImage .subtitle{
+	font-size: 28px;
+	font-weight: normal;
+	font-family: 'Noto Sans JP', sans-serif;
+	color: #707070
+}
+
+.header .startTemp{
+	margin-top: 6vh;
+	width: 36%;
+	height: auto;
+	box-shadow: 0px 10px 26px #080808;
+}
+.header .playButton{
+	top: 2vh;
+	position: relative;
+	background-color: red;
+	border-radius: 10px;
+	font-weight: bolder;
+	padding: 20px;
+	font-size: 0.4em;
+	margin-top: 15px;
+	font-family: 'Roboto', sans-serif;
+	word-spacing: 10px;
+}
+.header .testUnderImageStartTemp a{
+	opacity: 30%;
+}
+.header .testUnderImageStartTemp{
+	margin-top: 1vh;
+	font-size: 30px;
+	word-spacing: 30px;
+}
+.header .icon{
+	position: absolute;
+	top:5%;
+	font-size: 0.7em;
+}
+.header .iconLeft{
+	left:8%;
+}
+.header .iconRight{
+	position: absolute;
+	right: 12%;
 }
 body{
+	margin: 0;
 	background-color: #1A0D0D;
 	color:white;
 	width: 100vw;
