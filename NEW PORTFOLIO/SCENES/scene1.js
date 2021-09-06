@@ -72,14 +72,7 @@ class selectWorld extends Phaser.Scene{
 			var firstZoom = true
 
 			function zoomCamera(){
-				if(firstZoom){
-					cam
-						.setPosition(cam.x,-vertical - 800)
-						.setSize(window.innerWidth, window.innerHeight*3)
-						.setZoom(2);
-					background.y +=  window.innerHeight/2
-					firstZoom = false
-				}
+
 			}
 			background.setScrollFactor(0.5);
 
@@ -251,37 +244,12 @@ class selectWorld extends Phaser.Scene{
 			    sword()
 			}, this)
 
-			var particles = this.add.particles('snow');
 
-			var emitter = particles.createEmitter({
-				x: { min: 0, max: map.widthInPixels*scaleMap },
-				y: player.y,
-				speed: 600,
-				lifespan: 1000,
-				gravityY: -350,
-				quantity:0.0005,
-				alpha:0.9
-			});
-			var emitter = particles.createEmitter({
-				x: { min: 0, max: map.widthInPixels*scaleMap },
-				y: player.y+600,
-				speed: 600,
-				lifespan: 1000,
-				gravityY: -350,
-				quantity:0.0005,
-				alpha:0.9
-			});
-			var emitter = particles.createEmitter({
-				x: { min: 0, max: map.widthInPixels*scaleMap },
-				y: player.y-600,
-				speed: 600,
-				lifespan: 1000,
-				gravityY: -350,
-				quantity:0.0005,
-				alpha:0.9
-			});
 		}
 		update () {
+
+
+
 
 			this.physics.add.collider(player, platformsTiled, null, null, this);
 			this﻿.physics.world.enable(player);
@@ -312,6 +280,8 @@ class selectWorld extends Phaser.Scene{
 				player.body.setVelocityY(0)
 				boom.anims.play('boom', true);
 			}
+
+
 
 
 			//animation arret

@@ -128,7 +128,8 @@ canvas {
 	var checkPoint2;
 	var canMove =true;
 	var map;
-	var scaleMap = window.innerHeight/120;
+	var canDoubleJump;
+	var scaleMap = 3;
 	var checkPoint3;
 	var deadTouchTiled;
 	var backgroundTiled;
@@ -136,8 +137,8 @@ canvas {
 	var elementsTiled;
 	var inFrontOfPersoTiled;
 	var backgroundElementTiled;
-	var speedPerso = 40 * window.innerWidth/120;
-	var jumpPerso = 40 * window.innerWidth/120;
+	var speedPerso = 200 ;
+	var jumpPerso = 400 ;
 	var startAnim = false;
 	var lastPos= "right";
 	var vertical = 0;
@@ -145,15 +146,10 @@ canvas {
 	var keyDown = [false,false,false,false]
 	var spaceUp = false
 	var spaceDown = false
-	var scaleItem = window.innerHeight/170;
+	var scaleItem = 2;
 	var heightCanvas = window.innerHeight
 	if(window.innerWidth < window.innerHeight){
-		vertical =  window.innerHeight /2 -200
-		scaleMap = window.innerWidth/120
-		scaleItem = window.innerWidth/170;
-		heightCanvas = heightCanvas * 3/4
-		speedPerso = 70 * window.innerWidth/120;
-	 	jumpPerso = 50 * window.innerWidth/120;
+		vertical =  2
 	}
 
 	var config = {
