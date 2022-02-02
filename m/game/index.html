@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Isaac Menard - Portfolio !</title>
+<meta />
+	<link rel="icon" href="../logo.png" />
+	<link rel="stylesheet" media="screen" href="../style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<img src="../logo.png" class="logoIndex">
+	<div class="centerBox">
+		<h1>Que voulez vous faire ?</h1>
+		<div class="boxContent">
+			<div class="box" id="btn" onclick="download()">
+				<p>Télécharger</p>
+			</div>
+			<div class="box" onclick="window.location = 'https://youtu.be/r5KK_S7y2yQ'" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png')">
+				<p>Aide</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+	<script src="script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js">
+      </script>
+	<script>
+            function download() {
+                  axios({
+                        url: 'Proto.apk',
+                        method: 'GET',
+                        responseType: 'blob'
+                  })
+                        .then((response) => {
+                              const url = window.URL
+                                    .createObjectURL(new Blob([response.data]));
+                              const link = document.createElement('a');
+                              link.href = url;
+                              link.setAttribute('download', 'Proto.apk');
+                              document.body.appendChild(link);
+                              link.click();
+                              document.body.removeChild(link);
+                        })
+            }
+
+      </script>
+</html>
