@@ -16,10 +16,10 @@
 		<h1>Que voulez vous faire ?</h1>
 		<div class="boxContent">
 			<div class="box" id="btn" onclick="download()">
-				<p id="text">Télécharger</p>
+				<p id="text">Android</p>
 			</div>
-			<div class="box" onclick="window.location = 'https://youtu.be/r5KK_S7y2yQ'" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png')">
-				<p>Aide</p>
+			<div class="box" onclick="downloadPC()">
+				<p>PC</p>
 			</div>
 		</div>
 	</div>
@@ -42,6 +42,24 @@
                               const link = document.createElement('a');
                               link.href = url;
                               link.setAttribute('download', 'Proto.apk');
+                              document.body.appendChild(link);
+                              link.click();
+                              document.body.removeChild(link);
+                        })
+            }
+
+						function downloadPC() {
+                  axios({
+                        url: 'BuildPC.rar',
+                        method: 'GET',
+                        responseType: 'blob'
+                  })
+                        .then((response) => {
+                              const url = window.URL
+                                    .createObjectURL(new Blob([response.data]));
+                              const link = document.createElement('a');
+                              link.href = url;
+                              link.setAttribute('download', 'BuildPC.rar');
                               document.body.appendChild(link);
                               link.click();
                               document.body.removeChild(link);
