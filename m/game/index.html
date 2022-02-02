@@ -17,7 +17,7 @@
 		<h1>Que voulez vous faire ?</h1>
 		<div class="boxContent">
 			<div class="box" id="btn" onclick="download()">
-				<p>Télécharger</p>
+				<p id="text">Télécharger</p>
 			</div>
 			<div class="box" onclick="window.location = 'https://youtu.be/r5KK_S7y2yQ'" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png')">
 				<p>Aide</p>
@@ -31,6 +31,7 @@
       </script>
 	<script>
             function download() {
+							document.getElementById('text').innerHTML = "Patientez.."
                   axios({
                         url: 'Proto.apk',
                         method: 'GET',
