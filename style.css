@@ -10,6 +10,31 @@ i{
   font-size: 1.6em;
   margin-left: 1vw;
 }
+a:hover{
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.obg p, .obg a{
+  font-family: 'Fira Sans', sans-serif;
+  color: white;
+}
+.obg h2{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3em;
+}
+
+.deux5D p, .obg a{
+  font-family: 'Fira Sans', sans-serif;
+  color: white;
+}
+.deux5D h2{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3em;
+  color: white
+}
+
+
 .navbar{
   z-index: 1;
   zoom : 2;
@@ -38,7 +63,7 @@ i{
 .title{
   color: white;
   text-transform: uppercase;
-    font-family: 'Koulen', cursive;
+  font-family: 'Koulen', cursive;
   padding-bottom: 0;
   margin-bottom: 0;
   line-height: 0.635;
@@ -55,6 +80,17 @@ i{
   margin-bottom: 0.5rem;
   border-top: 4px solid white;
 }
+
+#imgOBG{
+  height: 80vh;
+  width: auto;
+}
+
+.btn{
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
 .dropdown-menu{
   background-color: #242424;
   color: white;
@@ -145,6 +181,10 @@ center{
   height: 100%;
 }
 
+.normalBlock{
+  font-size: 1.4em;
+  padding: 3vw;
+}
 
 
 body::-webkit-scrollbar-track
