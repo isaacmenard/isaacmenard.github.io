@@ -1,13 +1,17 @@
 body{
   background-image: url("pattern.svg");
-    background-size: 220px;
-     animation: slide 3s linear infinite;
+  background-size: 220px;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+html {
+	scroll-behavior: smooth;
 }
 i{
   font-size: 1.6em;
   margin-left: 2vw;
 }
 .navbar{
+  z-index: 1;
   zoom : 2;
   margin: 0;
   padding-top: 1vh;
@@ -17,6 +21,20 @@ i{
 .whiteColor,.whiteColor a{
   color: white;
 }
+
+.butt{
+  position: fixed;
+  color: white;
+  bottom: 3vh;
+  right: 3vh;
+  font-size: 2em;
+  transition: 0.1s;
+}
+.butt:hover{
+  font-size: 2.2em;
+  color: white
+}
+
 .title{
   color: white;
   text-transform: uppercase;
@@ -46,7 +64,7 @@ i{
 }
 
 .Page{
-  height: 70vh;
+  height: 100vh;
 }
 
 .Page .leftPage {
@@ -60,9 +78,9 @@ i{
     margin-left:50%;
     margin-top: 100px;
     position: absolute;
-      top: 50%;
-      transform: translate(0,-50%);
-      width: 50%;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 50%;
 }
 
 .leftPage{
@@ -109,6 +127,25 @@ i{
   border: 3px solid white;
   background-color: rgba(0,0,0,0.3);
 }
+
+.ParentBlock{
+  width: 100%;
+  display: flex;
+}
+.ParentBlock .left, .ParentBlock .right{
+  width: 50vw;
+  height: 85vh;
+  color: white;
+}
+
+center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+
 
 body::-webkit-scrollbar-track
 {
