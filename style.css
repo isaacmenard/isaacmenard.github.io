@@ -275,7 +275,7 @@ iframe {
   position: fixed;
   top: 0;
   left: 0;
-  width: 50vw;
+  width: 100vw;
   z-index: 1000000;
   text-shadow: rgb(36, 36, 36) 0px 0 6px;
 }
@@ -289,6 +289,9 @@ iframe {
     background-color: rgb(43, 43, 43);
       padding-left: 2vw;
       width: 20vw;
+  }
+  iframe{
+    z-index: 2;
   }
   .iconsSociaux{
     width: 25%;
@@ -322,10 +325,10 @@ iframe {
     zoom: 1;
   }
   .title{
-    font-size: 5em;
+    font-size: 3em;
   }
   .titleR{
-    font-size: 3em;
+    font-size: 2em;
   }
   .textBlock{
     position: inherit;
@@ -347,5 +350,8 @@ iframe {
   }
   .video-container, .Page{
     height: 100vw;;
+  }
+  .navbar {
+    zoom: 1;
   }
 }
