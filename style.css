@@ -39,6 +39,7 @@ a:hover{
   z-index: 1;
   zoom : 2;
   margin: 0;
+  width: 50vw;
   padding-top: 1vh;
   font-family: 'Koulen', cursive;
   text-transform: uppercase;
@@ -274,7 +275,7 @@ iframe {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 50vw;
   z-index: 1000000;
   text-shadow: rgb(36, 36, 36) 0px 0 6px;
 }
@@ -302,7 +303,11 @@ iframe {
     z-index: 4;
   }
   .Page .rightPage{
-    width: 100%;
+    margin-top: -28vh;
+    width: 100vw;
+    height: 100vh;
+    zoom: 0.5;
+    overflow-x: hidden;
     transform: translate(0px,0);
   }
   .card-deck .card {
@@ -312,10 +317,9 @@ iframe {
   }
   .imgPlanete {
     position: absolute;
-    top: -85vh;
-    transform: translate(0px,50%);
+    top: 15vh;
     z-index: -1;
-    zoom: 0.8;
+    zoom: 1;
   }
   .title{
     font-size: 5em;
