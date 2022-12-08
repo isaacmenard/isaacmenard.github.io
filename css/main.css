@@ -607,6 +607,10 @@ Filename      : main.css
 .image-icon{
     height: 50px;
 }
+.image-icon-little{
+    height: 30px;
+    margin-right: 5px;
+}
 .counterwrap__counternum-text{
     font-size: 20px;
     font-weight: 700;

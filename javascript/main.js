@@ -23,7 +23,6 @@ const freemaninit = (function() {
     var sliderService = document.getElementById("sliderservice");
     var yearele = document.querySelector('.years');
     var btnContainer = document.getElementById("filterwrap");
-    var btns = btnContainer.getElementsByTagName("li");
     var porto = document.getElementById('porfoliowarp');
     var Shuffle = window.Shuffle;
     var wrapper;
