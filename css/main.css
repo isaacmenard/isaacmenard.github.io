@@ -339,12 +339,14 @@ Filename      : main.css
         color: #ffffff;
         display: inline-block;
         background: #181715;
+        text-align: center;
     }
     
     .infohero__title {
         font-size: 80px;
         font-weight: 600;
         text-shadow: 5px 5px #ddaa01;
+        text-align: center;
     }
     
     .infohero__title span {
@@ -372,6 +374,7 @@ Filename      : main.css
         font-size: 20px;
         font-weight: 600;
         text-transform: uppercase;
+        text-align: center;
     }
     
     .herolink {
