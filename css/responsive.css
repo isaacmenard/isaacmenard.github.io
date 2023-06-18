@@ -60,6 +60,16 @@ Filename      : responsive.css
     .porfoliowarp__item {
         width: 50%;
     }
+    .pathHeader{
+        margin-top: 50px;
+    }
+    .englishCvButton{
+        margin-top: 5px;
+    }
+    .iconsLittlesContainer{
+        display: block;
+        margin-top: 10px;;
+    }
 }
 
 @media (max-width: 899) {}

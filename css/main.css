@@ -56,14 +56,17 @@ Filename      : main.css
     * {
         -webkit-font-smoothing: antialiased;
     }
-    
+
     body {
         font-family: 'Poppins';
         font-size: 15px;
         font-weight: 400;
         background: #FFDB67;
         color: #181715;
-        text-rendering: optimizeLegibility;
+        text-rendering: optimizeLegibility;q
+    }
+    h3{
+        white-space: normal;
     }
     
      ::selection {
@@ -764,4 +767,12 @@ hr {
     .modal-content {
         width: 100%;
     }
+}
+
+img, iframe{
+    max-width: 100%;
+}
+
+.iconsLittlesContainer{
+    display: inline;
 }
