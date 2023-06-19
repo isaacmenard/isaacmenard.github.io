@@ -70,6 +70,13 @@ Filename      : responsive.css
         display: block;
         margin-top: 10px;;
     }
+    svg{
+        margin-top: 0px;;
+        margin-bottom: 0px;;
+    }
+    #Projectssection{
+        margin-top: 0px;;
+    }
 }
 
 @media (max-width: 899) {}

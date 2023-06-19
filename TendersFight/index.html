@@ -76,7 +76,7 @@
     <!-- main wrap -->
     <main id="mainwrap">
 
-        <svg class="pathHeader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <svg class="pathHeader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="margin-top: 50px;">
             <path fill="#ffffff" fill-opacity="1"
                 d="M0,128L60,149.3C120,171,240,213,360,192C480,171,600,85,720,85.3C840,85,960,171,1080,197.3C1200,224,1320,192,1380,176L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
             </path>
@@ -121,21 +121,43 @@
                 <br>
                 <br>
                 <div class="abouthero">
-                    <h3 style="white-space: nowrap;text-align: left; font-size: 30px;">What i learnt:</h3>
+                    <h3 style="white-space: nowrap;text-align: left; font-size: 30px;">What i learnt</h3>
                     <br>
-                    <p>- This was the first time we'd started a project knowing that we were going to publish it for a
-                        fee. So we had to produce a clean, professional product.</p>
-                    <p>- It took us a while to understand the importance of communication, whether in terms of visuals,
-                        descriptions or posts on the networks. We did very little of it, even though it's very important
-                        to get a game off the ground.</p>
-                    <p>- We've had positive and negative reviews all over the world and on a whole host of platforms
-                        such as YouTube and Twitch, which has also helped us get our game out there!</p>
+                    <ul>
+                        <li>This was the first time we'd started a project knowing that we were going to publish it
+                            for a
+                            fee. So we had to produce a clean, professional product.</li>
+                        <li>It took us a while to understand the importance of communication, whether in terms of
+                            visuals,
+                            descriptions or posts on the networks. We did very little of it, even though it's very
+                            important
+                            to get a game off the ground.</li>
+                        <li>We've had positive and negative reviews all over the world and on a whole host of
+                            platforms
+                            such as YouTube and Twitch, which has also helped us get our game out there!</li>
+                    </ul>
                 </div>
 
                 <br>
                 <br>
                 <div class="abouthero">
-                    <h3 style="white-space: nowrap;text-align: left; font-size: 30px;">Screenshots:</h3>
+                    <h3 style="white-space: nowrap;text-align: left; font-size: 30px;">Team</h3>
+                    <br>
+                    <ul>
+                        <li>Lead level designer | <a target="_blank"
+                                href="https://www.linkedin.com/in/tom-boutonnat-5bb2aa232/">Tom BOUTONNAT</a>
+                        </li>
+                        <li>VFX, animator and responsible for signs and feedback | <a target="_blank"
+                                href="https://www.linkedin.com/in/gabriel-soussi-514593221/">Gabriel SOUSSI</a>
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+
+                <br>
+                <br>
+                <div class="abouthero">
+                    <h3 style="white-space: nowrap;text-align: left; font-size: 30px;">Screenshots</h3>
                     <!-- Gallery -->
                     <div class="row">
                         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
@@ -270,12 +292,13 @@
 
         Array.prototype.forEach.call(imgs, function (img) {
             img.onclick = function () {
-                if(screen.orientation != "portrait-secondary" && screen.orientation != "portrait-primary" && window.innerWidth > 700 ){
+                if (screen.orientation != "portrait-secondary" && screen.orientation !=
+                    "portrait-primary" && window.innerWidth > 700) {
                     modal.style.display = "block";
                     modalImg.src = this.src;
                     modalImg.alt = this.alt;
                     captionText.innerHTML = this.alt;
-                }            
+                }
             }
         });
 
