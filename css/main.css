@@ -847,7 +847,7 @@ Filename      : main.css
         transform: scaleX(2);
     }
 
-    #projectText{
+    #projectText {
         font-size: 30px;
         margin-bottom: -30px;
     }
