@@ -63,10 +63,9 @@ Filename      : main.css
         font-family: 'Poppins';
         font-size: 15px;
         font-weight: 400;
-        background: #FFDB67;
-        color: #181715;
+        background: #f2f2f2;
+        color: #080808;
         text-rendering: optimizeLegibility;
-        q
     }
 
     h3 {
@@ -74,7 +73,7 @@ Filename      : main.css
     }
 
     ::selection {
-        background: #ddaa01;
+        background: #bfbfbf;
         color: #ffffff;
     }
 
@@ -83,8 +82,8 @@ Filename      : main.css
     }
 
     .fixid {
-        background: #FFDB67;
-        box-shadow: 0 0 10px 5px rgba(221, 170, 1, .3);
+        background: #f2f2f2;
+        box-shadow: 0 0 10px 5px rgba(180, 180, 180, 0.3);
     }
 
     label {
@@ -98,10 +97,10 @@ Filename      : main.css
         padding: 10px;
         font-size: 13px;
         width: 100%;
-        color: #181715;
+        color: #080808;
         background: transparent;
         border: 2px solid rgba(25, 26, 30, .5);
-        border-radius: 3px;
+        border-radius: 0px;
     }
 
     textarea {
@@ -109,14 +108,14 @@ Filename      : main.css
     }
 
     .goverlay {
-        background: #FFDB67;
+        background: #f2f2f2;
     }
 
     .linkbtn {
-        background: #181715;
+        background: #080808;
         color: #ffffff;
         padding: 10px 20px;
-        border-radius: 50px;
+        border-radius: 0px;
     }
 
     .linkbtn:hover {
@@ -137,7 +136,7 @@ Filename      : main.css
         border: none;
         width: 20px;
         height: 2px;
-        background: #ddaa01;
+        background: #bfbfbf;
         border-radius: 3px;
         margin: 10px 5px;
         padding: 3px;
@@ -149,7 +148,7 @@ Filename      : main.css
     }
 
     .dot--active {
-        background: #181715;
+        background: #080808;
     }
 
     /*
@@ -164,7 +163,7 @@ Filename      : main.css
         width: 100%;
         height: 100%;
         z-index: 999999999 !important;
-        background-color: #ddaa01;
+        background-color: #bfbfbf;
         top: 0;
         left: 0;
         right: 0;
@@ -191,7 +190,7 @@ Filename      : main.css
         position: fixed;
         width: 100%;
         z-index: 3;
-        background-color: #FFDB67;
+        background-color: #080808;
     }
 
     /*
@@ -216,21 +215,22 @@ Filename      : main.css
         font-size: 15px;
         font-weight: 500;
         position: relative;
-        color: #181715;
+        color: #f2f2f2;
         z-index: 1;
         padding: 5px 15px;
-        border-radius: 50px;
+        border-radius: 0px;
     }
 
     .navpage__wrap li a:hover {
         text-decoration: none;
-        color: #ffffff;
-        background: #181715;
+        color: #080808;
+        background: #f2f2f2;
     }
 
     .navpage__wrap li a.activelink {
-        color: #ffffff;
-        background: #181715;
+        color: #080808;
+        background: #f2f2f2;
+        text-decoration: underline;
     }
 
     .navicon {
@@ -261,12 +261,12 @@ Filename      : main.css
         position: absolute;
         width: 25px;
         height: 2px;
-        background: #181715;
+        background: #080808;
     }
 
     .navicon:hover .navicon__bar:before,
     .navicon:hover .navicon__bar:after {
-        background: #181715;
+        background: #080808;
     }
 
     .navicon__bar:before {
@@ -300,9 +300,9 @@ Filename      : main.css
         z-index: 2;
         top: -100%;
         display: none;
-        background: #FFDB67;
+        background: #f2f2f2;
         padding: 80px 0 30px 0;
-        border-bottom: 1px solid #ddaa01;
+        border-bottom: 1px solid #bfbfbf;
     }
 
     .overlay__listnav {
@@ -318,15 +318,15 @@ Filename      : main.css
         font-size: 18px;
         font-weight: 500;
         position: relative;
-        color: #181715;
+        color: #080808;
         padding: 5px 10px;
-        border-radius: 50px;
+        border-radius: 0px;
     }
 
     .overlay__listnav li a:hover {
         color: #ffffff;
         text-decoration: none;
-        background: #181715;
+        background: #080808;
     }
 
     .openmenu .overlay {
@@ -341,23 +341,24 @@ Filename      : main.css
 */
 
     #sectionhero {
-        padding: 100px 0 0;
+        padding: 10vw 0 0;
     }
 
     .infohero__p {
         font-size: 20px;
         letter-spacing: 1px;
         padding: 5px 20px;
-        color: #ffffff;
+        color: #080808;
         display: inline-block;
-        background: #181715;
+        background: #f2f2f2;
         text-align: center;
+        font-weight: 550;
     }
 
     .infohero__title {
         font-size: 50px;
         font-weight: 600;
-        text-shadow: 5px 5px #ddaa01;
+        text-shadow: 5px 5px #080808;
         text-align: center;
     }
 
@@ -376,7 +377,7 @@ Filename      : main.css
         height: 350px;
         width: 350px;
         object-fit: cover;
-        box-shadow: 20px 20px 1px 1px #ddaa01;
+        box-shadow: 20px 20px 1px 1px #bfbfbf;
         border: 7px solid;
         image-rendering: smooth;
     }
@@ -401,8 +402,8 @@ Filename      : main.css
 
     #aboutsection {
         height: auto;
-        background: #ffffff;
         padding: 50px 0 0;
+        background-color: #ffffff;
     }
 
     .abouthero h3 {
@@ -419,7 +420,7 @@ Filename      : main.css
     }
 
     .infoabout__wrap .infoabout__title {
-        color: #181715;
+        color: #080808;
         letter-spacing: 1px;
         font-weight: 700;
     }
@@ -431,7 +432,7 @@ Filename      : main.css
 */
 
     #servicesection {
-        background: #FFDB67;
+        background: #f2f2f2;
         height: auto;
         padding: 0 0 0;
     }
@@ -451,9 +452,9 @@ Filename      : main.css
 
     .wrapservice i {
         font-size: 30px;
-        background: #ddaa01;
+        background: #bfbfbf;
         padding: 20px 20px;
-        border-radius: 100%;
+        border-radius: 0%;
     }
 
     .wrapservice__title {
@@ -509,14 +510,14 @@ Filename      : main.css
     }
 
     .porfoliowarp__item:hover .porfoliowarp__content {
-        background-color: #ddaa01;
+        background-color: #bfbfbf;
         opacity: .5;
     }
 
     .porfoliowarp__portolink i {
         position: absolute;
         z-index: 1;
-        color: #181715;
+        color: #080808;
         opacity: 0;
         font-size: 50px;
         position: absolute;
@@ -542,11 +543,11 @@ Filename      : main.css
         margin: 0 5px;
         padding: 5px 20px;
         cursor: pointer;
-        border: 1px solid #181715;
+        border: 1px solid #080808;
     }
 
     #filterwrap li.active {
-        background: #181715;
+        background: #080808;
         color: #ffffff;
     }
 
@@ -558,7 +559,7 @@ Filename      : main.css
 
     #contactsection {
         height: auto;
-        background: #FFDB67;
+        background: #f2f2f2;
         padding: 0 0 50px;
     }
 
@@ -596,7 +597,7 @@ Filename      : main.css
     }
 
     .contactdetail__sosmed li a {
-        color: #181715;
+        color: #080808;
         font-size: 30px;
     }
 
@@ -850,4 +851,40 @@ Filename      : main.css
     #projectText {
         font-size: 30px;
         margin-bottom: -30px;
+    }
+    #rowFirstSection{
+        background-image: url('../asset/portfolio/background.png');
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 689px;
+        height: 425px;
+        max-width: 689px;
+        max-height: 425px;
+        padding: 105px;
+        color: #f2f2f2;
+    }
+    img.background{
+      position: absolute;
+      left: 0px;
+      top: -20px;
+      z-index: -1;
+      width: 100%;
+      height: auto;
+        filter: blur(3px) grayscale(30%);
+        -webkit-filter: blur(3px) grayscale(30%);
+        -moz-filter: blur(3px) grayscale(30%);
+        -o-filter: blur(3px) grayscale(30%);
+        -ms-filter: blur(3px) grayscale(30%);
+    }
+    
+    .backgroundOfSection{
+        background-image: url("../asset/portfolio/SVG/grid.png");
+        background-size: 6%;
+        filter: invert(1);
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        margin-top: -50px;;
+        opacity: 0.1;
     }
