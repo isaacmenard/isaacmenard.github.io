@@ -63,9 +63,13 @@ Filename      : main.css
         font-family: 'Poppins';
         font-size: 15px;
         font-weight: 400;
-        background: #f2f2f2;
         color: #080808;
         text-rendering: optimizeLegibility;
+    }
+
+    main{
+        background-image: url("../asset/portfolio/SVG/gridWhite.png");
+        background-size: 4.5%;
     }
 
     h3 {
@@ -163,7 +167,7 @@ Filename      : main.css
         width: 100%;
         height: 100%;
         z-index: 999999999 !important;
-        background-color: #bfbfbf;
+        background-color: #ffffff;
         top: 0;
         left: 0;
         right: 0;
@@ -174,7 +178,7 @@ Filename      : main.css
         display: inline-block;
         position: absolute;
         width: 350px;
-        top: 50%;
+        top: 48%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -190,6 +194,7 @@ Filename      : main.css
         position: fixed;
         width: 100%;
         z-index: 3;
+        top: 0;;
         background-color: #080808;
     }
 
@@ -341,7 +346,7 @@ Filename      : main.css
 */
 
     #sectionhero {
-        padding: 10vw 0 0;
+        padding: 6vw 0 0;
     }
 
     .infohero__p {
@@ -364,6 +369,7 @@ Filename      : main.css
 
     .infohero__title span {
         display: block;
+        font-size: 40px;
     }
 
     .heroimg {
@@ -403,7 +409,6 @@ Filename      : main.css
     #aboutsection {
         height: auto;
         padding: 50px 0 0;
-        background-color: #ffffff;
     }
 
     .abouthero h3 {
@@ -432,7 +437,6 @@ Filename      : main.css
 */
 
     #servicesection {
-        background: #f2f2f2;
         height: auto;
         padding: 0 0 0;
     }
@@ -469,7 +473,6 @@ Filename      : main.css
 */
 
     #Projectssection {
-        background: #ffffff;
         height: auto;
     }
 
@@ -867,24 +870,120 @@ Filename      : main.css
     img.background{
       position: absolute;
       left: 0px;
-      top: -20px;
+      top: -142px;
       z-index: -1;
       width: 100%;
       height: auto;
-        filter: blur(3px) grayscale(30%);
-        -webkit-filter: blur(3px) grayscale(30%);
-        -moz-filter: blur(3px) grayscale(30%);
-        -o-filter: blur(3px) grayscale(30%);
-        -ms-filter: blur(3px) grayscale(30%);
+
     }
     
+    html, body{
+        width: 100%;
+        height: 100%;
+    }
+
     .backgroundOfSection{
         background-image: url("../asset/portfolio/SVG/grid.png");
         background-size: 6%;
         filter: invert(1);
         width: 100%;
-        height: 100vh;
+        height: 100%;
         position: absolute;
         margin-top: -50px;;
+        z-index: -2;
         opacity: 0.1;
     }
+
+
+    /* HTML: <div class="loader"></div> */
+.preloader__img {
+    max-width: 120px;
+    height: 10px;
+    background: 
+      linear-gradient(#000 50%,#0000 0),
+      linear-gradient(#0000 50%,#000 0),
+      linear-gradient(#000 50%,#0000 0),
+      linear-gradient(#0000 50%,#000 0),
+      linear-gradient(#000 50%,#0000 0),
+      linear-gradient(#0000 50%,#000 0)
+      #ddd;
+    background-size: calc(100%/6 + 1px) 200%;
+    background-repeat: no-repeat;
+    animation: l12 1s infinite;
+  }
+  @keyframes l12 {
+    0%     {background-position: calc(0*100%/5) 100%,calc(1*100%/5)   0%,calc(2*100%/5) 100%,calc(3*100%/5)   0%,calc(4*100%/5) 100%,calc(5*100%/5)   0%}
+    16.67% {background-position: calc(0*100%/5)   0%,calc(1*100%/5)   0%,calc(2*100%/5) 100%,calc(3*100%/5)   0%,calc(4*100%/5) 100%,calc(5*100%/5)   0%}
+    33.33% {background-position: calc(0*100%/5)   0%,calc(1*100%/5) 100%,calc(2*100%/5) 100%,calc(3*100%/5)   0%,calc(4*100%/5) 100%,calc(5*100%/5)   0%}
+    50%    {background-position: calc(0*100%/5)   0%,calc(1*100%/5) 100%,calc(2*100%/5)   0%,calc(3*100%/5)   0%,calc(4*100%/5) 100%,calc(5*100%/5)   0%}
+    66.67% {background-position: calc(0*100%/5)   0%,calc(1*100%/5) 100%,calc(2*100%/5)   0%,calc(3*100%/5) 100%,calc(4*100%/5) 100%,calc(5*100%/5)   0%}
+    83.33% {background-position: calc(0*100%/5)   0%,calc(1*100%/5) 100%,calc(2*100%/5)   0%,calc(3*100%/5) 100%,calc(4*100%/5)   0%,calc(5*100%/5)   0%}
+    100%   {background-position: calc(0*100%/5)   0%,calc(1*100%/5) 100%,calc(2*100%/5)   0%,calc(3*100%/5) 100%,calc(4*100%/5)   0%,calc(5*100%/5) 100%}
+  }
+  .preloader__img h1{
+    margin: auto;
+    display: block;
+    margin-top: -60px;;
+    margin-left: -30px;
+  }
+  .preloader__img{
+    margin-top: 35px;;
+  }
+
+  .preloaderBackground{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    filter: invert(1);
+    background-size: 4.5%;
+    opacity: 0.1;
+    background-image: url("../asset/portfolio/SVG/grid.png");
+  }
+
+
+.barHeader{
+    transform: translateY(50%);
+    filter: invert(1);
+}
+
+
+.video-container{
+  width: 100vw;
+  height:100%;
+}
+
+ iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100%;
+  transform: translate(-50%, -60%);
+  pointer-events: none;
+  border: 0;
+}
+
+.video-container iframe {
+  z-index: -1;
+}
+
+#text{
+  position: absolute;
+  color: #FFFFFF;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-container iframe {
+    height: 56.25vw;
+    overflow: hidden;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-container iframe {
+    width: 177.78vh;
+  }
+}
