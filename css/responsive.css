@@ -77,6 +77,35 @@ Filename      : responsive.css
     #Projectssection{
         margin-top: 0px;;
     }
+    #servicesection{
+        zoom: 0.5;
+        font-size: 30px
+    }
+    #servicesection p{
+        margin-top: -20px;
+    }
+
+    #sectionhero{
+        zoom: 0.8;
+        margin-bottom: -100px;
+    }
+
+    #sectionhero iframe{
+        visibility: hidden;
+    }
+
+    #sectionhero iframe{
+        visibility: hidden;
+    }
+
+    #rowFirstSection{
+        background-color: rgba(0, 0, 0, 0.943);
+        background-image: none;
+    }
+    #Projectssection h3{
+        font-size: 40px;
+    }
+    
 }
 
 @media (max-width: 899) {}
