@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Image Forgery Detection Pipeline - Isaac Menard</title>
+    <meta name="description"
+        content="Kaggle case study: synthetic image generation, dataset versioning via API, training automation, and submission workflow." />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../asset/page/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../asset/page/favicon-16x16.png">
+    <link rel="shortcut icon" href="../../asset/page/favicon-16x16.png">
+    <link href="../../css/vendor/fontawesome/all.min.css" rel="stylesheet">
+    <link href="../../css/main.css" rel="stylesheet">
+    <link href="../../css/responsive.css" rel="stylesheet">
+    <style>
+        :root {
+            --fp-bg: #ffffff;
+            --fp-text: #080808;
+            --fp-muted: #3f3f3f;
+            --fp-line: #d7d7d7;
+            --fp-soft: #f2f2f2;
+            --fp-shadow: 0 10px 24px rgba(8, 8, 8, 0.08);
+        }
+
+        .forgery-page {
+            margin: 0;
+            color: var(--fp-text);
+            background: linear-gradient(180deg, #f9f9f9 0%, #ffffff 40%);
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .forgery-page .backgroundOfSection {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            margin-top: 0;
+            background-image: url("../../asset/portfolio/SVG/grid.png");
+            background-size: 6%;
+            background-repeat: repeat;
+            filter: invert(1);
+            opacity: 0.1;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        .fp-shell::before,
+        .fp-shell::after,
+        .fp-topbar::before,
+        .fp-topbar::after,
+        .fp-hero::before,
+        .fp-hero::after,
+        .fp-stats::before,
+        .fp-stats::after,
+        .fp-focus-points::before,
+        .fp-focus-points::after,
+        .fp-links::before,
+        .fp-links::after,
+        .fp-gallery-grid::before,
+        .fp-gallery-grid::after,
+        .fp-schema-track::before,
+        .fp-schema-track::after {
+            content: none !important;
+            display: none !important;
+        }
+
+        .fp-shell {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 90px 18px 70px;
+        }
+
+        .fp-topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .fp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            padding: 10px 14px;
+            border: 1px solid #080808;
+            border-radius: 0;
+            font-weight: 700;
+            font-size: 0.9rem;
+            background: #080808;
+            color: #ffffff;
+        }
+
+        .fp-btn.alt {
+            background: #f2f2f2;
+            color: #080808;
+        }
+
+        .fp-card {
+            background: var(--fp-bg);
+            border: 1px solid var(--fp-line);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--fp-shadow);
+        }
+
+        .fp-hero {
+            background: #f4f4f4;
+            margin-bottom: 18px;
+        }
+
+        .fp-kicker {
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 0.74rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #080808;
+            text-decoration: underline;
+        }
+
+        .fp-hero h1 {
+            margin-bottom: 12px;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+        }
+
+        .fp-hero p {
+            margin: 0;
+            color: var(--fp-muted);
+            max-width: 820px;
+        }
+
+        .fp-stats {
+            margin-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .fp-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid #080808;
+            background: #ffffff;
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .fp-visual {
+            margin-bottom: 18px;
+            background: linear-gradient(135deg, #0e0e0e 0%, #282828 62%, #4a4a4a 100%);
+            color: #ffffff;
+            border-color: #080808;
+        }
+
+        .fp-visual-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            align-items: start;
+        }
+
+        .fp-visual p {
+            color: #f2f2f2;
+            margin-bottom: 10px;
+            max-width: 820px;
+        }
+
+        .fp-focus-points {
+            margin: 0;
+            padding-left: 18px;
+            color: #f2f2f2;
+        }
+
+        .fp-focus-points li {
+            margin-bottom: 6px;
+        }
+
+        .fp-section {
+            margin-bottom: 18px;
+        }
+
+        .fp-section h3 {
+            margin-bottom: 14px;
+        }
+
+        .fp-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .fp-gallery-item {
+            border: 1px solid var(--fp-line);
+            border-radius: 8px;
+            background: #f4f4f4;
+            padding: 10px;
+        }
+
+        .fp-gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+            border: 1px solid #bfbfbf;
+            display: block;
+            background: #ffffff;
+        }
+
+        .fp-gallery-label {
+            margin-top: 8px;
+            margin-bottom: 0;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #080808;
+        }
+
+        .fp-mermaid-wrap {
+            border: 1px solid #cfcfcf;
+            background: linear-gradient(180deg, #fafafa 0%, #f2f2f2 100%);
+            border-radius: 10px;
+            padding: 14px;
+            overflow: hidden;
+            margin-bottom: 12px;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+        }
+
+        .fp-schema-track {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding-bottom: 6px;
+            scrollbar-width: thin;
+        }
+
+        .fp-schema-block {
+            min-width: 180px;
+            border: 2px solid #080808;
+            padding: 10px;
+            background: #ffffff;
+            border-radius: 8px;
+        }
+
+        .fp-schema-block.start,
+        .fp-schema-block.end {
+            background: #080808;
+            color: #ffffff;
+        }
+
+        .fp-schema-block strong {
+            display: block;
+            font-size: 0.86rem;
+            margin-bottom: 6px;
+            letter-spacing: 0.01em;
+        }
+
+        .fp-schema-block p {
+            margin: 0;
+            font-size: 0.78rem;
+            line-height: 1.35;
+            color: #3f3f3f;
+        }
+
+        .fp-schema-block.start p,
+        .fp-schema-block.end p {
+            color: #f2f2f2;
+        }
+
+        .fp-schema-arrow {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #080808;
+            line-height: 1;
+            flex: 0 0 auto;
+        }
+
+        .fp-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 991px) {
+            .fp-topbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 620px) {
+            .fp-shell {
+                padding-top: 24px;
+            }
+
+            .fp-gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .fp-gallery-item img {
+                height: 200px;
+            }
+
+            .fp-schema-track {
+                flex-direction: column;
+                align-items: stretch;
+                overflow: visible;
+                padding-bottom: 0;
+            }
+
+            .fp-schema-block {
+                min-width: 0;
+            }
+
+            .fp-schema-arrow {
+                align-self: center;
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+
+<body class="forgery-page">
+    <div class="backgroundOfSection"></div>
+    <header id="headermain">
+        <div class="container">
+            <div class="row headerwrap">
+                <div class="text-xl-left d-none d-lg-block justify-content-lg-left justify-content-xl-left">
+                    <nav class="navpage text-center">
+                        <ul class="navpage__wrap">
+                            <li class="navpage__list"><a href="/DataEngineer/">Data Engineer Home</a></li>
+                            <li class="navpage__list"><a href="https://www.kaggle.com/isaacmenard" target="_blank"
+                                    rel="noopener noreferrer">Kaggle
+                                    Profile</a></li>
+                            <li class="navpage__list"><a href="/DataEngineer/#contactsection">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <img src="../../asset/portfolio/4x/Asset 4@4x.png" style="margin-bottom: -40px;">
+    </header>
+
+    <div class="fp-shell">
+        <div class="fp-topbar">
+            <a href="/DataEngineer/" class="fp-btn"><i class="fa-solid fa-arrow-left"></i> Back to Data Engineer
+                Home</a>
+            <a href="https://www.kaggle.com/competitions/recodai-luc-scientific-image-forgery-detection"
+                target="_blank" rel="noopener noreferrer" class="fp-btn alt">
+                <i class="fa-solid fa-trophy"></i> Open Competition
+            </a>
+        </div>
+
+        <section class="fp-card fp-hero">
+            <div class="fp-kicker">Data Engineering Case Study</div>
+            <h1>Scientific Image Forgery Detection Pipeline</h1>
+            <p>
+                End-to-end pipeline for a Kaggle competition: synthetic image generation,
+                dataset versioning and publication via Kaggle API, automated training, model export, and submission
+                delivery.
+            </p>
+            <div class="fp-stats">
+                <span class="fp-pill">Top 10 leaderboard (1 month)</span>
+                <span class="fp-pill">API-driven dataset versioning</span>
+                <span class="fp-pill">Automated train/export/submit</span>
+            </div>
+        </section>
+
+        <section class="fp-card fp-visual">
+            <div class="fp-visual-grid">
+                <div>
+                    <h3>Data Engineering Impact</h3>
+                    <p>
+                        The objective was not only model score. The project was engineered as a reusable and reliable data
+                        workflow that can be rerun with low manual effort and clear traceability.
+                    </p>
+                    <ul class="fp-focus-points">
+                        <li><b>Abilities acquired:</b> synthetic data generation, API dataset versioning, workflow
+                            orchestration, and reproducible model delivery.</li>
+                        <li><b>Success:</b> reached top 10 on the competition leaderboard during one month.</li>
+                        <li><b>Pipeline ownership:</b> from source data to published dataset, training run, artifact
+                            export, and final prediction submission.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="fp-card fp-section">
+            <h3>Forged Image Examples</h3>
+            <div class="fp-gallery-grid">
+                <figure class="fp-gallery-item">
+                    <img src="/DataEngineer/ForgeryPipeline/img/before.png" alt="Original cell image sample 01">
+                    <p class="fp-gallery-label">Original sample 01</p>
+                </figure>
+                <figure class="fp-gallery-item">
+                    <img src="/DataEngineer/ForgeryPipeline/img/after.png" alt="Forged cell image sample 01">
+                    <p class="fp-gallery-label">Forged sample 01</p>
+                </figure>
+                <figure class="fp-gallery-item">
+                    <img src="/DataEngineer/ForgeryPipeline/img/before_2.png" alt="Original cell image sample 02">
+                    <p class="fp-gallery-label">Original sample 02</p>
+                </figure>
+                <figure class="fp-gallery-item">
+                    <img src="/DataEngineer/ForgeryPipeline/img/after_2.png" alt="Forged cell image sample 02">
+                    <p class="fp-gallery-label">Forged sample 02</p>
+                </figure>
+            </div>
+        </section>
+
+        <section class="fp-card fp-section">
+            <h3>Pipeline Schema</h3>
+            <div class="fp-mermaid-wrap">
+                <div class="fp-schema-track" aria-label="Pipeline flow schema with step descriptions">
+                    <article class="fp-schema-block start">
+                        <strong>01. Source Dataset</strong>
+                        <p>Take a cell image dataset as initial ground truth.</p>
+                    </article>
+                    <span class="fp-schema-arrow">-></span>
+                    <article class="fp-schema-block">
+                        <strong>02. Forgery Algorithm</strong>
+                        <p>Apply transformation logic to create new forged images.</p>
+                    </article>
+                    <span class="fp-schema-arrow">-></span>
+                    <article class="fp-schema-block">
+                        <strong>03. Dataset Publish</strong>
+                        <p>Create and push a new dataset version using Kaggle API.</p>
+                    </article>
+                    <span class="fp-schema-arrow">-></span>
+                    <article class="fp-schema-block">
+                        <strong>04. Model Training</strong>
+                        <p>Use the generated dataset in the training notebook pipeline.</p>
+                    </article>
+                    <span class="fp-schema-arrow">-></span>
+                    <article class="fp-schema-block">
+                        <strong>05. Model Export</strong>
+                        <p>Export model outputs and artifacts through Kaggle workflow.</p>
+                    </article>
+                    <span class="fp-schema-arrow">-></span>
+                    <article class="fp-schema-block end">
+                        <strong>06. Prediction Submit</strong>
+                        <p>Run inference and submit predictions to the competition board.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="fp-card fp-section">
+            <h3>Project Links</h3>
+            <div class="fp-links">
+                <a target="_blank" rel="noopener noreferrer" class="fp-btn alt"
+                    href="https://www.kaggle.com/competitions/recodai-luc-scientific-image-forgery-detection">
+                    Competition
+                </a>
+                <a target="_blank" rel="noopener noreferrer" class="fp-btn alt"
+                    href="https://www.kaggle.com/code/isaacmenard/data-augmenter-forged">
+                    Synthetic data notebook
+                </a>
+                <a target="_blank" rel="noopener noreferrer" class="fp-btn alt"
+                    href="https://www.kaggle.com/code/isaacmenard/train-scientific-image-forgery-detection">
+                    Training notebook
+                </a>
+                <a target="_blank" rel="noopener noreferrer" class="fp-btn alt"
+                    href="https://www.kaggle.com/code/isaacmenard/submission-scientific-image-forgery-detection">
+                    Submission notebook
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        (function () {
+            var yearsNode = document.querySelector(".years");
+            if (yearsNode) {
+                yearsNode.textContent = new Date().getFullYear();
+            }
+        })();
+    </script>
+
+    <footer id="footerwrap" class="pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center footwrap">
+                    <p><b>PORTFOLIO</b> <span class="years"> </span> BY ISAAC MENARD</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

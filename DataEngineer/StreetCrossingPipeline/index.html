@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Crossing Analytics Pipeline - Isaac Menard</title>
+    <meta name="description"
+        content="AWS and Airflow pipeline case study for street video ingestion, YOLO inference, metrics aggregation, and analytics-ready outputs." />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../asset/page/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../asset/page/favicon-16x16.png">
+    <link rel="shortcut icon" href="../../asset/page/favicon-16x16.png">
+    <link href="../../css/vendor/fontawesome/all.min.css" rel="stylesheet">
+    <link href="../../css/main.css" rel="stylesheet">
+    <link href="../../css/responsive.css" rel="stylesheet">
+    <style>
+        :root {
+            --sc-text: #080808;
+            --sc-muted: #3f3f3f;
+            --sc-line: #d6d6d6;
+            --sc-soft: #f2f2f2;
+            --sc-shadow: 0 10px 24px rgba(8, 8, 8, 0.08);
+        }
+
+        .street-page {
+            margin: 0;
+            color: var(--sc-text);
+            background: linear-gradient(180deg, #f9f9f9 0%, #ffffff 40%);
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .street-page .backgroundOfSection {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            margin-top: 0;
+            background-image: url("../../asset/portfolio/SVG/grid.png");
+            background-size: 6%;
+            background-repeat: repeat;
+            filter: invert(1);
+            opacity: 0.1;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        .sc-shell::before,
+        .sc-shell::after,
+        .sc-topbar::before,
+        .sc-topbar::after,
+        .sc-stat-row::before,
+        .sc-stat-row::after,
+        .sc-content-grid::before,
+        .sc-content-grid::after,
+        .sc-media-grid::before,
+        .sc-media-grid::after,
+        .sc-schema-track::before,
+        .sc-schema-track::after,
+        .sc-flow-grid::before,
+        .sc-flow-grid::after,
+        .sc-skill-grid::before,
+        .sc-skill-grid::after {
+            content: none !important;
+            display: none !important;
+        }
+
+        .sc-shell {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 90px 18px 70px;
+        }
+
+        .sc-topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .sc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            text-decoration: none;
+            padding: 10px 14px;
+            border: 1px solid #080808;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border-radius: 0;
+            background: #080808;
+            color: #ffffff;
+        }
+
+        .sc-btn.alt {
+            background: #f2f2f2;
+            color: #080808;
+        }
+
+        .sc-card {
+            background: #ffffff;
+            border: 1px solid var(--sc-line);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--sc-shadow);
+            margin-bottom: 18px;
+        }
+
+        .sc-hero {
+            background: #f4f4f4;
+        }
+
+        .sc-kicker {
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 0.74rem;
+            font-weight: 700;
+            color: #080808;
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+
+        .sc-hero h1 {
+            margin-bottom: 12px;
+            font-size: clamp(1.8rem, 4vw, 2.45rem);
+        }
+
+        .sc-hero p {
+            color: var(--sc-muted);
+            margin: 0;
+            max-width: 880px;
+        }
+
+        .sc-stat-row {
+            margin-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .sc-pill {
+            border: 1px solid #080808;
+            border-radius: 999px;
+            padding: 6px 10px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            background: #ffffff;
+        }
+
+        .sc-focus {
+            background: linear-gradient(135deg, #0f0f0f 0%, #292929 62%, #4a4a4a 100%);
+            color: #ffffff;
+            border-color: #080808;
+        }
+
+        .sc-focus h3 {
+            color: #ffffff;
+        }
+
+        .sc-focus p,
+        .sc-focus li {
+            color: #f2f2f2;
+        }
+
+        .sc-focus ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .sc-media-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .sc-media-card {
+            border: 1px solid var(--sc-line);
+            background: linear-gradient(180deg, #f6f6f6 0%, #efefef 100%);
+            border-radius: 10px;
+            padding: 12px;
+            box-shadow: var(--sc-shadow);
+        }
+
+        .sc-media-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            border-radius: 8px;
+            border: 1px solid #cfcfcf;
+            background: #111111;
+            display: block;
+        }
+
+        .sc-media-card p {
+            margin: 10px 0 0;
+            color: var(--sc-muted);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .sc-content-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+
+        .sc-stack-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .sc-stack-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: var(--sc-soft);
+            border: 1px solid #d0d0d0;
+            font-weight: 700;
+            color: #080808;
+            font-size: 0.82rem;
+        }
+
+        .sc-schema-wrap {
+            border: 1px solid #d0d0d0;
+            background: linear-gradient(180deg, #fafafa 0%, #f2f2f2 100%);
+            border-radius: 8px;
+            padding: 12px;
+            margin-top: 10px;
+        }
+
+        .sc-schema-track {
+            display: flex;
+            align-items: stretch;
+            gap: 6px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding-bottom: 4px;
+        }
+
+        .sc-schema-step {
+            min-width: 0;
+            flex: 1 1 0;
+            border: 1px solid #080808;
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .sc-schema-step.start,
+        .sc-schema-step.end {
+            background: #080808;
+            color: #ffffff;
+        }
+
+        .sc-schema-step strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 0.84rem;
+        }
+
+        .sc-schema-step p {
+            margin: 0;
+            font-size: 0.78rem;
+            line-height: 1.35;
+            color: #3d3d3d;
+        }
+
+        .sc-schema-step.start p,
+        .sc-schema-step.end p {
+            color: #f2f2f2;
+        }
+
+        .sc-schema-arrow {
+            flex: 0 0 auto;
+            align-self: center;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #080808;
+        }
+
+        .sc-action-row {
+            margin-top: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .sc-action-btn {
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 0;
+            padding: 11px 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .sc-action-btn.primary {
+            background: #080808;
+            color: #ffffff;
+            border: 1px solid #080808;
+        }
+
+        .sc-action-btn.secondary {
+            color: #080808;
+            border: 1px solid #080808;
+            background: #f2f2f2;
+        }
+
+        .sc-step {
+            border: 1px solid var(--sc-line);
+            border-radius: 8px;
+            padding: 12px;
+            background: var(--sc-soft);
+        }
+
+        .sc-step strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .sc-step p {
+            margin: 0;
+            color: var(--sc-muted);
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .sc-skill-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .sc-skill {
+            border: 1px solid var(--sc-line);
+            border-radius: 8px;
+            background: var(--sc-soft);
+            padding: 12px;
+        }
+
+        .sc-skill strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .sc-skill p {
+            margin: 0;
+            color: var(--sc-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 991px) {
+            .sc-topbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .sc-content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sc-media-card img {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 620px) {
+            .sc-shell {
+                padding-top: 24px;
+            }
+
+            .sc-schema-track {
+                flex-direction: column;
+                overflow: visible;
+            }
+
+            .sc-schema-arrow {
+                transform: rotate(90deg);
+            }
+
+            .sc-media-card img {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body class="street-page">
+    <div class="backgroundOfSection"></div>
+    <header id="headermain">
+        <div class="container">
+            <div class="row headerwrap">
+                <div class="text-xl-left d-none d-lg-block justify-content-lg-left justify-content-xl-left">
+                    <nav class="navpage text-center">
+                        <ul class="navpage__wrap">
+                            <li class="navpage__list"><a href="/DataEngineer/">Data Engineer Home</a></li>
+                            <li class="navpage__list"><a href="/DataEngineer/#Projectssection">Projects</a></li>
+                            <li class="navpage__list"><a href="/DataEngineer/#contactsection">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <img src="../../asset/portfolio/4x/Asset 4@4x.png" style="margin-bottom: -40px;">
+    </header>
+
+    <div class="sc-shell">
+        <div class="sc-topbar">
+            <a href="/DataEngineer/" class="sc-btn"><i class="fa-solid fa-arrow-left"></i> Back to Data Engineer
+                Home</a>
+            <a href="/DataEngineer/ForgeryPipeline/" class="sc-btn alt"><i class="fa-solid fa-flask"></i> View
+                forgery project</a>
+        </div>
+
+        <section class="sc-card sc-hero">
+            <div class="sc-kicker">AWS + Airflow Project</div>
+            <h1>Street Crossing Analytics Pipeline</h1>
+            <p>
+                Computer vision data pipeline: ingest street video, run YOLO detection, and publish reliable crossing
+                metrics through an AWS + Airflow workflow.
+            </p>
+            <div class="sc-stat-row">
+                <span class="sc-pill">AWS-focused pipeline</span>
+                <span class="sc-pill">Airflow orchestration</span>
+                <span class="sc-pill">YOLO crossing count</span>
+            </div>
+        </section>
+
+        <div class="sc-media-grid">
+            <div class="sc-media-card">
+                <img src="/DataEngineer/StreetCrossingPipeline/img/image107.gif"
+                    alt="Detected street crossing events with YOLO">
+                <p>YOLO detection and crossing event tracking</p>
+            </div>
+        </div>
+
+        <div class="sc-content-grid">
+            <article class="sc-card">
+                <h3>Pipeline Scope</h3>
+                <p>
+                    Production-style pipeline that converts raw video files into structured crossing metrics.
+                </p>
+                <p>
+                    Data engineering work included ingestion, ETL, workflow orchestration, cloud storage, and
+                    analysis-ready exports.
+                </p>
+                <p>
+                    Source code is private due to internship data and cloud environment constraints.
+                </p>
+            </article>
+            <article class="sc-card">
+                <h3>Stack Used</h3>
+                <div class="sc-stack-wrap">
+                    <span class="sc-stack-pill"><i class="fa-brands fa-aws"></i> AWS</span>
+                    <span class="sc-stack-pill"><i class="fa-solid fa-gears"></i> Airflow</span>
+                    <span class="sc-stack-pill"><i class="fa-solid fa-shuffle"></i> ETL Pipelines</span>
+                    <span class="sc-stack-pill"><i class="fa-solid fa-database"></i> SQL</span>
+                    <span class="sc-stack-pill"><i class="fa-solid fa-layer-group"></i> Parquet</span>
+                    <span class="sc-stack-pill"><i class="fa-solid fa-chart-line"></i> Monitoring</span>
+                </div>
+            </article>
+        </div>
+
+        <section class="sc-card">
+            <h3>Pipeline Schema</h3>
+            <div class="sc-schema-wrap">
+                <div class="sc-schema-track" aria-label="Street crossing pipeline schema">
+                    <article class="sc-schema-step start">
+                        <strong>01. Ingestion</strong>
+                        <p>Collect video files and register metadata for tracked processing.</p>
+                    </article>
+                    <span class="sc-schema-arrow">-></span>
+                    <article class="sc-schema-step">
+                        <strong>02. Preprocessing</strong>
+                        <p>Prepare frames with consistent format and quality checks.</p>
+                    </article>
+                    <span class="sc-schema-arrow">-></span>
+                    <article class="sc-schema-step">
+                        <strong>03. YOLO Inference</strong>
+                        <p>Detect people and capture movement events per zone.</p>
+                    </article>
+                    <span class="sc-schema-arrow">-></span>
+                    <article class="sc-schema-step">
+                        <strong>04. Metrics Build</strong>
+                        <p>Aggregate detections into crossing counts and timestamps.</p>
+                    </article>
+                    <span class="sc-schema-arrow">-></span>
+                    <article class="sc-schema-step">
+                        <strong>05. Airflow Orchestration</strong>
+                        <p>Run scheduled DAGs with retries, logs, and rerun control.</p>
+                    </article>
+                    <span class="sc-schema-arrow">-></span>
+                    <article class="sc-schema-step end">
+                        <strong>06. AWS Outputs</strong>
+                        <p>Publish parquet/CSV outputs for SQL analysis and dashboards.</p>
+                    </article>
+                </div>
+            </div>
+            <div class="sc-action-row">
+                <a href="/DataEngineer/" class="sc-action-btn primary"><i class="fa-solid fa-house"></i> Back to
+                    Portfolio</a>
+                <a href="/DataEngineer/ForgeryPipeline/" class="sc-action-btn secondary"><i
+                        class="fa-solid fa-flask"></i> View forgery project</a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        (function () {
+            var yearsNode = document.querySelector(".years");
+            if (yearsNode) {
+                yearsNode.textContent = new Date().getFullYear();
+            }
+        })();
+    </script>
+
+    <footer id="footerwrap" class="pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center footwrap">
+                    <p><b>PORTFOLIO</b> <span class="years"> </span> BY ISAAC MENARD</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

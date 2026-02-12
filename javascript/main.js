@@ -59,13 +59,17 @@ const freemaninit = (function() {
         }
     };
     checkLoaded();
-    function checkLoaded() { 
-        if (document.readyState === "complete") { 
-             document.querySelector(".preloader").style.display = "none";
-        } else { 
-          setTimeout(checkLoaded, 1000); 
-        } 
-      }
+    function checkLoaded() {
+        var preloader = document.querySelector(".preloader");
+        if (!preloader) {
+            return;
+        }
+        if (document.readyState === "complete") {
+            preloader.style.display = "none";
+        } else {
+            setTimeout(checkLoaded, 1000);
+        }
+    }
     // GLightbox
     const glight = function(e) {
         GLightbox({
@@ -192,7 +196,9 @@ const freemaninit = (function() {
             // button event 
             buttonclick();
             //type animation 
-            typeanimation();
+            if (typedText && cursor) {
+                typeanimation();
+            }
             // glightbox 
             glight();
             // year 
