@@ -92,11 +92,26 @@
             border-radius: 0;
             background: #080808;
             color: #ffffff;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
         }
 
         .sc-btn.alt {
             background: #f2f2f2;
             color: #080808;
+        }
+
+        .sc-btn:hover,
+        .sc-btn:focus-visible {
+            transform: translateY(-2px);
+            box-shadow: 6px 6px 0 rgba(8, 8, 8, 0.16);
+            background: #f2f2f2;
+            color: #080808;
+        }
+
+        .sc-btn.alt:hover,
+        .sc-btn.alt:focus-visible {
+            background: #080808;
+            color: #ffffff;
         }
 
         .sc-card {
@@ -300,6 +315,7 @@
             display: inline-flex;
             align-items: center;
             gap: 7px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
         }
 
         .sc-action-btn.primary {
@@ -312,6 +328,14 @@
             color: #080808;
             border: 1px solid #080808;
             background: #f2f2f2;
+        }
+
+        .sc-action-btn:hover,
+        .sc-action-btn:focus-visible {
+            transform: translateY(-2px);
+            box-shadow: 6px 6px 0 rgba(8, 8, 8, 0.16);
+            background: #f2f2f2;
+            color: #080808;
         }
 
         .sc-step {
@@ -411,7 +435,6 @@
                 </div>
             </div>
         </div>
-        <img src="../../asset/portfolio/4x/Asset 4@4x.png" style="margin-bottom: -40px;">
     </header>
 
     <div class="sc-shell">

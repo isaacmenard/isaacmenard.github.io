@@ -88,11 +88,11 @@
         .ta-toplink {
             text-decoration: none;
             color: #ffffff;
-            font-weight: 600;
+            font-weight: 700;
             border: 1px solid #080808;
             border-radius: 0;
-            padding: 8px 14px;
-            transition: background 0.2s ease;
+            padding: 10px 14px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
             display: inline-flex;
             align-items: center;
             gap: 7px;
@@ -101,6 +101,8 @@
         }
 
         .ta-toplink:hover {
+            transform: translateY(-2px);
+            box-shadow: 6px 6px 0 rgba(8, 8, 8, 0.16);
             background: #f2f2f2;
             color: #080808;
         }
@@ -278,10 +280,11 @@
             text-decoration: none;
             font-weight: 700;
             border-radius: 0;
-            padding: 11px 15px;
+            padding: 10px 14px;
             display: inline-flex;
             align-items: center;
             gap: 7px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
         }
 
         .ta-action-btn.primary {
@@ -294,6 +297,37 @@
             color: #080808;
             border: 1px solid #080808;
             background: #f2f2f2;
+        }
+
+        .ta-action-btn:hover,
+        .ta-action-btn:focus-visible {
+            transform: translateY(-2px);
+            box-shadow: 6px 6px 0 rgba(8, 8, 8, 0.16);
+            background: #f2f2f2;
+            color: #080808;
+        }
+
+        .api-popup .btn.linkbtn.aboutlink.aboutlinkLogo {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 10px 14px;
+            border: 1px solid #080808;
+            border-radius: 0;
+            background: #080808;
+            color: #ffffff !important;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+            cursor: pointer;
+        }
+
+        .api-popup .btn.linkbtn.aboutlink.aboutlinkLogo:hover,
+        .api-popup .btn.linkbtn.aboutlink.aboutlinkLogo:focus-visible {
+            transform: translateY(-2px);
+            box-shadow: 6px 6px 0 rgba(8, 8, 8, 0.16);
+            background: #f2f2f2;
+            color: #080808 !important;
         }
 
         .api-popup-backdrop {
@@ -394,14 +428,13 @@
                             <li class="navpage__list"><a href="/DataEngineer/">Data Engineer Home</a></li>
                             <li class="navpage__list"><a href="http://51.254.130.249:4000/" target="_blank"
                                     rel="noopener noreferrer" class="api-key-trigger"
-                                    data-target-url="http://51.254.130.249:4000/">Open link</a></li>
+                                    data-target-url="http://51.254.130.249:4000/">Trackers live app</a></li>
                             <li class="navpage__list"><a href="/DataEngineer/#contactsection">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
-        <img src="../../asset/portfolio/4x/Asset 4@4x.png" style="margin-bottom: -40px;">
     </header>
 
     <div class="ta-page">
@@ -409,7 +442,7 @@
             <a href="/DataEngineer/" class="ta-toplink"><i class="fa-solid fa-arrow-left"></i> Back to Data Engineer
                 Home</a>
             <a href="http://51.254.130.249:4000/" target="_blank" rel="noopener noreferrer" class="ta-toplink api-key-trigger"
-                data-target-url="http://51.254.130.249:4000/">Open link</a>
+                data-target-url="http://51.254.130.249:4000/">Open Trackers live app</a>
         </div>
 
         <section class="ta-hero">
@@ -496,7 +529,7 @@
                 <a class="ta-action-btn primary api-key-trigger" href="http://51.254.130.249:4000/" target="_blank"
                     rel="noopener noreferrer"
                     data-target-url="http://51.254.130.249:4000/">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Open link
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Trackers live app
                 </a>
                 <a class="ta-action-btn secondary" href="/DataEngineer/">
                     <i class="fa-solid fa-house"></i> Back to Portfolio
@@ -513,7 +546,8 @@
             <div class="api-popup-actions">
                 <button id="copyApiKeyBtn" type="button" class="btn linkbtn aboutlink aboutlinkLogo">Copy API
                     key</button>
-                <button id="goToAppBtn" type="button" class="btn linkbtn aboutlink aboutlinkLogo">Go to app</button>
+                <button id="goToAppBtn" type="button" class="btn linkbtn aboutlink aboutlinkLogo">Go to Trackers live
+                    app</button>
                 <button id="closeApiPopupBtn" type="button" class="btn linkbtn aboutlink aboutlinkLogo">Close</button>
             </div>
         </div>

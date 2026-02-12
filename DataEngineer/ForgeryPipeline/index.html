@@ -93,11 +93,26 @@
             font-size: 0.9rem;
             background: #080808;
             color: #ffffff;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
         }
 
         .fp-btn.alt {
             background: #f2f2f2;
             color: #080808;
+        }
+
+        .fp-btn:hover,
+        .fp-btn:focus-visible {
+            transform: translateY(-2px);
+            box-shadow: 6px 6px 0 rgba(8, 8, 8, 0.16);
+            background: #f2f2f2;
+            color: #080808;
+        }
+
+        .fp-btn.alt:hover,
+        .fp-btn.alt:focus-visible {
+            background: #080808;
+            color: #ffffff;
         }
 
         .fp-card {
@@ -347,7 +362,6 @@
                 </div>
             </div>
         </div>
-        <img src="../../asset/portfolio/4x/Asset 4@4x.png" style="margin-bottom: -40px;">
     </header>
 
     <div class="fp-shell">
