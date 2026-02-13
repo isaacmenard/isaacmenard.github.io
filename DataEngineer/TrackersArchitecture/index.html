@@ -399,7 +399,7 @@
 
         @media (max-width: 580px) {
             .ta-page {
-                padding-top: 18px;
+                padding-top: clamp(84px, 14vw, 96px);
             }
 
             .ta-hero {
@@ -422,7 +422,12 @@
     <header id="headermain">
         <div class="container">
             <div class="row headerwrap">
-                <div class="text-xl-left d-none d-lg-block justify-content-lg-left justify-content-xl-left">
+                <div class="col-xs-12 col-md-12 col-lg-2">
+                    <div class="navicon d-block d-lg-none">
+                        <div class="navicon__bar"></div>
+                    </div>
+                </div>
+                <div class="col-lg-10 text-xl-left d-none d-lg-block justify-content-lg-left justify-content-xl-left">
                     <nav class="navpage text-center">
                         <ul class="navpage__wrap">
                             <li class="navpage__list"><a href="/DataEngineer/">Data Engineer Home</a></li>
@@ -436,6 +441,17 @@
             </div>
         </div>
     </header>
+
+    <div class="overlay">
+        <div class="overlay__navigation">
+            <ul class="overlay__listnav">
+                <li class="navpage__list"><a href="/DataEngineer/">Data Engineer Home</a></li>
+                <li><a href="http://51.254.130.249:4000/" target="_blank" rel="noopener noreferrer">Trackers live
+                        app</a></li>
+                <li><a href="/DataEngineer/#contactsection">Contact</a></li>
+            </ul>
+        </div>
+    </div>
 
     <div class="ta-page">
         <div class="ta-topbar">
@@ -618,6 +634,28 @@
                 if (event.target === popup) {
                     closePopup();
                 }
+            });
+        })();
+
+        (function () {
+            var body = document.body;
+            var menuButton = document.querySelector(".navicon");
+            var mobileLinks = document.querySelectorAll(".overlay__listnav a");
+
+            if (!menuButton) {
+                return;
+            }
+
+            menuButton.addEventListener("click", function () {
+                menuButton.classList.toggle("active");
+                body.classList.toggle("openmenu");
+            });
+
+            mobileLinks.forEach(function (link) {
+                link.addEventListener("click", function () {
+                    menuButton.classList.remove("active");
+                    body.classList.remove("openmenu");
+                });
             });
         })();
     </script>

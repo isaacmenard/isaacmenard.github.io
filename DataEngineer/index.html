@@ -28,6 +28,20 @@
             position: relative;
         }
 
+        #headermain .navicon__bar::before,
+        #headermain .navicon__bar::after {
+            background: #f2f2f2;
+        }
+
+        #headermain .navicon:hover .navicon__bar::before,
+        #headermain .navicon:hover .navicon__bar::after {
+            background: #f2f2f2;
+        }
+
+        #sectionhero .container {
+            padding-top: clamp(72px, 10vh, 120px) !important;
+        }
+
         .project-card {
             margin-top: 0;
             padding: 22px;
@@ -323,6 +337,18 @@
             .featured-media .project-thumb {
                 height: 210px;
             }
+
+            .abouthero h3 {
+                font-size: clamp(1.8rem, 8vw, 2.35rem);
+                line-height: 1.2;
+                white-space: normal !important;
+                overflow-wrap: anywhere;
+            }
+
+            #projectText {
+                font-size: clamp(1.8rem, 8vw, 2.35rem);
+                white-space: normal !important;
+            }
         }
 
         .api-popup-backdrop {
@@ -376,7 +402,7 @@
                         <div class="navicon__bar"></div>
                     </div>
                 </div>
-                <div class="text-xl-left d-none d-lg-block justify-content-lg-left justify-content-xl-left">
+                <div class="col-lg-10 text-xl-left d-none d-lg-block justify-content-lg-left justify-content-xl-left">
                     <nav class="navpage text-center">
                         <ul class="navpage__wrap">
                             <li class="navpage__list"><a href="#sectionhero" class="activelink">Intro</a></li>
@@ -535,7 +561,7 @@
         <div id="experiencesection" class="sectionblock">
             <div class="container">
                 <div class="abouthero" style="padding-top: 10vh;">
-                    <h3 style="white-space: nowrap;text-align: left;">Professional Experience</h3>
+                    <h3 style="text-align: left;">Professional Experience</h3>
                 </div>
 
                 <div class="experience-timeline">
@@ -610,7 +636,7 @@
         <div id="Projectssection" class="sectionblock">
             <div class="container ">
                 <div class="abouthero" style="padding-top: 12vh;">
-                    <h3 style="white-space: nowrap;text-align: left;" id="projectText">Data Engineering Projects</h3>
+                    <h3 style="text-align: left;" id="projectText">Data Engineering Projects</h3>
                 </div>
 
                 <div class="projects-grid">

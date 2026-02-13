@@ -102,7 +102,7 @@ Filename      : responsive.css
         background-color: rgba(0, 0, 0, 0.943);
         background-image: none;
     }
-    #Projectssection h3{
+    #Projectssection .abouthero h3{
         font-size: 40px;
     }
     
