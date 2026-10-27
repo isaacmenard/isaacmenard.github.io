@@ -2,9 +2,9 @@ GHOST IN THE SQL DATA - FACT SHEET
 
 Developer / publisher : Isaac Menard (solo developer)
 Genre                 : Detective, puzzle, educational. You solve cases by writing real SQL
-Release date          : October 29, 2026
+Release date          : October 29, 2026, 08:00 UTC
 Platforms             : Steam, Windows 10+ and macOS 11+
-Price                 : $9.99
+Price                 : $9.99 / £9.09 / €8.99, 10% off for the first 14 days
 Languages             : English, French, German, Italian, Spanish, Brazilian Portuguese,
                         Japanese, Korean, Russian, Simplified Chinese
 Steam features        : Achievements, Steam Cloud, Steam Workshop, level editor,
