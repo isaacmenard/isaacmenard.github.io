@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ghost in the SQL Data · Press Kit</title>
+<meta name="description" content="Press kit for Ghost in the SQL Data: fact sheet, trailer, screenshots and logos.">
+<meta property="og:title" content="Ghost in the SQL Data · Press Kit">
+<meta property="og:description" content="A detective game where you solve cases by writing real SQL. On Steam, October 29, 2026.">
+<meta property="og:image" content="https://isaacmenard.github.io/presskit/art/main-capsule-1232x706.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  /* The game's light theme, from src/styles/variables.css. */
+  :root {
+    --ink: #0A0A0A;
+    --ink-muted: #555555;
+    --ink-soft: #6A6357;
+    --paper: #FBF9F4;
+    --paper-tint: #EDE8DE;
+    --board: #ECE7DF;
+    --board-line: #D6D2C9;
+    --highlight: #FFC629;
+    --highlight-wash: #FFF6D6;
+    --red: #D90429;
+    --shadow-hard: 4px 4px 0 var(--ink);
+    --font-mono: 'Courier Prime', Menlo, Consolas, monospace;
+    --font-serif: 'Gloock', Georgia, serif;
+  }
+  * { box-sizing: border-box; }
+  html { color-scheme: light; }
+  body {
+    margin: 0;
+    color: var(--ink);
+    font: 17px/1.6 var(--font-mono);
+    background-color: var(--board);
+    background-image:
+      linear-gradient(var(--board-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--board-line) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+  main { max-width: 1000px; margin: 0 auto; padding: 40px 16px 80px; }
+
+  .sheet {
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    box-shadow: var(--shadow-hard);
+    padding: 28px;
+    margin-top: 32px;
+  }
+  @media (max-width: 600px) { .sheet { padding: 20px 16px; } }
+
+  .hero { text-align: center; margin-top: 0; }
+  .hero .logo { width: 100%; max-width: 580px; display: block; margin: -8px auto 4px; }
+  .tagline { font-size: 1.1rem; max-width: 640px; margin: 0 auto; }
+  .release { margin: 16px 0 0; color: var(--ink-soft); letter-spacing: .08em; text-transform: uppercase; font-size: .85rem; }
+
+  .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 22px; }
+  .btn {
+    display: inline-block; padding: 10px 18px;
+    font: 700 1rem var(--font-mono); color: var(--ink); text-decoration: none;
+    background: var(--paper); border: 2px solid var(--ink); box-shadow: var(--shadow-hard);
+    transition: transform .08s, box-shadow .08s;
+  }
+  .btn.primary { background: var(--highlight); }
+  .btn:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
+
+  h2 {
+    font: 400 1.9rem/1.2 var(--font-serif);
+    margin: 0 0 16px;
+  }
+  /* The highlighter stroke the game lays under a keyword. */
+  h2 span { background: linear-gradient(transparent 55%, var(--highlight) 55%, var(--highlight) 92%, transparent 92%); padding: 0 4px; }
+
+  table { width: 100%; border-collapse: collapse; }
+  td { padding: 9px 10px; border-bottom: 1px solid var(--board-line); vertical-align: top; }
+  tr:nth-child(odd) td { background: var(--paper-tint); }
+  td:first-child { width: 32%; font-weight: 700; text-transform: uppercase; font-size: .8rem; letter-spacing: .06em; color: var(--ink-soft); padding-top: 12px; }
+  @media (max-width: 600px) {
+    td { display: block; width: 100% !important; }
+    td:first-child { padding-bottom: 0; border-bottom: 0; }
+  }
+
+  p { margin: 0 0 14px; }
+  .lead { font-size: 1.05rem; }
+  mark { background: var(--highlight); color: var(--ink); padding: 0 3px; }
+  a { color: var(--ink); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  a:hover { text-decoration-color: var(--red); }
+
+  video { width: 100%; display: block; border: 2px solid var(--ink); background: #000; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+  .grid a { display: block; border: 2px solid var(--ink); box-shadow: var(--shadow-hard); transition: transform .08s, box-shadow .08s; }
+  .grid a:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+  .grid img { width: 100%; display: block; }
+
+  .downloads { list-style: none; padding: 0; margin: 0; }
+  .downloads li { padding: 8px 0; border-bottom: 1px dashed var(--board-line); }
+  .downloads li::before { content: "↓ "; color: var(--red); font-weight: 700; }
+  .note { color: var(--ink-muted); font-size: .9rem; margin-top: 12px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 700px) { .two { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+
+  <section class="sheet hero">
+    <img class="logo" src="logos/logo-transparent-for-light-bg.png" alt="Ghost in the SQL Data">
+    <p class="tagline">A call reported a school fire <mark>14 minutes</mark> before the first witness saw it. Find out who made it, in SQL, by exploring a year of Paris emergency calls.</p>
+    <p class="release">Steam · Windows &amp; macOS · October 29, 2026</p>
+    <div class="actions">
+      <a class="btn primary" href="https://store.steampowered.com/app/5072430">Steam page</a>
+      <a class="btn" href="presskit.zip">Download everything (.zip)</a>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <h2><span>Fact sheet</span></h2>
+    <table>
+      <tr><td>Title</td><td>Ghost in the SQL Data</td></tr>
+      <tr><td>Developer</td><td>Isaac Menard (solo developer)</td></tr>
+      <tr><td>Genre</td><td>Detective, puzzle, educational. You solve cases by writing real SQL</td></tr>
+      <tr><td>Release date</td><td>October 29, 2026</td></tr>
+      <tr><td>Platforms</td><td>Steam, Windows 10+ and macOS 11+ (Apple Silicon and Intel)</td></tr>
+      <tr><td>Price</td><td>$9.99</td></tr>
+      <tr><td>Languages</td><td>English, French, German, Italian, Spanish, Brazilian Portuguese, Japanese, Korean, Russian, Simplified Chinese</td></tr>
+      <tr><td>Steam features</td><td>Achievements, Steam Cloud, Steam Workshop, level editor, full controller support, Family Sharing</td></tr>
+      <tr><td>Accessibility</td><td>Adjustable text size, colour alternatives, camera comfort, no timed input, save anytime</td></tr>
+      <tr><td>Wishlists</td><td>100,000+</td></tr>
+      <tr><td>Press contact</td><td><a href="mailto:menardisaac@gmail.com">menardisaac@gmail.com</a></td></tr>
+    </table>
+  </section>
+
+  <section class="sheet">
+    <h2><span>Description</span></h2>
+    <p class="lead">Here is a case. Use <mark>SQL</mark> to search a year of calls to the Paris Emergency Switchboard. Find who called 14 minutes before the first witness saw the school on fire.</p>
+    <p>Use SQL to explore the data, filter it and join the tables. The first cases teach you the basics, and the later ones only give you the question.</p>
+    <p>Use an investigator’s board to pin your results, their charts and your notes, then connect the clues to solve the case.</p>
+    <p>Every case takes place in Paris: a school fire, a metro ticket with no name, or even a crown stolen from the Musée d’Orsay.</p>
+  </section>
+
+  <section class="sheet">
+    <h2><span>Trailer</span></h2>
+    <video controls preload="metadata" poster="screenshots/screenshot_01.jpg" src="trailer/ghost-in-the-sql-data-trailer.mp4"></video>
+    <ul class="downloads" style="margin-top:14px">
+      <li><a href="trailer/ghost-in-the-sql-data-trailer.mp4" download>Trailer, 1080p MP4, 45 s</a></li>
+      <li><a href="trailer/gameplay-clip-20s.mp4" download>Gameplay clip, 1080p MP4, 20 s</a></li>
+    </ul>
+  </section>
+
+  <section class="sheet">
+    <h2><span>Screenshots</span></h2>
+    <div class="grid">
+      <a href="screenshots/screenshot_01.jpg"><img src="screenshots/screenshot_01.jpg" alt="Screenshot 1" loading="lazy"></a>
+      <a href="screenshots/screenshot_02.jpg"><img src="screenshots/screenshot_02.jpg" alt="Screenshot 2" loading="lazy"></a>
+      <a href="screenshots/screenshot_03.jpg"><img src="screenshots/screenshot_03.jpg" alt="Screenshot 3" loading="lazy"></a>
+      <a href="screenshots/screenshot_04.jpg"><img src="screenshots/screenshot_04.jpg" alt="Screenshot 4" loading="lazy"></a>
+      <a href="screenshots/screenshot_05.jpg"><img src="screenshots/screenshot_05.jpg" alt="Screenshot 5" loading="lazy"></a>
+      <a href="screenshots/screenshot_06.jpg"><img src="screenshots/screenshot_06.jpg" alt="Screenshot 6" loading="lazy"></a>
+    </div>
+    <p class="note">1920×1080, no watermark. Click to open full size.</p>
+  </section>
+
+  <section class="sheet two">
+    <div>
+      <h2><span>Logos</span></h2>
+      <ul class="downloads">
+        <li><a href="logos/logo-transparent-for-light-bg.png" download>Logo, transparent PNG, light backgrounds</a></li>
+        <li><a href="logos/logo-transparent-for-dark-bg.png" download>Logo, transparent PNG, dark backgrounds</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2><span>Key art</span></h2>
+      <ul class="downloads">
+        <li><a href="art/library-hero-3840x1240.png" download>Key art, 3840×1240</a></li>
+        <li><a href="art/main-capsule-1232x706.png" download>Capsule, 1232×706</a></li>
+        <li><a href="art/header-capsule-920x430.png" download>Header, 920×430</a></li>
+        <li><a href="art/library-capsule-600x900.png" download>Vertical capsule, 600×900</a></li>
+        <li><a href="art/vertical-capsule-748x896.png" download>Vertical capsule, 748×896</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sheet two">
+    <div>
+      <h2><span>Developer</span></h2>
+      <p>Isaac Menard is the game designer and the sole developer of Ghost in the SQL Data.</p>
+    </div>
+    <div>
+      <h2><span>Contact</span></h2>
+      <p>Press, keys and interviews:<br><a href="mailto:menardisaac@gmail.com">menardisaac@gmail.com</a></p>
+      <p class="note">Every asset on this page may be used freely for coverage of the game.</p>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

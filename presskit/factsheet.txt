@@ -1,0 +1,31 @@
+GHOST IN THE SQL DATA - FACT SHEET
+
+Developer / publisher : Isaac Menard (solo developer)
+Genre                 : Detective, puzzle, educational. You solve cases by writing real SQL
+Release date          : October 29, 2026
+Platforms             : Steam, Windows 10+ and macOS 11+
+Price                 : $9.99
+Languages             : English, French, German, Italian, Spanish, Brazilian Portuguese,
+                        Japanese, Korean, Russian, Simplified Chinese
+Steam features        : Achievements, Steam Cloud, Steam Workshop, level editor,
+                        full controller support, Family Sharing
+Wishlists             : 100,000+
+Steam page            : https://store.steampowered.com/app/5072430
+Press contact         : menardisaac@gmail.com
+
+SHORT DESCRIPTION
+A call reported a school fire 14 minutes before the first witness saw it. Find out who
+made it, in SQL, by exploring a year of Paris emergency calls.
+
+LONG DESCRIPTION
+Here is a case. Use SQL to search a year of calls to the Paris Emergency Switchboard.
+Find who called 14 minutes before the first witness saw the school on fire.
+
+Use SQL to explore the data, filter it and join the tables. The first cases teach you
+the basics, and the later ones only give you the question.
+
+Use an investigator's board to pin your results, their charts and your notes, then
+connect the clues to solve the case.
+
+Every case takes place in Paris: a school fire, a metro ticket with no name, or even a
+crown stolen from the Musee d'Orsay.
